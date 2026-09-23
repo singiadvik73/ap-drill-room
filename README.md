@@ -25,6 +25,8 @@ A claude.ai app can't connect to other websites, so linking moves your data when
 
 When someone signed in on the website generates questions with their API key, the **Claude relay** (`worker/`) asks Claude for the questions and saves Claude's answer straight to the database. Browsers can't write to the shared bank (`firestore.rules` blocks it), so every shared question comes directly from Claude. Nobody can type one in.
 
+The relay's prompt is fixed: it asks Claude for 5 questions on one CED topic. The browser only sends a course and topic code. The relay fills in the course, unit, topic name and the existing questions to avoid from `worker/src/topics.json`, which `src/build.py` generates from the repo's question files. Nothing a user types can reach the prompt.
+
 - New shared questions show up for everyone right away, labeled **Written by Claude**.
 - Every day, a GitHub Action (`.github/workflows/sync-community.yml`) copies them into `src/data/community.js`, rebuilds the site, and commits.
 - Admins can hide a bad question in Dev mode. Hidden questions are removed from the file at the next sync.
@@ -73,6 +75,10 @@ The relay uses `claude-opus-5` by default, with Anthropic's automatic fallback t
 It's published at the `claudeAppUrl` in `config.js`. To let anyone use it, open it on claude.ai → **Share** → turn on the public link. After changing the code, the Claude version is updated by republishing it from Claude.
 
 ---
+
+## Practice sets
+
+Practice on a single topic gives 5 questions by default (change it to 3 or All with **Per topic** on any course page). Questions you missed last time come first, then ones you haven't seen.
 
 ## Dev mode (admins)
 

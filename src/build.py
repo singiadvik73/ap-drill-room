@@ -35,7 +35,28 @@ def site_html(app):
 </html>
 """
 
+def worker_topics():
+    """Trusted course outline for the Claude relay: the relay builds its prompt ONLY from this file,
+    never from text the browser sends, so nobody can smuggle their own questions into the shared pool."""
+    import json, shutil, subprocess
+    node = shutil.which("node")
+    if not node:
+        print("note: node not found; worker/src/topics.json not regenerated")
+        return
+    data = "\n".join((SRC / "data" / f).read_text() for f in ORDER if f != "community.js")
+    script = "globalThis.window = globalThis;\n" + data + r"""
+const out = {};
+for (const c of Object.values(AP_DATA)) for (const u of c.units) for (const [code, name, qs] of u.topics)
+  out[c.id + "|" + code] = { course: c.name, unitN: u.n, unitName: u.name, topicName: name, stems: qs.slice(0, 12).map(q => q[0]) };
+process.stdout.write(JSON.stringify(out));
+"""
+    res = subprocess.run([node, "-"], input=script, capture_output=True, text=True, check=True)
+    topics = json.loads(res.stdout)
+    (ROOT / "worker" / "src" / "topics.json").write_text(json.dumps(topics, ensure_ascii=False, indent=0, sort_keys=True) + "\n")
+    print("wrote worker/src/topics.json", len(topics), "topics")
+
 if __name__ == "__main__":
+    worker_topics()
     app = app_with_data()
     (ROOT / "index.html").write_text(site_html(app))
     print("wrote index.html", len(app) // 1024, "KB")

@@ -1,0 +1,1707 @@
+{
+"bio|1.1": {
+"course": "AP Biology",
+"stems": [
+"Water can rise dozens of meters through the xylem of a tree. Which property of water most directly makes this possible?",
+"Why does ice float on liquid water?",
+"A water molecule is polar because",
+"Coastal areas tend to have milder climates than inland areas at the same latitude. Which property of water best explains this?",
+"Which substance would dissolve most readily in water?",
+"Sweating cools the body because"
+],
+"topicName": "Structure of Water and Hydrogen Bonding",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|1.2": {
+"course": "AP Biology",
+"stems": [
+"A researcher grows cells in a medium containing radioactive nitrogen (¹⁵N). Which pair of macromolecules will become labeled?",
+"Radioactive sulfur (³⁵S) would be incorporated into which molecule?",
+"Phosphorus taken up by plant roots is used to build which of the following?",
+"Carbon is the backbone of biological molecules mainly because it",
+"Nitrogen-fixing bacteria in root nodules supply legumes with usable nitrogen. The plant most directly uses this nitrogen to synthesize"
+],
+"topicName": "Elements of Life",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|1.3": {
+"course": "AP Biology",
+"stems": [
+"Which process joins monomers into polymers?",
+"During digestion, amylase breaks starch into glucose. This reaction is an example of",
+"A peptide bond forms between",
+"Adjacent nucleotides in a DNA strand are linked by",
+"A polymer of 20 glucose monomers is made by dehydration synthesis. How many water molecules are released?"
+],
+"topicName": "Introduction to Biological Macromolecules",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|1.4": {
+"course": "AP Biology",
+"stems": [
+"A nucleic acid strand has directionality. Its two ends are",
+"The chemical properties of an amino acid (polar, nonpolar, charged) are determined by its",
+"Compared with unsaturated fatty acids, saturated fatty acids",
+"Humans can digest starch but not cellulose, even though both are glucose polymers. The difference is due to",
+"Proteins have directionality defined by"
+],
+"topicName": "Properties of Biological Macromolecules",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|1.5": {
+"course": "AP Biology",
+"stems": [
+"Alpha helices and beta pleated sheets are held together mainly by",
+"Hemoglobin is made of four polypeptide chains. This level of structure is",
+"In sickle cell disease, a charged glutamic acid is replaced by a nonpolar valine. Hemoglobin molecules then clump. Why?",
+"Phospholipids spontaneously form bilayers in water because",
+"Heating an enzyme to 90 °C makes it lose function because",
+"Which interaction contributes to tertiary structure but NOT to secondary structure?"
+],
+"topicName": "Structure and Function of Biological Macromolecules",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|1.6": {
+"course": "AP Biology",
+"stems": [
+"Which feature distinguishes RNA from DNA?",
+"A double-stranded DNA sample contains 30% adenine. What percentage is guanine?",
+"Which DNA molecule would require the highest temperature to separate its strands?",
+"The two strands of a DNA double helix are antiparallel, meaning",
+"Adenine and guanine are purines. In a DNA double helix, each purine pairs with"
+],
+"topicName": "Nucleic Acids",
+"unitN": 1,
+"unitName": "Chemistry of Life"
+},
+"bio|2.1": {
+"course": "AP Biology",
+"stems": [
+"Which structure is found in both prokaryotic and eukaryotic cells?",
+"Pancreatic cells secrete large amounts of digestive enzymes. Which organelles would be especially abundant in them?",
+"Liver cells break down many drugs and toxins. Which organelle is especially extensive in these cells?",
+"Radioactively labeled amino acids are given to a cell that secretes protein. In what order would the label most likely appear?",
+"Lysosomes are most directly involved in",
+"The nucleolus is the site of"
+],
+"topicName": "Cell Structure: Subcellular Components",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.10": {
+"course": "AP Biology",
+"stems": [
+"Lysosomal enzymes work best at pH ~5. The cytosol is ~pH 7.2. What is the advantage of this arrangement?",
+"Internal membranes in eukaryotic cells",
+"Prokaryotic cells lack membrane-bound organelles, but their DNA is concentrated in a",
+"Enclosing the Krebs cycle enzymes within the mitochondrial matrix"
+],
+"topicName": "Cell Compartmentalization",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.11": {
+"course": "AP Biology",
+"stems": [
+"Which observation supports the endosymbiont theory for mitochondria?",
+"According to endosymbiotic theory, chloroplasts most likely came from",
+"The endomembrane system (nuclear envelope, ER, Golgi) most likely evolved from",
+"Mitochondria have a double membrane. Endosymbiotic theory explains this as"
+],
+"topicName": "Origins of Cell Compartmentalization",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.2": {
+"course": "AP Biology",
+"stems": [
+"The folding of the inner mitochondrial membrane into cristae is an adaptation that",
+"In chloroplasts, the light-dependent reactions occur in the",
+"A large central vacuole in plant cells helps the plant by",
+"The Krebs (citric acid) cycle takes place in the",
+"A cell has a mutation that prevents lysosomes from fusing with vesicles. The most likely result is"
+],
+"topicName": "Cell Structure and Function",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.3": {
+"course": "AP Biology",
+"stems": [
+"A cube-shaped cell with 2 µm sides has what surface area-to-volume ratio?",
+"As a cell grows larger without changing shape, its surface area-to-volume ratio",
+"Which of the following cells would exchange materials with its environment most efficiently?",
+"Cells lining the small intestine have microvilli. The main advantage is",
+"A cube-shaped cell with 3 µm sides has a surface area-to-volume ratio of"
+],
+"topicName": "Cell Size",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.4": {
+"course": "AP Biology",
+"stems": [
+"The fluid mosaic model describes the plasma membrane as",
+"Cholesterol in animal cell membranes",
+"Glycoproteins on the outer surface of the plasma membrane mainly function in",
+"A transmembrane protein most likely has",
+"Which cell wall component is correctly matched with its organism?"
+],
+"topicName": "Plasma Membranes",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.5": {
+"course": "AP Biology",
+"stems": [
+"Which molecule can diffuse directly through the phospholipid bilayer most easily?",
+"Ions such as K⁺ cannot easily cross the lipid bilayer because",
+"Selective permeability is important because it",
+"Although water is polar, small amounts cross the bilayer directly. Large amounts cross quickly through"
+],
+"topicName": "Membrane Permeability",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.6": {
+"course": "AP Biology",
+"stems": [
+"Which process requires the direct input of ATP?",
+"For each ATP hydrolyzed, the sodium-potassium pump moves",
+"A white blood cell engulfs a bacterium by wrapping its membrane around it. This process is",
+"Neurons release neurotransmitters from vesicles that fuse with the plasma membrane. This process is",
+"Cells take in cholesterol-carrying LDL particles only after they bind specific surface proteins. This is"
+],
+"topicName": "Membrane Transport",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.7": {
+"course": "AP Biology",
+"stems": [
+"Facilitated diffusion differs from simple diffusion because it",
+"A graph shows that the rate of glucose uptake levels off at high external glucose concentrations. The best explanation is that",
+"Ion channels in nerve cell membranes allow",
+"Which molecule most likely moves by facilitated diffusion?"
+],
+"topicName": "Facilitated Diffusion",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.8": {
+"course": "AP Biology",
+"stems": [
+"A red blood cell is placed in distilled water. What will happen?",
+"Water moves by osmosis from a region of",
+"What is the solute potential of a 0.1 M sucrose solution at 22 °C? (Ψs = −iCRT, R = 0.0831 L·bar/mol·K)",
+"Compared with 0.1 M sucrose at the same temperature, 0.1 M NaCl has a solute potential that is",
+"Potato cores are placed in sucrose solutions. Mass change is zero at about 0.3 M. This suggests",
+"A freshwater Paramecium uses a contractile vacuole to"
+],
+"topicName": "Tonicity and Osmoregulation",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|2.9": {
+"course": "AP Biology",
+"stems": [
+"The sodium-glucose cotransporter moves glucose into intestinal cells against its gradient. The energy comes from",
+"Plant cells load sucrose into phloem using a H⁺/sucrose cotransporter. The H⁺ gradient is established by",
+"A drug inhibits the Na⁺/K⁺ ATPase. What would be the most immediate effect?",
+"Membrane potential in animal cells is primarily established by"
+],
+"topicName": "Mechanisms of Transport",
+"unitN": 2,
+"unitName": "Cell Structure and Function"
+},
+"bio|3.1": {
+"course": "AP Biology",
+"stems": [
+"An enzyme's specificity for its substrate depends mainly on",
+"In the induced-fit model,",
+"Most enzymes are",
+"A mutation replaces a positively charged amino acid in an enzyme's active site with a nonpolar one. The substrate is negatively charged. The most likely result is"
+],
+"topicName": "Enzyme Structure",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.2": {
+"course": "AP Biology",
+"stems": [
+"Enzymes speed up reactions by",
+"Which statement about an enzyme-catalyzed reaction is true?",
+"An energy diagram compares a reaction with and without an enzyme. The enzyme-catalyzed curve has",
+"In an experiment, product formation is fast at first and then levels off. The most likely reason is"
+],
+"topicName": "Enzyme Catalysis",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.3": {
+"course": "AP Biology",
+"stems": [
+"A competitive inhibitor",
+"A noncompetitive inhibitor lowers the maximum rate of reaction even at high substrate concentration because it",
+"Pepsin works in the stomach (pH 2). If moved to the small intestine (pH 8), it would",
+"Cooling an enzyme from 37 °C to 10 °C usually",
+"The end product of a metabolic pathway binds to the first enzyme and inhibits it. This is an example of",
+"A non-protein helper, such as Mg²⁺ or a vitamin-derived coenzyme, that an enzyme needs to function is called a"
+],
+"topicName": "Environmental Impacts on Enzyme Function",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.4": {
+"course": "AP Biology",
+"stems": [
+"Cells drive endergonic reactions by",
+"Organisms need a constant input of energy because",
+"ATP releases energy when",
+"If a step in a metabolic pathway is blocked, what happens to the intermediates?"
+],
+"topicName": "Cellular Energy",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.5": {
+"course": "AP Biology",
+"stems": [
+"In an experiment, plants are given water labeled with ¹⁸O. Where will the ¹⁸O appear?",
+"The Calvin cycle directly uses which products of the light reactions?",
+"The enzyme that fixes CO₂ in the Calvin cycle is",
+"During the light reactions, ATP is made when",
+"Chlorophyll a absorbs mostly red and blue light. Leaves appear green because",
+"A drug blocks electron flow between photosystem II and photosystem I. The immediate effect is"
+],
+"topicName": "Photosynthesis",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.6": {
+"course": "AP Biology",
+"stems": [
+"Glycolysis occurs in the ___ and produces a net of ___ ATP per glucose.",
+"The final electron acceptor in aerobic respiration is",
+"The poison cyanide blocks the transfer of electrons to O₂. The immediate effect on a cell is",
+"The main function of fermentation is to",
+"The chemical 2,4-dinitrophenol (DNP) makes the inner mitochondrial membrane leaky to H⁺. The expected effect is",
+"CO₂ released during cellular respiration is produced during"
+],
+"topicName": "Cellular Respiration",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|3.7": {
+"course": "AP Biology",
+"stems": [
+"Some bacteria live in hot springs above 80 °C. Their enzymes most likely",
+"Plants have several photosynthetic pigments (chlorophyll a, chlorophyll b, carotenoids). How does this variation benefit them?",
+"Having multiple forms of hemoglobin (fetal and adult) is advantageous because",
+"A population with greater variation in enzyme alleles is more likely to"
+],
+"topicName": "Fitness",
+"unitN": 3,
+"unitName": "Cellular Energetics"
+},
+"bio|4.1": {
+"course": "AP Biology",
+"stems": [
+"Neurotransmitters diffuse across a synapse to a nearby cell. This is an example of",
+"Insulin released from the pancreas travels through the blood to cells throughout the body. This is",
+"Plant cells can exchange small molecules directly through",
+"Bacteria such as Vibrio fischeri glow only when their population density is high. This coordination depends on",
+"A T cell recognizes an antigen on the surface of an antigen-presenting cell by direct contact. This is"
+],
+"topicName": "Cell Communication",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.2": {
+"course": "AP Biology",
+"stems": [
+"The three stages of cell signaling, in order, are",
+"Steroid hormones like testosterone can bind receptors inside the cell because they",
+"When a ligand binds a receptor protein, the receptor typically",
+"G protein-coupled receptors are activated when",
+"Receptor tyrosine kinases, when activated, typically"
+],
+"topicName": "Introduction to Signal Transduction",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.3": {
+"course": "AP Biology",
+"stems": [
+"Cyclic AMP (cAMP) acts as a",
+"A phosphorylation cascade amplifies a signal because",
+"Protein phosphatases in signaling pathways",
+"Epinephrine binding to liver cells causes glycogen breakdown without epinephrine entering the cell. This shows that",
+"Which cellular response could result from a signal transduction pathway?"
+],
+"topicName": "Signal Transduction",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.4": {
+"course": "AP Biology",
+"stems": [
+"Cholera toxin keeps a G protein permanently active in intestinal cells. The result is",
+"A mutation makes the Ras protein unable to hydrolyze GTP. The most likely outcome is",
+"A drug that blocks a hormone receptor would most likely",
+"In type 2 diabetes, cells respond poorly to insulin. This is best described as a change in"
+],
+"topicName": "Changes in Signal Transduction Pathways",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.5": {
+"course": "AP Biology",
+"stems": [
+"After a meal, blood glucose rises, insulin is released, and glucose levels fall. This is an example of",
+"During childbirth, uterine contractions stimulate oxytocin release, which causes stronger contractions. This is",
+"Ripening fruit releases ethylene, which causes nearby fruit to ripen and release more ethylene. This is",
+"When body temperature rises, sweating increases and blood vessels near the skin dilate. This is",
+"When blood glucose is low, the pancreas releases"
+],
+"topicName": "Feedback",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.6": {
+"course": "AP Biology",
+"stems": [
+"DNA replication occurs during which phase?",
+"During which phase of mitosis do sister chromatids separate and move to opposite poles?",
+"A human somatic cell (2n = 46) completes mitosis. Each daughter cell has",
+"Cells that stop dividing, such as mature neurons, exit the cycle into",
+"Chromosomes line up along the middle of the cell during",
+"A cell has 20 units of DNA in G1. How much DNA does it have in G2?"
+],
+"topicName": "Cell Cycle",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|4.7": {
+"course": "AP Biology",
+"stems": [
+"Cyclins regulate the cell cycle by",
+"The protein p53 is called a tumor suppressor because it",
+"The M checkpoint (spindle checkpoint) ensures that",
+"Proto-oncogenes normally",
+"Cancer cells often",
+"Programmed cell death that removes damaged or unneeded cells is called"
+],
+"topicName": "Regulation of Cell Cycle",
+"unitN": 4,
+"unitName": "Cell Communication and Cell Cycle"
+},
+"bio|5.1": {
+"course": "AP Biology",
+"stems": [
+"In humans (2n = 46), how many chromosomes are in each cell produced by meiosis?",
+"Homologous chromosomes separate during",
+"Which event occurs in meiosis but not in mitosis?",
+"A cell at the end of meiosis I is",
+"Meiosis produces"
+],
+"topicName": "Meiosis",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|5.2": {
+"course": "AP Biology",
+"stems": [
+"Crossing over occurs during",
+"Ignoring crossing over, how many different combinations of chromosomes can a human (n = 23) gamete receive through independent assortment?",
+"Random fertilization increases genetic variation because",
+"Failure of homologous chromosomes to separate in meiosis I is called",
+"Why is sexual reproduction advantageous in a changing environment?"
+],
+"topicName": "Meiosis and Genetic Diversity",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|5.3": {
+"course": "AP Biology",
+"stems": [
+"Two heterozygous pea plants (Pp × Pp) are crossed. P (purple) is dominant to p (white). The expected phenotypic ratio is",
+"AaBb × AaBb (independent assortment). What fraction of offspring will be aabb?",
+"AaBbCc × AaBbCc. What is the probability of an AABBCC offspring?",
+"A test cross is used to determine an individual's genotype by crossing it with",
+"In a chi-square test with 2 phenotypic classes, the degrees of freedom and critical value at p = 0.05 are",
+"Two unaffected parents have an affected child. The trait is most likely"
+],
+"topicName": "Mendelian Genetics",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|5.4": {
+"course": "AP Biology",
+"stems": [
+"Crossing red and white snapdragons produces pink offspring. Crossing two pinks gives 1 red : 2 pink : 1 white. This is",
+"A person with type AB blood expresses both A and B antigens. This is",
+"A carrier woman (XᴮXᵇ) has children with a man with normal color vision (XᴮY). What fraction of their sons are expected to be color-blind?",
+"Genes A and B show 12% recombinant offspring. This suggests they are",
+"A disease caused by a mitochondrial DNA mutation is passed",
+"Human height shows continuous variation in a bell-shaped distribution. This is most consistent with"
+],
+"topicName": "Non-Mendelian Genetics",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|5.5": {
+"course": "AP Biology",
+"stems": [
+"Hydrangeas with the same genotype produce blue flowers in acidic soil and pink flowers in basic soil. This shows",
+"Himalayan rabbits have dark fur on their ears, nose, and feet. The best explanation is",
+"People with phenylketonuria (PKU) can develop normally if they follow a low-phenylalanine diet. This shows",
+"In many turtle species, the incubation temperature of eggs determines the sex of the hatchlings. This is an example of"
+],
+"topicName": "Environmental Effects on Phenotype",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|5.6": {
+"course": "AP Biology",
+"stems": [
+"Down syndrome most commonly results from",
+"A person with Klinefelter syndrome has which karyotype?",
+"Thomas Morgan's fruit fly experiments with white eyes provided evidence that",
+"A karyotype can be used to detect",
+"Why are X-linked recessive disorders more common in males?"
+],
+"topicName": "Chromosomal Inheritance",
+"unitN": 5,
+"unitName": "Heredity"
+},
+"bio|6.1": {
+"course": "AP Biology",
+"stems": [
+"Hershey and Chase used ³²P and ³⁵S to label phage. They found ³²P inside infected bacteria, which showed that",
+"Compared with eukaryotic chromosomes, a typical prokaryotic chromosome is",
+"Plasmids are",
+"In eukaryotes, DNA is packaged by wrapping around",
+"Griffith found that heat-killed virulent bacteria could make harmless bacteria virulent. This process is called"
+],
+"topicName": "DNA and RNA Structure",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.2": {
+"course": "AP Biology",
+"stems": [
+"Meselson and Stahl grew E. coli in ¹⁵N, then switched them to ¹⁴N. After two rounds of replication, the DNA would be",
+"DNA polymerase can add nucleotides only to",
+"Okazaki fragments are formed on the",
+"Which enzyme unwinds the double helix at the replication fork?",
+"DNA ligase",
+"DNA polymerase needs a primer because it cannot start a new strand. The primer is made by"
+],
+"topicName": "Replication",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.3": {
+"course": "AP Biology",
+"stems": [
+"A DNA template strand reads 3′-TAC GGA TTC-5′. What is the mRNA sequence?",
+"Which modifications happen to eukaryotic pre-mRNA before it leaves the nucleus?",
+"Alternative splicing allows",
+"RNA polymerase binds to a region of DNA called the",
+"During transcription, RNA is synthesized in which direction?"
+],
+"topicName": "Transcription and RNA Processing",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.4": {
+"course": "AP Biology",
+"stems": [
+"The mRNA codon 5′-AUG-3′ pairs with which tRNA anticodon?",
+"The fact that almost all organisms use the same genetic code is evidence of",
+"Several codons can code for the same amino acid. This is called",
+"In prokaryotes, translation can begin before transcription ends because",
+"Translation ends when",
+"Retroviruses such as HIV use reverse transcriptase to"
+],
+"topicName": "Translation",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.5": {
+"course": "AP Biology",
+"stems": [
+"In the lac operon, when lactose is present,",
+"The trp operon is a repressible operon, meaning",
+"Histone acetylation generally",
+"DNA methylation of a gene's promoter usually",
+"MicroRNAs (miRNAs) regulate gene expression by",
+"Enhancers are DNA regions that"
+],
+"topicName": "Regulation of Gene Expression",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.6": {
+"course": "AP Biology",
+"stems": [
+"A liver cell and a nerve cell from the same person differ in structure and function mainly because they",
+"A specific combination of transcription factors in a cell determines",
+"Homeotic (Hox) genes are important in development because they",
+"Stem cells differ from differentiated cells in that stem cells"
+],
+"topicName": "Gene Expression and Cell Specialization",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.7": {
+"course": "AP Biology",
+"stems": [
+"A single-base substitution changes a codon from UAC (Tyr) to UAG (stop). This is a",
+"Which mutation is most likely to severely disrupt a protein?",
+"Bacteria can take up DNA from their environment. This form of horizontal gene transfer is",
+"Antibiotic resistance genes often spread between bacterial species through",
+"A mutation that changes one amino acid to another with similar chemical properties is most likely to have",
+"Why are mutations important for evolution?"
+],
+"topicName": "Mutations",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|6.8": {
+"course": "AP Biology",
+"stems": [
+"In gel electrophoresis, DNA fragments move toward the positive electrode because",
+"A gel shows three bands: 500 bp, 1,200 bp, and 3,000 bp. Which band traveled farthest from the wells?",
+"The three steps of each PCR cycle, in order, are",
+"Starting with one DNA molecule, how many copies does PCR produce after 10 cycles, ideally?",
+"Restriction enzymes are useful in making recombinant DNA because they",
+"After inserting a plasmid with an ampicillin-resistance gene into bacteria, scientists grow them on ampicillin plates. The purpose is to"
+],
+"topicName": "Biotechnology",
+"unitN": 6,
+"unitName": "Gene Expression and Regulation"
+},
+"bio|7.1": {
+"course": "AP Biology",
+"stems": [
+"Which statement best describes natural selection?",
+"The smallest unit that can evolve is",
+"Darwin's reasoning about natural selection was influenced by the observation that",
+"Evolutionary fitness is measured by"
+],
+"topicName": "Introduction to Natural Selection",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.10": {
+"course": "AP Biology",
+"stems": [
+"Two frog species live in the same pond but breed in different months. This is",
+"A horse and a donkey produce a sterile mule. This is",
+"A canyon forms and splits a squirrel population in two. Over time, the two groups become separate species. This is",
+"Sympatric speciation in plants often happens through",
+"The fossil record shows long periods of little change broken by short periods of rapid change. This pattern is called",
+"A single ancestral species rapidly diversifies into many species that fill different niches, like Hawaiian honeycreepers. This is"
+],
+"topicName": "Speciation",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.11": {
+"course": "AP Biology",
+"stems": [
+"Why was the Irish potato famine so devastating?",
+"Individuals heterozygous for the sickle-cell allele are more resistant to malaria. In malaria regions, this keeps the allele in the population through",
+"A population with high genetic diversity is more likely to",
+"Cavendish bananas are propagated as clones. Scientists worry about them because"
+],
+"topicName": "Variations in Populations",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.12": {
+"course": "AP Biology",
+"stems": [
+"The Miller-Urey experiment showed that",
+"The RNA world hypothesis proposes that RNA was the first genetic material because RNA",
+"Earth formed about 4.6 billion years ago. The earliest evidence of life dates to about",
+"Protocells formed from lipid vesicles would have been an important step toward life because they"
+],
+"topicName": "Origins of Life on Earth",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.2": {
+"course": "AP Biology",
+"stems": [
+"Human birth weights cluster around an intermediate value because very small and very large babies have lower survival. This is",
+"After a drought, Galápagos finches with deeper beaks survived better because they could crack larger, harder seeds. This is",
+"In a population, both small and large seed-eating birds survive better than medium-sized ones, because only small and large seeds are available. This is",
+"During the Industrial Revolution, dark peppered moths increased in soot-covered areas. This occurred because",
+"Male peacocks have elaborate tails that attract females but make them easier for predators to catch. This trait is maintained by",
+"Which is required for natural selection to change a population?"
+],
+"topicName": "Natural Selection",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.3": {
+"course": "AP Biology",
+"stems": [
+"Broccoli, cabbage, kale, and cauliflower all came from wild mustard. This is an example of",
+"Artificial selection is similar to natural selection because both",
+"Many dog breeds have health problems, such as hip dysplasia. This is best explained by",
+"Dairy cattle bred for high milk production over many generations illustrate that"
+],
+"topicName": "Artificial Selection",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.4": {
+"course": "AP Biology",
+"stems": [
+"A storm randomly kills most of a small beetle population, and the survivors' allele frequencies differ from the original population's. This is",
+"A few individuals colonize an island, and the new population has allele frequencies unlike the source population. This is",
+"Genetic drift has the greatest effect on allele frequencies in",
+"Pollen carried by wind between two plant populations tends to",
+"Cheetahs have very low genetic diversity. This is most likely due to"
+],
+"topicName": "Population Genetics",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.5": {
+"course": "AP Biology",
+"stems": [
+"In a population in Hardy-Weinberg equilibrium, 16% of individuals show the recessive phenotype. What is the frequency of the dominant allele (p)?",
+"Using the same population (q² = 0.16), what percentage of individuals are heterozygous?",
+"A recessive disorder affects 1 in 10,000 people. About what fraction of the population are carriers?",
+"Which condition is required for Hardy-Weinberg equilibrium?",
+"If a population's allele frequencies change significantly over generations, you can conclude that"
+],
+"topicName": "Hardy-Weinberg Equilibrium",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.6": {
+"course": "AP Biology",
+"stems": [
+"The forelimbs of humans, cats, whales, and bats have the same bone arrangement but different functions. These are",
+"The wings of bats and the wings of insects are",
+"Radiometric dating of fossils is useful because it",
+"Comparing the amino acid sequence of cytochrome c among species shows that humans and chimps differ by 0 amino acids and humans and yeast by 44. This supports",
+"Whales have small pelvic bones that don't support hind limbs. These are"
+],
+"topicName": "Evidence of Evolution",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.7": {
+"course": "AP Biology",
+"stems": [
+"Which features are shared by all eukaryotes and support their common ancestry?",
+"Which of the following is found in all living organisms, supporting a common ancestor?",
+"Similar metabolic pathways, such as glycolysis, found across all domains of life suggest",
+"Ribosomal RNA sequences are used to compare distantly related organisms because rRNA"
+],
+"topicName": "Common Ancestry",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.8": {
+"course": "AP Biology",
+"stems": [
+"A new flu vaccine is needed every year mostly because",
+"HIV patients are given combinations of several drugs because",
+"Overuse of antibiotics has led to more antibiotic-resistant bacteria because",
+"Insects exposed to the same pesticide for many generations often become resistant. This shows that"
+],
+"topicName": "Continuing Evolution",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|7.9": {
+"course": "AP Biology",
+"stems": [
+"On a phylogenetic tree, a node (branch point) represents",
+"A cladogram shows ((A, B), C). Which statement is correct?",
+"An outgroup in a phylogenetic analysis is",
+"Shared derived characters are used to build cladograms because they",
+"The principle of parsimony states that the best phylogenetic tree is the one that",
+"Trees based on DNA sequences are often considered more reliable than trees based only on morphology because"
+],
+"topicName": "Phylogeny",
+"unitN": 7,
+"unitName": "Natural Selection"
+},
+"bio|8.1": {
+"course": "AP Biology",
+"stems": [
+"A plant grows toward light because auxin builds up on its shaded side and causes cell elongation there. This is",
+"Honeybees perform a waggle dance to communicate the location of food. This is an example of",
+"A woodlouse moves faster in dry areas and slower in humid ones, so it ends up spending more time in humid areas. This is",
+"A ground squirrel gives an alarm call that warns relatives but puts itself at risk. This behavior can be explained by",
+"Many plants flower based on the length of night. This response is called"
+],
+"topicName": "Responses to the Environment",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.2": {
+"course": "AP Biology",
+"stems": [
+"Producers in an ecosystem capture 10,000 kcal. About how much energy reaches tertiary consumers?",
+"Why is only about 10% of energy transferred between trophic levels?",
+"Compared with ectotherms, endotherms",
+"Net primary productivity (NPP) is",
+"Which biogeochemical cycle has no significant atmospheric component?",
+"Nitrogen-fixing bacteria convert"
+],
+"topicName": "Energy Flow Through Ecosystems",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.3": {
+"course": "AP Biology",
+"stems": [
+"A population of 400 grows exponentially with r = 0.05 per year. What is dN/dt?",
+"A population has N = 1,000, rmax = 0.2, and K = 1,500. Using the logistic model, the growth rate is about",
+"In logistic growth, the population grows fastest when N is",
+"A J-shaped growth curve indicates",
+"An S-shaped (sigmoid) growth curve levels off because"
+],
+"topicName": "Population Ecology",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.4": {
+"course": "AP Biology",
+"stems": [
+"Which is a density-dependent limiting factor?",
+"A severe frost kills 80% of an insect population no matter how dense it is. The frost is a",
+"As a deer population increases, the amount of food per individual decreases and birth rates drop. This shows",
+"Snowshoe hare and lynx populations rise and fall in linked cycles. This pattern is best explained by"
+],
+"topicName": "Effect of Density of Populations",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.5": {
+"course": "AP Biology",
+"stems": [
+"A community has three species with 5, 5, and 10 individuals. What is Simpson's diversity index (D = 1 − Σ(n/N)²)?",
+"Oxpeckers eat ticks off rhinos, and both species benefit. This relationship is",
+"Barnacles attach to whales, benefiting from transport while the whale is unaffected. This is",
+"Two species of warblers feed in different parts of the same tree. This is an example of",
+"The competitive exclusion principle states that",
+"When sea otters were removed from kelp forests, sea urchin populations exploded and kelp forests collapsed. Sea otters are"
+],
+"topicName": "Community Ecology",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.6": {
+"course": "AP Biology",
+"stems": [
+"Ecosystems with greater biodiversity tend to",
+"Removing which organisms would most likely have the greatest effect on an ecosystem?",
+"Why does genetic diversity within a species matter for conservation?",
+"Loss of a keystone species usually causes"
+],
+"topicName": "Biodiversity",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"bio|8.7": {
+"course": "AP Biology",
+"stems": [
+"Fertilizer runoff into a lake causes algal blooms, then fish die-offs. The fish die mainly because",
+"Invasive species often spread rapidly because they",
+"DDT concentrations were much higher in eagles than in fish or plankton. This is",
+"Ecological succession on bare rock after a glacier retreats, starting with lichens, is",
+"Rising global temperatures are causing some species' ranges to shift toward the poles. This is an example of",
+"Which human activity most directly reduces biodiversity worldwide?"
+],
+"topicName": "Disruptions to Ecosystems",
+"unitN": 8,
+"unitName": "Ecology"
+},
+"hug|1.1": {
+"course": "AP Human Geography",
+"stems": [
+"The Mercator projection is useful for navigation because it",
+"A map shows the percentage of each county's population that voted for a candidate, using shades of one color. This is a",
+"A map that resizes countries according to their population rather than land area is a",
+"Contour lines on a topographic map are an example of",
+"A map at a scale of 1:24,000 compared with a map at 1:1,000,000 shows",
+"The Gall-Peters projection is often chosen to"
+],
+"topicName": "Introduction to Maps",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.2": {
+"course": "AP Human Geography",
+"stems": [
+"A geographer interviews residents about how safe they feel in different neighborhoods. This is",
+"Which technology combines layers of spatial data to analyze patterns, such as overlaying flood zones and housing?",
+"Satellite imagery used to monitor deforestation in the Amazon is an example of",
+"A ride-share app pinpoints a user's exact location. This relies on",
+"A national census is an example of"
+],
+"topicName": "Geographic Data",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.3": {
+"course": "AP Human Geography",
+"stems": [
+"During a disease outbreak, officials map where cases occur to find the source. This shows geographic data being used to",
+"City planners use traffic data and GIS to decide where to build a new bus line. This is an application of geographic data at the",
+"A person's internal representation of places they know, such as the route to school, is a",
+"Businesses analyze consumer data by ZIP code to decide where to open new stores. This is an example of"
+],
+"topicName": "The Power of Geographic Data",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.4": {
+"course": "AP Human Geography",
+"stems": [
+"The coordinates 40.7° N, 74.0° W describe New York City's",
+"\"Chicago is located on the southwestern shore of Lake Michigan and is a major rail hub linking the eastern and western United States.\" The second part of this sentence describes Chicago's",
+"The idea that interaction between places decreases as the distance between them increases is",
+"Video calls and fast airline travel make distant places feel closer. This is",
+"The arrangement of phenomena across Earth's surface, such as clustered or dispersed, is called",
+"A town's sense of place, based on its landmarks, culture, and physical setting, describes its"
+],
+"topicName": "Spatial Concepts",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.5": {
+"course": "AP Human Geography",
+"stems": [
+"The idea that the physical environment determines human culture and development is",
+"Terraced rice fields in the Philippine mountains are an example of",
+"Draining wetlands to build housing is an example of",
+"Using resources in a way that meets present needs without compromising future generations is",
+"Natural resources that cannot be replaced within a human lifetime, such as oil, are"
+],
+"topicName": "Human-Environmental Interaction",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.6": {
+"course": "AP Human Geography",
+"stems": [
+"A map of U.S. unemployment by state shows the Midwest average. A county map shows sharp differences within one state. This shows that",
+"Studying the spread of COVID-19 among countries uses which scale of analysis?",
+"Comparing voting patterns among neighborhoods in one city uses which scale?",
+"Why should geographers be careful when drawing conclusions from national-scale data?"
+],
+"topicName": "Scales of Analysis",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|1.7": {
+"course": "AP Human Geography",
+"stems": [
+"The area served by a pizza delivery restaurant is an example of a",
+"The Corn Belt, defined by a high share of land planted in corn, is a",
+"\"The South\" in the United States, defined by people's feelings and identity, is a",
+"Regional boundaries are often contested because",
+"A newspaper's circulation area is best described as a"
+],
+"topicName": "Regional Analysis",
+"unitN": 1,
+"unitName": "Thinking Geographically"
+},
+"hug|2.1": {
+"course": "AP Human Geography",
+"stems": [
+"Arithmetic density is calculated as",
+"Egypt has a high physiological density because",
+"Agricultural density (farmers per unit of arable land) is typically higher in",
+"Which region is one of the world's largest population clusters?",
+"Most of the world's population lives"
+],
+"topicName": "Population Distribution",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.10": {
+"course": "AP Human Geography",
+"stems": [
+"A family leaves Syria because of civil war. War is a",
+"Ravenstein's laws of migration state that",
+"An obstacle that prevents a migrant from reaching their intended destination, such as strict border laws, is an",
+"A migrant heading to a big city takes a good job in a town along the way and stays. This is an",
+"The gravity model predicts that migration between two places is"
+],
+"topicName": "Causes of Migration",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.11": {
+"course": "AP Human Geography",
+"stems": [
+"The transatlantic slave trade is an example of",
+"A person who flees their country because of well-founded fear of persecution and crosses an international border is a",
+"People forced from their homes by conflict who remain within their own country are",
+"Migrants who join family members already settled in a new country are part of",
+"A Turkish worker moves to Germany temporarily to fill a labor shortage. This is an example of",
+"Herders who move their livestock seasonally between mountain and lowland pastures practice"
+],
+"topicName": "Forced and Voluntary Migration",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.12": {
+"course": "AP Human Geography",
+"stems": [
+"Money sent home by migrants to their families is called",
+"The emigration of highly educated professionals from a less developed country is known as",
+"A country that receives many immigrants may experience",
+"Emigration of many young adult men from a rural area is likely to cause",
+"Areas that receive many migrants may develop ethnic neighborhoods, such as Chinatowns. This is an example of migration affecting"
+],
+"topicName": "Effects of Migration",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.2": {
+"course": "AP Human Geography",
+"stems": [
+"A country with very high physiological density may face",
+"Rapid population growth in cities can strain",
+"Uneven population distribution in a country can lead to",
+"Carrying capacity refers to"
+],
+"topicName": "Consequences of Population Distribution",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.3": {
+"course": "AP Human Geography",
+"stems": [
+"A population pyramid with a wide base and narrow top most likely represents a country with",
+"A population pyramid shaped like a column or slightly wider at the top indicates",
+"A population pyramid shows an unusually large number of males aged 20–40. The most likely explanation is",
+"The sex ratio is",
+"A dip in a population pyramid in a specific age group 20 years earlier might reflect"
+],
+"topicName": "Population Composition",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.4": {
+"course": "AP Human Geography",
+"stems": [
+"A country's CBR is 30 and its CDR is 10 per 1,000. Its rate of natural increase (RNI) is",
+"Using the rule of 70, a population growing at 2% per year will double in about",
+"Total fertility rate (TFR) is",
+"Infant mortality rate (IMR) is a useful indicator of",
+"The dependency ratio compares"
+],
+"topicName": "Population Dynamics",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.5": {
+"course": "AP Human Geography",
+"stems": [
+"In Stage 2 of the Demographic Transition Model,",
+"The main reason birth rates fall in Stage 3 is",
+"A country with CBR 10, CDR 11, and an aging population is most likely in",
+"A criticism of the Demographic Transition Model is that",
+"Most countries in sub-Saharan Africa today are in"
+],
+"topicName": "The Demographic Transition Model",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.6": {
+"course": "AP Human Geography",
+"stems": [
+"Thomas Malthus argued that",
+"A major criticism of Malthus is that he",
+"Neo-Malthusians expand Malthus's ideas by arguing that",
+"Ester Boserup's view, which contrasts with Malthus, is that"
+],
+"topicName": "Malthusian Theory",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.7": {
+"course": "AP Human Geography",
+"stems": [
+"China's one-child policy (1979–2015) is an example of",
+"France offers generous child allowances and paid parental leave to encourage larger families. This is",
+"An unintended consequence of China's one-child policy was",
+"Immigration policies that favor highly skilled workers, like Canada's points system, are designed to"
+],
+"topicName": "Population Policies",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.8": {
+"course": "AP Human Geography",
+"stems": [
+"As women's access to education and paid work increases, fertility rates usually",
+"Improvements in women's rights and reproductive health care are associated with",
+"In many countries, women are marrying later and having children later. One demographic effect is",
+"Which change is most associated with countries moving from Stage 2 to Stage 3 of the DTM?"
+],
+"topicName": "Women and Demographic Change",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|2.9": {
+"course": "AP Human Geography",
+"stems": [
+"A country with a large share of people over 65 is likely to face",
+"Countries with aging populations may respond by",
+"The elderly dependency ratio increases when",
+"Which country is best known for having one of the world's oldest populations?"
+],
+"topicName": "Aging Populations",
+"unitN": 2,
+"unitName": "Population and Migration Patterns and Processes"
+},
+"hug|3.1": {
+"course": "AP Human Geography",
+"stems": [
+"Culture traits include",
+"An attitude that one's own culture is superior to others is",
+"Evaluating another culture's practices based on that culture's own values is",
+"A Korean restaurant opens in a Mexican neighborhood of Los Angeles and serves kimchi tacos. This blend of traits reflects"
+],
+"topicName": "Introduction to Culture",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.2": {
+"course": "AP Human Geography",
+"stems": [
+"The visible imprint of human activity on the land, such as buildings, fields, and signs, is the",
+"Layers of different cultural influences on a place over time, such as Spanish missions and later American buildings in San Antonio, show",
+"Mosques with minarets in a city's skyline are an example of",
+"Streets named after saints and a central plaza with a cathedral in Latin American cities reflect",
+"Attachment to a place that gives people a sense of identity is known as"
+],
+"topicName": "Cultural Landscapes",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.3": {
+"course": "AP Human Geography",
+"stems": [
+"The belief that a particular place belongs to a group because of their ethnic identity is related to",
+"Ethnic enclaves such as Little Havana in Miami form because",
+"Gender roles that differ from place to place are an example of",
+"Architecture that uses local materials and traditional designs, like adobe homes in the Southwest, is"
+],
+"topicName": "Cultural Patterns",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.4": {
+"course": "AP Human Geography",
+"stems": [
+"A fashion trend that starts in New York, then spreads to Los Angeles and Chicago before reaching smaller towns, illustrates",
+"A viral video spreading rapidly from person to person, regardless of hierarchy, is",
+"McDonald's in India serves the vegetarian McAloo Tikki instead of beef burgers. This is",
+"Irish immigrants bringing St. Patrick's Day celebrations to Boston is",
+"The spread of Christianity through the Roman Empire, first to urban centers and then outward, involved",
+"The point where a culture trait originates is called its"
+],
+"topicName": "Types of Diffusion",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.5": {
+"course": "AP Human Geography",
+"stems": [
+"English became widespread in India, Nigeria, and Australia mainly because of",
+"The Silk Road contributed to the diffusion of",
+"Spanish and Portuguese are the dominant languages in Latin America because of",
+"The spread of Islam across North Africa in the 7th–8th centuries occurred largely through"
+],
+"topicName": "Historical Causes of Diffusion",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.6": {
+"course": "AP Human Geography",
+"stems": [
+"K-pop gaining fans around the world through streaming platforms is an example of",
+"Critics argue that global chains like Starbucks lead to",
+"The adoption of another culture's traits while still keeping one's own culture is",
+"Immigrants whose grandchildren speak only English and no longer practice their ancestors' traditions have experienced",
+"Popular culture differs from folk culture in that popular culture"
+],
+"topicName": "Contemporary Causes of Diffusion",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.7": {
+"course": "AP Human Geography",
+"stems": [
+"Which religions are universalizing religions that actively seek converts?",
+"Hinduism is considered an ethnic religion because it",
+"Buddhism originated in",
+"English, Hindi, Spanish, and Persian all belong to which language family?",
+"The Anatolian hypothesis proposes that Proto-Indo-European spread",
+"A language used between speakers of different native languages to communicate, such as Swahili in East Africa, is a"
+],
+"topicName": "Diffusion of Religion and Language",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|3.8": {
+"course": "AP Human Geography",
+"stems": [
+"Voodoo in Haiti combines West African religious traditions with Catholicism. This is",
+"Many indigenous languages are disappearing as younger generations adopt dominant languages. This is an example of",
+"Quebec's laws requiring French on signs are an attempt to",
+"Amish communities rejecting many modern technologies show",
+"The mixing of Spanish and English words, such as \"Spanglish,\" is an example of"
+],
+"topicName": "Effects of Diffusion",
+"unitN": 3,
+"unitName": "Cultural Patterns and Processes"
+},
+"hug|4.1": {
+"course": "AP Human Geography",
+"stems": [
+"A state is best defined as",
+"A nation is",
+"Japan is often cited as an example of a",
+"The Kurds, who live across Turkey, Iraq, Iran, and Syria without their own country, are a",
+"The former Soviet Union, with dozens of ethnic groups, was a",
+"Koreans living in both North and South Korea are an example of a"
+],
+"topicName": "Introduction to Political Geography",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.10": {
+"course": "AP Human Geography",
+"stems": [
+"A shared national language and common national holidays are examples of",
+"Ethnic separatist movements are examples of",
+"Belgium's division between Dutch-speaking Flanders and French-speaking Wallonia creates",
+"Uneven economic development between regions of a country is likely to act as a",
+"A strong national sports team that the whole country supports is an example of a"
+],
+"topicName": "Consequences of Centrifugal and Centripetal Forces",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.2": {
+"course": "AP Human Geography",
+"stems": [
+"The idea that states have the right to govern their own territory without outside interference is",
+"European powers dividing Africa among themselves at the Berlin Conference (1884–85) is an example of",
+"After World War II, many African and Asian colonies gained independence. This process is called",
+"The right of a group to govern itself is known as"
+],
+"topicName": "Political Processes",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.3": {
+"course": "AP Human Geography",
+"stems": [
+"A country trying to extend its control over a region where people of its ethnicity live in another country is practicing",
+"Neocolonialism refers to",
+"Territoriality is",
+"Shatterbelts are regions that"
+],
+"topicName": "Political Power and Territoriality",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.4": {
+"course": "AP Human Geography",
+"stems": [
+"The 49th parallel boundary between the U.S. and Canada is a",
+"A boundary drawn after a cultural landscape developed, often following ethnic or religious lines, is a",
+"A boundary imposed by outside powers that ignores existing cultural patterns, like many borders in Africa, is a",
+"The Berlin Wall's remaining sections, a boundary that no longer functions, are an example of a",
+"A boundary that existed before the area was heavily populated, like much of the U.S.–Canada border, is an"
+],
+"topicName": "Defining Political Boundaries",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.5": {
+"course": "AP Human Geography",
+"stems": [
+"The UN Convention on the Law of the Sea gives coastal states an exclusive economic zone (EEZ) extending",
+"Under UNCLOS, a state's territorial sea extends",
+"Two countries disagree about where exactly a boundary line should be drawn according to a treaty. This is a",
+"Countries disagree over how to manage migration across their shared border. This is an",
+"A dispute over oil deposits that lie under a border is an"
+],
+"topicName": "The Function of Political Boundaries",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.6": {
+"course": "AP Human Geography",
+"stems": [
+"Drawing voting district boundaries to benefit one political party is",
+"Concentrating an opposing party's voters into a few districts so they win those by large margins but lose elsewhere is",
+"After each U.S. census, House seats are redistributed among states based on population. This is",
+"Spreading an opposing party's voters thinly across many districts so they are outvoted everywhere is"
+],
+"topicName": "Internal Boundaries",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.7": {
+"course": "AP Human Geography",
+"stems": [
+"A unitary state is one in which",
+"A federal state, such as the U.S. or Germany, is one in which",
+"Federal systems are often found in large, culturally diverse countries because they",
+"Which country is best described as a unitary state?"
+],
+"topicName": "Forms of Governance",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.8": {
+"course": "AP Human Geography",
+"stems": [
+"The transfer of power from a central government to regional governments is",
+"The breakup of Yugoslavia into several smaller states along ethnic lines is often called",
+"Which factor is most likely to drive devolution in a country?",
+"Physical geography, such as a remote island region far from the capital, can encourage devolution because",
+"Economic differences, such as a wealthier region resenting transfers to poorer regions, can lead to"
+],
+"topicName": "Defining Devolutionary Factors",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|4.9": {
+"course": "AP Human Geography",
+"stems": [
+"The European Union is an example of",
+"The United Kingdom's decision to leave the EU (Brexit) reflects",
+"Which is a challenge to state sovereignty?",
+"NATO is an example of a supranational organization focused on"
+],
+"topicName": "Challenges to Sovereignty",
+"unitN": 4,
+"unitName": "Political Patterns and Processes"
+},
+"hug|5.1": {
+"course": "AP Human Geography",
+"stems": [
+"Farming that uses large amounts of labor or capital on a small plot of land to get high yields is",
+"Ranching on vast areas of land with few inputs per acre is an example of",
+"Mediterranean agriculture, which grows olives, grapes, and citrus, is associated with a climate of",
+"Slash-and-burn agriculture in tropical rainforests is a form of",
+"Nomadic pastoralism is most common in"
+],
+"topicName": "Introduction to Agriculture",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.10": {
+"course": "AP Human Geography",
+"stems": [
+"Converting tropical rainforest to cattle pasture most directly leads to",
+"Desertification in the Sahel is caused in part by",
+"Soil salinization is most often caused by",
+"Terracing hillsides for farming helps to",
+"Pesticide and fertilizer runoff from farms can cause"
+],
+"topicName": "Consequences of Agricultural Practices",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.11": {
+"course": "AP Human Geography",
+"stems": [
+"Genetically modified organisms (GMOs) are controversial because",
+"Urban areas where residents lack affordable access to fresh, healthy food are called",
+"The growing demand for meat in developing countries like China is increasing",
+"The local food movement encourages people to",
+"Using crops such as corn to produce ethanol fuel can"
+],
+"topicName": "Challenges of Contemporary Agriculture",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.12": {
+"course": "AP Human Geography",
+"stems": [
+"In many developing countries, women",
+"Microloans to women farmers are intended to",
+"In developed countries, the role of women in agriculture has shifted toward",
+"Improving women's access to land, credit, and education in agriculture tends to"
+],
+"topicName": "Women in Agriculture",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.2": {
+"course": "AP Human Geography",
+"stems": [
+"The metes and bounds survey system uses",
+"The long-lot survey system, which divides land into narrow strips extending back from a river, is associated with",
+"The township and range system (Public Land Survey System) created",
+"A clustered rural settlement, where farmers live in a village and travel out to their fields, is a",
+"Houses spread out along a road or river are an example of a"
+],
+"topicName": "Settlement Patterns and Survey Methods",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.3": {
+"course": "AP Human Geography",
+"stems": [
+"The Fertile Crescent was a hearth for the domestication of",
+"Maize (corn) was first domesticated in",
+"The Columbian Exchange was",
+"The First Agricultural Revolution refers to",
+"Carl Sauer proposed that early agriculture began with"
+],
+"topicName": "Agricultural Origins and Diffusions",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.4": {
+"course": "AP Human Geography",
+"stems": [
+"The Second Agricultural Revolution was closely linked to",
+"A major demographic effect of the Second Agricultural Revolution was",
+"Which innovation is associated with the Second Agricultural Revolution?",
+"Improvements in transportation, such as railroads, during the Second Agricultural Revolution allowed"
+],
+"topicName": "The Second Agricultural Revolution",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.5": {
+"course": "AP Human Geography",
+"stems": [
+"The Green Revolution of the mid-20th century introduced",
+"A positive outcome of the Green Revolution was",
+"A criticism of the Green Revolution is that it",
+"The Green Revolution had less impact in sub-Saharan Africa than in Asia partly because"
+],
+"topicName": "The Green Revolution",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.6": {
+"course": "AP Human Geography",
+"stems": [
+"Plantation agriculture, growing crops like coffee, bananas, and sugarcane for export, is most common in",
+"Commercial grain farming, such as wheat on the Great Plains, is characterized by",
+"Dairy farms tend to be located near large cities because",
+"Wet rice farming in East and South Asia is an example of",
+"Truck farming, also called market gardening, specializes in"
+],
+"topicName": "Agricultural Production Regions",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.7": {
+"course": "AP Human Geography",
+"stems": [
+"Large corporations that control several stages of food production, from seeds to processing to distribution, are examples of",
+"A commodity chain describes",
+"Economies of scale in agriculture mean that",
+"The shift toward fewer, larger farms in the U.S. is known as"
+],
+"topicName": "Spatial Organization of Agriculture",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.8": {
+"course": "AP Human Geography",
+"stems": [
+"In the von Thünen model, which activity is located closest to the central market?",
+"In von Thünen's original model, forestry was in the second ring because",
+"The main factor determining land use in the von Thünen model is",
+"Ranching is found in the outermost ring of the von Thünen model because",
+"A limitation of the von Thünen model today is that"
+],
+"topicName": "Von Thünen Model",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|5.9": {
+"course": "AP Human Geography",
+"stems": [
+"Kenya exports cut flowers to Europe by air. This shows",
+"Many developing countries depend on exporting a few cash crops. This can make them vulnerable because",
+"Government payments to farmers to stabilize prices or support production are called",
+"Fair trade certification aims to"
+],
+"topicName": "The Global System of Agriculture",
+"unitN": 5,
+"unitName": "Agriculture and Rural Land-Use Patterns and Processes"
+},
+"hug|6.1": {
+"course": "AP Human Geography",
+"stems": [
+"The first cities developed in places like Mesopotamia mainly because",
+"Site factors that influenced the location of early cities include",
+"The growth of suburbs in the U.S. after World War II was encouraged by",
+"Rapid urbanization in developing countries today is mostly caused by",
+"People moving from cities to rural areas or small towns is called"
+],
+"topicName": "The Origin and Influences of Urbanization",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.10": {
+"course": "AP Human Geography",
+"stems": [
+"When higher-income residents move into a lower-income neighborhood, raising property values and displacing longtime residents, this is",
+"The discriminatory practice of refusing loans in minority neighborhoods, historically marked on maps, is",
+"Real estate agents who scared white homeowners into selling cheaply by claiming minorities were moving in practiced",
+"The movement of white middle-class residents from central cities to suburbs in the mid-20th century is called",
+"Squatter settlements, also called favelas or informal settlements, form because",
+"Deindustrialization in cities like Detroit led to"
+],
+"topicName": "Challenges of Urban Changes",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.11": {
+"course": "AP Human Geography",
+"stems": [
+"Brownfields are",
+"Urban heat islands occur because",
+"Which is a challenge to urban sustainability caused by sprawl?",
+"Environmental injustice in cities refers to",
+"Converting old rail lines into urban parks, like New York's High Line, is an example of"
+],
+"topicName": "Challenges of Urban Sustainability",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.2": {
+"course": "AP Human Geography",
+"stems": [
+"A city with a population of more than 10 million is a",
+"A metacity is a city with more than",
+"Most of the fastest-growing cities today are in",
+"The continuous urban region stretching from Boston to Washington, D.C., is an example of a",
+"Suburban business centers with offices and shopping, such as Tysons, Virginia, are"
+],
+"topicName": "Cities Across the World",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.3": {
+"course": "AP Human Geography",
+"stems": [
+"World cities like New York, London, and Tokyo are important because they",
+"Cities that are highly connected in global networks of trade, finance, and information are ranked by their",
+"A city whose economy relies on business and financial services connected to global markets is most likely a",
+"Globalization has influenced cities by"
+],
+"topicName": "Cities and Globalization",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.4": {
+"course": "AP Human Geography",
+"stems": [
+"According to the rank-size rule, if a country's largest city has 12 million people, its third-largest city should have about",
+"A primate city is",
+"Central place theory states that",
+"The minimum number of people needed to support a service is its",
+"The maximum distance people will travel to get a good or service is its",
+"The gravity model predicts that"
+],
+"topicName": "The Size and Distribution of Cities",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.5": {
+"course": "AP Human Geography",
+"stems": [
+"The Burgess concentric zone model describes a city as",
+"The Hoyt sector model suggests that",
+"The Harris and Ullman multiple nuclei model is best suited to cities that",
+"In the Latin American city model (Griffin-Ford), the wealthy live",
+"In the Sub-Saharan African city model (de Blij), cities often have",
+"In the Southeast Asian city model (McGee), the old colonial port zone is the focus of the city rather than"
+],
+"topicName": "The Internal Structure of Cities",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.6": {
+"course": "AP Human Geography",
+"stems": [
+"Low-density, car-dependent development spreading outward from a city is called",
+"Building on vacant or underused lots within existing urban areas is",
+"Mixed-use zoning allows",
+"Residential density is usually highest in"
+],
+"topicName": "Density and Land Use",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.7": {
+"course": "AP Human Geography",
+"stems": [
+"Transit-oriented development (TOD) concentrates housing and businesses",
+"A city's infrastructure includes",
+"Informal settlements in developing cities often lack",
+"Well-developed infrastructure tends to"
+],
+"topicName": "Infrastructure",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.8": {
+"course": "AP Human Geography",
+"stems": [
+"Smart growth policies encourage",
+"New Urbanism is a design movement that promotes",
+"Urban growth boundaries, like Portland's, are designed to",
+"Green belts around cities such as London are intended to"
+],
+"topicName": "Urban Sustainability",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|6.9": {
+"course": "AP Human Geography",
+"stems": [
+"Census tract data can help geographers analyze",
+"Qualitative urban data, such as interviews with residents, can reveal",
+"A map showing the percentage of residents with college degrees by neighborhood is best used to study",
+"Why might census data underestimate populations in informal settlements?"
+],
+"topicName": "Urban Data",
+"unitN": 6,
+"unitName": "Cities and Urban Land-Use Patterns and Processes"
+},
+"hug|7.1": {
+"course": "AP Human Geography",
+"stems": [
+"The Industrial Revolution began in Great Britain in the late 1700s partly because Britain had",
+"The Industrial Revolution spread to Western Europe and the U.S. through",
+"Industrialization increased the demand for raw materials, which encouraged",
+"A social effect of the Industrial Revolution was"
+],
+"topicName": "The Industrial Revolution",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.2": {
+"course": "AP Human Geography",
+"stems": [
+"A coal miner works in the",
+"A factory worker assembling cars works in the",
+"A software engineer researching artificial intelligence works in the",
+"A CEO or top government official making high-level decisions works in the",
+"As countries develop, the share of workers typically shifts from",
+"Alfred Weber's least cost theory states that industries locate to minimize",
+"Copper smelting reduces the weight of raw ore substantially. According to Weber, a smelter should be located",
+"Soft drink bottling adds weight (water) to the product. Weber would predict bottlers locate"
+],
+"topicName": "Economic Sectors and Patterns",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.3": {
+"course": "AP Human Geography",
+"stems": [
+"Gross National Income (GNI) per capita measures",
+"The Human Development Index (HDI) combines",
+"The Gender Inequality Index (GII) measures",
+"The Gini coefficient measures",
+"Which indicator is most likely to be higher in a less developed country?",
+"The informal economy includes"
+],
+"topicName": "Measures of Development",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.4": {
+"course": "AP Human Geography",
+"stems": [
+"As women gain more access to education and jobs, a country's",
+"The gender wage gap refers to",
+"Microfinance programs mostly lend to women because",
+"Export processing zones in many developing countries often employ"
+],
+"topicName": "Women and Economic Development",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.5": {
+"course": "AP Human Geography",
+"stems": [
+"Rostow's stages of economic growth, in order, are",
+"A criticism of Rostow's model is that",
+"Wallerstein's world-systems theory divides countries into",
+"In world-systems theory, periphery countries typically",
+"Dependency theory argues that"
+],
+"topicName": "Theories of Development",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.6": {
+"course": "AP Human Geography",
+"stems": [
+"Comparative advantage means a country should specialize in producing goods that",
+"NAFTA, replaced by the USMCA, is an example of",
+"The World Trade Organization (WTO)",
+"The International Monetary Fund (IMF) has been criticized for",
+"A country that buys more from other countries than it sells to them has a"
+],
+"topicName": "Trade and the World Economy",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.7": {
+"course": "AP Human Geography",
+"stems": [
+"When U.S. manufacturing companies move factories to countries with cheaper labor, this is",
+"The Rust Belt in the northeastern U.S. has experienced",
+"Mexican factories near the U.S. border that assemble imported parts for export are called",
+"China's Special Economic Zones, like Shenzhen, were created to",
+"The clustering of related industries in one location, like tech firms in Silicon Valley, creates",
+"Flexible production methods that keep minimal inventory and deliver parts only when needed are called"
+],
+"topicName": "Changes as a Result of the World Economy",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+},
+"hug|7.8": {
+"course": "AP Human Geography",
+"stems": [
+"The UN Sustainable Development Goals (SDGs) aim to",
+"Ecotourism can support sustainable development by",
+"A challenge to sustainable development is",
+"Renewable energy sources like wind and solar support sustainable development because they",
+"Which is an example of sustainable development in a developing country?"
+],
+"topicName": "Sustainable Development",
+"unitN": 7,
+"unitName": "Industrial and Economic Development Patterns and Processes"
+}
+}

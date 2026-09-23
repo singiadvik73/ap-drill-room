@@ -745,17 +745,25 @@ function initHosted(){
     snap.docs.forEach(d => { const x = d.data(); let qs; try { qs = JSON.parse(x.json); } catch (e) { return; } if (addCommunity({ id: d.id, course: x.course, topic: x.topic, questions: qs })) changed = true; });
     if (changed) { applyEdits(); softRerender(); }
   }, () => {});
-  if (CFG.aiEndpoint) aiProxy = async (kind, payload, signal) => {
-    const u = fbAuth.currentUser; if (!u) throw { code: "unauthorized" };
-    const token = await u.getIdToken();
-    let r;
-    try { r = await fetch(CFG.aiEndpoint.replace(/\/$/, "") + "/" + kind, { method: "POST", headers: { "content-type": "application/json", authorization: "Bearer " + token, "x-anthropic-key": apiKey() }, body: JSON.stringify(payload), signal }); }
-    catch (e) { throw { code: signal && signal.aborted ? "cancelled" : "upstream_error" }; }
-    if (r.ok) return r.json();
-    let err = {}; try { err = await r.json(); } catch (e) {}
-    const map = { sign_in: "unauthorized", bad_key: "bad_key", no_credits: "no_credits", limit: "limit", busy: "rate_limited", declined: "refused", store: "store" };
-    throw { code: map[err.error] || (r.status === 401 ? "unauthorized" : r.status === 429 ? "rate_limited" : "upstream_error") };
-  };
+  if (CFG.aiEndpoint) {
+    const relay = async (method, path, payload, signal) => {
+      const u = fbAuth.currentUser; if (!u) throw { code: "unauthorized" };
+      const token = await u.getIdToken();
+      let r;
+      try { r = await fetch(CFG.aiEndpoint.replace(/\/$/, "") + "/" + path, { method, headers: { "content-type": "application/json", authorization: "Bearer " + token }, body: payload ? JSON.stringify(payload) : undefined, signal }); }
+      catch (e) { throw { code: signal && signal.aborted ? "cancelled" : "upstream_error" }; }
+      if (r.ok) return r.json();
+      let err = {}; try { err = await r.json(); } catch (e) {}
+      const map = { sign_in: "unauthorized", bad_key: "bad_key", no_key: "no_key", no_credits: "no_credits", limit: "limit", busy: "rate_limited", declined: "refused", store: "store" };
+      throw { code: map[err.error] || (r.status === 401 ? "unauthorized" : r.status === 429 ? "rate_limited" : "upstream_error"), message: err.message };
+    };
+    aiProxy = (kind, payload, signal) => relay("POST", kind, payload, signal);
+    keyApi = {
+      status: () => relay("GET", "key"),
+      save: key => relay("PUT", "key", { key }),
+      wipe: () => relay("DELETE", "key")
+    };
+  }
   fbAuth.onAuthStateChanged(async u => {
     const prev = userId;
     if (u) {
@@ -764,8 +772,15 @@ function initHosted(){
       try { devAllowed = (await fbStore.doc("admins/" + u.uid).get()).exists; } catch (e) { devAllowed = false; }
     } else { me = null; userId = null; devAllowed = false; }
     meKnown = true;
-    if (u && !apiKey() && !prefs.aiNoticeShown) { prefs.aiNoticeShown = 1; save("apdr.prefs", prefs); setTimeout(() => toast("Signed in. AI features aren't included with a Google account. See Account for options."), 600); }
-    if (prev !== userId) { syncStarted = false; syncReady = false; clearTimeout(syncTimer); setSync("local"); }
+    keyStatus = null;
+    if (u && keyApi) {
+      try { keyStatus = await keyApi.status(); } catch (e) { keyStatus = null; }
+      // One-time move of a key saved on this device by an older version of the site into the account.
+      let legacy = ""; try { legacy = localStorage.getItem("apdr.apikey") || ""; } catch (e) {}
+      if (legacy) { try { if (!(keyStatus && keyStatus.saved)) keyStatus = await keyApi.save(legacy); } catch (e) {} try { localStorage.removeItem("apdr.apikey"); } catch (e) {} }
+      if (!(keyStatus && keyStatus.saved) && !prefs.aiNoticeShown) { prefs.aiNoticeShown = 1; save("apdr.prefs", prefs); setTimeout(() => toast("Signed in. To use AI features, add your Claude API key on the Account page."), 600); }
+    }
+    if (prev !== userId) { syncStarted = false; syncReady = false; visitConsent = false; replacingKey = false; clearTimeout(syncTimer); setSync("local"); }
     updateDevToggle(); updateAccountChip(); initSync(); softRerender();
   });
 }
@@ -812,14 +827,37 @@ function updateDevToggle(){
   b.textContent = devOn() ? "Dev mode on" : "Dev mode";
 }
 document.getElementById("dev-toggle").onclick = () => { prefs.dev = !prefs.dev; save("apdr.prefs", prefs); updateDevToggle(); toast(prefs.dev ? "Dev mode on. Tools appear on each course page." : "Dev mode off"); rerender(); };
+// Website: every visit, before the first AI request, confirm that it's billed to the user's own Claude API credits.
+function askVisitConsent(){
+  return new Promise(resolve => {
+    const wrap = document.createElement("div");
+    wrap.className = "modal"; wrap.setAttribute("role", "dialog"); wrap.setAttribute("aria-modal", "true"); wrap.setAttribute("aria-labelledby", "vc-h");
+    wrap.innerHTML = `<div class="modal-card">
+      <h2 id="vc-h">Use your Claude API credits?</h2>
+      <p><b>AI features are billed to your own Claude API account</b>, the one for the key <code>${esc((keyStatus && keyStatus.hint) || "you saved")}</code>. Each explanation or set of 5 new questions uses your Anthropic API credits.</p>
+      <p>Questions you generate are added to the shared question bank for everyone.</p>
+      <p class="muted">You'll be asked each time you open AP Drill Room. You can remove your key anytime on the Account page.</p>
+      <div class="frow"><button class="btn primary" type="button" id="vc-yes">I agree, use my API credits</button><button class="btn ghost" type="button" id="vc-no">Not now</button></div>
+    </div>`;
+    document.body.appendChild(wrap);
+    const done = ok => { wrap.remove(); if (ok) visitConsent = true; resolve(ok); };
+    wrap.querySelector("#vc-yes").onclick = () => done(true);
+    wrap.querySelector("#vc-no").onclick = () => done(false);
+    wrap.addEventListener("keydown", e => { if (e.key === "Escape") done(false); });
+    wrap.querySelector("#vc-yes").focus();
+  });
+}
+
 /* AI: one interface, two engines. On claude.ai it uses the viewer's own Claude ("sample");
    on a self-hosted site it calls your Worker, which holds your API key and builds the prompt server-side. */
 let aiProxy = null;
-const apiKey = () => { try { return localStorage.getItem("apdr.apikey") || ""; } catch (e) { return ""; } };  // never synced
-const aiOn = () => !!sample || !!(aiProxy && userId && apiKey());
+let keyApi = null, keyStatus = null;   // website: the Claude API key lives (encrypted) with the relay, never in the browser
+let visitConsent = false;               // website: asked again every time the site is opened (memory only)
+const aiOn = () => !!sample || !!(aiProxy && userId && keyStatus && keyStatus.saved);
 // claude.ai: AI runs on the viewer's own Claude usage, so ask clearly before the first request (Claude also asks).
 function ensureAiConsent(){
-  if (!sample || prefs.aiConsent) return Promise.resolve(true);
+  if (!sample) return visitConsent ? Promise.resolve(true) : askVisitConsent();
+  if (prefs.aiConsent) return Promise.resolve(true);
   return new Promise(resolve => {
     const wrap = document.createElement("div");
     wrap.className = "modal"; wrap.setAttribute("role", "dialog"); wrap.setAttribute("aria-modal", "true"); wrap.setAttribute("aria-labelledby", "cons-h");
@@ -869,7 +907,8 @@ const AI = {
 function sampleErr(e){
   const c = e && e.code;
   if (c === "unauthorized") return "Sign in to use Claude features.";
-  if (c === "bad_key") return "Your Anthropic API key was rejected. Check it on the Account page.";
+  if (c === "bad_key") return "Your Claude API key was rejected. Replace it on the Account page.";
+  if (c === "no_key") { keyStatus = { saved: false }; return "Add your Claude API key on the Account page to use AI features."; }
   if (c === "no_credits") return "Your Anthropic account is out of credits.";
   if (c === "limit") return "You've reached today's limit for this site. Try again tomorrow.";
   if (c === "store") return "Claude wrote the questions, but they couldn't be saved. Try again.";
@@ -964,7 +1003,7 @@ function renderCourse(){
         <div class="frow"><button class="btn small primary" type="button" id="ja-go">Practice the new questions</button><button class="btn small ghost" type="button" id="ja-x">Dismiss</button></div>
       </div>` : ""}
     ${IN_CLAUDE && !storageWorks() ? `<div class="notice" style="margin-bottom:18px"><b>This browser isn't saving your progress here.</b> Claude's viewer is blocking storage for this page, so answers and generated questions disappear when you close it. Use <b>Link Google account</b> on the Account page to keep them.</div>` : ""}
-    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) need Claude. ${CFG.claudeAppUrl ? `<a href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a> or add` : "Add"} your own API key on the <button type="button" class="linkbtn" id="hint-acct">Account page</button>.</p>` : ""}
+    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) use your own Claude API key. ${userId ? "Add it on the" : "Sign in, then add it on the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button>.</p>` : ""}
     ${devOn() ? `<div class="devpanel">
       <span class="devtag">Dev</span>
       <button class="btn small" type="button" id="dv-browse">Browse &amp; edit questions</button>
@@ -1657,8 +1696,7 @@ function renderAccount(){
   const all = COURSES.flatMap(c => courseQs(c)), m = mastery(all), st = streaks();
   const answered = Object.values(activity).reduce((n, a) => n + a[0], 0);
   const signed = !!userId;
-  const siteUrl = CFG.siteUrl || "", claudeUrl = CFG.claudeAppUrl || "";
-  const key = apiKey();
+  const siteUrl = CFG.siteUrl || "";
   const head = IN_CLAUDE ? { tag: "IN CLAUDE", title: "Your progress", sub: "You're using AP Drill Room inside Claude. Progress is saved in this browser. Link a Google account to keep it on the website too." }
     : signed ? { tag: "YOUR ACCOUNT", title: me.name || "Signed in", sub: "Signed in" + (me.email ? " as " + me.email : "") + "." }
     : HOSTED ? { tag: "GUEST", title: "Not signed in", sub: "Sign in to save your progress and pick up on any device." }
@@ -1701,35 +1739,28 @@ function renderAccount(){
         <p class="ederr" id="au-err" role="alert" hidden></p>
         <div class="frow"><button class="btn primary" type="submit" id="au-in">Sign in</button><button class="btn" type="button" id="au-up">Create account</button><span class="spacer"></span><button class="linkbtn" type="button" id="au-reset">Forgot password?</button></div>
       </form>
-      <p class="muted" style="font-size:12.5px">A Google account covers practice and progress. AI features (explanations and new questions) need Claude. ${claudeUrl ? `<a href="${esc(claudeUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a>, or add your own API key after signing in.` : "Add your own API key after signing in."}</p>
+      <p class="muted" style="font-size:12.5px">An account covers practice and progress. AI features (explanations and new questions) need your own Claude API key, which you can add after signing in.</p>
     </section>`;
   } else if (HOSTED && signed) {
     modeHtml = `
     <div class="acc-cards">
       <section class="acc-card">
-        <h2 class="sec">Linked accounts</h2>
-        <ul class="linklist">
-          <li><span class="okdot"></span><b>${esc(me.email ? "Google / email" : "Signed in")}</b><span class="muted">${esc(me.email || "")}</span></li>
-          <li>${links.claude ? `<span class="okdot"></span><b>Claude</b><span class="muted">Linked · last transfer ${esc(fmtDate(links.claude.at))}</span>` : `<span class="offdot"></span><b>Claude</b><span class="muted">Not linked</span>`}</li>
-        </ul>
-        <p class="muted">To bring progress from Claude here, open the Claude version and choose <b>Link Google account</b>. To take this account's progress into Claude:</p>
-        ${claudeUrl ? `<div class="frow"><a class="btn" id="lk-claude" href="${esc(claudeUrl)}" target="_blank" rel="noopener">Open in Claude</a><span class="muted" style="font-size:12.5px">Copies a link code. In Claude, paste it under Account → Bring progress from the website.</span></div>` : ""}
-      </section>
-      <section class="acc-card">
-        <h2 class="sec">AI features</h2>
-        ${key ? `<p><span class="okdot"></span>Using your Anthropic API key <code>${esc(maskKey(key))}</code> on this device. Each request is billed to your Anthropic account.</p>
-                <p class="muted">Questions you generate here are written by Claude on the site's server and added to the shared question bank for everyone.</p>
-                <div class="frow"><button class="btn small ghost" type="button" id="ak-remove">Remove key</button></div>`
-          : `<div class="notice"><b>AI features aren't included with a Google account.</b> Explanations and generating new questions need Claude. You can:
-              <ul>${claudeUrl ? `<li><a href="${esc(claudeUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a>. This uses your Claude plan's usage.</li>` : ""}<li>Or add your own Anthropic API key below. You're billed per use by Anthropic.</li></ul></div>
-             ${CFG.aiEndpoint ? `<form id="ak-form" class="edform" novalidate>
-               <label for="ak-key">Anthropic API key</label>
-               <input id="ak-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-…">
-               <label class="checkrow" for="ak-agree"><input type="checkbox" id="ak-agree"> I understand each explanation or question set is billed to my Anthropic account.</label>
-               <p class="muted" style="font-size:12.5px">Your key stays in this browser until you sign out. For each request it's sent over HTTPS to the site's Claude relay, used once, and never stored.</p>
-               <p class="ederr" id="ak-err" role="alert" hidden></p>
-               <div class="frow"><button class="btn primary" type="submit">Save key on this device</button></div>
-             </form>` : `<p class="muted">The site owner hasn't turned on the Claude relay yet, so API keys can't be used.</p>`}`}
+        <h2 class="sec">Claude API key</h2>
+        ${!CFG.aiEndpoint ? `<p class="muted">The site owner hasn't turned on AI features yet.</p>`
+          : keyStatus === null ? `<p class="muted">Checking your saved key…</p>`
+          : keyStatus.saved ? `<p><span class="okdot"></span>Saved to your account: <code>${esc(keyStatus.hint)}</code>${keyStatus.savedAt ? ` · since ${esc(fmtDate(keyStatus.savedAt))}` : ""}</p>
+              <p class="muted">It works on any device where you sign in. It's stored encrypted and is never shown or sent back to your browser. Each time you open the site, you'll be asked before AI features use your credits.</p>
+              <p class="muted">Questions you generate are added to the shared question bank for everyone.</p>
+              <div class="frow"><button class="btn small ghost" type="button" id="ak-wipe">Remove key from my account</button><button class="btn small ghost" type="button" id="ak-replace">Replace key</button></div>`
+          : `<div class="notice"><b>AI features aren't included with a Google account.</b> To get explanations and generate new questions, add your own Claude API key (from <b>console.anthropic.com</b>). Anthropic bills you per use.</div>`}
+        ${CFG.aiEndpoint && keyStatus && (!keyStatus.saved || replacingKey) ? `<form id="ak-form" class="edform" novalidate>
+            <label for="ak-key">Claude API key</label>
+            <input id="ak-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-…">
+            <label class="checkrow" for="ak-agree"><input type="checkbox" id="ak-agree"> I understand AI features will use my Claude API credits, and I'll confirm each time I open the site.</label>
+            <p class="muted" style="font-size:12.5px">Your key is checked with Anthropic, then stored encrypted with your account. The site never shows it again, and you can remove it anytime.</p>
+            <p class="ederr" id="ak-err" role="alert" hidden></p>
+            <div class="frow"><button class="btn primary" type="submit" id="ak-save">Save key to my account</button>${replacingKey ? `<button class="btn ghost" type="button" id="ak-cancel">Cancel</button>` : ""}</div>
+          </form>` : ""}
       </section>
     </div>`;
   }
@@ -1801,23 +1832,25 @@ function renderAccount(){
       toast("Added your website progress to this device"); renderAccount();
     } catch (e) { toast("That code didn't work. Copy it again from the website's Account page."); }
   };
-  // Website: open in Claude (copy a code), API key
-  const toClaude = $("lk-claude"); if (toClaude) toClaude.onclick = () => {
-    packLink(linkPayload("site")).then(code => navigator.clipboard.writeText(code)).then(
-      () => toast("Link code copied. In Claude, paste it under Account → Bring progress from the website."),
-      () => toast("Couldn't copy the code automatically. Try again."));
-  };
-  const akRemove = $("ak-remove"); if (akRemove) akRemove.onclick = () => { try { localStorage.removeItem("apdr.apikey"); } catch (e) {} toast("API key removed from this device"); renderAccount(); };
-  const akForm = $("ak-form"); if (akForm) akForm.onsubmit = e => {
+  // Website: Claude API key saved to the account (through the relay)
+  const wipe = $("ak-wipe"); if (wipe) armConfirm(wipe, "Click again to remove your key", async () => {
+    try { keyStatus = await keyApi.wipe(); visitConsent = false; toast("Your API key was removed from your account"); } catch (e) { toast(sampleErr(e) || "Couldn't remove the key. Try again."); }
+    renderAccount();
+  });
+  const repl = $("ak-replace"); if (repl) repl.onclick = () => { replacingKey = true; renderAccount(); };
+  const cancel = $("ak-cancel"); if (cancel) cancel.onclick = () => { replacingKey = false; renderAccount(); };
+  const akForm = $("ak-form"); if (akForm) akForm.onsubmit = async e => {
     e.preventDefault();
-    const v = $("ak-key").value.trim(), err = $("ak-err");
+    const v = $("ak-key").value.trim(), err = $("ak-err"), btn = $("ak-save");
     const fail = msg => { err.hidden = false; err.textContent = msg; };
-    if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v)) return fail("That doesn't look like an Anthropic API key. Keys start with sk-ant-.");
-    if (!$("ak-agree").checked) return fail("Check the box to confirm you understand requests are billed to your Anthropic account.");
-    try { localStorage.setItem("apdr.apikey", v); } catch (e2) { return fail("This browser won't let the site save the key."); }
-    toast("API key saved on this device. AI features are on."); renderAccount();
+    if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v)) return fail("That doesn't look like a Claude API key. Keys start with sk-ant-.");
+    if (!$("ak-agree").checked) return fail("Check the box to confirm AI features will use your Claude API credits.");
+    btn.disabled = true; btn.textContent = "Checking with Anthropic…";
+    try { keyStatus = await keyApi.save(v); replacingKey = false; visitConsent = false; $("ak-key").value = ""; toast("Key saved to your account. AI features are on."); renderAccount(); }
+    catch (e2) { btn.disabled = false; btn.textContent = "Save key to my account"; fail(e2.code === "bad_key" ? "Anthropic rejected that key. Check it and try again." : (sampleErr(e2) || "Couldn't save the key. Try again.")); }
   };
 }
+let replacingKey = false;
 updateAccountChip();
 
 /* ---------- toast ---------- */

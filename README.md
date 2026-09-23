@@ -6,31 +6,26 @@ Free AP practice for **AP Human Geography** and **AP Biology**: a question pool 
 
 ## Ways to use it
 
-| | Sign in with | AI features (explanations, +5 new questions) | Who pays for AI |
-|---|---|---|---|
-| **Website, guest** | nothing | No | — |
-| **Website, account** | Google or email/password | Only with your own Anthropic API key | You, per use, on your Anthropic account |
-| **Claude version** | your Claude account (on claude.ai) | Yes, after you agree on a consent screen | Your Claude plan's usage (and paid credits if you've turned on extra usage) |
+| | Sign in with | AI features (explanations, +5 new questions) |
+|---|---|---|
+| **Guest** | nothing | No |
+| **Account** | Google or email/password | After saving your own Claude API key to your account |
 
-The Claude version runs inside claude.ai, because Anthropic doesn't let outside websites offer "Sign in with Claude" or spend a Claude plan's usage. Everyone signs in to claude.ai as usual, and the app asks clearly before any request uses their Claude usage. Claude also asks its own permission.
+### Your Claude API key
 
-### Linking a Claude session and a Google account
-
-- **Claude → website:** in the Claude version, open **Account → Link Google account**. The website opens and you sign in with Google, and your progress and generated questions are added to that account.
-- **Website → Claude:** on the website, open **Account → Linked accounts → Open in Claude**. It copies a link code. In the Claude version, paste it under **Account → Bring progress from the website**.
-
-A claude.ai app can't connect to other websites, so linking moves your data when you click, instead of syncing continuously. The data travels in the link's `#` part, which browsers never send to any server.
+- Save it once on the **Account** page. The relay checks it with Anthropic, then stores it **encrypted** with your account (`apikeys/<uid>`, which no browser can read). It's never shown again or sent back to any browser. It works on every device you sign in on.
+- **Remove key from my account** deletes it immediately.
+- **Every time you open the site**, you're asked to agree that AI features will use your Claude API credits before the first AI request. Nothing is sent until you agree.
 
 ### The shared question bank (Claude-written only)
 
-When someone signed in on the website generates questions with their API key, the **Claude relay** (`worker/`) asks Claude for the questions and saves Claude's answer straight to the database. Browsers can't write to the shared bank (`firestore.rules` blocks it), so every shared question comes directly from Claude. Nobody can type one in.
+When someone signed in generates questions with their saved API key, the **Claude relay** (`worker/`) asks Claude for the questions and saves Claude's answer straight to the database. Browsers can't write to the shared bank (`firestore.rules` blocks it), so every shared question comes directly from Claude. Nobody can type one in.
 
 The relay's prompt is fixed: it asks Claude for 5 questions on one CED topic. The browser only sends a course and topic code. The relay fills in the course, unit, topic name and the existing questions to avoid from `worker/src/topics.json`, which `src/build.py` generates from the repo's question files. Nothing a user types can reach the prompt.
 
 - New shared questions show up for everyone right away, labeled **Written by Claude**.
 - Every day, a GitHub Action (`.github/workflows/sync-community.yml`) copies them into `src/data/community.js`, rebuilds the site, and commits.
 - Admins can hide a bad question in Dev mode. Hidden questions are removed from the file at the next sync.
-- Questions generated in the Claude version stay with that person (and their linked account). The Claude version runs on claude.ai, so the relay can't confirm they came from Claude. Only relay-generated questions join the shared bank.
 
 ---
 
@@ -51,7 +46,7 @@ The repository and Pages site are already set up. The site works right away as a
 
 ### 3. Claude relay: API-key AI on the website (~10 min, optional)
 
-You need a free Cloudflare account and Node.js 18+. No Anthropic key of yours is involved: each person uses their own.
+You need a free Cloudflare account and Node.js 18+. No Anthropic key of yours is involved: each person saves their own. Use a dedicated service account with only the **Cloud Datastore User** role for step 1.
 
 1. Firebase console → **Project settings → Service accounts → Generate new private key**. Save it in `worker/` as `service-account.json`. It's git-ignored, so never commit it.
 2. In `worker/wrangler.toml`, set `FIREBASE_API_KEY` to the `apiKey` from `config.js`.
@@ -62,6 +57,7 @@ You need a free Cloudflare account and Node.js 18+. No Anthropic key of yours is
    npm install
    npx wrangler login
    npx wrangler secret put FIREBASE_SERVICE_ACCOUNT < service-account.json
+   openssl rand -base64 32 | tr -d '\\n' | npx wrangler secret put KEY_ENCRYPTION_SECRET
    npx wrangler deploy
    ```
 
@@ -69,10 +65,6 @@ You need a free Cloudflare account and Node.js 18+. No Anthropic key of yours is
 5. Optional daily cap per person: run `npx wrangler kv namespace create USAGE`, paste the id into `wrangler.toml`, and redeploy.
 
 The relay uses `claude-opus-5` by default, with Anthropic's automatic fallback turned on (if Claude declines a request, it's retried on Anthropic's recommended backup model). Change the model with `CLAUDE_MODEL` in `wrangler.toml`.
-
-### 4. The Claude version
-
-It's published at the `claudeAppUrl` in `config.js`. To let anyone use it, open it on claude.ai → **Share** → turn on the public link. After changing the code, the Claude version is updated by republishing it from Claude.
 
 ---
 
@@ -102,7 +94,7 @@ python3 src/build.py
 - Shared question edits: anyone can read, and only accounts in `admins` can write.
 - Shared question bank (`community`): anyone can read, and only the relay's service account can write.
 - Progress (`data/users/<uid>/account`): only that account can read or write it.
-- API keys stay in the person's browser and are removed when they sign out. The relay uses a key for one request and never stores or logs it.
+- Saved API keys are encrypted with `KEY_ENCRYPTION_SECRET` (a Worker secret) and stored where only the relay's service account can read them. They're decrypted only inside the relay, per request, and never logged or returned to a browser.
 - The relay accepts only signed-in users of this site and builds every prompt itself, so it can't be used as a general chatbot.
 
 ## Free-tier limits

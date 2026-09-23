@@ -1,7 +1,10 @@
 // Cloudflare Worker: Claude relay for the website's "Explain more" and "+5 new" buttons.
 //
-// - Callers must be signed in to your site (Firebase ID token) AND supply their OWN Anthropic API key
-//   (header x-anthropic-key). The key is used for this one request and never stored or logged.
+// - Callers must be signed in to your site (Firebase ID token).
+// - Each person saves their OWN Claude (Anthropic) API key to their account once (PUT /key). The relay
+//   encrypts it (AES-GCM, secret KEY_ENCRYPTION_SECRET) and stores it in Firestore under apikeys/<uid>,
+//   which no browser can read (firestore.rules). It is decrypted only here, per request, and never
+//   returned to any browser or logged. DELETE /key wipes it.
 // - Every prompt is built here, so this can't be used as a general-purpose chatbot.
 // - Generated questions are written to Firestore by THIS Worker with a service account. Browsers can't
 //   write to the shared pool (see firestore.rules), so every shared question is guaranteed to come
@@ -41,28 +44,58 @@ export default {
     const allowed = (env.ALLOWED_ORIGINS || "").split(",").map(s => s.trim()).filter(Boolean);
     const cors = {
       "access-control-allow-origin": allowed.includes(origin) ? origin : (allowed[0] || ""),
-      "access-control-allow-methods": "POST, OPTIONS",
-      "access-control-allow-headers": "content-type, authorization, x-anthropic-key",
+      "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "access-control-allow-headers": "content-type, authorization",
       "access-control-max-age": "86400",
       vary: "origin"
     };
     const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: { ...cors, "content-type": "application/json" } });
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-    if (request.method !== "POST") return json({ error: "Use POST" }, 405);
     if (!allowed.includes(origin)) return json({ error: "Origin not allowed" }, 403);
 
     const kind = new URL(request.url).pathname.replace(/^\/+|\/+$/g, "");
-    if (kind !== "explain" && kind !== "generate") return json({ error: "Unknown endpoint" }, 404);
+    const route = request.method + " " + kind;
+    if (!["POST explain", "POST generate", "GET key", "PUT key", "DELETE key"].includes(route)) return json({ error: "Unknown endpoint" }, 404);
 
     // 1. Signed-in users of your site only.
     const token = (request.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
     const uid = await verifyFirebaseUser(token, env);
     if (!uid) return json({ error: "sign_in", message: "Sign in required" }, 401);
 
-    // 2. The caller's own Anthropic API key (billed to them).
-    const apiKey = request.headers.get("x-anthropic-key") || "";
-    if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(apiKey)) return json({ error: "bad_key", message: "Missing or malformed API key" }, 400);
+    // 2. Saved-key management: status, save (verified first), wipe.
+    try {
+      if (route === "GET key") {
+        const rec = await loadKeyRecord(env, uid);
+        return json(rec ? { saved: true, hint: rec.hint, savedAt: rec.savedAt } : { saved: false });
+      }
+      if (route === "DELETE key") {
+        await deleteKeyRecord(env, uid);
+        return json({ saved: false });
+      }
+      if (route === "PUT key") {
+        let body; try { body = await request.json(); } catch { return json({ error: "bad_input", message: "Invalid JSON" }, 400); }
+        const key = String(body.key || "").trim();
+        if (!/^sk-ant-[A-Za-z0-9_-]{20,200}$/.test(key)) return json({ error: "bad_key", message: "That doesn't look like a Claude API key" }, 400);
+        await new Anthropic({ apiKey: key, maxRetries: 1 }).models.list({ limit: 1 });  // free check that the key works
+        const hint = key.slice(0, 7) + "…" + key.slice(-4);
+        const savedAt = new Date().toISOString();
+        await saveKeyRecord(env, uid, { enc: await encryptKey(env, key), hint, savedAt });
+        return json({ saved: true, hint, savedAt });
+      }
+    } catch (e) {
+      if (e instanceof Anthropic.AuthenticationError || e instanceof Anthropic.PermissionDeniedError) return json({ error: "bad_key", message: "Anthropic rejected that API key" }, 400);
+      if (e instanceof Anthropic.APIError) return json({ error: "claude", message: "Couldn't check the key with Anthropic. Try again." }, 502);
+      return json({ error: "store", message: "Couldn't update your saved key. Try again." }, 502);
+    }
+
+    // 3. Use the caller's saved key (billed to them).
+    let apiKey;
+    try {
+      const rec = await loadKeyRecord(env, uid);
+      if (!rec) return json({ error: "no_key", message: "Save your Claude API key on the Account page first" }, 400);
+      apiKey = await decryptKey(env, rec.enc);
+    } catch { return json({ error: "store", message: "Couldn't read your saved key. Try again." }, 502); }
 
     // 3. Optional per-user daily cap (protects the shared database from floods).
     if (env.USAGE) {
@@ -116,7 +149,7 @@ export default {
       return json({ id, questions });
     } catch (e) {
       if (e instanceof BadInput) return json({ error: "bad_input", message: e.message }, 400);
-      if (e instanceof Anthropic.AuthenticationError || e instanceof Anthropic.PermissionDeniedError) return json({ error: "bad_key", message: "Your API key was rejected" }, 400);
+      if (e instanceof Anthropic.AuthenticationError || e instanceof Anthropic.PermissionDeniedError) return json({ error: "bad_key", message: "Your saved API key was rejected. Replace it on the Account page." }, 400);
       if (e instanceof Anthropic.RateLimitError) return json({ error: "busy", message: "Your API key hit a rate limit" }, 429);
       if (e instanceof Anthropic.BadRequestError && /credit/i.test(e.message || "")) return json({ error: "no_credits", message: "Your Anthropic account has no credits" }, 402);
       if (e instanceof Anthropic.APIError) return json({ error: "claude", message: "Claude API error" }, 502);
@@ -197,6 +230,48 @@ async function writeCommunity(env, rec) {
   const doc = await r.json();
   return doc.name.split("/").pop();
 }
+
+/* ---------- saved API keys: encrypted at rest, readable only by this relay ---------- */
+
+async function aesKey(env) {
+  const raw = Uint8Array.from(atob(String(env.KEY_ENCRYPTION_SECRET || "")), c => c.charCodeAt(0));
+  if (raw.length !== 32) throw new StoreError("KEY_ENCRYPTION_SECRET must be 32 random bytes, base64-encoded");
+  return crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["encrypt", "decrypt"]);
+}
+const toB64 = u8 => { let s = ""; for (const b of u8) s += String.fromCharCode(b); return btoa(s); };
+const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function encryptKey(env, plain) {
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv }, await aesKey(env), new TextEncoder().encode(plain)));
+  return toB64(iv) + "." + toB64(ct);
+}
+async function decryptKey(env, enc) {
+  const [iv, ct] = String(enc).split(".");
+  const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromB64(iv) }, await aesKey(env), fromB64(ct));
+  return new TextDecoder().decode(pt);
+}
+async function firestore(env, method, path, body) {
+  let project;
+  try { project = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT).project_id; } catch { throw new StoreError("bad service account"); }
+  const token = await googleAccessToken(env);
+  const r = await fetch(`https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/${path}`, {
+    method, headers: { authorization: `Bearer ${token}`, "content-type": "application/json" }, body: body ? JSON.stringify(body) : undefined
+  });
+  if (r.status === 404 && method !== "PATCH") return null;
+  if (!r.ok) throw new StoreError(`Firestore ${method} ${r.status}`);
+  return r.status === 204 ? null : r.json();
+}
+const keyPath = uid => "apikeys/" + encodeURIComponent(uid);
+async function loadKeyRecord(env, uid) {
+  const doc = await firestore(env, "GET", keyPath(uid));
+  if (!doc || !doc.fields) return null;
+  const f = doc.fields;
+  return { enc: f.enc.stringValue, hint: f.hint.stringValue, savedAt: f.savedAt.timestampValue };
+}
+function saveKeyRecord(env, uid, rec) {
+  return firestore(env, "PATCH", keyPath(uid), { fields: { enc: { stringValue: rec.enc }, hint: { stringValue: rec.hint }, savedAt: { timestampValue: rec.savedAt } } });
+}
+function deleteKeyRecord(env, uid) { return firestore(env, "DELETE", keyPath(uid)); }
 
 /* ---------- input validation and prompts ---------- */
 

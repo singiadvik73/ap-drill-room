@@ -283,6 +283,7 @@ h2.sec{font-size:20px;font-weight:700;margin-top:10px}
 .lk-paste summary{cursor:pointer;font-size:13px;color:var(--muted)}
 .lk-paste{display:grid;gap:8px}
 .aihint{margin:-14px 0 22px;font-size:13px;color:var(--muted)}
+.added{display:grid;gap:10px;border:1px solid var(--ok);background:var(--ok-soft);border-radius:12px;padding:14px 16px;margin:-8px 0 22px;font-size:14px}
 .st-claude{background:var(--ok-soft);color:var(--ok)}
 .authbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;max-width:460px;margin-bottom:26px}
 .authbox h2.sec{margin:0}
@@ -2410,6 +2411,12 @@ function renderCourse(){
       <button class="btn" id="go-weak" type="button" ${weak.length ? "" : "disabled"} title="${weak.length ? weak.length + " topics under 60% mastery" : "Answer some questions first. Topics under 60% show up here."}">Weak topics${weak.length ? " (" + weak.length + ")" : ""}</button>
       <button class="btn ghost" id="go-reset" type="button">Reset progress</button>
     </div>
+    ${justAdded && TOPIC[justAdded.key] && TOPIC[justAdded.key].course === c ? `<div class="added" role="status">
+        <div><b>Added ${justAdded.ids.length} new question${justAdded.ids.length === 1 ? "" : "s"} to ${esc(TOPIC[justAdded.key].code)} ${esc(TOPIC[justAdded.key].name)}.</b>
+        ${justAdded.shared ? "They're in the shared bank, so everyone can practice them." : justAdded.saved ? "Saved for you in this browser. To keep them on any device, use Link Google account on the Account page." : "This browser isn't letting the page save, so they'll be gone when you close it. Use Link Google account on the Account page to keep them."}</div>
+        <div class="frow"><button class="btn small primary" type="button" id="ja-go">Practice the new questions</button><button class="btn small ghost" type="button" id="ja-x">Dismiss</button></div>
+      </div>` : ""}
+    ${IN_CLAUDE && !storageWorks() ? `<div class="notice" style="margin-bottom:18px"><b>This browser isn't saving your progress here.</b> Claude's viewer is blocking storage for this page, so answers and generated questions disappear when you close it. Use <b>Link Google account</b> on the Account page to keep them.</div>` : ""}
     ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) need Claude. ${CFG.claudeAppUrl ? `<a href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a> or add` : "Add"} your own API key on the <button type="button" class="linkbtn" id="hint-acct">Account page</button>.</p>` : ""}
     ${devOn() ? `<div class="devpanel">
       <span class="devtag">Dev</span>
@@ -2455,6 +2462,9 @@ function renderCourse(){
     const kb = document.getElementById("dv-key"); kb.onchange = () => { prefs.devKey = kb.checked; save("apdr.prefs", prefs); };
   }
   const ha = document.getElementById("hint-acct"); if (ha) ha.onclick = () => go({ name: "account" });
+  const jaGo = document.getElementById("ja-go");
+  if (jaGo) jaGo.onclick = () => { const ids = new Set(justAdded.ids), t = TOPIC[justAdded.key]; justAdded = null; start(c, t.qs.filter(q => ids.has(q.id)), t.code + " new questions", "all", true); };
+  const jaX = document.getElementById("ja-x"); if (jaX) jaX.onclick = () => { justAdded = null; renderCourse(); };
   const figBox = document.getElementById("figs");
   figBox.onchange = () => { prefs.figs = figBox.checked; save("apdr.prefs", prefs); toast(prefs.figs ? "Practice sets now use only questions with a graph, diagram, or table" : "Practice sets include all questions"); };
   document.getElementById("go-course").onclick = () => start(c, all, "Whole course", prefs.len);
@@ -2484,12 +2494,16 @@ async function generateFor(t, btn){
   const ctx = { courseId: t.course.id, course: t.course.name, unitN: t.unit.n, unitName: t.unit.name, topicCode: t.code, topicName: t.name, existing: t.qs.slice(0, 12).map(q => q.stem) };
   try {
     const res = await AI.generate(ctx);
-    const out = res && res.questions;
+    let out = res && res.questions;
+    if (out && !Array.isArray(out) && Array.isArray(out.questions)) out = out.questions;  // Claude sometimes wraps the list
     const arr = (Array.isArray(out) ? out : []).filter(o => o && typeof o.stem === "string" && typeof o.correct === "string" && Array.isArray(o.wrong) && o.wrong.length >= 3);
     if (!arr.length) throw { code: "invalid_json" };
     if (res.id) {
       addCommunity({ id: res.id, course: t.course.id, topic: t.code, questions: arr.slice(0, 5) });
-      applyEdits(); toast(`Added ${Math.min(arr.length, 5)} Claude-written questions to ${t.code} for everyone`); renderCourse(); return;
+      applyEdits();
+      justAdded = { key: t.key, ids: arr.slice(0, 5).map((_, i) => "c-" + res.id + "-" + i), shared: true };
+      justAdded.ids.forEach(id => freshIds.add(id)); save("apdr.fresh", [...freshIds]);
+      renderCourse(); return;
     }
     const list = generated[t.key] || (generated[t.key] = []);
     const stamp = Date.now().toString(36);
@@ -2498,7 +2512,8 @@ async function generateFor(t, btn){
       list.push(g); t.base.push(mkQ(t, g.q, g.id, true));
     });
     save(GKEY, generated); applyEdits();
-    toast(`Added ${Math.min(arr.length, 5)} questions to ${t.code} ${t.name}`);
+    justAdded = { key: t.key, ids: arr.slice(0, 5).map((_, i) => `${t.course.id}-${t.code}-g${stamp}${i}`), shared: false, saved: storageWorks() };
+    justAdded.ids.forEach(id => freshIds.add(id)); save("apdr.fresh", [...freshIds]);
     renderCourse();
   } catch (e) {
     const msg = sampleErr(e);
@@ -2508,10 +2523,15 @@ async function generateFor(t, btn){
   }
 }
 
+/* Questions generated this visit are practiced first, and the course page confirms where they were saved. */
+let justAdded = null;
+const freshIds = new Set(load("apdr.fresh", []));
+function storageWorks(){ try { localStorage.setItem("apdr.t", "1"); const ok = localStorage.getItem("apdr.t") === "1"; localStorage.removeItem("apdr.t"); return ok; } catch (e) { return false; } }
+
 /* ---------- sessions ---------- */
 function pick(qs, len){
-  // Prioritize: missed last time, then unseen, then previously correct. Random within each group.
-  const pri = q => { const s = qStat(q); return !s ? 1 : s[2] ? 0 : 2; };
+  // Prioritize: missed last time, then new questions you just generated, then unseen, then previously correct.
+  const pri = q => { const s = qStat(q); return s ? (s[2] ? 0 : 3) : (q.gen || q.community) && freshIds.has(q.id) ? 2 : 1; };
   const sorted = shuffle(qs).sort((a, b) => pri(b) - pri(a));
   const n = len === "all" ? qs.length : Math.min(+len, qs.length);
   return shuffle(sorted.slice(0, n));
@@ -2535,6 +2555,7 @@ function answer(idx){
   const s = progress[it.q.id] || [0, 0, 0];
   s[0]++; if (ok) s[1]++; s[2] = ok ? 1 : 0;
   progress[it.q.id] = s; save(KEY, progress);
+  if (freshIds.delete(it.q.id)) save("apdr.fresh", [...freshIds]);
   const day = today(), a = activity[day] || [0, 0]; a[0]++; if (ok) a[1]++; activity[day] = a; save(AKEY, activity);
   renderQuiz();
 }
@@ -3108,7 +3129,7 @@ function renderAccount(){
       </section>
       <section class="acc-card">
         <h2 class="sec">Link your Google account</h2>
-        ${links.google ? `<p><span class="okdot"></span>Linked with <b>${esc(links.google.email || "your Google account")}</b> · last transfer ${esc(fmtDate(links.google.at))}</p>` : ""}
+        ${links.google && links.google.email ? `<p><span class="okdot"></span>Linked with <b>${esc(links.google.email)}</b> · last transfer ${esc(fmtDate(links.google.at))}</p>` : links.google ? `<p class="muted">Last sent to the website ${esc(fmtDate(links.google.at))}. It's linked once you signed in there.</p>` : ""}
         <p class="muted">Send this progress, and questions you've generated here, to your account on the AP Drill Room website. There you'll sign in with Google. AI features on the website need Claude or your own API key.</p>
         ${siteUrl ? `<div class="frow"><a class="btn primary" id="lk-send" href="${esc(siteUrl)}" target="_blank" rel="noopener">Link Google account</a><span class="muted" id="lk-note" style="font-size:12.5px">Opens the website in a new tab.</span></div>` : `<p class="muted">The website address isn't set up yet.</p>`}
         <details class="lk-paste"><summary>Bring progress from the website</summary>
@@ -3224,6 +3245,7 @@ function renderAccount(){
     send.href = siteUrl.replace(/#.*$/, "") + "#claude-link=" + code;
     send.onclick = () => { links.google = { email: links.google && links.google.email || "", at: Date.now() }; save(LKEY, links); };
   }).catch(() => { const n = $("lk-note"); if (n) n.textContent = "Linking isn't supported in this browser."; });
+  if (!storageWorks() && IN_CLAUDE) { const n = $("lk-note"); if (n) n.textContent = "This browser isn't saving progress here, so link now to keep it."; }
   const imp = $("lk-import"); if (imp) imp.onclick = async () => {
     try {
       const d = await unpackLink($("lk-code").value);

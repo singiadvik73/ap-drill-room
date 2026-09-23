@@ -3,12 +3,12 @@
 window.APDR_CONFIG = {
   // Firebase console → Project settings → General → Your apps → Web app → "firebaseConfig"
   firebase: {
-    apiKey: "YOUR_FIREBASE_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyAWvbVcMgYqQxoYmPMbV7ZA7fJ4vQsb1_s",
+    authDomain: "ap-drill-room.firebaseapp.com",
+    projectId: "ap-drill-room",
+    storageBucket: "ap-drill-room.firebasestorage.app",
+    messagingSenderId: "465372216125",
+    appId: "1:465372216125:web:c98a68196594901f492354"
   },
   // This website's address (the Claude version links here).
   siteUrl: "https://singiadvik73.github.io/ap-drill-room/",

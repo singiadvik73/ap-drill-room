@@ -283,6 +283,10 @@ h2.sec{font-size:20px;font-weight:700;margin-top:10px}
 .lk-paste summary{cursor:pointer;font-size:13px;color:var(--muted)}
 .lk-paste{display:grid;gap:8px}
 .aihint{margin:-14px 0 22px;font-size:13px;color:var(--muted)}
+.howto{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--bg)}
+.howto summary{cursor:pointer;font-weight:600;font-size:14px}
+.howto ol{margin:10px 0 8px;padding-left:20px;display:grid;gap:8px;font-size:14px}
+.howto p{margin:6px 0 0;font-size:12.5px}
 .added{display:grid;gap:10px;border:1px solid var(--ok);background:var(--ok-soft);border-radius:12px;padding:14px 16px;margin:-8px 0 22px;font-size:14px}
 .st-claude{background:var(--ok-soft);color:var(--ok)}
 .authbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;max-width:460px;margin-bottom:26px}
@@ -2456,7 +2460,7 @@ function renderCourse(){
         <div class="frow"><button class="btn small primary" type="button" id="ja-go">Practice the new questions</button><button class="btn small ghost" type="button" id="ja-x">Dismiss</button></div>
       </div>` : ""}
     ${IN_CLAUDE && !storageWorks() ? `<div class="notice" style="margin-bottom:18px"><b>This browser isn't saving your progress here.</b> Claude's viewer is blocking storage for this page, so answers and generated questions disappear when you close it. Use <b>Link Google account</b> on the Account page to keep them.</div>` : ""}
-    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) use your own Claude API key. ${userId ? "Add it on the" : "Sign in, then add it on the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button>.</p>` : ""}
+    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) use your own Claude API key. ${userId ? "The" : "Sign in, then the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button> shows how to get one, step by step.</p>` : ""}
     ${devOn() ? `<div class="devpanel">
       <span class="devtag">Dev</span>
       <button class="btn small" type="button" id="dv-browse">Browse &amp; edit questions</button>
@@ -3205,7 +3209,19 @@ function renderAccount(){
               <p class="muted">It works on any device where you sign in. It's stored encrypted and is never shown or sent back to your browser. Each time you open the site, you'll be asked before AI features use your credits.</p>
               <p class="muted">Questions you generate are added to the shared question bank for everyone.</p>
               <div class="frow"><button class="btn small ghost" type="button" id="ak-wipe">Remove key from my account</button><button class="btn small ghost" type="button" id="ak-replace">Replace key</button></div>`
-          : `<div class="notice"><b>AI features aren't included with a Google account.</b> To get explanations and generate new questions, add your own Claude API key (from <b>console.anthropic.com</b>). Anthropic bills you per use.</div>`}
+          : `<div class="notice"><b>AI features aren't included with a Google account.</b> To get explanations and generate new questions, add your own Claude API key. Anthropic bills you per use.</div>`}
+        ${CFG.aiEndpoint && keyStatus ? `<details class="howto" ${!keyStatus.saved || replacingKey ? "open" : ""}>
+          <summary>How to get a Claude API key</summary>
+          <ol>
+            <li><b>Open the Claude Console.</b> Go to <a href="https://platform.claude.com/" target="_blank" rel="noopener">platform.claude.com</a> and sign in, or create a Console account. This is separate from a Claude Pro or Max subscription, which doesn't include API use.</li>
+            <li><b>Add credits.</b> In the Console, open <b>Billing</b> and add credits. You only pay for what you use. An explanation or a set of 5 questions usually costs a few cents.</li>
+            <li><b>Create a key.</b> Go to <a href="https://platform.claude.com/settings/keys" target="_blank" rel="noopener">Settings → API keys</a> and click <b>Create key</b>. Name it something like <i>AP Drill Room</i> and pick an expiration.</li>
+            <li><b>Copy it right away.</b> The key starts with <code>sk-ant-</code> and is shown <b>only once</b>. If you lose it, create a new one.</li>
+            <li><b>Paste it here.</b> Put it in the box below, check the box to agree, and click <b>Save key to my account</b>.</li>
+          </ol>
+          <p class="muted">Tip: make a key just for this site. To stop at any time, click <b>Remove key from my account</b> here, or delete the key in the Console. Anthropic's terms apply to API accounts, so if you're under 18, ask a parent or teacher to set this up.</p>
+          <p class="muted">Official guide: <a href="https://platform.claude.com/docs/en/get-api-key" target="_blank" rel="noopener">Get your Claude API key</a></p>
+        </details>` : ""}
         ${CFG.aiEndpoint && keyStatus && (!keyStatus.saved || replacingKey) ? `<form id="ak-form" class="edform" novalidate>
             <label for="ak-key">Claude API key</label>
             <input id="ak-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-…">

@@ -8,7 +8,7 @@ compatibility_flags = ["nodejs_compat"]
 ALLOWED_ORIGINS = "https://singiadvik73.github.io"
 # Same value as apiKey in config.js; used to check that callers are signed in to your site.
 FIREBASE_API_KEY = "AIzaSyAWvbVcMgYqQxoYmPMbV7ZA7fJ4vQsb1_s"
-# Claude calls allowed per signed-in user per day (enforced only when the USAGE KV namespace is bound).
+# Claude calls allowed per signed-in user per day (only enforced if you bind the USAGE KV namespace below).
 DAILY_LIMIT = "60"
 # CLAUDE_MODEL = "claude-opus-5"
 

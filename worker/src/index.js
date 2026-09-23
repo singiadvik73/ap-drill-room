@@ -168,6 +168,11 @@ async function googleAccessToken(env) {
 }
 
 async function saveCommunity(env, rec) {
+  try { return await writeCommunity(env, rec); }
+  catch (e) { throw e instanceof StoreError ? e : new StoreError(String(e && e.message || e)); }  // any credential/network failure reads as "couldn't save"
+}
+
+async function writeCommunity(env, rec) {
   let project;
   try { project = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT).project_id; } catch { throw new StoreError("bad service account"); }
   const token = await googleAccessToken(env);

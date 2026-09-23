@@ -15,5 +15,5 @@ window.APDR_CONFIG = {
   // The Claude version of the app (people use it with their own Claude usage). Share it publicly from claude.ai.
   claudeAppUrl: "https://claude.ai/artifact/KfQcApv2EqBpZiVFK9RpJW",
   // Optional: URL of your deployed Claude relay (see worker/). Leave "" to hide the API-key option.
-  aiEndpoint: ""
+  aiEndpoint: "https://ap-drill-room-claude.ap-drill-room-claude.workers.dev"
 };

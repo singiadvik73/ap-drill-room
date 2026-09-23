@@ -1,6 +1,6 @@
 """Builds the site from src/app.html + src/data/*.js.
 
-  python3 src/build.py                      -> index.html (GitHub Pages / any static host, uses config.js + Firebase)
+  python3 src/build.py                      -> index.html (Cloudflare Pages / any static host, uses config.js + Firebase)
   python3 src/build.py --artifact out.html  -> also a single-file claude.ai artifact build
                                                 (links back to the siteUrl set in config.js)
 """

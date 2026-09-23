@@ -2,7 +2,7 @@
 
 Free AP practice for **AP Human Geography** and **AP Biology**: a question pool for every CED unit and topic, AP-style figure questions, progress tracking, accounts, and an admin Dev mode for editing questions. Every topic has at least one figure question (152 in all).
 
-**Website:** https://singiadvik73.github.io/ap-drill-room/
+**Website:** https://ap-drill-room.pages.dev/
 
 ## Ways to use it
 
@@ -31,15 +31,15 @@ The relay's prompt is fixed: it asks Claude for 5 questions on one CED topic. Th
 
 ## Setup
 
-### 1. GitHub Pages (done for you)
+### 1. Hosting on Cloudflare Pages (done for you)
 
-The repository and Pages site are already set up. The site works right away as a practice site with guest progress.
+The site is served by Cloudflare Pages, connected to this repository: every push to `main` (including the daily question sync) deploys automatically. No build step: the output directory is the repository root. The site works right away as a practice site with guest progress.
 
 ### 2. Firebase: accounts and the shared database (~15 min, free)
 
 1. <https://console.firebase.google.com> → **Add project**.
 2. **Add app → Web** (`</>`). Copy the `firebaseConfig` values into `config.js`.
-3. **Authentication → Get started → Sign-in method**: enable **Google** and **Email/Password**. Under **Settings → Authorized domains**, add `singiadvik73.github.io`.
+3. **Authentication → Get started → Sign-in method**: enable **Google** and **Email/Password**. Under **Settings → Authorized domains**, add your site's domain (for example `ap-drill-room.pages.dev`).
 4. **Firestore Database → Create database** (production mode). Under **Rules**, paste `firestore.rules` → **Publish**.
 5. Commit and push `config.js`.
 6. **Make yourself an admin:** sign in on the site, then on **Account** click **Copy** next to your Account ID. In Firestore → **Data → Start collection** `admins`, set Document ID = that ID, add any field (for example `role` = `owner`), and save. Reload the site. **Dev mode** appears.

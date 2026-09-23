@@ -2591,7 +2591,7 @@ function subscribeEdits(){
   }, () => {});
 }
 
-/* ---------- self-hosted backend (GitHub Pages + Firebase) ----------
+/* ---------- self-hosted backend (static hosting + Firebase) ----------
    Active when config.js supplies a Firebase config. Accounts use Firebase Auth (Google or email/password);
    progress lives at data/users/<uid>/account and shared question edits in content/edits, guarded by firestore.rules. */
 const CFG = window.APDR_CONFIG || {};

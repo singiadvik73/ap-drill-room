@@ -11,7 +11,7 @@ window.APDR_CONFIG = {
     appId: "1:465372216125:web:c98a68196594901f492354"
   },
   // This website's address (the Claude version links here).
-  siteUrl: "https://singiadvik73.github.io/ap-drill-room/",
+  siteUrl: "https://ap-drill-room.pages.dev/",
   // Optional: URL of your deployed Claude relay (see worker/). Leave "" to hide the API-key option.
   aiEndpoint: "https://ap-drill-room-claude.ap-drill-room-claude.workers.dev"
 };

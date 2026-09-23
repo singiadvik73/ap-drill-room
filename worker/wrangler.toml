@@ -4,8 +4,8 @@ compatibility_date = "2026-09-01"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-# Origin allowed to call this relay (your GitHub Pages site).
-ALLOWED_ORIGINS = "https://singiadvik73.github.io"
+# Origin allowed to call this relay (the website).
+ALLOWED_ORIGINS = "https://ap-drill-room.pages.dev"
 # Same value as apiKey in config.js; used to check that callers are signed in to your site.
 FIREBASE_API_KEY = "AIzaSyAWvbVcMgYqQxoYmPMbV7ZA7fJ4vQsb1_s"
 # Claude calls allowed per signed-in user per day (only enforced if you bind the USAGE KV namespace below).

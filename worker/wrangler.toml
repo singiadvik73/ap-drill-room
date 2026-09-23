@@ -1,0 +1,22 @@
+name = "ap-drill-room-claude"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Origin allowed to call this relay (your GitHub Pages site).
+ALLOWED_ORIGINS = "https://singiadvik73.github.io"
+# Same value as apiKey in config.js; used to check that callers are signed in to your site.
+FIREBASE_API_KEY = "YOUR_FIREBASE_API_KEY"
+# Claude calls allowed per signed-in user per day (enforced only when the USAGE KV namespace is bound).
+DAILY_LIMIT = "60"
+# CLAUDE_MODEL = "claude-opus-5"
+
+# Secret (never commit it): the Firebase service account JSON that lets the relay save
+# Claude-written questions. Run: npx wrangler secret put FIREBASE_SERVICE_ACCOUNT < service-account.json
+# No Anthropic key is stored here: each person uses their own key.
+
+# Optional daily limit. Create with `npx wrangler kv namespace create USAGE`, then paste the id:
+# [[kv_namespaces]]
+# binding = "USAGE"
+# id = "PASTE_KV_NAMESPACE_ID"

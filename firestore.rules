@@ -1,0 +1,47 @@
+rules_version = '2';
+// Paste into Firebase console → Firestore Database → Rules, then Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isAdmin() {
+      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Shared question edits made in Dev mode: everyone (even signed-out visitors) can read, only admins can write.
+    match /content/edits {
+      allow read: if true;
+      allow write: if isAdmin()
+                   && request.resource.data.keys().hasOnly(['json', 'updatedAt'])
+                   && request.resource.data.json is string;
+    }
+
+    // Shared bank of Claude-written questions. Only the Claude relay (Worker, using a service account,
+    // which bypasses these rules) can add to it, so nothing here can be typed in by a person.
+    match /community/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Admin list: create documents here by hand in the console (document ID = the user's Account ID).
+    // A user may check only their own entry; nobody can write it from the site.
+    match /admins/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // Each person's progress: private to that account.
+    match /data/users/{uid}/{docId} {
+      allow read, delete: if signedIn() && request.auth.uid == uid;
+      allow create, update: if signedIn() && request.auth.uid == uid
+                            && request.resource.data.keys().hasOnly(['json', 'updatedAt'])
+                            && request.resource.data.json is string
+                            && request.resource.data.json.size() < 900000;
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

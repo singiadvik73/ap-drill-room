@@ -1,0 +1,1821 @@
+<title>AP Drill Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f2f3ef; --surface:#ffffff; --sunk:#e8eae4; --ink:#161d19; --muted:#5b645e; --line:#d6dad2;
+  --bio:#4a7a12; --bio-soft:#e6efd8; --hug:#1c5d8a; --hug-soft:#dde9f2;
+  --ok:#0d7a52; --ok-soft:#dcf1e7; --bad:#b8321f; --bad-soft:#f8e1dc; --warn:#9a6b00;
+  --accent:var(--ink); --accent-soft:var(--sunk);
+  --s1:#2563a8; --s2:#c4501b; --s3:#7a4bb0; --s4:#23865a;
+  --q0:#e4edf5; --q1:#b9d1e7; --q2:#82aed5; --q3:#4c85bd; --q4:#265c93;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111513; --surface:#191e1b; --sunk:#222924; --ink:#e6ebe6; --muted:#98a39b; --line:#2d3530;
+    --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38;
+    --ok:#4fd19a; --ok-soft:#153427; --bad:#f07a66; --bad-soft:#3a1d18; --warn:#e3b341;
+    --s1:#6aa8e8; --s2:#f08a55; --s3:#b891e6; --s4:#5cc795;
+    --q0:#1c2833; --q1:#24405a; --q2:#2f6391; --q3:#4f8fc8; --q4:#94c5ef;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111513; --surface:#191e1b; --sunk:#222924; --ink:#e6ebe6; --muted:#98a39b; --line:#2d3530;
+  --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38;
+  --ok:#4fd19a; --ok-soft:#153427; --bad:#f07a66; --bad-soft:#3a1d18; --warn:#e3b341;
+    --s1:#6aa8e8; --s2:#f08a55; --s3:#b891e6; --s4:#5cc795;
+    --q0:#1c2833; --q1:#24405a; --q2:#2f6391; --q3:#4f8fc8; --q4:#94c5ef;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+.c-bio{--accent:var(--bio);--accent-soft:var(--bio-soft)}
+.c-hug{--accent:var(--hug);--accent-soft:var(--hug-soft)}
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px;border-bottom:1px solid var(--line);margin-bottom:28px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px;background:none;border:0;padding:0}
+.brand b{font:800 20px/1 var(--display);letter-spacing:-.01em}
+.brand span{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.crumbs{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.crumbs button{background:none;border:0;padding:2px 0;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);padding:9px 14px;border-radius:8px;font-weight:500;font-size:14px;line-height:1.2;white-space:nowrap}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.small{padding:6px 10px;font-size:13px}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.5;cursor:default}
+select{font:inherit;font-size:14px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+
+/* home */
+.hero{display:grid;gap:10px;margin-bottom:28px;max-width:62ch}
+.hero h1{font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-.02em}
+.hero p{margin:0;color:var(--muted)}
+.courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:18px}
+.ccard{display:grid;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.ccard:hover{border-color:var(--accent)}
+.ccard .abbr{font:800 64px/.9 var(--display);letter-spacing:-.04em;color:var(--accent)}
+.ccard h2{font-size:20px;font-weight:700}
+.ccard p{margin:0;color:var(--muted);font-size:14px}
+.ccard .facts{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.ccard .facts b{color:var(--ink);font-weight:600}
+.unitstrip{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px}
+.unitstrip i{display:block;height:28px;border-radius:4px;background:var(--sunk);position:relative;overflow:hidden}
+.unitstrip i::after{content:"";position:absolute;inset:auto 0 0 0;height:var(--p,0%);background:var(--accent)}
+.unitstrip i span{position:absolute;inset:0;display:grid;place-items:center;font:500 11px var(--mono);color:var(--muted);z-index:1;mix-blend-mode:normal}
+.legend{font-size:12px;color:var(--muted)}
+.later{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:70ch}
+
+/* course page */
+.chead{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;margin-bottom:22px}
+.chead .abbr{font:800 18px/1 var(--mono);color:var(--accent);letter-spacing:.04em}
+.chead h1{font-size:clamp(28px,4.6vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:6px}
+.chead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.stats{display:flex;gap:22px;flex-wrap:wrap}
+.stat{display:grid;gap:2px}
+.stat b{font:600 22px/1 var(--mono);font-variant-numeric:tabular-nums}
+.stat span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.launch{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--accent-soft);border-radius:12px;padding:14px 16px;margin-bottom:26px}
+.launch .lbl{font-weight:600;margin-right:auto}
+.launch label{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+
+.unit{border-top:1px solid var(--line)}
+.unit:last-child{border-bottom:1px solid var(--line)}
+.unit summary{list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding-block:16px;cursor:pointer}
+.unit summary::-webkit-details-marker{display:none}
+.unum{font:800 30px/1 var(--display);color:var(--accent);min-width:2ch;font-variant-numeric:tabular-nums}
+.uname h3{font-size:18px;font-weight:700}
+.uname .meta{font-size:12.5px;color:var(--muted);margin-top:4px;display:flex;gap:12px;flex-wrap:wrap}
+.uact{display:flex;gap:10px;align-items:center}
+.meter{width:90px;height:6px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent)}
+.chev{width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s;margin-left:4px}
+details[open] .chev{transform:rotate(-135deg)}
+.topics{display:grid;padding:0 0 16px;margin:0;list-style:none}
+.topic{display:grid;grid-template-columns:4.2em 1fr auto auto;gap:14px;align-items:center;padding:9px 10px;border-radius:8px}
+.topic:hover{background:var(--surface)}
+.topic .code{font:500 13px var(--mono);color:var(--muted)}
+.topic .tname{font-size:14.5px}
+.topic .tname small{display:block;color:var(--muted);font-size:12px}
+.chip{font:500 11.5px/1 var(--mono);padding:5px 7px;border-radius:5px;background:var(--sunk);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.chip.m-hi{background:var(--ok-soft);color:var(--ok)}
+.chip.m-mid{background:var(--accent-soft);color:var(--accent)}
+.chip.m-lo{background:var(--bad-soft);color:var(--bad)}
+.tact{display:flex;gap:6px}
+.ai-badge{font:500 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 5px;border-radius:4px;border:1px solid var(--line);color:var(--muted);vertical-align:2px;margin-left:6px}
+
+/* quiz */
+.qwrap{max-width:720px;margin:0 auto}
+.qbar{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.qbar .scope{font-size:13px;color:var(--muted);margin-right:auto}
+.qbar .scope b{color:var(--ink);font-weight:600}
+.prog{height:4px;background:var(--sunk);border-radius:2px;overflow:hidden;margin-bottom:28px}
+.prog i{display:block;height:100%;background:var(--accent);transition:width .25s}
+.qmeta{display:flex;gap:10px;align-items:center;font:500 12px var(--mono);color:var(--muted);margin-bottom:12px;flex-wrap:wrap}
+.qmeta .tag{color:var(--accent)}
+.stem{font:500 clamp(19px,2.6vw,23px)/1.4 var(--sans);margin:0 0 22px;letter-spacing:-.005em}
+.opts{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.opt{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:13px 14px;font-size:15.5px;line-height:1.45}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt .k{font:500 13px/1 var(--mono);display:grid;place-items:center;width:26px;height:26px;border-radius:6px;background:var(--sunk);color:var(--muted)}
+.opt[disabled]{cursor:default}
+.opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+.opt.correct .k{background:var(--ok);color:var(--surface)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.opt.dim{opacity:.55}
+.feedback{margin-top:20px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
+.verdict{font:700 18px var(--display)}
+.verdict.ok{color:var(--ok)} .verdict.bad{color:var(--bad)}
+.expl{margin:0;max-width:65ch}
+.deeper{background:var(--sunk);border-radius:8px;padding:12px 14px;font-size:14.5px;white-space:pre-wrap;max-width:65ch}
+.frow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.frow .spacer{margin-right:auto}
+.hint{font-size:12px;color:var(--muted)}
+.hint kbd{font:500 11px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 5px;background:var(--surface)}
+
+/* results */
+.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:6px 0 8px}
+.score b{font:800 clamp(56px,10vw,84px)/1 var(--display);letter-spacing:-.03em;color:var(--accent)}
+.score span{font:500 16px var(--mono);color:var(--muted)}
+.rtable{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0 28px}
+.rtable th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+.rtable td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.rtable td.num{font-family:var(--mono);text-align:right;white-space:nowrap}
+.tablebox{overflow-x:auto}
+.missed{display:grid;gap:14px;margin:12px 0 0;padding:0;list-style:none}
+.missed li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid;gap:6px}
+.missed .yours{color:var(--bad);font-size:14px}
+.missed .right{color:var(--ok);font-size:14px;font-weight:500}
+.missed .ex{color:var(--muted);font-size:13.5px}
+h2.sec{font-size:20px;font-weight:700;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:9;max-width:calc(100% - 32px)}
+.gen-status{font-size:12px;color:var(--muted);grid-column:2/-1}
+
+/* figures */
+.fig{margin:0 0 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px 12px;display:grid;gap:8px}
+.ftitle{font:600 13.5px/1.35 var(--sans);color:var(--ink)}
+.fnote{font-size:12px;color:var(--muted)}
+.fscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fscroll svg{display:block;width:100%;min-width:400px;height:auto}
+.fig svg text{font-family:var(--sans)}
+.fig .tick{fill:var(--muted);font:11.5px var(--mono)}
+.fig .alabel{fill:var(--muted);font-size:12.5px}
+.fig .axis{stroke:var(--muted);stroke-width:1}
+.fig .grid{stroke:var(--line);stroke-width:1}
+.fig .ref{stroke:var(--muted);stroke-width:1.25;stroke-dasharray:4 4}
+.fig .reflabel{fill:var(--muted);font-size:12px}
+.fig .band{fill:var(--sunk)}
+.fig .bandlabel{fill:var(--muted);font:500 11.5px var(--mono)}
+.fig .mark{fill:var(--ink)}
+.fig .marklabel{fill:var(--ink);font:600 13px var(--sans)}
+.fig .lbl{fill:var(--ink);font-size:13px}
+.fig .lbl-muted{fill:var(--muted);font-size:12px}
+.fig .edge{stroke:var(--muted);stroke-width:1.5;fill:none}
+.fig .node{fill:var(--surface);stroke:var(--ink);stroke-width:1.25}
+.fig .br{stroke:var(--ink);stroke-width:1.75;fill:none}
+.fig .gelbg{fill:var(--sunk)}
+.fig .well{fill:var(--bg);stroke:var(--muted)}
+.fig .gband{fill:var(--ink);opacity:.82}
+.fig .ped{stroke:var(--ink);stroke-width:1.5}
+.fig .ped-u{fill:var(--surface)}
+.fig .ped-a{fill:var(--ink)}
+.fig .ring{stroke:var(--line);stroke-width:1.5}
+.fig .d-ln{stroke:var(--ink);stroke-width:1.5;fill:none}
+.fig .d-thin{stroke:var(--muted);stroke-width:1;fill:none}
+.fig .d-water{fill:var(--s1);fill-opacity:.22;stroke:var(--s1);stroke-width:1.5}
+.fig .d-fill{fill:var(--sunk);stroke:var(--ink);stroke-width:1.25}
+.flegend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+.flegend span{display:inline-flex;align-items:center;gap:6px}
+.flegend i{display:inline-block;width:18px;height:0;border-top:3px solid var(--c)}
+.flegend i.dash{border-top-style:dashed}
+.flegend i.sq{width:12px;height:12px;border:0;border-radius:3px;background:var(--c)}
+.fpanels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+.fpanels .fscroll svg{min-width:0}
+.fpanel h4{margin:0 0 6px;font:600 12.5px var(--sans);color:var(--muted)}
+.ftable{border-collapse:collapse;font-size:14px;min-width:100%}
+.ftable th,.ftable td{border:1px solid var(--line);padding:7px 10px;text-align:center;font-variant-numeric:tabular-nums}
+.ftable thead th{background:var(--sunk);font-weight:600;font-size:13px}
+.ftable tbody th{background:var(--sunk);font-weight:600;text-align:left}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.fstep{border:1.5px solid var(--ink);border-radius:8px;padding:6px 10px;font-size:13.5px;background:var(--surface)}
+.fstep.x{border-style:dashed;border-color:var(--accent);color:var(--accent);font-weight:700}
+.farrow{color:var(--muted);font-size:15px}
+.fstrip{display:flex;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;min-width:400px}
+.fseg{padding:10px 6px;text-align:center;font-size:13px;border-left:1.5px solid var(--ink);background:var(--surface);display:grid;gap:2px;align-content:center}
+.fseg:first-child{border-left:0}
+.fseg small{color:var(--muted);font-size:11px}
+.fseg.alt{background:var(--sunk)}
+.fseg.x{color:var(--accent);font-weight:700}
+.fig-badge{font:500 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 5px;border-radius:4px;background:var(--accent-soft);color:var(--accent);vertical-align:2px;margin-left:6px}
+.launch .toggle{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink)}
+.missed details summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.missed .fig{margin:8px 0 0}
+
+/* accounts */
+.acct{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px 4px 4px;font-size:13px;font-weight:500;position:relative}
+.acct:hover{border-color:var(--ink)}
+.acct-av{width:26px;height:26px;border-radius:50%;background:var(--sunk);overflow:hidden;display:grid;place-items:center;flex:none}
+.acct-av img{width:100%;height:100%;object-fit:cover}
+.acct::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--line);position:absolute;left:23px;top:23px;border:2px solid var(--surface)}
+.acct[data-sync="synced"]::after{background:var(--ok)}
+.acct[data-sync="pending"]::after,.acct[data-sync="loading"]::after{background:var(--warn)}
+.acct[data-sync="error"]::after{background:var(--bad)}
+.acchead{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin-bottom:22px}
+.acchead .abbr{font:600 12px/1 var(--mono);letter-spacing:.1em;color:var(--muted)}
+.acchead h1{font-size:clamp(26px,4.4vw,38px);font-weight:800;letter-spacing:-.02em;margin:6px 0 4px}
+.acchead p{margin:0;font-size:14px}
+.acc-av{width:64px;height:64px;border-radius:50%;background:var(--sunk);overflow:hidden}
+.acc-av img{width:100%;height:100%;object-fit:cover}
+.acc-sync{display:grid;gap:8px;justify-items:end}
+.syncpill{font:500 12px/1 var(--mono);padding:6px 9px;border-radius:999px;background:var(--sunk);color:var(--muted)}
+.syncpill[data-s="synced"]{background:var(--ok-soft);color:var(--ok)}
+.syncpill[data-s="error"]{background:var(--bad-soft);color:var(--bad)}
+.syncpill[data-s="pending"],.syncpill[data-s="loading"]{color:var(--warn)}
+.accstats{margin:4px 0 26px;padding:16px 0;border-block:1px solid var(--line)}
+.acc-courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px;margin:12px 0 26px}
+.acc-course{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:12px}
+.acc-ch{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.acc-ch .abbr{font:800 30px/1 var(--display);color:var(--accent);letter-spacing:-.03em}
+.acc-pct{font-size:20px;font-weight:600;color:var(--accent)}
+.acc-course .meter i{background:var(--accent)}
+.acc-weak{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.acc-weak .muted{margin-right:4px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:grid;place-items:center;padding:16px;z-index:20}
+.modal-card{background:var(--surface);color:var(--ink);border-radius:14px;padding:22px;max-width:520px;width:100%;display:grid;gap:10px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal-card h2{font-size:22px;font-weight:800}
+.modal-card p{margin:0;font-size:14.5px}
+.acc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px;margin-bottom:24px}
+.acc-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:10px;align-content:start}
+.acc-card h2.sec{margin:0;font-size:17px}
+.acc-card p{margin:0;font-size:14px}
+.notice{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:14px}
+.notice ul{margin:6px 0 0;padding-left:18px}
+.okdot,.offdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:8px;vertical-align:1px}
+.offdot{background:var(--line)}
+.linklist{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px}
+.linklist li{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.checkrow{display:flex !important;gap:8px;align-items:flex-start;font-weight:500 !important;color:var(--ink) !important}
+.checkrow input{margin-top:3px}
+.lk-paste summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.lk-paste{display:grid;gap:8px}
+.aihint{margin:-14px 0 22px;font-size:13px;color:var(--muted)}
+.st-claude{background:var(--ok-soft);color:var(--ok)}
+.authbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;max-width:460px;margin-bottom:26px}
+.authbox h2.sec{margin:0}
+.authbox p{margin:0;font-size:13.5px}
+.authgoogle{justify-content:center;font-weight:600}
+.author{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px}
+.author::before,.author::after{content:"";flex:1;border-top:1px solid var(--line)}
+input[type="email"],input[type="password"]{font:inherit;font-size:14px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+code{font-family:var(--mono);font-size:.92em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+@media (max-width:640px){.acchead{grid-template-columns:auto 1fr}.acc-sync{grid-column:1/-1;justify-items:start}}
+
+/* dev mode */
+.topright{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.devtoggle{font:500 12px/1 var(--mono);letter-spacing:.04em;padding:7px 10px;border-radius:6px;border:1px dashed var(--muted);background:transparent;color:var(--muted)}
+.devtoggle[aria-pressed="true"]{border-style:solid;border-color:var(--warn);color:var(--warn);background:var(--surface)}
+.devtag{font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--warn);border:1px solid var(--warn);border-radius:4px;padding:4px 6px}
+.devpanel{display:flex;flex-wrap:wrap;gap:10px;align-items:center;border:1px dashed var(--warn);border-radius:12px;padding:12px 14px;margin:-12px 0 26px}
+.devpanel .toggle{display:flex;align-items:center;gap:6px;font-size:13px}
+.devnote{font-size:12px;color:var(--muted);margin-left:auto}
+.devid{color:var(--warn);font-size:12px}
+.opt.key{border-style:dashed;border-color:var(--warn)}
+.opt.key .k{background:var(--warn);color:var(--surface)}
+.devfilters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-bottom:18px}
+.devfilters label{display:grid;gap:4px;font-size:12px;color:var(--muted)}
+.devfilters label.grow{flex:1;min-width:200px}
+.devfilters select{max-width:260px}
+input[type="search"],input[type="text"],textarea{font:inherit;font-size:14px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+textarea.mono{font:12.5px/1.45 var(--mono)}
+input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.devlist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.devq{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px}
+.devq.is-hidden{opacity:.6;border-style:dashed}
+.devq-head{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:12px}
+.devstats{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.st{font:500 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 5px;border-radius:4px;background:var(--sunk);color:var(--muted)}
+.st-hidden{background:var(--bad-soft);color:var(--bad)}
+.st-edited,.st-added{background:var(--accent-soft);color:var(--accent)}
+.st-ai{border:1px solid var(--line)}
+.devstem{margin:0;font-weight:500}
+.devopts{margin:0;padding-left:20px;font-size:14px;display:grid;gap:2px}
+.devopts li{color:var(--muted)}
+.devopts li.ok{color:var(--ok);font-weight:600}
+.devexpl{margin:0;font-size:13px;color:var(--muted)}
+.devexpl.warn{color:var(--warn)}
+.devexpl.ok{color:var(--ok)}
+.devfig summary{cursor:pointer;font-size:12.5px;color:var(--muted)}
+.devfig .fig{margin:8px 0 0}
+.devact{display:flex;flex-wrap:wrap;gap:6px}
+.btn.danger{border-color:var(--bad);color:var(--bad)}
+.edh{font-size:28px;font-weight:800;margin:4px 0 12px}
+.edform{display:grid;gap:6px}
+.edform label{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:8px}
+.edform details{margin-top:10px}
+.edform summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--muted)}
+.edform .frow{margin-top:14px}
+.ederr{margin:8px 0 0;color:var(--bad);font-size:13.5px}
+.edprev{margin-top:26px;border-top:1px dashed var(--line);padding-top:18px}
+.edprev .opt{cursor:default}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:18px}
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.tool h2.sec{margin:0;font-size:18px}
+.tool p{margin:0;font-size:13.5px}
+.issues{margin:6px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px;max-height:320px;overflow:auto}
+.linkbtn{background:none;border:0;padding:0;color:var(--warn);text-decoration:underline;text-underline-offset:2px;font-size:12px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (max-width:640px){
+  .chead{grid-template-columns:1fr}
+  .topic{grid-template-columns:3.4em 1fr;row-gap:8px}
+  .topic .chip,.topic .tact{grid-column:2}
+  .topic .chip{justify-self:start}
+  .unit summary{grid-template-columns:auto 1fr}
+  .uact{grid-column:1/-1}
+  .meter{flex:1}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" id="root">
+  <header class="top">
+    <button class="brand" id="home-link" type="button"><b>AP Drill Room</b><span>CED-aligned practice</span></button>
+    <div class="topright"><nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav><button type="button" class="devtoggle" id="dev-toggle" aria-pressed="false" hidden>Dev mode</button><button type="button" class="acct" id="acct-chip"><span class="acct-av" aria-hidden="true"></span><span class="acct-name">Account</span></button></div>
+  </header>
+  <main id="app"></main>
+</div>
+
+<!--DATA-->
+
+<script>
+(function(){
+"use strict";
+const ORDER = ["hug","bio"];
+const COURSES = ORDER.map(id => AP_DATA[id]).filter(Boolean);
+const $app = document.getElementById("app");
+const $crumbs = document.getElementById("crumbs");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+/* ---------- figures (stimulus graphics, drawn as theme-aware SVG/HTML) ---------- */
+let uid = 0;
+const r1 = n => Math.round(n * 10) / 10;
+const col = k => `var(--s${k})`;
+const numFmt = v => typeof v === "number" ? (Math.abs(v) >= 10000 ? v.toLocaleString("en-US") : String(v)) : String(v);
+const svgWrap = (W, H, inner, label) => `<div class="fscroll"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label || "Figure")}">${inner}</svg></div>`;
+function legendHtml(items){ return items.length ? `<div class="flegend">${items.map(it => `<span><i class="${it.sq ? "sq" : ""}${it.dash ? " dash" : ""}" style="--c:${it.c}"></i>${esc(it.l)}</span>`).join("")}</div>` : ""; }
+function renderFig(f, nested){
+  if (!f) return "";
+  const body = (FIG[f.t] || (() => ""))(f);
+  if (nested) return body;
+  return `<figure class="fig">${f.title ? `<figcaption class="ftitle">${esc(f.title)}</figcaption>` : ""}${body}${f.note ? `<figcaption class="fnote">${esc(f.note)}</figcaption>` : ""}</figure>`;
+}
+function plotFrame(f, W, H, m){
+  const x = f.x || {}, y = f.y || {};
+  const sx = v => m.l + (v - x.min) / (x.max - x.min) * (W - m.l - m.r);
+  const sy = v => H - m.b - (v - y.min) / (y.max - y.min) * (H - m.t - m.b);
+  let s = "";
+  (f.bands || []).forEach((b, i) => {
+    const x1 = sx(b.from), x2 = sx(b.to);
+    if (i % 2 === 0) s += `<rect class="band" x="${r1(x1)}" y="${m.t}" width="${r1(x2 - x1)}" height="${H - m.t - m.b}"/>`;
+    s += `<text class="bandlabel" x="${r1((x1 + x2) / 2)}" y="${m.t - 8}" text-anchor="middle">${esc(b.l)}</text>`;
+  });
+  (y.ticks || []).forEach(t => { s += `<line class="grid" x1="${m.l}" x2="${W - m.r}" y1="${r1(sy(t))}" y2="${r1(sy(t))}"/><text class="tick" x="${m.l - 7}" y="${r1(sy(t))}" dy="0.35em" text-anchor="end">${esc(y.fmt ? y.fmt(t) : numFmt(t))}</text>`; });
+  (x.ticks || []).forEach(t => { s += `<line class="axis" x1="${r1(sx(t))}" x2="${r1(sx(t))}" y1="${H - m.b}" y2="${H - m.b + 4}"/><text class="tick" x="${r1(sx(t))}" y="${H - m.b + 17}" text-anchor="middle">${esc(x.fmt ? x.fmt(t) : numFmt(t))}</text>`; });
+  s += `<line class="axis" x1="${m.l}" x2="${W - m.r}" y1="${H - m.b}" y2="${H - m.b}"/><line class="axis" x1="${m.l}" x2="${m.l}" y1="${m.t}" y2="${H - m.b}"/>`;
+  if (x.label) s += `<text class="alabel" x="${(m.l + W - m.r) / 2}" y="${H - 8}" text-anchor="middle">${esc(x.label)}</text>`;
+  if (y.label) s += `<text class="alabel" transform="translate(15 ${(m.t + H - m.b) / 2}) rotate(-90)" text-anchor="middle">${esc(y.label)}</text>`;
+  (f.hlines || []).forEach(h => { s += `<line class="ref" x1="${m.l}" x2="${W - m.r}" y1="${r1(sy(h.y))}" y2="${r1(sy(h.y))}"/>${h.l ? `<text class="reflabel" x="${W - m.r - 4}" y="${r1(sy(h.y)) - 6}" text-anchor="end">${esc(h.l)}</text>` : ""}`; });
+  (f.vlines || []).forEach(v => { s += `<line class="ref" x1="${r1(sx(v.x))}" x2="${r1(sx(v.x))}" y1="${m.t}" y2="${H - m.b}"/>${v.l ? `<text class="reflabel" x="${r1(sx(v.x)) + 5}" y="${m.t + 12}">${esc(v.l)}</text>` : ""}`; });
+  return { s, sx, sy };
+}
+const marksSvg = (marks, sx, sy) => (marks || []).map(k => `<circle class="mark" cx="${r1(sx(k.x))}" cy="${r1(sy(k.y))}" r="4.5"/><text class="marklabel" x="${r1(sx(k.x)) + (k.dx ?? -7)}" y="${r1(sy(k.y)) + (k.dy ?? -9)}" text-anchor="${k.dx > 0 ? "start" : "end"}">${esc(k.l)}</text>`).join("");
+const FIG = {
+  line(f){
+    const W = 520, H = f.h || 300, m = { l: f.y && f.y.label ? 62 : 44, r: 18, t: f.bands ? 30 : 14, b: f.x && f.x.label ? 46 : 28 };
+    const P = plotFrame(f, W, H, m);
+    let s = P.s;
+    f.series.forEach((se, i) => {
+      const d = se.pts.map((p, j) => (j ? "L" : "M") + r1(P.sx(p[0])) + " " + r1(P.sy(p[1]))).join("");
+      s += `<path d="${d}" fill="none" stroke="${col(se.k || i + 1)}" stroke-width="2.5" stroke-linejoin="round" ${se.dash ? 'stroke-dasharray="7 5"' : ""}/>`;
+      if (se.dots) se.pts.forEach(p => { s += `<circle cx="${r1(P.sx(p[0]))}" cy="${r1(P.sy(p[1]))}" r="3.5" fill="${col(se.k || i + 1)}"/>`; });
+    });
+    s += marksSvg(f.marks, P.sx, P.sy);
+    const leg = f.series.length > 1 || f.series[0].name ? legendHtml(f.series.map((se, i) => ({ l: se.name || "", c: col(se.k || i + 1), dash: se.dash }))) : "";
+    return svgWrap(W, H, s, f.title) + leg;
+  },
+  scatter(f){
+    const W = 520, H = f.h || 300, m = { l: 62, r: 18, t: 14, b: 46 };
+    const P = plotFrame(f, W, H, m);
+    let s = P.s;
+    f.pts.forEach(p => { s += `<circle cx="${r1(P.sx(p[0]))}" cy="${r1(P.sy(p[1]))}" r="5" fill="${col(1)}" fill-opacity=".8"/>`; if (p[2]) s += `<text class="lbl-muted" x="${r1(P.sx(p[0])) + 8}" y="${r1(P.sy(p[1])) + 4}">${esc(p[2])}</text>`; });
+    s += marksSvg(f.marks, P.sx, P.sy);
+    return svgWrap(W, H, s, f.title);
+  },
+  bar(f){
+    const W = 520, H = f.h || 290, m = { l: f.y && f.y.label ? 62 : 44, r: 14, t: 14, b: f.x && f.x.label ? 50 : 32 };
+    const n = f.cats.length, k = f.series.length;
+    const P = plotFrame({ ...f, x: { min: 0, max: n, label: f.x && f.x.label } }, W, H, m);
+    const bw = (W - m.l - m.r) / n, inner = bw * (k > 1 ? .78 : .6), w = inner / k;
+    let s = P.s;
+    f.cats.forEach((c, i) => {
+      const x0 = m.l + i * bw + (bw - inner) / 2;
+      f.series.forEach((se, j) => {
+        const v = se.vals[i], y0 = P.sy(Math.max(f.y.min, 0)), y1 = P.sy(v);
+        s += `<rect x="${r1(x0 + j * w + 1)}" y="${r1(Math.min(y0, y1))}" width="${r1(w - 2)}" height="${r1(Math.abs(y0 - y1))}" rx="2" fill="${col(se.k || j + 1)}"/>`;
+        if (f.values) s += `<text class="tick" x="${r1(x0 + j * w + w / 2)}" y="${r1(y1 - 5)}" text-anchor="middle">${esc(numFmt(v))}</text>`;
+      });
+      s += `<text class="tick" x="${r1(m.l + i * bw + bw / 2)}" y="${H - m.b + 17}" text-anchor="middle">${esc(c)}</text>`;
+    });
+    (f.hlines || []).forEach(h => { s += `<line class="ref" x1="${m.l}" x2="${W - m.r}" y1="${r1(P.sy(h.y))}" y2="${r1(P.sy(h.y))}"/>`; });
+    return svgWrap(W, H, s, f.title) + (k > 1 ? legendHtml(f.series.map((se, j) => ({ l: se.name, c: col(se.k || j + 1), sq: 1 }))) : "");
+  },
+  pyramid(f){
+    const rowH = 15, n = f.ages.length, W = 520, gap = 58, side = 22, top = 26, H = top + n * rowH + 38;
+    const cx = W / 2, hw = (W - 2 * side - gap) / 2, sc = v => v / f.max * hw;
+    let s = `<text class="lbl" x="${cx - gap / 2 - 4}" y="16" text-anchor="end">Male</text><text class="lbl" x="${cx + gap / 2 + 4}" y="16">Female</text>`;
+    const ticks = f.ticks || [0, f.max / 2, f.max];
+    ticks.forEach(t => {
+      [cx - gap / 2 - sc(t), cx + gap / 2 + sc(t)].forEach(xx => { s += `<line class="grid" x1="${r1(xx)}" x2="${r1(xx)}" y1="${top}" y2="${top + n * rowH}"/><text class="tick" x="${r1(xx)}" y="${top + n * rowH + 16}" text-anchor="middle">${t}</text>`; });
+    });
+    f.ages.forEach((a, i) => {
+      const y = top + (n - 1 - i) * rowH;
+      s += `<rect x="${r1(cx - gap / 2 - sc(f.m[i]))}" y="${y + 1.5}" width="${r1(sc(f.m[i]))}" height="${rowH - 3}" fill="${col(1)}"/>`;
+      s += `<rect x="${cx + gap / 2}" y="${y + 1.5}" width="${r1(sc(f.f[i]))}" height="${rowH - 3}" fill="${col(2)}"/>`;
+      s += `<text class="tick" x="${cx}" y="${y + rowH / 2}" dy="0.35em" text-anchor="middle">${esc(a)}</text>`;
+    });
+    s += `<text class="alabel" x="${cx}" y="${H - 4}" text-anchor="middle">${esc(f.unit || "Percent of total population")}</text>`;
+    return svgWrap(W, H, s, f.title);
+  },
+  table(f){
+    return `<div class="fscroll"><table class="ftable">${f.head ? `<thead><tr>${f.head.map(h => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>` : ""}<tbody>${f.rows.map(r => `<tr>${r.map((c, i) => i === 0 && f.rowHead !== false ? `<th scope="row">${esc(c)}</th>` : `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  },
+  tree(f){
+    const kids = n => typeof n === "string" ? null : Array.isArray(n) ? n : n.c;
+    const hgt = n => kids(n) ? 1 + Math.max(...kids(n).map(hgt)) : 0;
+    const leaves = []; (function walk(n){ const k = kids(n); if (!k) leaves.push(n); else k.forEach(walk); })(f.root);
+    const rowH = 34, W = 520, labelW = 130, x0 = 28, H = leaves.length * rowH + 16;
+    const xLeaf = W - labelW, step = (xLeaf - x0) / hgt(f.root);
+    let s = "", li = 0;
+    (function draw(n, px){
+      const k = kids(n);
+      const x = k ? xLeaf - hgt(n) * step : xLeaf;
+      let y;
+      if (!k) { y = 12 + li++ * rowH + rowH / 2 - 4; s += `<text class="lbl" x="${x + 8}" y="${y}" dy="0.35em">${esc(n)}</text>`; }
+      else {
+        const ys = k.map(c => draw(c, x));
+        y = (ys[0] + ys[ys.length - 1]) / 2;
+        s += `<line class="br" x1="${r1(x)}" x2="${r1(x)}" y1="${r1(ys[0])}" y2="${r1(ys[ys.length - 1])}"/>`;
+      }
+      s += `<line class="br" x1="${r1(px)}" x2="${r1(x)}" y1="${r1(y)}" y2="${r1(y)}"/>`;
+      if (!Array.isArray(n) && typeof n === "object" && n.l) { const mx = (px + x) / 2; s += `<rect x="${r1(mx - 3)}" y="${r1(y - 7)}" width="6" height="14" fill="${col(2)}"/><text class="lbl-muted" x="${r1(mx)}" y="${r1(y - 11)}" text-anchor="middle">${esc(n.l)}</text>`; }
+      return y;
+    })(f.root, x0 - 14);
+    return svgWrap(W, H, s, f.title);
+  },
+  gel(f){
+    const L = f.lanes.length, laneW = 74, left = f.refs ? 122 : f.ladderLabels ? 86 : 48, W = left + L * laneW + 14, H = f.h || 300, top = 44, bot = H - 26;
+    const log = !f.linear, vals = f.lanes.flatMap(l => l.bands);
+    const hi = log ? Math.log(f.max || Math.max(...vals) * 1.3) : 0, lo = log ? Math.log(f.min || Math.min(...vals) * .7) : 1;
+    const py = v => log ? top + 14 + (hi - Math.log(v)) / (hi - lo) * (bot - top - 24) : top + 10 + v * (bot - top - 20);
+    let s = `<rect class="gelbg" x="${left - 6}" y="${top - 12}" width="${L * laneW + 6}" height="${bot - top + 18}" rx="4"/>`;
+    s += `<text class="lbl" x="${left - 18}" y="${top - 2}" text-anchor="middle">−</text><text class="lbl" x="${left - 18}" y="${bot}" text-anchor="middle">+</text>`;
+    f.lanes.forEach((ln, i) => {
+      const x = left + i * laneW + 8, w = laneW - 18;
+      s += `<text class="tick" x="${x + w / 2}" y="${top - 20}" text-anchor="middle">${esc(ln.name)}</text><rect class="well" x="${x}" y="${top - 6}" width="${w}" height="8" rx="1"/>`;
+      ln.bands.forEach(b => { s += `<rect class="gband" x="${x}" y="${r1(py(b) - 2.5)}" width="${w}" height="5" rx="1.5"/>`; });
+      if (ln.ladder && f.ladderLabels) ln.bands.forEach(b => { s += `<text class="tick" x="${left - 28}" y="${r1(py(b))}" dy="0.35em" text-anchor="end">${esc(numFmt(b))}</text>`; });
+    });
+    (f.refs || []).forEach(r => { s += `<text class="tick" x="${left - 28}" y="${r1(py(r.v))}" dy="0.35em" text-anchor="end">${esc(r.l)}</text>`; });
+    return svgWrap(W, H, s, f.title);
+  },
+  compartments(f){
+    const W = 520, H = 230; let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    let s = `<rect x="40" y="20" width="440" height="150" rx="6" fill="none" class="d-ln"/><line x1="260" x2="260" y1="20" y2="170" stroke="var(--ink)" stroke-width="2" stroke-dasharray="6 5"/>`;
+    [[f.left, 52, 248], [f.right, 272, 468]].forEach(([side, a, b]) => {
+      for (let i = 0; i < side.dots; i++) s += `<circle cx="${r1(a + rnd() * (b - a))}" cy="${r1(32 + rnd() * 126)}" r="4" fill="${col(2)}"/>`;
+      s += `<text class="lbl" x="${(a + b) / 2}" y="192" text-anchor="middle">${esc(side.label)}</text>`;
+    });
+    s += `<text class="lbl-muted" x="260" y="216" text-anchor="middle">${esc(f.membrane)}</text>`;
+    return svgWrap(W, H, s, f.title) + legendHtml([{ l: f.solute || "Solute particle", c: col(2), sq: 1 }]);
+  },
+  flow(f){
+    if (f.strip) return `<div class="fscroll"><div class="fstrip">${f.steps.map((st, i) => `<div class="fseg ${st.x ? "x" : ""} ${i % 2 ? "alt" : ""}" style="flex:${st.w || 1}">${esc(st.l)}${st.s ? `<small>${esc(st.s)}</small>` : ""}</div>`).join("")}</div></div>`;
+    return `<div class="flow">${f.steps.map(st => `<span class="fstep ${st === "X" || st === "?" ? "x" : ""}">${esc(st)}</span>`).join('<span class="farrow" aria-hidden="true">→</span>')}</div>`;
+  },
+  web(f){
+    const W = 520, H = f.h || 300, id = "ar" + (++uid);
+    const N = {}; f.nodes.forEach(n => { N[n.id] = { ...n, cx: n.x / 100 * W, cy: n.y / 100 * H, w: n.l.length * 7.2 + 20, h: 28 }; });
+    const clip = (n, dx, dy) => { const t = Math.min(dx ? (n.w / 2) / Math.abs(dx) : Infinity, dy ? (n.h / 2) / Math.abs(dy) : Infinity); return [n.cx + dx * t, n.cy + dy * t]; };
+    let s = `<defs><marker id="${id}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>`;
+    f.edges.forEach(([a, b]) => {
+      const A = N[a], B = N[b], dx = B.cx - A.cx, dy = B.cy - A.cy;
+      const p = clip(A, dx, dy), q = clip(B, -dx, -dy);
+      s += `<line class="edge" x1="${r1(p[0])}" y1="${r1(p[1])}" x2="${r1(q[0])}" y2="${r1(q[1])}" marker-end="url(#${id})"/>`;
+    });
+    Object.values(N).forEach(n => { s += `<rect class="node" x="${r1(n.cx - n.w / 2)}" y="${r1(n.cy - n.h / 2)}" width="${r1(n.w)}" height="${n.h}" rx="14"/><text class="lbl" x="${r1(n.cx)}" y="${r1(n.cy)}" dy="0.35em" text-anchor="middle">${esc(n.l)}</text>`; });
+    return svgWrap(W, H, s, f.title);
+  },
+  rings(f){
+    const W = 520, H = 300, cx = W / 2, cy = H / 2, R = 138, n = f.rings.length;
+    let s = "";
+    for (let i = n - 1; i >= 0; i--) s += `<circle class="ring" cx="${cx}" cy="${cy}" r="${r1(R * (i + 1) / n)}" fill="${i % 2 ? "var(--sunk)" : "var(--surface)"}"/>`;
+    f.rings.forEach((l, i) => { const y = i === 0 ? cy : cy - R * (i + .5) / n; s += `<text class="lbl" x="${cx}" y="${r1(y)}" dy="0.35em" text-anchor="middle" font-weight="600">${esc(l)}</text>`; });
+    return svgWrap(W, H, s, f.title) + (f.key ? `<div class="flegend">${f.key.map(k => `<span>${esc(k)}</span>`).join("")}</div>` : "");
+  },
+  sectors(f){
+    const W = 520, H = 300, cx = W / 2, cy = H / 2, R = 136;
+    let s = "", a0 = -90;
+    const pt = (a, r) => [cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)];
+    f.wedges.forEach(w => {
+      const a1 = a0 + w.a, p = pt(a0, R), q = pt(a1, R), mid = pt((a0 + a1) / 2, R * .64);
+      s += `<path d="M${cx} ${cy}L${r1(p[0])} ${r1(p[1])}A${R} ${R} 0 ${w.a > 180 ? 1 : 0} 1 ${r1(q[0])} ${r1(q[1])}Z" fill="${col(w.k)}" fill-opacity=".28" stroke="var(--surface)" stroke-width="2"/>`;
+      const lines = w.l.split("|");
+      s += `<text class="lbl" x="${r1(mid[0])}" y="${r1(mid[1])}" text-anchor="middle">${lines.map((t, j) => `<tspan x="${r1(mid[0])}" dy="${j ? "1.15em" : (-(lines.length - 1) * 0.575 + 0.35) + "em"}">${esc(t)}</tspan>`).join("")}</text>`;
+      a0 = a1;
+    });
+    s += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="var(--ink)" stroke-width="1.25"/><circle cx="${cx}" cy="${cy}" r="24" fill="var(--ink)"/><text x="${cx}" y="${cy}" dy="0.35em" text-anchor="middle" style="fill:var(--bg);font:600 12px var(--sans)">${esc(f.center || "CBD")}</text>`;
+    return svgWrap(W, H, s, f.title);
+  },
+  pedigree(f){
+    const u = 62, gy = 78, x0 = 58, y0 = 34, sz = 24;
+    const P = f.people.map(p => ({ ...p, px: x0 + p.x * u, py: y0 + p.y * gy }));
+    const maxX = Math.max(...P.map(p => p.px)), maxY = Math.max(...P.map(p => p.py));
+    const W = Math.max(maxX + 50, 360), H = maxY + 34;
+    let s = "";
+    const gens = new Set(P.map(p => p.y));
+    [...gens].sort().forEach(g => { s += `<text class="lbl-muted" x="14" y="${y0 + g * gy}" dy="0.35em" font-weight="600">${["I","II","III","IV"][g]}</text>`; });
+    f.fams.forEach(fm => {
+      const a = P[fm.p[0]], b = P[fm.p[1]], xm = (a.px + b.px) / 2, yb = a.py + gy / 2;
+      s += `<line class="ped" x1="${a.px}" x2="${b.px}" y1="${a.py}" y2="${a.py}"/>`;
+      if (fm.c && fm.c.length) {
+        const cs = fm.c.map(i => P[i]), xs = cs.map(c => c.px).concat(xm);
+        s += `<line class="ped" x1="${xm}" x2="${xm}" y1="${a.py}" y2="${yb}"/><line class="ped" x1="${Math.min(...xs)}" x2="${Math.max(...xs)}" y1="${yb}" y2="${yb}"/>`;
+        cs.forEach(c => { s += `<line class="ped" x1="${c.px}" x2="${c.px}" y1="${yb}" y2="${c.py - sz / 2}"/>`; });
+      }
+    });
+    P.forEach(p => {
+      const cls = "ped " + (p.a ? "ped-a" : "ped-u");
+      s += p.s === "m" ? `<rect class="${cls}" x="${p.px - sz / 2}" y="${p.py - sz / 2}" width="${sz}" height="${sz}"/>` : `<circle class="${cls}" cx="${p.px}" cy="${p.py}" r="${sz / 2}"/>`;
+      if (p.n) s += `<text class="tick" x="${p.px}" y="${p.py + sz / 2 + 13}" text-anchor="middle">${esc(p.n)}</text>`;
+    });
+    return svgWrap(W, H, s, f.title) + `<div class="flegend"><span>□ Male</span><span>○ Female</span><span>■ ● Affected</span></div>`;
+  },
+  choro(f){
+    const cs = 30, g = 3;
+    const panel = p => { const R = p.grid.length, C = p.grid[0].length, W = C * (cs + g) + 4, H = R * (cs + g) + 4; let s = "";
+      p.grid.forEach((row, i) => row.forEach((v, j) => { if (v !== null) s += `<rect x="${2 + j * (cs + g)}" y="${2 + i * (cs + g)}" width="${cs}" height="${cs}" rx="3" fill="var(--q${v})"/>`; }));
+      (p.outline || []).forEach(o => { s += `<rect x="${1 + o[1] * (cs + g)}" y="${1 + o[0] * (cs + g)}" width="${o[3] * (cs + g) - g + 2}" height="${o[2] * (cs + g) - g + 2}" rx="4" fill="none" stroke="var(--ink)" stroke-width="2"/>`; });
+      return `<div class="fpanel">${p.title ? `<h4>${esc(p.title)}</h4>` : ""}<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W * 1.2}px;height:auto" role="img" aria-label="${esc(p.title || "Map")}">${s}</svg></div>`; };
+    return `<div class="fpanels">${f.panels.map(panel).join("")}</div>` + legendHtml(f.legend.map((l, i) => ({ l, c: `var(--q${i})`, sq: 1 })));
+  },
+  svg(f){ return svgWrap(f.w || 520, f.h || 260, f.svg, f.title); },
+  panels(f){ return `<div class="fpanels">${f.items.map(it => `<div class="fpanel">${it.title ? `<h4>${esc(it.title)}</h4>` : ""}${renderFig(it, true)}</div>`).join("")}</div>`; }
+};
+
+/* ---------- storage (per-browser convenience) ---------- */
+const KEY = "apdr.v1", GKEY = "apdr.gen.v1";
+function load(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } }
+const AKEY = "apdr.activity.v1", SKEY = "apdr.sessions.v1", LKEY = "apdr.links.v1", SYNCED = [KEY, GKEY, AKEY, SKEY, LKEY, "apdr.prefs"];
+function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} if (SYNCED.includes(k)) scheduleSync(); }
+let progress = load(KEY, {});      // id -> [attempts, correctCount, lastCorrect]
+let generated = load(GKEY, {});    // "course|topic" -> [question tuples]
+let prefs = load("apdr.prefs", {len: "20"});
+let activity = load(AKEY, {});     // "YYYY-MM-DD" -> [answered, correct]
+let sessions = load(SKEY, []);     // recent finished sets, newest first
+let links = load(LKEY, {});        // linked accounts: {claude: {at}, google: {email, at}}
+
+/* ---------- normalize data ---------- */
+const TOPIC = {};   // "course|code" -> topic
+COURSES.forEach(c => {
+  c.topicList = [];
+  c.units.forEach(u => {
+    u.topicList = u.topics.map(([code, name, qs]) => {
+      const t = { code, name, unit: u, course: c, key: c.id + "|" + code, base: [], all: [], qs: [] };
+      t.base = qs.map((q, i) => mkQ(t, q, c.id + "-" + code + "-" + i, false));
+      (generated[t.key] || []).forEach(g => t.base.push(mkQ(t, g.q, g.id, true)));
+      TOPIC[t.key] = t; c.topicList.push(t);
+      return t;
+    });
+  });
+});
+function mkQ(t, q, id, gen){ return { id, topic: t, stem: q[0], correct: q[1], wrong: q[2], expl: q[3], fig: q[4] || null, gen }; }
+const hash = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
+(window.AP_VIS || []).forEach(([cid, code, q]) => { const t = TOPIC[cid + "|" + code]; if (t) t.base.push(mkQ(t, q, cid + "-" + code + "-v" + hash(q[0]), false)); });
+// Shared questions written by Claude through the site's relay. Built-in ones come from src/data/community.js
+// (folded in daily by a GitHub Action); newer ones stream in live from Firestore on the website.
+function addCommunity(rec){
+  const t = TOPIC[rec.course + "|" + rec.topic]; if (!t || !Array.isArray(rec.questions)) return false;
+  let added = false;
+  rec.questions.forEach((q, i) => {
+    const id = "c-" + rec.id + "-" + i;
+    if (!q || !q.stem || !q.correct || !Array.isArray(q.wrong) || q.wrong.length < 3 || t.base.some(x => x.id === id)) return;
+    const m = mkQ(t, [String(q.stem), String(q.correct), q.wrong.slice(0, 3).map(String), String(q.explanation || "")], id, false);
+    m.community = true; t.base.push(m); added = true;
+  });
+  return added;
+}
+(window.AP_COMMUNITY || []).forEach(addCommunity);
+const figOnly = qs => prefs.figs ? qs.filter(q => q.fig) : qs;
+
+/* Shared edits (db collection "edits"): doc id = question id.
+   kind "override" patches a built-in question (any subset of stem/correct/wrong/expl/fig/hidden); kind "new" adds one. */
+let EDITS = {};
+function applyEdits(){
+  COURSES.forEach(c => c.topicList.forEach(t => {
+    const out = t.base.map(q => {
+      const e = EDITS[q.id];
+      if (!e || e.kind !== "override") return q;
+      const n = { ...q, edited: true, hidden: !!e.hidden, orig: q };
+      ["stem", "correct", "expl"].forEach(k => { if (typeof e[k] === "string") n[k] = e[k]; });
+      if (Array.isArray(e.wrong) && e.wrong.length === 3) n.wrong = e.wrong.map(String);
+      if (e.fig !== undefined) n.fig = e.fig || null;
+      return n;
+    });
+    Object.values(EDITS).forEach(e => {
+      if (e.kind === "new" && e.course === c.id && e.topic === t.code && typeof e.stem === "string" && Array.isArray(e.wrong))
+        out.push({ id: e.id, topic: t, stem: e.stem, correct: String(e.correct || ""), wrong: e.wrong.map(String), expl: String(e.expl || ""), fig: e.fig || null, added: true, hidden: !!e.hidden });
+    });
+    t.all = out; t.qs = out.filter(q => !q.hidden);
+  }));
+}
+applyEdits();
+const findQ = id => { for (const c of COURSES) for (const t of c.topicList) { const q = t.all.find(x => x.id === id); if (q) return q; } return null; };
+
+/* ---------- mastery ---------- */
+function qStat(q){ return progress[q.id] || null; }
+function mastery(qs){
+  let seen = 0, right = 0, att = 0, cor = 0;
+  qs.forEach(q => { const s = qStat(q); if (s) { seen++; att += s[0]; cor += s[1]; if (s[2]) right++; } });
+  return { total: qs.length, seen, mastered: right, pct: qs.length ? right / qs.length : 0, acc: att ? cor / att : null };
+}
+const unitQs = u => u.topicList.flatMap(t => t.qs);
+const courseQs = c => c.topicList.flatMap(t => t.qs);
+function chipFor(m){
+  if (!m.seen) return `<span class="chip">${m.total} Qs · new</span>`;
+  const p = Math.round(m.pct * 100);
+  const cls = p >= 80 ? "m-hi" : p >= 50 ? "m-mid" : "m-lo";
+  return `<span class="chip ${cls}" title="${m.mastered} of ${m.total} answered correctly on the latest try">${p}% mastered</span>`;
+}
+
+/* ---------- Claude (optional) ---------- */
+let sample = null;
+let db = null, devAllowed = false;
+const devOn = () => devAllowed && !!prefs.dev;
+if (window.claude && typeof window.claude.use === "function") {
+  window.claude.use("sample").then(s => { sample = s || null; if (sample) softRerender(); }).catch(() => {});
+  window.claude.use("user").then(async u => {
+    devAllowed = !!(u && await u.canEdit()); updateDevToggle(); if (devAllowed && prefs.dev) softRerender();
+    if (u) { me = await u.me(); userId = me.id || null; } else me = null;
+    meKnown = true; updateAccountChip(); initSync();
+  }).catch(() => { meKnown = true; updateAccountChip(); });
+  window.claude.use("db").then(d => {
+    db = d || null; dbKnown = true; initSync(); if (db) subscribeEdits();
+  }).catch(() => {});
+}
+function subscribeEdits(){
+  db.collection("edits").limit(1000).onSnapshot(snap => {
+    const next = {}; snap.docs.forEach(doc => { if (doc.exists) next[doc.id] = { ...doc.data(), id: doc.id }; });
+    EDITS = next; applyEdits(); softRerender();
+  }, () => {});
+}
+
+/* ---------- self-hosted backend (GitHub Pages + Firebase) ----------
+   Active when config.js supplies a Firebase config. Accounts use Firebase Auth (Google or email/password);
+   progress lives at data/users/<uid>/account and shared question edits in content/edits, guarded by firestore.rules. */
+const CFG = window.APDR_CONFIG || {};
+const HOSTED = !!(CFG.firebase && CFG.firebase.apiKey && !/YOUR_/.test(CFG.firebase.apiKey) && window.firebase && !(window.claude && typeof window.claude.use === "function"));
+const IN_CLAUDE = !HOSTED && !!(window.claude && typeof window.claude.use === "function");
+let fbAuth = null, fbStore = null;
+function initialsAvatar(name){
+  const ch = (String(name).trim()[0] || "?").toUpperCase();
+  return "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#4c85bd"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">${ch.replace(/[<&>"]/g, "")}</text></svg>`);
+}
+// Firestore can't store arrays inside arrays (figures and question tuples have them), so bodies are stored as JSON text.
+// Shared edits live in ONE document so each visit costs a single read, whatever the number of edits.
+function firestoreDb(fs){
+  const stamp = () => firebase.firestore.FieldValue.serverTimestamp();
+  const edits = fs.doc("content/edits");
+  const parse = snap => { try { return snap.exists ? JSON.parse(snap.data().json || "{}") : {}; } catch (e) { return {}; } };
+  const mutate = fn => fs.runTransaction(async tx => { const map = parse(await tx.get(edits)); fn(map); tx.set(edits, { json: JSON.stringify(map), updatedAt: stamp() }); });
+  return {
+    doc(path){
+      const ref = fs.doc(path);
+      return {
+        get: async () => { const snap = await ref.get(); return { exists: snap.exists, data: () => parse(snap) }; },
+        set: body => ref.set({ json: JSON.stringify(body), updatedAt: stamp() })
+      };
+    },
+    collection(name){
+      if (name !== "edits") throw new Error("Unknown collection " + name);
+      const api = {
+        limit(){ return api; },
+        onSnapshot(next, err){ return edits.onSnapshot(snap => { const map = parse(snap); next({ docs: Object.keys(map).map(id => ({ id, exists: true, data: () => map[id] })) }); }, e => err && err(e)); },
+        doc(id){ return { set: body => mutate(m => { m[id] = body; }), delete: () => mutate(m => { delete m[id]; }) }; }
+      };
+      return api;
+    }
+  };
+}
+function initHosted(){
+  firebase.initializeApp(CFG.firebase);
+  fbAuth = firebase.auth(); fbStore = firebase.firestore();
+  db = firestoreDb(fbStore); dbKnown = true; subscribeEdits();
+  fbStore.collection("community").where("createdAt", ">", new Date(window.AP_COMMUNITY_UNTIL || 0)).onSnapshot(snap => {
+    let changed = false;
+    snap.docs.forEach(d => { const x = d.data(); let qs; try { qs = JSON.parse(x.json); } catch (e) { return; } if (addCommunity({ id: d.id, course: x.course, topic: x.topic, questions: qs })) changed = true; });
+    if (changed) { applyEdits(); softRerender(); }
+  }, () => {});
+  if (CFG.aiEndpoint) aiProxy = async (kind, payload, signal) => {
+    const u = fbAuth.currentUser; if (!u) throw { code: "unauthorized" };
+    const token = await u.getIdToken();
+    let r;
+    try { r = await fetch(CFG.aiEndpoint.replace(/\/$/, "") + "/" + kind, { method: "POST", headers: { "content-type": "application/json", authorization: "Bearer " + token, "x-anthropic-key": apiKey() }, body: JSON.stringify(payload), signal }); }
+    catch (e) { throw { code: signal && signal.aborted ? "cancelled" : "upstream_error" }; }
+    if (r.ok) return r.json();
+    let err = {}; try { err = await r.json(); } catch (e) {}
+    const map = { sign_in: "unauthorized", bad_key: "bad_key", no_credits: "no_credits", limit: "limit", busy: "rate_limited", declined: "refused", store: "store" };
+    throw { code: map[err.error] || (r.status === 401 ? "unauthorized" : r.status === 429 ? "rate_limited" : "upstream_error") };
+  };
+  fbAuth.onAuthStateChanged(async u => {
+    const prev = userId;
+    if (u) {
+      me = { id: u.uid, name: u.displayName || (u.email ? u.email.split("@")[0] : ""), email: u.email || "", avatarUrl: u.photoURL || initialsAvatar(u.displayName || u.email || "?") };
+      userId = u.uid;
+      try { devAllowed = (await fbStore.doc("admins/" + u.uid).get()).exists; } catch (e) { devAllowed = false; }
+    } else { me = null; userId = null; devAllowed = false; }
+    meKnown = true;
+    if (u && !apiKey() && !prefs.aiNoticeShown) { prefs.aiNoticeShown = 1; save("apdr.prefs", prefs); setTimeout(() => toast("Signed in. AI features aren't included with a Google account. See Account for options."), 600); }
+    if (prev !== userId) { syncStarted = false; syncReady = false; clearTimeout(syncTimer); setSync("local"); }
+    updateDevToggle(); updateAccountChip(); initSync(); softRerender();
+  });
+}
+async function signOutHosted(){
+  if (syncState.s === "pending") { clearTimeout(syncTimer); await pushSync(); }
+  // Clear this device's copy so the next person on a shared computer starts fresh; it's safe in the account.
+  progress = {}; activity = {}; sessions = []; generated = {}; links = {};
+  try { [KEY, GKEY, AKEY, SKEY, LKEY, "apdr.apikey"].forEach(k => localStorage.removeItem(k)); } catch (e) {}  // incl. the API key, so the next person can't spend it
+  COURSES.forEach(cc => cc.topicList.forEach(t => { t.base = t.base.filter(q => !q.gen); }));
+  applyEdits();
+  await fbAuth.signOut();
+  toast("Signed out");
+}
+function authErr(e){
+  const c = (e && e.code) || "";
+  return ({
+    "auth/invalid-email": "That email address doesn't look right.",
+    "auth/missing-password": "Enter your password.",
+    "auth/invalid-credential": "Email or password is incorrect.",
+    "auth/wrong-password": "Email or password is incorrect.",
+    "auth/user-not-found": "No account uses that email. Choose Create account instead.",
+    "auth/email-already-in-use": "An account already uses that email. Sign in instead.",
+    "auth/weak-password": "Use a password with at least 6 characters.",
+    "auth/too-many-requests": "Too many attempts. Wait a few minutes and try again.",
+    "auth/network-request-failed": "Couldn't connect. Check your internet connection.",
+    "auth/popup-closed-by-user": "",
+    "auth/cancelled-popup-request": "",
+    "auth/unauthorized-domain": "This site's address isn't authorized for sign-in yet. The site owner needs to add it in Firebase → Authentication → Settings → Authorized domains.",
+    "auth/api-key-not-valid.-please-pass-a-valid-api-key.": "Sign-in isn't set up correctly yet. The site owner needs to check the Firebase settings in config.js.",
+    "auth/operation-not-allowed": "This sign-in method is turned off. The site owner needs to enable it in Firebase → Authentication → Sign-in method."
+  })[c] ?? "Couldn't sign in. Try again.";
+}
+// Re-render for background updates without clobbering a form the person is typing in.
+function softRerender(){
+  if (view.name === "edit" || view.name === "tools") return;
+  const a = document.activeElement;
+  if (a && /INPUT|TEXTAREA|SELECT/.test(a.tagName) && view.name !== "quiz") { a.addEventListener("blur", () => softRerender(), { once: true }); return; }
+  rerender();
+}
+function updateDevToggle(){
+  const b = document.getElementById("dev-toggle");
+  b.hidden = !devAllowed;
+  b.setAttribute("aria-pressed", devOn() ? "true" : "false");
+  b.textContent = devOn() ? "Dev mode on" : "Dev mode";
+}
+document.getElementById("dev-toggle").onclick = () => { prefs.dev = !prefs.dev; save("apdr.prefs", prefs); updateDevToggle(); toast(prefs.dev ? "Dev mode on. Tools appear on each course page." : "Dev mode off"); rerender(); };
+/* AI: one interface, two engines. On claude.ai it uses the viewer's own Claude ("sample");
+   on a self-hosted site it calls your Worker, which holds your API key and builds the prompt server-side. */
+let aiProxy = null;
+const apiKey = () => { try { return localStorage.getItem("apdr.apikey") || ""; } catch (e) { return ""; } };  // never synced
+const aiOn = () => !!sample || !!(aiProxy && userId && apiKey());
+// claude.ai: AI runs on the viewer's own Claude usage, so ask clearly before the first request (Claude also asks).
+function ensureAiConsent(){
+  if (!sample || prefs.aiConsent) return Promise.resolve(true);
+  return new Promise(resolve => {
+    const wrap = document.createElement("div");
+    wrap.className = "modal"; wrap.setAttribute("role", "dialog"); wrap.setAttribute("aria-modal", "true"); wrap.setAttribute("aria-labelledby", "cons-h");
+    wrap.innerHTML = `<div class="modal-card">
+      <h2 id="cons-h">Use your Claude usage?</h2>
+      <p><b>AI features run on your own Claude account.</b> Each explanation or set of new questions counts toward your Claude plan's usage limits. If you've turned on extra usage in Claude, requests can also use your paid credits.</p>
+      <p>AP Drill Room doesn't pay for these requests and can't see your Claude account or conversations. Claude will also ask your permission before the first request.</p>
+      <p class="muted">You can turn this off anytime on the Account page.</p>
+      <div class="frow"><button class="btn primary" type="button" id="cons-yes">I agree, use my Claude usage</button><button class="btn ghost" type="button" id="cons-no">Not now</button></div>
+    </div>`;
+    document.body.appendChild(wrap);
+    const done = ok => { wrap.remove(); if (ok) { prefs.aiConsent = Date.now(); save("apdr.prefs", prefs); } resolve(ok); };
+    wrap.querySelector("#cons-yes").onclick = () => done(true);
+    wrap.querySelector("#cons-no").onclick = () => done(false);
+    wrap.addEventListener("keydown", e => { if (e.key === "Escape") done(false); });
+    wrap.querySelector("#cons-yes").focus();
+  });
+}
+function explainPrompt(c){
+  const L = "ABCD";
+  return `A student is studying ${c.course}, CED Topic ${c.topicCode} "${c.topicName}".
+${c.fig ? "The question has a figure described by this data: " + c.fig + "\n" : ""}Question: ${c.stem}
+Options:
+${c.options.map((o, i) => L[i] + ". " + o).join("\n")}
+Correct answer: ${L[c.correct]}. The student chose: ${L[c.picked]}.
+
+In 120 words or fewer of plain text with no markdown, explain why the correct answer is right${c.picked !== c.correct ? " and why the student's choice is wrong" : ""}. Then give one quick tip for remembering the concept on the AP exam.`;
+}
+function generatePrompt(c){
+  return `You write practice questions for ${c.course}, Unit ${c.unitN} (${c.unitName}), CED Topic ${c.topicCode}: "${c.topicName}".
+Write 5 NEW, original, accurate AP-style multiple-choice questions for this topic only. Mix recall with application or data/scenario reasoning, at real AP exam difficulty. Each has exactly one correct answer and 3 plausible wrong answers that reflect common misconceptions. Do not use "all of the above" or "none of the above". Do not repeat these existing questions:
+${c.existing.map(x => "- " + x).join("\n")}
+
+Reply with ONLY a JSON array of 5 objects shaped like:
+{"stem": "question text", "correct": "the correct answer", "wrong": ["wrong 1", "wrong 2", "wrong 3"], "explanation": "1-2 sentences explaining why the answer is correct"}`;
+}
+const AI = {
+  async explain(c, onText, signal){
+    if (sample) { await sample(explainPrompt(c), { signal, modelTier: "quick", onText: ({ text }) => onText(text) }); return; }
+    const r = await aiProxy("explain", c, signal); onText(String(r.text || ""));
+  },
+  async generate(c){
+    if (sample) return { questions: await sample.json(generatePrompt(c), { cache: false }) };
+    return await aiProxy("generate", c);  // {id, questions}: saved to the shared pool by the relay itself
+  }
+};
+function sampleErr(e){
+  const c = e && e.code;
+  if (c === "unauthorized") return "Sign in to use Claude features.";
+  if (c === "bad_key") return "Your Anthropic API key was rejected. Check it on the Account page.";
+  if (c === "no_credits") return "Your Anthropic account is out of credits.";
+  if (c === "limit") return "You've reached today's limit for this site. Try again tomorrow.";
+  if (c === "store") return "Claude wrote the questions, but they couldn't be saved. Try again.";
+  if (c === "not_granted" || c === "sampling_disabled" || c === "not_declared" || c === "capability_disabled" || c === "capability_removed") { sample = null; return "Claude isn't available on this page, so AI features are off."; }
+  if (c === "rate_limited") return "Too many requests right now. Try again in a minute.";
+  if (c === "session_expired") return "Sign in to Claude again to use this.";
+  if (c === "invalid_json") return "Claude's reply couldn't be read. Try again.";
+  if (c === "cancelled") return "";
+  return "Couldn't reach Claude. Try again.";
+}
+
+/* ---------- routing ---------- */
+let view = { name: "home" };
+let session = null;
+function go(v){ view = v; rerender(); window.scrollTo(0, 0);
+  try { const h = v.name === "course" ? v.cid : ""; if (location.hash.slice(1) !== h) history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch(e){}
+}
+function rerender(){
+  document.getElementById("root").className = "wrap" + (view.cid ? " c-" + view.cid : "");
+  if (view.name === "home") renderHome();
+  else if (view.name === "course") renderCourse();
+  else if (view.name === "quiz") renderQuiz();
+  else if (view.name === "results") renderResults();
+  else if (view.name === "dev") renderDev();
+  else if (view.name === "edit") renderEdit();
+  else if (view.name === "tools") renderTools();
+  else if (view.name === "account") renderAccount();
+}
+document.getElementById("home-link").onclick = () => go({ name: "home" });
+function crumbs(items){
+  $crumbs.innerHTML = items.map((it, i) => it.go ? `<button type="button" data-i="${i}">${esc(it.label)}</button>` : `<span>${esc(it.label)}</span>`).join('<span aria-hidden="true">/</span>');
+  $crumbs.querySelectorAll("button").forEach(b => b.onclick = () => items[+b.dataset.i].go());
+}
+
+/* ---------- home ---------- */
+function renderHome(){
+  crumbs([]);
+  const total = COURSES.reduce((n, c) => n + courseQs(c).length, 0);
+  $app.innerHTML = `
+    <section class="hero">
+      <h1>Drill any AP topic, unit, or whole course.</h1>
+      <p>Original multiple-choice questions organized to match the College Board Course and Exam Description (CED), one pool for every numbered topic. ${total} questions so far. ${userId && db ? "Your progress syncs to your account." : "Your progress is saved in this browser."}</p>
+    </section>
+    <div class="courses">
+      ${COURSES.map(c => {
+        const m = mastery(courseQs(c));
+        return `<button type="button" class="ccard c-${c.id}" data-c="${c.id}">
+          <div class="abbr">${esc(c.short)}</div>
+          <div><h2>${esc(c.name)}</h2><p style="margin-top:4px">${esc(c.blurb)}</p></div>
+          <div class="facts"><span><b>${c.units.length}</b> units</span><span><b>${c.topicList.length}</b> topics</span><span><b>${m.total}</b> questions</span><span><b>${courseQs(c).filter(q => q.fig).length}</b> with figures</span><span><b>${Math.round(m.pct*100)}%</b> mastered</span></div>
+          <div>
+            <div class="unitstrip">${c.units.map(u => { const um = mastery(unitQs(u)); return `<i style="--p:${Math.round(um.pct*100)}%" title="Unit ${u.n}: ${Math.round(um.pct*100)}% mastered"><span>${u.n}</span></i>`; }).join("")}</div>
+            <div class="legend" style="margin-top:6px">Mastery by unit</div>
+          </div>
+        </button>`;
+      }).join("")}
+    </div>
+    <p class="later">More AP courses can be added with the same unit → topic structure. Questions are original practice written to match each CED topic. They are not released College Board exam items.</p>`;
+  $app.querySelectorAll(".ccard").forEach(b => b.onclick = () => go({ name: "course", cid: b.dataset.c }));
+}
+
+/* ---------- course ---------- */
+function renderCourse(){
+  const c = AP_DATA[view.cid];
+  crumbs([{ label: "Courses", go: () => go({ name: "home" }) }, { label: c.name }]);
+  const all = courseQs(c), m = mastery(all);
+  const weak = c.topicList.filter(t => { const tm = mastery(t.qs); return tm.seen && tm.pct < 0.6; });
+  const openSet = view.open || new Set([firstUnfinishedUnit(c)]);
+  view.open = openSet;
+  $app.innerHTML = `
+    <section class="chead">
+      <div><div class="abbr">${esc(c.short.toUpperCase())}</div><h1>${esc(c.name)}</h1><p>${esc(c.exam)}</p></div>
+      <div class="stats">
+        <div class="stat"><b>${m.total}</b><span>Questions</span></div>
+        <div class="stat"><b>${m.seen}</b><span>Attempted</span></div>
+        <div class="stat"><b>${m.acc == null ? "—" : Math.round(m.acc*100) + "%"}</b><span>Accuracy</span></div>
+        <div class="stat"><b>${Math.round(m.pct*100)}%</b><span>Mastered</span></div>
+      </div>
+    </section>
+    <div class="launch">
+      <span class="lbl">Whole-course practice</span>
+      <label for="len">Length <select id="len">${["10","20","40","all"].map(v => `<option value="${v}" ${prefs.len===v?"selected":""}>${v==="all"?"All":v} questions</option>`).join("")}</select></label>
+      <label class="toggle" for="figs"><input type="checkbox" id="figs" ${prefs.figs ? "checked" : ""}> Figure questions only</label>
+      <button class="btn primary" id="go-course" type="button">Start mixed set</button>
+      <button class="btn" id="go-weak" type="button" ${weak.length ? "" : "disabled"} title="${weak.length ? weak.length + " topics under 60% mastery" : "Answer some questions first. Topics under 60% show up here."}">Weak topics${weak.length ? " (" + weak.length + ")" : ""}</button>
+      <button class="btn ghost" id="go-reset" type="button">Reset progress</button>
+    </div>
+    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) need Claude. ${CFG.claudeAppUrl ? `<a href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a> or add` : "Add"} your own API key on the <button type="button" class="linkbtn" id="hint-acct">Account page</button>.</p>` : ""}
+    ${devOn() ? `<div class="devpanel">
+      <span class="devtag">Dev</span>
+      <button class="btn small" type="button" id="dv-browse">Browse &amp; edit questions</button>
+      <button class="btn small" type="button" id="dv-add">Add a question</button>
+      <button class="btn small" type="button" id="dv-tools">Testing tools &amp; data</button>
+      <label class="toggle" for="dv-key"><input type="checkbox" id="dv-key" ${prefs.devKey ? "checked" : ""}> Show answer key while practicing</label>
+      <span class="devnote">${db ? Object.keys(EDITS).length + " shared edits" : "Shared edits unavailable in this view"}</span>
+    </div>` : ""}
+    ${c.units.map(u => {
+      const um = mastery(unitQs(u));
+      return `<details class="unit" data-u="${u.n}" ${openSet.has(u.n) ? "open" : ""}>
+        <summary>
+          <span class="unum">${u.n}</span>
+          <span class="uname"><h3>${esc(u.name)}</h3><span class="meta"><span>Exam weight ${esc(u.weight)}</span><span>${u.topicList.length} topics · ${um.total} Qs</span><span>${Math.round(um.pct*100)}% mastered</span></span></span>
+          <span class="uact"><span class="meter" aria-hidden="true"><i style="width:${Math.round(um.pct*100)}%"></i></span><button class="btn small primary" type="button" data-unit="${u.n}">Practice unit</button><span class="chev" aria-hidden="true"></span></span>
+        </summary>
+        <ul class="topics">
+          ${u.topicList.map(t => {
+            const tm = mastery(t.qs), g = t.qs.filter(q => q.gen).length, fg = t.qs.filter(q => q.fig).length, ed = t.all.filter(q => q.edited || q.added || q.hidden).length;
+            return `<li class="topic">
+              <span class="code">${esc(t.code)}</span>
+              <span class="tname">${esc(t.name)}${devOn() && ed ? `<span class="ai-badge" title="Edited, added, or hidden questions">${ed} edited</span>` : ""}${fg ? `<span class="fig-badge" title="${fg} questions with a graph, diagram, or table">${fg} fig</span>` : ""}${g ? `<span class="ai-badge" title="${g} questions generated by Claude">+${g} AI</span>` : ""}</span>
+              ${chipFor(tm)}
+              <span class="tact">
+                ${aiOn() ? `<button class="btn small ghost" type="button" data-gen="${esc(t.key)}" title="Ask Claude to write 5 new questions for this topic">+5 new</button>` : ""}
+                <button class="btn small" type="button" data-topic="${esc(t.key)}">Practice</button>
+              </span>
+              <span class="gen-status" data-gs="${esc(t.key)}" hidden></span>
+            </li>`;
+          }).join("")}
+        </ul>
+      </details>`;
+    }).join("")}`;
+  const lenSel = document.getElementById("len");
+  lenSel.onchange = () => { prefs.len = lenSel.value; save("apdr.prefs", prefs); };
+  if (devOn()) {
+    document.getElementById("dv-browse").onclick = () => go({ name: "dev", cid: c.id, f: {}, limit: 40 });
+    document.getElementById("dv-add").onclick = () => go({ name: "edit", cid: c.id, qid: null, topicKey: c.topicList[0].key, ret: { name: "dev", cid: c.id, f: {}, limit: 40 } });
+    document.getElementById("dv-tools").onclick = () => go({ name: "tools", cid: c.id });
+    const kb = document.getElementById("dv-key"); kb.onchange = () => { prefs.devKey = kb.checked; save("apdr.prefs", prefs); };
+  }
+  const ha = document.getElementById("hint-acct"); if (ha) ha.onclick = () => go({ name: "account" });
+  const figBox = document.getElementById("figs");
+  figBox.onchange = () => { prefs.figs = figBox.checked; save("apdr.prefs", prefs); toast(prefs.figs ? "Practice sets now use only questions with a graph, diagram, or table" : "Practice sets include all questions"); };
+  document.getElementById("go-course").onclick = () => start(c, all, "Whole course", prefs.len);
+  document.getElementById("go-weak").onclick = () => start(c, weak.flatMap(t => t.qs), "Weak topics", prefs.len);
+  const rb = document.getElementById("go-reset");
+  rb.onclick = () => {
+    if (rb.dataset.armed) { courseQs(c).forEach(q => delete progress[q.id]); save(KEY, progress); toast("Progress reset for " + c.name); renderCourse(); return; }
+    rb.dataset.armed = "1"; rb.textContent = "Click again to reset"; rb.style.borderColor = "var(--bad)"; rb.style.color = "var(--bad)";
+    setTimeout(() => { if (rb.isConnected) { delete rb.dataset.armed; rb.textContent = "Reset progress"; rb.style.cssText = ""; } }, 3500);
+  };
+  $app.querySelectorAll("details.unit").forEach(d => d.addEventListener("toggle", () => { const n = +d.dataset.u; d.open ? openSet.add(n) : openSet.delete(n); }));
+  $app.querySelectorAll("[data-unit]").forEach(b => b.onclick = e => { e.preventDefault(); const u = c.units.find(x => x.n === +b.dataset.unit); start(c, unitQs(u), "Unit " + u.n + ": " + u.name, prefs.len); });
+  $app.querySelectorAll("[data-topic]").forEach(b => b.onclick = () => { const t = TOPIC[b.dataset.topic]; start(c, t.qs, t.code + " " + t.name, "all"); });
+  $app.querySelectorAll("[data-gen]").forEach(b => b.onclick = () => generateFor(TOPIC[b.dataset.gen], b));
+}
+function firstUnfinishedUnit(c){
+  const u = c.units.find(u => mastery(unitQs(u)).pct < 0.8);
+  return (u || c.units[0]).n;
+}
+
+/* ---------- Claude: generate more questions ---------- */
+async function generateFor(t, btn){
+  if (!aiOn() || !(await ensureAiConsent())) return;
+  const status = $app.querySelector(`[data-gs="${CSS.escape(t.key)}"]`);
+  btn.disabled = true; btn.textContent = "Writing…";
+  if (status) { status.hidden = false; status.textContent = `Claude is writing 5 new questions using your ${sample ? "Claude usage" : "API key"}. This can take up to a minute.`; }
+  const ctx = { courseId: t.course.id, course: t.course.name, unitN: t.unit.n, unitName: t.unit.name, topicCode: t.code, topicName: t.name, existing: t.qs.slice(0, 12).map(q => q.stem) };
+  try {
+    const res = await AI.generate(ctx);
+    const out = res && res.questions;
+    const arr = (Array.isArray(out) ? out : []).filter(o => o && typeof o.stem === "string" && typeof o.correct === "string" && Array.isArray(o.wrong) && o.wrong.length >= 3);
+    if (!arr.length) throw { code: "invalid_json" };
+    if (res.id) {
+      addCommunity({ id: res.id, course: t.course.id, topic: t.code, questions: arr.slice(0, 5) });
+      applyEdits(); toast(`Added ${Math.min(arr.length, 5)} Claude-written questions to ${t.code} for everyone`); renderCourse(); return;
+    }
+    const list = generated[t.key] || (generated[t.key] = []);
+    const stamp = Date.now().toString(36);
+    arr.slice(0, 5).forEach((o, i) => {
+      const g = { id: `${t.course.id}-${t.code}-g${stamp}${i}`, q: [o.stem, o.correct, o.wrong.slice(0, 3).map(String), String(o.explanation || "")] };
+      list.push(g); t.base.push(mkQ(t, g.q, g.id, true));
+    });
+    save(GKEY, generated); applyEdits();
+    toast(`Added ${Math.min(arr.length, 5)} questions to ${t.code} ${t.name}`);
+    renderCourse();
+  } catch (e) {
+    const msg = sampleErr(e);
+    if (!aiOn()) { renderCourse(); if (msg) toast(msg); return; }
+    btn.disabled = false; btn.textContent = "+5 new";
+    if (status) status.textContent = msg;
+  }
+}
+
+/* ---------- sessions ---------- */
+function pick(qs, len){
+  // Prioritize: missed last time, then unseen, then previously correct. Random within each group.
+  const pri = q => { const s = qStat(q); return !s ? 1 : s[2] ? 0 : 2; };
+  const sorted = shuffle(qs).sort((a, b) => pri(b) - pri(a));
+  const n = len === "all" ? qs.length : Math.min(+len, qs.length);
+  return shuffle(sorted.slice(0, n));
+}
+function start(c, qs, label, len, noFilter){
+  if (!noFilter) qs = figOnly(qs);
+  if (!qs.length) { toast(prefs.figs ? "No figure questions here yet. Turn off “Figure questions only” to practice this." : "No questions in this selection yet."); return; }
+  const chosen = pick(qs, len);
+  session = {
+    cid: c.id, label, source: qs, len,
+    items: chosen.map(q => { const opts = shuffle([q.correct, ...q.wrong]); return { q, opts, ans: opts.indexOf(q.correct), picked: null }; }),
+    i: 0
+  };
+  go({ name: "quiz", cid: c.id });
+}
+function answer(idx){
+  const it = session.items[session.i];
+  if (it.picked !== null) return;
+  it.picked = idx;
+  const ok = idx === it.ans;
+  const s = progress[it.q.id] || [0, 0, 0];
+  s[0]++; if (ok) s[1]++; s[2] = ok ? 1 : 0;
+  progress[it.q.id] = s; save(KEY, progress);
+  const day = today(), a = activity[day] || [0, 0]; a[0]++; if (ok) a[1]++; activity[day] = a; save(AKEY, activity);
+  renderQuiz();
+}
+function next(){
+  if (session.i < session.items.length - 1) { session.i++; renderQuiz(); window.scrollTo(0, 0); }
+  else go({ name: "results", cid: session.cid });
+}
+
+/* ---------- quiz view ---------- */
+let explainCtl = null;
+function renderQuiz(){
+  const c = AP_DATA[session.cid];
+  crumbs([{ label: "Courses", go: () => go({ name: "home" }) }, { label: c.name, go: () => go({ name: "course", cid: c.id }) }, { label: "Practice" }]);
+  const it = session.items[session.i], q = it.q, done = it.picked !== null;
+  const answered = session.items.filter(x => x.picked !== null).length;
+  const right = session.items.filter(x => x.picked !== null && x.picked === x.ans).length;
+  const L = "ABCD";
+  $app.innerHTML = `
+    <div class="qwrap">
+      <div class="qbar">
+        <span class="scope"><b>${esc(session.label)}</b> · ${right}/${answered} correct</span>
+        ${devOn() ? `<button class="btn small ghost" type="button" id="q-skip">Skip</button><button class="btn small ghost" type="button" id="q-sim">Auto-answer rest</button><button class="btn small ghost" type="button" id="q-edit">Edit question</button>` : ""}
+        <button class="btn small ghost" type="button" id="q-end">End &amp; review</button>
+      </div>
+      <div class="prog" aria-hidden="true"><i style="width:${(session.i + (done ? 1 : 0)) / session.items.length * 100}%"></i></div>
+      <div class="qmeta"><span class="mono">Q ${session.i + 1} / ${session.items.length}</span>${devOn() ? `<span class="mono devid">${esc(q.id)}</span>` : ""}<span class="tag">${esc(q.topic.code)} ${esc(q.topic.name)}</span>${q.community ? '<span class="ai-badge">Written by Claude</span>' : q.gen ? '<span class="ai-badge">AI-written</span>' : ""}</div>
+      ${renderFig(q.fig)}
+      <p class="stem">${esc(q.stem)}</p>
+      <ol class="opts">
+        ${it.opts.map((o, i) => {
+          let cls = "";
+          if (done) cls = i === it.ans ? "correct" : i === it.picked ? "wrong" : "dim";
+          else if (devOn() && prefs.devKey && i === it.ans) cls = "key";
+          return `<li><button type="button" class="opt ${cls}" data-i="${i}" ${done ? "disabled" : ""}><span class="k">${L[i]}</span><span>${esc(o)}</span></button></li>`;
+        }).join("")}
+      </ol>
+      ${done ? `
+      <div class="feedback" aria-live="polite">
+        <div class="verdict ${it.picked === it.ans ? "ok" : "bad"}">${it.picked === it.ans ? "Correct" : "Not quite. The answer is " + L[it.ans] + "."}</div>
+        ${q.expl ? `<p class="expl">${esc(q.expl)}</p>` : ""}
+        <div class="deeper" id="deeper" hidden></div>
+        <div class="frow">
+          ${aiOn() ? `<button class="btn small ghost" type="button" id="q-explain">Explain more</button>` : ""}
+          <span class="spacer"></span>
+          <button class="btn primary" type="button" id="q-next">${session.i < session.items.length - 1 ? "Next question" : "See results"}</button>
+        </div>
+      </div>` : `<p class="hint" style="margin-top:16px">Press <kbd>A</kbd>–<kbd>D</kbd> or <kbd>1</kbd>–<kbd>4</kbd> to answer, then <kbd>Enter</kbd> for the next question.</p>`}
+    </div>`;
+  $app.querySelectorAll(".opt").forEach(b => b.onclick = () => answer(+b.dataset.i));
+  document.getElementById("q-end").onclick = () => go({ name: "results", cid: session.cid });
+  if (devOn()) {
+    document.getElementById("q-skip").onclick = next;
+    document.getElementById("q-edit").onclick = () => go({ name: "edit", cid: session.cid, qid: q.id, ret: { name: "quiz", cid: session.cid } });
+    document.getElementById("q-sim").onclick = () => {
+      session.items.forEach((x, i) => { if (i >= session.i && x.picked === null) { const ok = Math.random() < 0.7; x.picked = ok ? x.ans : (x.ans + 1) % x.opts.length; const st = progress[x.q.id] || [0, 0, 0]; st[0]++; if (ok) st[1]++; st[2] = ok ? 1 : 0; progress[x.q.id] = st; } });
+      save(KEY, progress); go({ name: "results", cid: session.cid });
+    };
+  }
+  const nb = document.getElementById("q-next"); if (nb) { nb.onclick = next; nb.focus({ preventScroll: true }); }
+  const eb = document.getElementById("q-explain"); if (eb) eb.onclick = () => explain(it, eb);
+}
+async function explain(it, btn){
+  if (!aiOn() || !(await ensureAiConsent())) return;
+  const box = document.getElementById("deeper");
+  if (explainCtl) explainCtl.abort();
+  const ctl = explainCtl = new AbortController();
+  btn.disabled = true; box.hidden = false; box.textContent = "Thinking…";
+  const q = it.q;
+  const ctx = { course: q.topic.course.name, topicCode: q.topic.code, topicName: q.topic.name, stem: q.stem, options: it.opts, correct: it.ans, picked: it.picked, fig: q.fig ? JSON.stringify(q.fig).slice(0, 3000) : "" };
+  try {
+    await AI.explain(ctx, text => { if (box.isConnected) box.textContent = text; }, ctl.signal);
+  } catch (e) {
+    const msg = sampleErr(e);
+    if (box.isConnected) box.textContent = (e && e.text) ? e.text + "\n\n" + msg : msg;
+    if (!msg && box.isConnected && !(e && e.text)) box.hidden = true;
+  } finally { if (btn.isConnected) btn.disabled = false; }
+}
+document.addEventListener("keydown", e => {
+  if (view.name !== "quiz" || !session || e.metaKey || e.ctrlKey || e.altKey || document.querySelector(".modal")) return;
+  if (e.target && /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+  const it = session.items[session.i];
+  const k = e.key.toLowerCase();
+  const map = { a: 0, b: 1, c: 2, d: 3, "1": 0, "2": 1, "3": 2, "4": 3 };
+  if (it.picked === null && k in map && map[k] < it.opts.length) { e.preventDefault(); answer(map[k]); }
+  else if (it.picked !== null && (k === "enter" || k === "arrowright" || k === "n")) { if (e.target && e.target.id === "q-next" && k === "enter") return; e.preventDefault(); next(); }
+});
+
+/* ---------- results ---------- */
+function renderResults(){
+  const c = AP_DATA[session.cid];
+  crumbs([{ label: "Courses", go: () => go({ name: "home" }) }, { label: c.name, go: () => go({ name: "course", cid: c.id }) }, { label: "Results" }]);
+  const done = session.items.filter(x => x.picked !== null);
+  if (!session.logged && done.length) {
+    session.logged = true;
+    sessions.unshift({ at: Date.now(), course: session.cid, label: session.label, n: done.length, right: done.filter(x => x.picked === x.ans).length });
+    sessions = sessions.slice(0, 30); save(SKEY, sessions);
+  }
+  const right = done.filter(x => x.picked === x.ans);
+  const missed = done.filter(x => x.picked !== x.ans);
+  const pct = done.length ? Math.round(right.length / done.length * 100) : 0;
+  const byTopic = {};
+  done.forEach(x => { const k = x.q.topic.key; (byTopic[k] = byTopic[k] || { t: x.q.topic, n: 0, r: 0 }); byTopic[k].n++; if (x.picked === x.ans) byTopic[k].r++; });
+  const rows = Object.values(byTopic).sort((a, b) => (a.r / a.n) - (b.r / b.n) || a.t.code.localeCompare(b.t.code, undefined, { numeric: true }));
+  const L = "ABCD";
+  $app.innerHTML = `
+    <div class="qwrap">
+      <div class="qmeta"><span>${esc(session.label)}</span></div>
+      <div class="score"><b>${pct}%</b><span>${right.length} of ${done.length} correct${done.length < session.items.length ? ` · ${session.items.length - done.length} skipped` : ""}</span></div>
+      <div class="frow" style="margin:14px 0 6px">
+        ${missed.length ? `<button class="btn primary" type="button" id="r-missed">Retry ${missed.length} missed</button>` : ""}
+        <button class="btn ${missed.length ? "" : "primary"}" type="button" id="r-again">New set, same scope</button>
+        <button class="btn ghost" type="button" id="r-back">Back to ${esc(c.short)} units</button>
+      </div>
+      ${rows.length ? `<h2 class="sec" style="margin-top:28px">By topic</h2>
+      <div class="tablebox"><table class="rtable"><thead><tr><th>Topic</th><th style="text-align:right">This set</th><th style="text-align:right">Mastery</th></tr></thead><tbody>
+        ${rows.map(r => `<tr><td><span class="mono muted">${esc(r.t.code)}</span> ${esc(r.t.name)}</td><td class="num">${r.r}/${r.n}</td><td class="num">${Math.round(mastery(r.t.qs).pct * 100)}%</td></tr>`).join("")}
+      </tbody></table></div>` : `<p class="muted">You didn't answer any questions in this set.</p>`}
+      ${missed.length ? `<h2 class="sec">Review what you missed</h2>
+      <ul class="missed">${missed.map(x => `<li>
+        <span class="mono muted" style="font-size:12px">${esc(x.q.topic.code)} ${esc(x.q.topic.name)}</span>
+        ${x.q.fig ? `<details><summary>Show figure</summary>${renderFig(x.q.fig)}</details>` : ""}
+        <span>${esc(x.q.stem)}</span>
+        <span class="yours">Your answer: ${L[x.picked]}. ${esc(x.opts[x.picked])}</span>
+        <span class="right">Correct: ${esc(x.q.correct)}</span>
+        ${x.q.expl ? `<span class="ex">${esc(x.q.expl)}</span>` : ""}
+      </li>`).join("")}</ul>` : ""}
+    </div>`;
+  const rm = document.getElementById("r-missed");
+  if (rm) rm.onclick = () => start(c, missed.map(x => x.q), "Retry missed", "all", true);
+  document.getElementById("r-again").onclick = () => start(c, session.source, session.label, session.len, true);
+  document.getElementById("r-back").onclick = () => go({ name: "course", cid: c.id });
+}
+
+/* ---------- dev mode (editors only) ---------- */
+const nowIso = () => new Date().toISOString();
+function dbErr(e){
+  const c = e && e.code;
+  if (c === "invalid_argument" || c === "permission-denied") return "Couldn't save. Only admins can change shared questions.";
+  if (c === "resource-exhausted") return "The database's daily limit was reached. Try again tomorrow.";
+  if (c === "quota_exceeded") return "The shared store is full. Delete some added questions first.";
+  if (c === "resource_exhausted") return "Too many saves at once. Wait a moment and try again.";
+  return "Couldn't reach the shared store. Try again.";
+}
+function statusOf(q){
+  const b = [];
+  if (q.hidden) b.push(["hidden", "Hidden from practice"]);
+  if (q.edited) b.push(["edited", "Edited (shared)"]);
+  if (q.added) b.push(["added", "Added (shared)"]);
+  if (q.gen) b.push(["ai", "AI-written, saved only in this browser"]);
+  if (q.community) b.push(["claude", "Written by Claude, shared with everyone"]);
+  if (q.fig) b.push(["fig", "Has a figure"]);
+  return b;
+}
+function devBack(c){ return [{ label: "Courses", go: () => go({ name: "home" }) }, { label: c.name, go: () => go({ name: "course", cid: c.id }) }]; }
+function armConfirm(btn, label, action){
+  btn.onclick = () => {
+    if (btn.dataset.armed) { action(); return; }
+    const orig = btn.textContent; btn.dataset.armed = "1"; btn.textContent = label; btn.classList.add("danger");
+    setTimeout(() => { if (btn.isConnected) { delete btn.dataset.armed; btn.textContent = orig; btn.classList.remove("danger"); } }, 3500);
+  };
+}
+
+function renderDev(){
+  if (!devOn()) return go({ name: "course", cid: view.cid });
+  const c = AP_DATA[view.cid], f = view.f || (view.f = {});
+  crumbs([...devBack(c), { label: "Question browser" }]);
+  const topicsIn = f.unit ? c.units.find(u => u.n === +f.unit).topicList : c.topicList;
+  let list = (f.topic ? [TOPIC[f.topic]] : topicsIn).flatMap(t => t.all);
+  const term = (f.q || "").trim().toLowerCase();
+  if (term) list = list.filter(q => (q.id + " " + q.stem + " " + q.correct + " " + q.wrong.join(" ") + " " + q.expl).toLowerCase().includes(term));
+  if (f.only === "fig") list = list.filter(q => q.fig);
+  if (f.only === "edited") list = list.filter(q => q.edited || q.added);
+  if (f.only === "hidden") list = list.filter(q => q.hidden);
+  if (f.only === "ai") list = list.filter(q => q.gen);
+  if (f.only === "missed") list = list.filter(q => { const s = qStat(q); return s && !s[2]; });
+  if (f.only === "unseen") list = list.filter(q => !qStat(q));
+  const shown = list.slice(0, view.limit || 40);
+  $app.innerHTML = `
+    <section class="chead" style="grid-template-columns:1fr"><div><div class="abbr">DEV · ${esc(c.short.toUpperCase())}</div><h1>Question browser</h1><p>${list.length} matching questions. Edits, hides, and additions save to the shared store, so everyone who opens this page sees them.</p></div></section>
+    <div class="devfilters">
+      <label for="df-unit">Unit <select id="df-unit"><option value="">All units</option>${c.units.map(u => `<option value="${u.n}" ${+f.unit === u.n ? "selected" : ""}>${u.n}. ${esc(u.name)}</option>`).join("")}</select></label>
+      <label for="df-topic">Topic <select id="df-topic"><option value="">All topics</option>${topicsIn.map(t => `<option value="${esc(t.key)}" ${f.topic === t.key ? "selected" : ""}>${esc(t.code)} ${esc(t.name)}</option>`).join("")}</select></label>
+      <label for="df-only">Show <select id="df-only">${[["", "Everything"], ["fig", "With figures"], ["edited", "Edited or added"], ["hidden", "Hidden"], ["ai", "AI-written (this browser)"], ["missed", "Missed last time"], ["unseen", "Never attempted"]].map(([v, l]) => `<option value="${v}" ${(f.only || "") === v ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+      <label for="df-q" class="grow">Search <input id="df-q" type="search" value="${esc(f.q || "")}" placeholder="Text, answer, or question ID"></label>
+      <button class="btn small primary" type="button" id="df-add">Add question</button>
+    </div>
+    <ul class="devlist">${shown.map(q => {
+      const s = qStat(q);
+      return `<li class="devq ${q.hidden ? "is-hidden" : ""}">
+        <div class="devq-head"><span class="mono devid">${esc(q.id)}</span><span class="mono muted">${esc(q.topic.code)} ${esc(q.topic.name)}</span>${statusOf(q).map(([k, t]) => `<span class="st st-${k}" title="${esc(t)}">${k}</span>`).join("")}
+          <span class="devstats mono">${s ? `${s[1]}/${s[0]} correct · last ${s[2] ? "✓" : "✗"}` : "not attempted"}</span></div>
+        ${q.fig ? `<details class="devfig"><summary>Figure: ${esc(q.fig.title || q.fig.t)}</summary>${safeFig(q.fig)}</details>` : ""}
+        <p class="devstem">${esc(q.stem)}</p>
+        <ol class="devopts"><li class="ok">${esc(q.correct)}</li>${q.wrong.map(w => `<li>${esc(w)}</li>`).join("")}</ol>
+        ${q.expl ? `<p class="devexpl">${esc(q.expl)}</p>` : `<p class="devexpl warn">No explanation</p>`}
+        <div class="devact">
+          <button class="btn small" type="button" data-act="edit" data-id="${esc(q.id)}">Edit</button>
+          <button class="btn small ghost" type="button" data-act="try" data-id="${esc(q.id)}">Try it</button>
+          ${db ? `<button class="btn small ghost" type="button" data-act="hide" data-id="${esc(q.id)}">${q.hidden ? "Unhide" : "Hide"}</button>` : ""}
+          ${db && q.edited ? `<button class="btn small ghost" type="button" data-act="revert" data-id="${esc(q.id)}">Revert to original</button>` : ""}
+          ${db && q.added ? `<button class="btn small ghost" type="button" data-act="delete" data-id="${esc(q.id)}">Delete</button>` : ""}
+          ${db && q.gen ? `<button class="btn small ghost" type="button" data-act="promote" data-id="${esc(q.id)}">Share with everyone</button>` : ""}
+        </div>
+      </li>`; }).join("")}</ul>
+    ${list.length > shown.length ? `<div class="frow" style="justify-content:center;margin-top:16px"><button class="btn" type="button" id="df-more">Show ${Math.min(40, list.length - shown.length)} more</button></div>` : ""}
+    ${!list.length ? `<p class="muted">No questions match these filters.</p>` : ""}`;
+  const set = (k, v) => { f[k] = v; if (k === "unit") f.topic = ""; view.limit = 40; renderDev(); };
+  document.getElementById("df-unit").onchange = e => set("unit", e.target.value);
+  document.getElementById("df-topic").onchange = e => set("topic", e.target.value);
+  document.getElementById("df-only").onchange = e => set("only", e.target.value);
+  let tmr; const qi = document.getElementById("df-q");
+  qi.oninput = () => { clearTimeout(tmr); tmr = setTimeout(() => { f.q = qi.value; view.limit = 40; renderDev(); const n = document.getElementById("df-q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); }, 250); };
+  document.getElementById("df-add").onclick = () => go({ name: "edit", cid: c.id, qid: null, topicKey: f.topic || c.topicList[0].key, ret: { name: "dev", cid: c.id, f, limit: view.limit } });
+  const more = document.getElementById("df-more"); if (more) more.onclick = () => { view.limit = (view.limit || 40) + 40; renderDev(); };
+  $app.querySelectorAll("[data-act]").forEach(b => {
+    const q = findQ(b.dataset.id); if (!q) return;
+    const act = b.dataset.act;
+    if (act === "edit") b.onclick = () => go({ name: "edit", cid: c.id, qid: q.id, ret: { name: "dev", cid: c.id, f, limit: view.limit } });
+    else if (act === "try") b.onclick = () => start(c, [q], "Dev: " + q.id, "all", true);
+    else if (act === "hide") b.onclick = () => writeEdit(q.id, EDITS[q.id] ? { ...EDITS[q.id], hidden: !q.hidden } : { kind: "override", hidden: true }, q.hidden ? "Question unhidden" : "Question hidden from practice");
+    else if (act === "revert") armConfirm(b, "Click again to revert", () => removeEdit(q.id, "Reverted to the original question"));
+    else if (act === "delete") armConfirm(b, "Click again to delete", () => removeEdit(q.id, "Question deleted"));
+    else if (act === "promote") b.onclick = () => writeEdit("new-" + Date.now().toString(36), { kind: "new", course: c.id, topic: q.topic.code, stem: q.stem, correct: q.correct, wrong: q.wrong, expl: q.expl }, "Shared with everyone. It now appears as an added question.");
+  });
+}
+function safeFig(f){ try { return renderFig(f); } catch (e) { return `<p class="devexpl warn">Figure failed to render: ${esc(e.message || e)}</p>`; } }
+async function writeEdit(id, body, msg){
+  if (!db) { toast("Shared edits aren't available in this view."); return false; }
+  const clean = { ...body }; delete clean.id; clean.updatedAt = nowIso();
+  try { await db.collection("edits").doc(id).set(clean); toast(msg); return true; }
+  catch (e) { toast(dbErr(e)); return false; }
+}
+async function removeEdit(id, msg){
+  if (!db) return;
+  try { await db.collection("edits").doc(id).delete(); toast(msg); } catch (e) { toast(dbErr(e)); }
+}
+
+function renderEdit(){
+  if (!devOn()) return go({ name: "course", cid: view.cid });
+  const c = AP_DATA[view.cid];
+  const q = view.qid ? findQ(view.qid) : null;
+  const isBuiltIn = q && !q.added && !q.gen;
+  const d = view.draft || (view.draft = q ? { topic: q.topic.key, stem: q.stem, correct: q.correct, wrong: q.wrong.slice(), expl: q.expl, fig: q.fig ? JSON.stringify(q.fig, null, 1) : "" } : { topic: view.topicKey, stem: "", correct: "", wrong: ["", "", ""], expl: "", fig: "" });
+  crumbs([...devBack(c), { label: "Question browser", go: () => go(view.ret || { name: "dev", cid: c.id, f: {} }) }, { label: q ? "Edit" : "New question" }]);
+  $app.innerHTML = `
+    <div class="qwrap">
+      <div class="qmeta"><span class="devtag">Dev</span>${q ? `<span class="mono devid">${esc(q.id)}</span>` : ""}${q && q.gen ? `<span class="st st-ai">ai</span>` : ""}</div>
+      <h1 class="edh">${q ? "Edit question" : "New question"}</h1>
+      ${q && q.gen ? `<p class="devexpl warn">This question was written by Claude and is saved only in this browser. Saving creates a shared copy that everyone sees.</p>` : ""}
+      ${isBuiltIn ? `<p class="devexpl">Changes are stored as a shared edit. You can revert to the original from the question browser at any time.</p>` : ""}
+      <form id="ed" class="edform" novalidate>
+        <label for="ed-topic">Topic</label>
+        <select id="ed-topic" ${isBuiltIn ? "disabled" : ""}>${c.topicList.map(t => `<option value="${esc(t.key)}" ${d.topic === t.key ? "selected" : ""}>${esc(t.code)} ${esc(t.name)}</option>`).join("")}</select>
+        <label for="ed-stem">Question</label>
+        <textarea id="ed-stem" rows="3" required>${esc(d.stem)}</textarea>
+        <label for="ed-correct">Correct answer</label>
+        <input id="ed-correct" type="text" value="${esc(d.correct)}" required>
+        ${[0, 1, 2].map(i => `<label for="ed-w${i}">Wrong answer ${i + 1}</label><input id="ed-w${i}" type="text" value="${esc(d.wrong[i] || "")}" required>`).join("")}
+        <label for="ed-expl">Explanation</label>
+        <textarea id="ed-expl" rows="3">${esc(d.expl)}</textarea>
+        <details ${d.fig ? "open" : ""}><summary>Figure (JSON, optional)</summary>
+          <p class="devexpl">Types: line, bar, scatter, pyramid, table, tree, gel, pedigree, web, rings, sectors, flow, compartments, choro, panels. Leave empty for no figure.</p>
+          <textarea id="ed-fig" rows="10" class="mono" spellcheck="false">${esc(d.fig)}</textarea>
+        </details>
+        <p class="ederr" id="ed-err" role="alert" hidden></p>
+        <div class="frow">
+          <button class="btn" type="button" id="ed-preview">Preview</button>
+          <span class="spacer"></span>
+          <button class="btn ghost" type="button" id="ed-cancel">Cancel</button>
+          <button class="btn primary" type="submit" id="ed-save" ${db ? "" : "disabled"}>${db ? "Save for everyone" : "Saving unavailable"}</button>
+        </div>
+      </form>
+      <div id="ed-prev" class="edprev" hidden></div>
+    </div>`;
+  const $ = id => document.getElementById(id);
+  const read = () => { d.topic = $("ed-topic").value; d.stem = $("ed-stem").value; d.correct = $("ed-correct").value; d.wrong = [0, 1, 2].map(i => $("ed-w" + i).value); d.expl = $("ed-expl").value; d.fig = $("ed-fig").value; };
+  ["ed-topic", "ed-stem", "ed-correct", "ed-w0", "ed-w1", "ed-w2", "ed-expl", "ed-fig"].forEach(id => $(id).addEventListener("input", read));
+  const validate = () => {
+    read();
+    const errs = [];
+    if (!d.stem.trim()) errs.push("Write the question.");
+    if (!d.correct.trim()) errs.push("Add the correct answer.");
+    if (d.wrong.some(w => !w.trim())) errs.push("Fill in all three wrong answers.");
+    const opts = [d.correct, ...d.wrong].map(s => s.trim().toLowerCase());
+    if (new Set(opts).size !== opts.length) errs.push("Each answer choice must be different.");
+    let fig = null;
+    if (d.fig.trim()) {
+      try { fig = JSON.parse(d.fig); if (!fig || typeof fig !== "object" || !FIG[fig.t]) errs.push("Figure JSON needs a \"t\" type from the list above."); else renderFig(fig); }
+      catch (e) { errs.push("Figure JSON has an error: " + (e.message || e)); }
+    }
+    const box = $("ed-err"); box.hidden = !errs.length; box.textContent = errs.join(" ");
+    return errs.length ? null : fig;
+  };
+  $("ed-preview").onclick = () => {
+    const fig = validate(); if (fig === null && !$("ed-err").hidden) return;
+    const pv = $("ed-prev"); pv.hidden = false;
+    pv.innerHTML = `<div class="qmeta"><span>Preview</span></div>${fig ? renderFig(fig) : ""}<p class="stem">${esc(d.stem)}</p><ol class="opts">${[d.correct, ...d.wrong].map((o, i) => `<li><div class="opt ${i === 0 ? "correct" : ""}"><span class="k">${"ABCD"[i]}</span><span>${esc(o)}</span></div></li>`).join("")}</ol>${d.expl ? `<p class="expl" style="margin-top:14px">${esc(d.expl)}</p>` : ""}<p class="hint">Answer order is shuffled in practice.</p>`;
+    pv.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const leave = () => { const r = view.ret || { name: "dev", cid: c.id, f: {} }; go(r); };
+  $("ed-cancel").onclick = leave;
+  $("ed").onsubmit = async e => {
+    e.preventDefault();
+    const fig = validate(); if (!$("ed-err").hidden) return;
+    const [cid, code] = d.topic.split("|");
+    const fields = { stem: d.stem.trim(), correct: d.correct.trim(), wrong: d.wrong.map(w => w.trim()), expl: d.expl.trim(), fig: fig };
+    const btn = $("ed-save"); btn.disabled = true; btn.textContent = "Saving…";
+    let ok;
+    if (isBuiltIn) ok = await writeEdit(q.id, { kind: "override", hidden: !!q.hidden, ...fields }, "Saved. Everyone now sees the edited question.");
+    else if (q && q.added) ok = await writeEdit(q.id, { ...EDITS[q.id], kind: "new", course: cid, topic: code, ...fields }, "Saved");
+    else ok = await writeEdit("new-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), { kind: "new", course: cid, topic: code, hidden: false, ...fields }, "Question added for everyone");
+    if (ok) leave(); else { btn.disabled = false; btn.textContent = "Save for everyone"; }
+  };
+}
+
+function renderTools(){
+  if (!devOn()) return go({ name: "course", cid: view.cid });
+  const c = AP_DATA[view.cid];
+  crumbs([...devBack(c), { label: "Testing tools" }]);
+  $app.innerHTML = `
+    <section class="chead" style="grid-template-columns:1fr"><div><div class="abbr">DEV · ${esc(c.short.toUpperCase())}</div><h1>Testing tools &amp; data</h1><p>Progress tools affect only this browser. Shared edits affect everyone.</p></div></section>
+    <div class="toolgrid">
+      <section class="tool">
+        <h2 class="sec">Simulate progress</h2>
+        <p class="muted">Fill ${esc(c.name)} with fake answer history to test mastery meters, weak topics, and the unit strip.</p>
+        <div class="frow">${[30, 60, 90].map(p => `<button class="btn small" type="button" data-sim="${p}">${p}% correct</button>`).join("")}<button class="btn small ghost" type="button" id="tl-clear">Clear course progress</button></div>
+      </section>
+      <section class="tool">
+        <h2 class="sec">Check content</h2>
+        <p class="muted">Looks for missing fields, duplicate choices, repeated questions, thin topics, and figures that fail to draw.</p>
+        <div class="frow"><button class="btn small primary" type="button" id="tl-validate">Run check</button></div>
+        <div id="tl-results"></div>
+      </section>
+      <section class="tool">
+        <h2 class="sec">Export</h2>
+        <p class="muted">Copy this browser's progress, AI-written questions, and settings, or the shared edits, as JSON.</p>
+        <div class="frow"><button class="btn small" type="button" id="tl-exp-local">This browser's data</button><button class="btn small" type="button" id="tl-exp-edits" ${db ? "" : "disabled"}>Shared edits (${Object.keys(EDITS).length})</button></div>
+        <label for="tl-out" class="visually-hidden">Exported JSON</label>
+        <textarea id="tl-out" class="mono" rows="6" readonly placeholder="Exported JSON appears here"></textarea>
+        <div class="frow"><button class="btn small" type="button" id="tl-copy">Copy</button></div>
+      </section>
+      <section class="tool">
+        <h2 class="sec">Import this browser's data</h2>
+        <p class="muted">Paste JSON exported above. It replaces this browser's progress, AI-written questions, and settings.</p>
+        <label for="tl-in" class="visually-hidden">JSON to import</label>
+        <textarea id="tl-in" class="mono" rows="6" placeholder='{"progress": {...}, "generated": {...}, "prefs": {...}}'></textarea>
+        <div class="frow"><button class="btn small primary" type="button" id="tl-import">Import</button></div>
+      </section>
+    </div>`;
+  const $ = id => document.getElementById(id);
+  $app.querySelectorAll("[data-sim]").forEach(b => b.onclick = () => {
+    const p = +b.dataset.sim / 100;
+    courseQs(c).forEach(q => { const n = 1 + Math.floor(Math.random() * 3); let cor = 0; for (let i = 0; i < n; i++) if (Math.random() < p) cor++; progress[q.id] = [n, cor, Math.random() < p ? 1 : 0]; });
+    save(KEY, progress); toast(`Simulated about ${b.dataset.sim}% correct across ${courseQs(c).length} questions`);
+  });
+  armConfirm($("tl-clear"), "Click again to clear", () => { courseQs(c).forEach(q => delete progress[q.id]); save(KEY, progress); toast("Course progress cleared"); renderTools(); });
+  $("tl-validate").onclick = () => {
+    const issues = [], stems = {};
+    c.topicList.forEach(t => {
+      if (t.qs.length < 3) issues.push([null, `${t.code} ${t.name}: only ${t.qs.length} active question${t.qs.length === 1 ? "" : "s"}`]);
+      t.all.forEach(q => {
+        if (!q.stem || !q.stem.trim()) issues.push([q, "Empty question text"]);
+        if (!q.correct || !q.correct.trim()) issues.push([q, "Empty correct answer"]);
+        if (!Array.isArray(q.wrong) || q.wrong.length !== 3 || q.wrong.some(w => !String(w).trim())) issues.push([q, "Needs exactly three non-empty wrong answers"]);
+        const o = [q.correct, ...(q.wrong || [])].map(s => String(s).trim().toLowerCase());
+        if (new Set(o).size !== o.length) issues.push([q, "Two answer choices are identical"]);
+        if (!q.expl) issues.push([q, "No explanation"]);
+        if (q.fig) { try { const h = renderFig(q.fig); if (/NaN|undefined/.test(h)) issues.push([q, "Figure has missing values (NaN/undefined)"]); } catch (e) { issues.push([q, "Figure failed to render: " + (e.message || e)]); } }
+        const k = (q.stem || "").trim().toLowerCase(); if (k && !q.fig) { if (stems[k]) issues.push([q, "Same text as " + stems[k]]); else stems[k] = q.id; }
+      });
+    });
+    const box = $("tl-results");
+    box.innerHTML = issues.length ? `<p class="devexpl warn">${issues.length} issue${issues.length === 1 ? "" : "s"} found</p><ul class="issues">${issues.map(([q, m]) => `<li>${q ? `<button type="button" class="linkbtn mono" data-edit="${esc(q.id)}">${esc(q.id)}</button> ` : ""}${esc(m)}</li>`).join("")}</ul>` : `<p class="devexpl ok">No problems found in ${courseQs(c).length} active questions.</p>`;
+    box.querySelectorAll("[data-edit]").forEach(b => b.onclick = () => go({ name: "edit", cid: c.id, qid: b.dataset.edit, ret: { name: "tools", cid: c.id } }));
+  };
+  $("tl-exp-local").onclick = () => { $("tl-out").value = JSON.stringify({ app: "ap-drill-room", exported: nowIso(), progress, generated, prefs }, null, 1); };
+  $("tl-exp-edits").onclick = () => { $("tl-out").value = JSON.stringify({ app: "ap-drill-room", exported: nowIso(), edits: EDITS }, null, 1); };
+  $("tl-copy").onclick = () => {
+    const ta = $("tl-out"); if (!ta.value) { toast("Export something first"); return; }
+    const done = () => toast("Copied");
+    try { navigator.clipboard.writeText(ta.value).then(done, () => { ta.select(); toast("Selected. Press Ctrl/Cmd+C to copy."); }); } catch (e) { ta.select(); toast("Selected. Press Ctrl/Cmd+C to copy."); }
+  };
+  $("tl-import").onclick = () => {
+    let o; try { o = JSON.parse($("tl-in").value); } catch (e) { toast("That isn't valid JSON."); return; }
+    if (!o || typeof o !== "object" || (!o.progress && !o.generated && !o.prefs)) { toast("Expected an export with progress, generated, or prefs."); return; }
+    if (o.progress && typeof o.progress === "object") { progress = o.progress; save(KEY, progress); }
+    if (o.generated && typeof o.generated === "object") {
+      generated = o.generated; save(GKEY, generated);
+      COURSES.forEach(cc => cc.topicList.forEach(t => { t.base = t.base.filter(q => !q.gen); (generated[t.key] || []).forEach(g => t.base.push(mkQ(t, g.q, g.id, true))); }));
+      applyEdits();
+    }
+    if (o.prefs && typeof o.prefs === "object") { prefs = { ...prefs, ...o.prefs }; save("apdr.prefs", prefs); updateDevToggle(); }
+    toast("Imported"); renderTools();
+  };
+}
+
+/* ---------- accounts: Claude sign-in + private per-user sync ---------- */
+// Each signed-in viewer's data lives at data/users/<their id>/account — private to them (not even the owner can read it).
+var me = null, userId = null, meKnown = false, dbKnown = false;
+var syncState = { s: "local", at: null }, syncStarted = false, syncReady = false, syncTimer = null, syncChain = Promise.resolve();
+function today(d){ const x = d || new Date(); return x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0") + "-" + String(x.getDate()).padStart(2, "0"); }
+const canSync = () => !!(db && userId);
+const acctDoc = () => db.doc("data/users/" + userId + "/account");
+function updateAccountChip(){
+  const b = document.getElementById("acct-chip"); if (!b) return;
+  const av = b.querySelector(".acct-av"), nm = b.querySelector(".acct-name");
+  if (me && me.avatarUrl && userId) { av.innerHTML = ""; const img = document.createElement("img"); img.src = me.avatarUrl; img.alt = ""; av.appendChild(img); }
+  else av.textContent = "";
+  nm.textContent = userId ? (me.name ? me.name.split(" ")[0] : "My account") : HOSTED ? "Sign in" : "Account";
+  b.dataset.sync = syncState.s;
+  b.title = userId ? (canSync() ? syncLabel() : "Signed in · progress saved in this browser") : "Progress is saved in this browser only";
+}
+function syncLabel(){
+  return { local: "Saved in this browser", loading: "Loading your account…", pending: "Saving…", synced: "Synced to your account", error: "Couldn't sync. Changes are saved in this browser." }[syncState.s] || "";
+}
+function setSync(s){ syncState.s = s; if (s === "synced") syncState.at = Date.now(); updateAccountChip(); const el = document.getElementById("acct-sync"); if (el) { el.textContent = syncLabel(); el.dataset.s = s; } }
+async function initSync(){
+  if (syncStarted || !meKnown || !dbKnown || !canSync()) return;
+  syncStarted = true; setSync("loading");
+  try {
+    const snap = await acctDoc().get();
+    if (snap.exists) mergeRemote(snap.data() || {});
+    syncReady = true;  // only now may local changes be written back, so a slow load can't clobber the saved account
+    await applyPendingLink();
+    await pushSync();
+    softRerender();
+  } catch (e) { setSync("error"); }
+}
+function mergeRemote(d){
+  // Progress: keep whichever record has more attempts per question, so no device loses work.
+  if (d.progress && typeof d.progress === "object") for (const [id, r] of Object.entries(d.progress)) { const l = progress[id]; if (Array.isArray(r) && (!l || r[0] > l[0])) progress[id] = r; }
+  if (d.activity && typeof d.activity === "object") for (const [day, r] of Object.entries(d.activity)) { const l = activity[day]; if (Array.isArray(r) && (!l || r[0] > l[0])) activity[day] = r; }
+  if (Array.isArray(d.sessions)) { const seen = new Set(sessions.map(x => x.at)); d.sessions.forEach(x => { if (x && !seen.has(x.at)) sessions.push(x); }); sessions.sort((a, b) => b.at - a.at); sessions = sessions.slice(0, 30); }
+  if (d.generated && typeof d.generated === "object") {
+    for (const [k, list] of Object.entries(d.generated)) { if (!Array.isArray(list)) continue; const mine = generated[k] || (generated[k] = []); const ids = new Set(mine.map(g => g.id)); list.forEach(g => { if (g && g.id && !ids.has(g.id)) mine.push(g); }); }
+    COURSES.forEach(cc => cc.topicList.forEach(t => { t.base = t.base.filter(q => !q.gen); (generated[t.key] || []).forEach(g => t.base.push(mkQ(t, g.q, g.id, true))); }));
+    applyEdits();
+  }
+  if (d.links && typeof d.links === "object") links = { ...d.links, ...links };
+  if (d.prefs && typeof d.prefs === "object") { if (d.prefs.len) prefs.len = d.prefs.len; if (typeof d.prefs.figs === "boolean") prefs.figs = d.prefs.figs; }
+  try { localStorage.setItem(KEY, JSON.stringify(progress)); localStorage.setItem(AKEY, JSON.stringify(activity)); localStorage.setItem(SKEY, JSON.stringify(sessions)); localStorage.setItem(GKEY, JSON.stringify(generated)); localStorage.setItem("apdr.prefs", JSON.stringify(prefs)); localStorage.setItem(LKEY, JSON.stringify(links)); } catch (e) {}
+}
+function trimActivity(){ const keys = Object.keys(activity).sort(); keys.slice(0, Math.max(0, keys.length - 400)).forEach(k => delete activity[k]); }
+function pushSync(){
+  syncChain = syncChain.then(async () => {
+    if (!canSync() || !syncReady) return;
+    trimActivity();
+    const body = { progress, activity, sessions, generated, links, prefs: { len: prefs.len, figs: !!prefs.figs }, updatedAt: new Date().toISOString() };
+    if (JSON.stringify(body).length > 240000) body.generated = {};  // stay under the 256 KiB document cap
+    setSync("pending");
+    try { await acctDoc().set(body); setSync("synced"); } catch (e) { setSync("error"); }
+  });
+  return syncChain;
+}
+function scheduleSync(){
+  if (!syncReady || !canSync()) return;
+  setSync("pending"); clearTimeout(syncTimer); syncTimer = setTimeout(pushSync, HOSTED ? 10000 : 1500);  // hosted: fewer Firestore writes; flushed when the tab is hidden
+}
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && syncTimer && syncState.s === "pending") { clearTimeout(syncTimer); pushSync(); } });
+document.getElementById("acct-chip").onclick = () => go({ name: "account" });
+
+function streaks(){
+  const has = d => activity[today(d)] && activity[today(d)][0] > 0;
+  let cur = 0; const d = new Date(); if (!has(d)) d.setDate(d.getDate() - 1);
+  while (has(d)) { cur++; d.setDate(d.getDate() - 1); }
+  const days = Object.keys(activity).filter(k => activity[k][0] > 0).sort(); let best = 0, run = 0, prev = null;
+  days.forEach(k => { const t = new Date(k + "T12:00:00"); run = prev && (t - prev) / 864e5 < 1.5 ? run + 1 : 1; best = Math.max(best, run); prev = t; });
+  return { cur, best };
+}
+function heatmap(){
+  const weeks = 17, cs = 13, g = 3, left = 28, top = 18;
+  const end = new Date(); const start = new Date(end); start.setDate(end.getDate() - (weeks * 7 - 1) - end.getDay());
+  let s = "", lastMonth = -1;
+  ["Mon", "Wed", "Fri"].forEach((l, i) => { s += `<text class="tick" x="${left - 6}" y="${top + (i * 2 + 1) * (cs + g) + cs / 2}" dy="0.35em" text-anchor="end">${l}</text>`; });
+  for (let w = 0; w < weeks + 1; w++) for (let dow = 0; dow < 7; dow++) {
+    const d = new Date(start); d.setDate(start.getDate() + w * 7 + dow); if (d > end) continue;
+    const n = (activity[today(d)] || [0])[0], lv = n === 0 ? -1 : n < 10 ? 1 : n < 25 ? 2 : n < 50 ? 3 : 4;
+    if (dow === 0 && d.getMonth() !== lastMonth) { lastMonth = d.getMonth(); s += `<text class="tick" x="${left + w * (cs + g)}" y="${top - 6}">${d.toLocaleString("en-US", { month: "short" })}</text>`; }
+    s += `<rect x="${left + w * (cs + g)}" y="${top + dow * (cs + g)}" width="${cs}" height="${cs}" rx="3" fill="${lv < 0 ? "var(--sunk)" : `var(--q${lv})`}"><title>${today(d)}: ${n} question${n === 1 ? "" : "s"}</title></rect>`;
+  }
+  const W = left + (weeks + 1) * (cs + g) + 4, H = top + 7 * (cs + g) + 2;
+  return `<div class="fscroll"><svg viewBox="0 0 ${W} ${H}" style="min-width:0;max-width:${W * 1.6}px" role="img" aria-label="Questions answered per day, last ${weeks} weeks">${s}</svg></div>
+    <div class="flegend"><span>Less</span>${["var(--sunk)", "var(--q1)", "var(--q2)", "var(--q3)", "var(--q4)"].map(c => `<i class="sq" style="--c:${c}"></i>`).join("")}<span>More</span></div>`;
+}
+function wireAuth(){
+  const $ = id => document.getElementById(id);
+  const out = $("acc-out"); if (out) out.onclick = () => signOutHosted().catch(() => toast("Couldn't sign out. Try again."));
+  const cp = $("acc-uid-copy"); if (cp) cp.onclick = () => { try { navigator.clipboard.writeText(userId).then(() => toast("Copied"), () => toast(userId)); } catch (e) { toast(userId); } };
+  const form = $("au-form"); if (!form) return;
+  const err = m => { const b = $("au-err"); b.hidden = !m; b.textContent = m || ""; };
+  const busy = on => ["au-in", "au-up", "au-google"].forEach(id => { const b = $(id); if (b) b.disabled = on; });
+  const creds = () => [$("au-email").value.trim(), $("au-pass").value];
+  const run = async fn => { err(""); busy(true); try { await fn(); } catch (e) { err(authErr(e)); } finally { if (form.isConnected) busy(false); } };
+  $("au-google").onclick = () => run(async () => {
+    const p = new firebase.auth.GoogleAuthProvider();
+    try { await fbAuth.signInWithPopup(p); }
+    catch (e) { if (e && e.code === "auth/popup-blocked") await fbAuth.signInWithRedirect(p); else throw e; }
+  });
+  form.onsubmit = e => { e.preventDefault(); run(async () => { const [em, pw] = creds(); await fbAuth.signInWithEmailAndPassword(em, pw); }); };
+  $("au-up").onclick = () => run(async () => {
+    const [em, pw] = creds();
+    if (pw.length < 6) throw { code: "auth/weak-password" };
+    const r = await fbAuth.createUserWithEmailAndPassword(em, pw);
+    try { await r.user.sendEmailVerification(); } catch (e) {}
+    toast("Account created");
+  });
+  $("au-reset").onclick = () => run(async () => {
+    const em = $("au-email").value.trim(); if (!em) throw { code: "auth/invalid-email" };
+    await fbAuth.sendPasswordResetEmail(em); toast("Password reset email sent to " + em);
+  });
+}
+/* ---------- linking a Claude session and a Google account ----------
+   A claude.ai artifact can't reach other websites, so progress moves through the person:
+   Claude → website: a link opens the site with a compressed code in the #fragment (never sent to any server).
+   Website → Claude: the site copies a code that's pasted into the Claude version. */
+var pendingLink = null;
+async function packLink(obj){
+  const stream = new Blob([JSON.stringify(obj)]).stream().pipeThrough(new CompressionStream("deflate-raw"));
+  const buf = new Uint8Array(await new Response(stream).arrayBuffer());
+  let bin = ""; for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000));
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+async function unpackLink(code){
+  const b64 = String(code).trim().replace(/^.*#claude-link=/, "").replace(/-/g, "+").replace(/_/g, "/");
+  const bin = atob(b64 + "===".slice((b64.length + 3) % 4));
+  const bytes = Uint8Array.from(bin, ch => ch.charCodeAt(0));
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+  return JSON.parse(await new Response(stream).text());
+}
+const linkPayload = src => ({ v: 1, src, email: (me && me.email) || "", at: Date.now(), progress, activity, sessions, generated });
+function importLink(d){
+  if (!d || d.v !== 1 || typeof d.progress !== "object") throw new Error("Not a link code");
+  mergeRemote({ progress: d.progress, activity: d.activity, sessions: d.sessions, generated: d.generated });
+  save(KEY, progress); save(AKEY, activity); save(SKEY, sessions); save(GKEY, generated);
+}
+async function applyPendingLink(){
+  if (!pendingLink || !HOSTED || !userId) return;
+  const code = pendingLink; pendingLink = null;
+  try { sessionStorage.removeItem("apdr.pendingLink"); } catch (e) {}
+  try {
+    const d = await unpackLink(code);
+    if (d.src !== "claude") throw new Error("wrong direction");
+    importLink(d); links.claude = { at: Date.now() }; save(LKEY, links);
+    toast("Linked. Your progress from Claude is now in this account.");
+  } catch (e) { toast("That link didn't work. In the Claude version, choose Link Google account again."); }
+}
+const fmtDate = t => new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+const maskKey = k => k ? k.slice(0, 7) + "…" + k.slice(-4) : "";
+
+function renderAccount(){
+  crumbs([{ label: "Courses", go: () => go({ name: "home" }) }, { label: "Account" }]);
+  const all = COURSES.flatMap(c => courseQs(c)), m = mastery(all), st = streaks();
+  const answered = Object.values(activity).reduce((n, a) => n + a[0], 0);
+  const signed = !!userId;
+  const siteUrl = CFG.siteUrl || "", claudeUrl = CFG.claudeAppUrl || "";
+  const key = apiKey();
+  const head = IN_CLAUDE ? { tag: "IN CLAUDE", title: "Your progress", sub: "You're using AP Drill Room inside Claude. Progress is saved in this browser. Link a Google account to keep it on the website too." }
+    : signed ? { tag: "YOUR ACCOUNT", title: me.name || "Signed in", sub: "Signed in" + (me.email ? " as " + me.email : "") + "." }
+    : HOSTED ? { tag: "GUEST", title: "Not signed in", sub: "Sign in to save your progress and pick up on any device." }
+    : { tag: "GUEST", title: "Your progress", sub: "Progress is saved in this browser." };
+
+  let modeHtml = "";
+  if (IN_CLAUDE) {
+    modeHtml = `
+    <div class="acc-cards">
+      <section class="acc-card">
+        <h2 class="sec">Claude usage for AI features</h2>
+        ${!sample ? `<p class="muted">Claude isn't available in this view, so Explain more and +5 new are hidden.</p>`
+          : prefs.aiConsent ? `<p><span class="okdot"></span><b>Allowed</b> on this device since ${esc(fmtDate(prefs.aiConsent))}. Explanations and new questions use your Claude plan's usage (and paid credits, if you've turned on extra usage).</p><div class="frow"><button class="btn small ghost" type="button" id="cu-off">Turn off</button></div>`
+          : `<p>Not turned on. AI features use <b>your own Claude usage</b>, so you'll be asked to agree before the first request.</p><div class="frow"><button class="btn small" type="button" id="cu-on">Review and allow…</button></div>`}
+      </section>
+      <section class="acc-card">
+        <h2 class="sec">Link your Google account</h2>
+        ${links.google ? `<p><span class="okdot"></span>Linked with <b>${esc(links.google.email || "your Google account")}</b> · last transfer ${esc(fmtDate(links.google.at))}</p>` : ""}
+        <p class="muted">Send this progress, and questions you've generated here, to your account on the AP Drill Room website. There you'll sign in with Google. AI features on the website need Claude or your own API key.</p>
+        ${siteUrl ? `<div class="frow"><a class="btn primary" id="lk-send" href="${esc(siteUrl)}" target="_blank" rel="noopener">Link Google account</a><span class="muted" id="lk-note" style="font-size:12.5px">Opens the website in a new tab.</span></div>` : `<p class="muted">The website address isn't set up yet.</p>`}
+        <details class="lk-paste"><summary>Bring progress from the website</summary>
+          <p class="muted">On the website, open Account → Linked accounts → <b>Open in Claude</b>. It copies a code. Paste it here.</p>
+          <label for="lk-code" class="visually-hidden">Link code</label>
+          <textarea id="lk-code" class="mono" rows="3" placeholder="Paste the link code"></textarea>
+          <div class="frow"><button class="btn small primary" type="button" id="lk-import">Add to this device</button></div>
+        </details>
+      </section>
+    </div>`;
+  } else if (HOSTED && !signed) {
+    modeHtml = `
+    ${pendingLink ? `<div class="notice"><b>Almost linked.</b> Sign in with Google (or email) to add your progress from Claude to your account.</div>` : ""}
+    <section class="authbox" aria-labelledby="auth-h">
+      <h2 class="sec" id="auth-h">Sign in or create an account</h2>
+      <p class="muted">Free for everyone. Anything you've practiced as a guest on this device is added to your account.</p>
+      <button class="btn authgoogle" type="button" id="au-google">Continue with Google</button>
+      <div class="author"><span>or use email</span></div>
+      <form id="au-form" class="edform" novalidate>
+        <label for="au-email">Email</label><input id="au-email" type="email" autocomplete="email" required>
+        <label for="au-pass">Password</label><input id="au-pass" type="password" autocomplete="current-password" minlength="6" required>
+        <p class="ederr" id="au-err" role="alert" hidden></p>
+        <div class="frow"><button class="btn primary" type="submit" id="au-in">Sign in</button><button class="btn" type="button" id="au-up">Create account</button><span class="spacer"></span><button class="linkbtn" type="button" id="au-reset">Forgot password?</button></div>
+      </form>
+      <p class="muted" style="font-size:12.5px">A Google account covers practice and progress. AI features (explanations and new questions) need Claude. ${claudeUrl ? `<a href="${esc(claudeUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a>, or add your own API key after signing in.` : "Add your own API key after signing in."}</p>
+    </section>`;
+  } else if (HOSTED && signed) {
+    modeHtml = `
+    <div class="acc-cards">
+      <section class="acc-card">
+        <h2 class="sec">Linked accounts</h2>
+        <ul class="linklist">
+          <li><span class="okdot"></span><b>${esc(me.email ? "Google / email" : "Signed in")}</b><span class="muted">${esc(me.email || "")}</span></li>
+          <li>${links.claude ? `<span class="okdot"></span><b>Claude</b><span class="muted">Linked · last transfer ${esc(fmtDate(links.claude.at))}</span>` : `<span class="offdot"></span><b>Claude</b><span class="muted">Not linked</span>`}</li>
+        </ul>
+        <p class="muted">To bring progress from Claude here, open the Claude version and choose <b>Link Google account</b>. To take this account's progress into Claude:</p>
+        ${claudeUrl ? `<div class="frow"><a class="btn" id="lk-claude" href="${esc(claudeUrl)}" target="_blank" rel="noopener">Open in Claude</a><span class="muted" style="font-size:12.5px">Copies a link code. In Claude, paste it under Account → Bring progress from the website.</span></div>` : ""}
+      </section>
+      <section class="acc-card">
+        <h2 class="sec">AI features</h2>
+        ${key ? `<p><span class="okdot"></span>Using your Anthropic API key <code>${esc(maskKey(key))}</code> on this device. Each request is billed to your Anthropic account.</p>
+                <p class="muted">Questions you generate here are written by Claude on the site's server and added to the shared question bank for everyone.</p>
+                <div class="frow"><button class="btn small ghost" type="button" id="ak-remove">Remove key</button></div>`
+          : `<div class="notice"><b>AI features aren't included with a Google account.</b> Explanations and generating new questions need Claude. You can:
+              <ul>${claudeUrl ? `<li><a href="${esc(claudeUrl)}" target="_blank" rel="noopener">Use AP Drill Room in Claude</a>. This uses your Claude plan's usage.</li>` : ""}<li>Or add your own Anthropic API key below. You're billed per use by Anthropic.</li></ul></div>
+             ${CFG.aiEndpoint ? `<form id="ak-form" class="edform" novalidate>
+               <label for="ak-key">Anthropic API key</label>
+               <input id="ak-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-…">
+               <label class="checkrow" for="ak-agree"><input type="checkbox" id="ak-agree"> I understand each explanation or question set is billed to my Anthropic account.</label>
+               <p class="muted" style="font-size:12.5px">Your key stays in this browser until you sign out. For each request it's sent over HTTPS to the site's Claude relay, used once, and never stored.</p>
+               <p class="ederr" id="ak-err" role="alert" hidden></p>
+               <div class="frow"><button class="btn primary" type="submit">Save key on this device</button></div>
+             </form>` : `<p class="muted">The site owner hasn't turned on the Claude relay yet, so API keys can't be used.</p>`}`}
+      </section>
+    </div>`;
+  }
+
+  $app.innerHTML = `
+    <section class="acchead">
+      <div class="acc-av">${signed && me && me.avatarUrl ? `<img src="${esc(me.avatarUrl)}" alt="">` : ""}</div>
+      <div><div class="abbr">${head.tag}</div><h1 id="acc-name"></h1><p class="muted" id="acc-sub"></p></div>
+      <div class="acc-sync">
+        <span class="syncpill" id="acct-sync" data-s="${syncState.s}">${esc(syncLabel())}</span>
+        ${canSync() ? `<button class="btn small" type="button" id="acc-syncnow">Sync now</button>` : ""}
+      </div>
+    </section>
+    ${modeHtml}
+    <div class="stats accstats">
+      <div class="stat"><b>${answered || Object.values(progress).reduce((n, r) => n + r[0], 0)}</b><span>Answers logged</span></div>
+      <div class="stat"><b>${m.acc == null ? "—" : Math.round(m.acc * 100) + "%"}</b><span>Accuracy</span></div>
+      <div class="stat"><b>${m.mastered}</b><span>Questions mastered</span></div>
+      <div class="stat"><b>${st.cur}</b><span>Day streak</span></div>
+      <div class="stat"><b>${st.best}</b><span>Best streak</span></div>
+    </div>
+    <h2 class="sec">Activity</h2>
+    <div class="fig" style="margin-top:10px">${heatmap()}</div>
+    <h2 class="sec">By course</h2>
+    <div class="acc-courses">${COURSES.map(c => {
+      const cm = mastery(courseQs(c));
+      const weak = c.topicList.map(t => ({ t, m: mastery(t.qs) })).filter(x => x.m.seen).sort((a, b) => a.m.pct - b.m.pct).slice(0, 3);
+      return `<div class="acc-course c-${c.id}">
+        <div class="acc-ch"><span class="abbr">${esc(c.short)}</span><div><b>${esc(c.name)}</b><div class="muted" style="font-size:13px">${cm.seen} of ${cm.total} attempted · ${cm.acc == null ? "no answers yet" : Math.round(cm.acc * 100) + "% accuracy"}</div></div><span class="acc-pct mono">${Math.round(cm.pct * 100)}%</span></div>
+        <div class="meter" style="width:100%"><i style="width:${Math.round(cm.pct * 100)}%"></i></div>
+        ${weak.length ? `<div class="acc-weak"><span class="muted">Weakest topics</span>${weak.map(x => `<button type="button" class="btn small ghost" data-wk="${esc(x.t.key)}">${esc(x.t.code)} ${esc(x.t.name)} · ${Math.round(x.m.pct * 100)}%</button>`).join("")}</div>` : `<p class="muted" style="margin:0;font-size:13px">Practice a topic to see your weak spots here.</p>`}
+      </div>`; }).join("")}</div>
+    <h2 class="sec">Recent practice</h2>
+    ${sessions.length ? `<div class="tablebox"><table class="rtable"><thead><tr><th>When</th><th>Course</th><th>Set</th><th style="text-align:right">Score</th></tr></thead><tbody>${sessions.slice(0, 12).map(x => `<tr><td class="mono" style="white-space:nowrap">${esc(new Date(x.at).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }))}</td><td>${esc((AP_DATA[x.course] || {}).short || x.course)}</td><td>${esc(x.label)}</td><td class="num">${x.right}/${x.n} (${Math.round(x.right / x.n * 100)}%)</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted">Finished practice sets will show up here.</p>`}
+    <h2 class="sec">Your data</h2>
+    <div class="frow" style="margin-top:10px">
+      <button class="btn ghost" type="button" id="acc-reset">Reset all my progress</button>
+      ${signed && HOSTED ? `<button class="btn ghost" type="button" id="acc-out">Sign out</button>` : ""}
+      <span class="muted" style="font-size:13px">${signed && db ? "Your progress is private to your account." : ""}</span>
+    </div>
+    ${signed && HOSTED ? `<p class="muted" style="font-size:12.5px;margin-top:14px">Account ID <code class="mono" id="acc-uid">${esc(userId)}</code> <button class="linkbtn" type="button" id="acc-uid-copy">Copy</button>${devAllowed ? " · Admin" : " · To make this account a site admin, add this ID in Firestore under <code>admins</code>."}</p>` : ""}`;
+  document.getElementById("acc-name").textContent = head.title;
+  document.getElementById("acc-sub").textContent = head.sub;
+  const $ = id => document.getElementById(id);
+  if (HOSTED) wireAuth();
+  const sn = $("acc-syncnow"); if (sn) sn.onclick = () => pushSync().then(() => toast(syncState.s === "synced" ? "Synced" : syncLabel()));
+  $app.querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { const t = TOPIC[b.dataset.wk]; start(t.course, t.qs, t.code + " " + t.name, "all"); });
+  armConfirm($("acc-reset"), "Click again to erase everything", () => {
+    progress = {}; activity = {}; sessions = [];
+    save(KEY, progress); save(AKEY, activity); save(SKEY, sessions);
+    toast("All progress reset" + (canSync() ? " on every device" : "")); renderAccount();
+  });
+
+  // Claude version: consent + linking
+  const cuOn = $("cu-on"); if (cuOn) cuOn.onclick = async () => { if (await ensureAiConsent()) { toast("AI features will use your Claude usage"); renderAccount(); } };
+  const cuOff = $("cu-off"); if (cuOff) cuOff.onclick = () => { delete prefs.aiConsent; save("apdr.prefs", prefs); toast("Turned off. You'll be asked again before any AI request."); renderAccount(); };
+  const send = $("lk-send");
+  if (send) packLink(linkPayload("claude")).then(code => {
+    if (!send.isConnected) return;
+    send.href = siteUrl.replace(/#.*$/, "") + "#claude-link=" + code;
+    send.onclick = () => { links.google = { email: links.google && links.google.email || "", at: Date.now() }; save(LKEY, links); };
+  }).catch(() => { const n = $("lk-note"); if (n) n.textContent = "Linking isn't supported in this browser."; });
+  const imp = $("lk-import"); if (imp) imp.onclick = async () => {
+    try {
+      const d = await unpackLink($("lk-code").value);
+      if (d.src !== "site") throw new Error("wrong direction");
+      importLink(d); links.google = { email: d.email || "", at: Date.now() }; save(LKEY, links);
+      toast("Added your website progress to this device"); renderAccount();
+    } catch (e) { toast("That code didn't work. Copy it again from the website's Account page."); }
+  };
+  // Website: open in Claude (copy a code), API key
+  const toClaude = $("lk-claude"); if (toClaude) toClaude.onclick = () => {
+    packLink(linkPayload("site")).then(code => navigator.clipboard.writeText(code)).then(
+      () => toast("Link code copied. In Claude, paste it under Account → Bring progress from the website."),
+      () => toast("Couldn't copy the code automatically. Try again."));
+  };
+  const akRemove = $("ak-remove"); if (akRemove) akRemove.onclick = () => { try { localStorage.removeItem("apdr.apikey"); } catch (e) {} toast("API key removed from this device"); renderAccount(); };
+  const akForm = $("ak-form"); if (akForm) akForm.onsubmit = e => {
+    e.preventDefault();
+    const v = $("ak-key").value.trim(), err = $("ak-err");
+    const fail = msg => { err.hidden = false; err.textContent = msg; };
+    if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v)) return fail("That doesn't look like an Anthropic API key. Keys start with sk-ant-.");
+    if (!$("ak-agree").checked) return fail("Check the box to confirm you understand requests are billed to your Anthropic account.");
+    try { localStorage.setItem("apdr.apikey", v); } catch (e2) { return fail("This browser won't let the site save the key."); }
+    toast("API key saved on this device. AI features are on."); renderAccount();
+  };
+}
+updateAccountChip();
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg){
+  let t = document.querySelector(".toast");
+  if (!t) { t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 2800);
+}
+
+/* ---------- boot ---------- */
+if (HOSTED) {
+  const hh = location.hash || "";
+  if (hh.indexOf("#claude-link=") === 0) {
+    pendingLink = hh.slice("#claude-link=".length);
+    try { sessionStorage.setItem("apdr.pendingLink", pendingLink); } catch (e) {}
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  } else { try { pendingLink = sessionStorage.getItem("apdr.pendingLink"); } catch (e) {} }
+}
+if (HOSTED) { try { initHosted(); } catch (e) { console.error("Firebase failed to start", e); meKnown = true; dbKnown = true; db = null; } }
+const h = (location.hash || "").slice(1);
+if (AP_DATA[h]) view = { name: "course", cid: h };
+if (pendingLink) view = { name: "account" };
+rerender();
+})();
+</script>

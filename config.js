@@ -12,6 +12,8 @@ window.APDR_CONFIG = {
   },
   // This website's address (the Claude version links here).
   siteUrl: "https://ap-drill-room.pages.dev/",
+  // The Claude version of the app (people use it with their own Claude plan). Share it from claude.ai with "Anyone with the link".
+  claudeAppUrl: "https://claude.ai/artifact/KfQcApv2EqBpZiVFK9RpJW",
   // Optional: URL of your deployed Claude relay (see worker/). Leave "" to hide the API-key option.
   aiEndpoint: "https://ap-drill-room-claude.ap-drill-room-claude.workers.dev"
 };

@@ -10,6 +10,7 @@ Free AP practice for **AP Human Geography**, **AP Biology**, and **AP World Hist
 |---|---|---|
 | **Guest** | nothing | No |
 | **Account** | Google or email/password | After saving your own Claude API key to your account |
+| **Claude version** | a claude.ai account (opened from **Account → Open in Claude**) | Yes, with the person's own Claude plan usage |
 
 ### Your Claude API key
 
@@ -17,13 +18,14 @@ Free AP practice for **AP Human Geography**, **AP Biology**, and **AP World Hist
 - **Remove key from my account** deletes it immediately.
 - **Every time you open the site**, you're asked to agree that AI features will use your Claude API credits before the first AI request. Nothing is sent until you agree.
 
-### The shared question bank (Claude-written only)
+### The shared question bank
 
-When someone signed in generates questions with their saved API key, the **Claude relay** (`worker/`) asks Claude for the questions and saves Claude's answer straight to the database. Browsers can't write to the shared bank (`firestore.rules` blocks it), so every shared question comes directly from Claude. Nobody can type one in.
+When someone signed in generates questions with their saved API key, the **Claude relay** (`worker/`) asks Claude for the questions and saves Claude's answer straight to the database. Browsers can't write to the shared bank (`firestore.rules` blocks it), so these questions come directly from Claude.
 
 The relay's prompt is fixed: it asks Claude for 5 questions on one CED topic. The browser only sends a course and topic code. The relay fills in the course, unit, topic name and the existing questions to avoid from `worker/src/topics.json`, which `src/build.py` generates from the repo's question files. Nothing a user types can reach the prompt.
 
 - New shared questions show up for everyone right away, labeled **Written by Claude**.
+- **From the Claude version:** questions made there reach the site when the person uses **Link Google account** and signs in. The relay adds them to the shared bank right away, labeled **Made in the Claude version**. They travel through the person's browser, so there's no guarantee Claude wrote them. The relay only checks the format (known topic, one correct answer and three different wrong ones), skips duplicates (`submissions/<hash>`), and caps each account at 40 a day (`quota/`). Hide bad ones in Dev mode.
 - Every day, a GitHub Action (`.github/workflows/sync-community.yml`) copies them into `src/data/community.js`, rebuilds the site, and commits.
 - Admins can hide a bad question in Dev mode. Hidden questions are removed from the file at the next sync.
 

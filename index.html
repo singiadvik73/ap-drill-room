@@ -2992,7 +2992,7 @@ function addCommunity(rec){
     const id = "c-" + rec.id + "-" + i;
     if (!q || !q.stem || !q.correct || !Array.isArray(q.wrong) || q.wrong.length < 3 || t.base.some(x => x.id === id)) return;
     const m = mkQ(t, [String(q.stem), String(q.correct), q.wrong.slice(0, 3).map(String), String(q.explanation || "")], id, false);
-    m.community = true; m.reviewed = rec.source === "reviewed"; t.base.push(m); added = true;
+    m.community = true; m.reviewed = rec.source === "reviewed"; m.fromApp = rec.source === "claude-app"; t.base.push(m); added = true;
   });
   return added;
 }
@@ -3125,11 +3125,7 @@ function initHosted(){
       save: key => relay("PUT", "key", { key }),
       wipe: () => relay("DELETE", "key")
     };
-    reviewApi = {
-      submit: questions => relay("POST", "submit", { questions }),
-      list: () => relay("GET", "review"),
-      act: (id, action) => relay("POST", "review", { id, action })
-    };
+    reviewApi = { submit: questions => relay("POST", "submit", { questions }) };
   }
   fbAuth.onAuthStateChanged(async u => {
     const prev = userId;
@@ -3303,7 +3299,6 @@ function rerender(){
   else if (view.name === "edit") renderEdit();
   else if (view.name === "tools") renderTools();
   else if (view.name === "account") renderAccount();
-  else if (view.name === "review") renderReview();
 }
 document.getElementById("home-link").onclick = () => go({ name: "home" });
 function crumbs(items){
@@ -3371,13 +3366,12 @@ function renderCourse(){
         <div class="frow"><button class="btn small primary" type="button" id="ja-go">Practice the new questions</button><button class="btn small ghost" type="button" id="ja-x">Dismiss</button></div>
       </div>` : ""}
     ${IN_CLAUDE && !storageWorks() ? `<div class="notice" style="margin-bottom:18px"><b>This browser isn't saving your progress here.</b> Claude's viewer is blocking storage for this page, so answers and generated questions disappear when you close it. Use <b>Link Google account</b> on the Account page to keep them.</div>` : ""}
-    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) use your own Claude API key. ${userId ? "The" : "Sign in, then the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button> shows how to get one, step by step.</p>` : ""}
+    ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) need Claude. ${CFG.claudeAppUrl ? `<a href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Open AP Drill Room in Claude</a> to use your Claude plan, or add your own API key: ` : ""}${userId ? "the" : "sign in, then the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button> shows how, step by step.</p>` : ""}
     ${devOn() ? `<div class="devpanel">
       <span class="devtag">Dev</span>
       <button class="btn small" type="button" id="dv-browse">Browse &amp; edit questions</button>
       <button class="btn small" type="button" id="dv-add">Add a question</button>
       <button class="btn small" type="button" id="dv-tools">Testing tools &amp; data</button>
-      ${reviewApi ? `<button class="btn small" type="button" id="dv-review">Review queue</button>` : ""}
       <label class="toggle" for="dv-key"><input type="checkbox" id="dv-key" ${prefs.devKey ? "checked" : ""}> Show answer key while practicing</label>
       <span class="devnote">${db ? Object.keys(EDITS).length + " shared edits" : "Shared edits unavailable in this view"}</span>
     </div>` : ""}
@@ -3414,7 +3408,6 @@ function renderCourse(){
     document.getElementById("dv-browse").onclick = () => go({ name: "dev", cid: c.id, f: {}, limit: 40 });
     document.getElementById("dv-add").onclick = () => go({ name: "edit", cid: c.id, qid: null, topicKey: c.topicList[0].key, ret: { name: "dev", cid: c.id, f: {}, limit: 40 } });
     document.getElementById("dv-tools").onclick = () => go({ name: "tools", cid: c.id });
-    const dvr = document.getElementById("dv-review"); if (dvr) dvr.onclick = () => go({ name: "review", cid: c.id });
     const kb = document.getElementById("dv-key"); kb.onchange = () => { prefs.devKey = kb.checked; save("apdr.prefs", prefs); };
   }
   const ha = document.getElementById("hint-acct"); if (ha) ha.onclick = () => go({ name: "account" });
@@ -3446,7 +3439,7 @@ async function generateFor(t, btn){
   if (!aiOn() || !(await ensureAiConsent())) return;
   const status = $app.querySelector(`[data-gs="${CSS.escape(t.key)}"]`);
   btn.disabled = true; btn.textContent = "Writing…";
-  if (status) { status.hidden = false; status.textContent = `Claude is writing 5 new questions using your ${sample ? "Claude usage" : "API key"}. This can take up to a minute.${sample ? " They'll be saved for you. To share them, use Link Google account: Claude checks them and an admin approves them." : ""}`; }
+  if (status) { status.hidden = false; status.textContent = `Claude is writing 5 new questions using your ${sample ? "Claude usage" : "API key"}. This can take up to a minute.${sample ? " They'll be saved for you. To add them to the question pool for everyone, use Link Google account on the Account page." : ""}`; }
   const ctx = { courseId: t.course.id, course: t.course.name, unitN: t.unit.n, unitName: t.unit.name, topicCode: t.code, topicName: t.name, existing: t.qs.slice(0, 12).map(q => q.stem) };
   try {
     const res = await AI.generate(ctx);
@@ -3537,7 +3530,7 @@ function renderQuiz(){
         <button class="btn small ghost" type="button" id="q-end">End &amp; review</button>
       </div>
       <div class="prog" aria-hidden="true"><i style="width:${(session.i + (done ? 1 : 0)) / session.items.length * 100}%"></i></div>
-      <div class="qmeta"><span class="mono">Q ${session.i + 1} / ${session.items.length}</span>${devOn() ? `<span class="mono devid">${esc(q.id)}</span>` : ""}<span class="tag">${esc(q.topic.code)} ${esc(q.topic.name)}</span>${q.community ? (q.reviewed ? '<span class="ai-badge" title="Generated in the Claude version, checked by Claude, and approved by an admin">Claude-generated · reviewed</span>' : '<span class="ai-badge">Written by Claude</span>') : q.gen ? '<span class="ai-badge">AI-written</span>' : ""}</div>
+      <div class="qmeta"><span class="mono">Q ${session.i + 1} / ${session.items.length}</span>${devOn() ? `<span class="mono devid">${esc(q.id)}</span>` : ""}<span class="tag">${esc(q.topic.code)} ${esc(q.topic.name)}</span>${q.community ? (q.fromApp ? '<span class="ai-badge" title="Generated with Claude in the Claude version and shared by a student">Made in the Claude version</span>' : q.reviewed ? '<span class="ai-badge" title="Generated in the Claude version, checked by Claude, and approved by an admin">Claude-generated · reviewed</span>' : '<span class="ai-badge">Written by Claude</span>') : q.gen ? '<span class="ai-badge">AI-written</span>' : ""}</div>
       ${renderFig(q.fig)}
       <p class="stem">${esc(q.stem)}</p>
       <ol class="opts">
@@ -3661,7 +3654,7 @@ function statusOf(q){
   if (q.edited) b.push(["edited", "Edited (shared)"]);
   if (q.added) b.push(["added", "Added (shared)"]);
   if (q.gen) b.push(["ai", "AI-written, saved only in this browser"]);
-  if (q.community) b.push(q.reviewed ? ["reviewed", "From the Claude version: checked by Claude and approved by an admin"] : ["claude", "Written by Claude, shared with everyone"]);
+  if (q.community) b.push(q.fromApp ? ["claude", "Made in the Claude version, shared with everyone"] : q.reviewed ? ["reviewed", "From the Claude version: checked by Claude and approved by an admin"] : ["claude", "Written by Claude, shared with everyone"]);
   if (q.fig) b.push(["fig", "Has a figure"]);
   return b;
 }
@@ -3747,39 +3740,6 @@ async function writeEdit(id, body, msg){
 async function removeEdit(id, msg){
   if (!db) return;
   try { await db.collection("edits").doc(id).delete(); toast(msg); } catch (e) { toast(dbErr(e)); }
-}
-
-async function renderReview(){
-  if (!devOn() || !reviewApi) return go({ name: "course", cid: view.cid });
-  const c = AP_DATA[view.cid];
-  crumbs([...devBack(c), { label: "Review queue" }]);
-  $app.innerHTML = `<section class="chead" style="grid-template-columns:1fr"><div><div class="abbr">DEV · ALL COURSES</div><h1>Review queue</h1><p>Questions generated in the Claude version that passed Claude's check. Approve to add one to the shared bank for everyone; reject to discard it.</p></div></section><p class="muted" id="rv-status">Loading…</p><ul class="devlist" id="rv-list"></ul>`;
-  let items;
-  try { items = (await reviewApi.list()).items || []; }
-  catch (e) { document.getElementById("rv-status").textContent = e.code === "not_admin" ? "Only admins can review submissions." : "Couldn't load the queue. Try again."; return; }
-  if (view.name !== "review") return;
-  const st = document.getElementById("rv-status");
-  st.textContent = items.length ? `${items.length} waiting for review` : "Nothing waiting. New submissions appear here after Claude checks them.";
-  document.getElementById("rv-list").innerHTML = items.map(it => { const t = TOPIC[it.course + "|" + it.topic], q = it.question || {};
-    return `<li class="devq" data-rid="${esc(it.id)}">
-      <div class="devq-head"><span class="mono muted">${esc(t ? t.course.short + " " + t.code + " " + t.name : it.course + " " + it.topic)}</span><span class="st st-ai">submitted ${esc(it.createdAt ? fmtDate(it.createdAt) : "")}</span></div>
-      <p class="devstem">${esc(q.stem || "")}</p>
-      <ol class="devopts"><li class="ok">${esc(q.correct || "")}</li>${(q.wrong || []).map(w => `<li>${esc(w)}</li>`).join("")}</ol>
-      ${q.explanation ? `<p class="devexpl">${esc(q.explanation)}</p>` : ""}
-      <p class="devexpl"><b>Claude's check:</b> ${esc(it.check || "passed")}</p>
-      <div class="devact"><button class="btn small primary" type="button" data-rv="approve">Approve</button><button class="btn small ghost" type="button" data-rv="reject">Reject</button></div>
-    </li>`; }).join("");
-  $app.querySelectorAll("[data-rv]").forEach(b => b.onclick = async () => {
-    const li = b.closest("[data-rid]"), id = li.dataset.rid, action = b.dataset.rv;
-    li.querySelectorAll("button").forEach(x => x.disabled = true);
-    try {
-      const r = await reviewApi.act(id, action);
-      if (action === "approve" && r.communityId) { const it = items.find(x => x.id === id); addCommunity({ id: r.communityId, course: it.course, topic: it.topic, questions: [it.question], source: "reviewed" }); applyEdits(); }
-      li.remove(); items = items.filter(x => x.id !== id);
-      st.textContent = items.length ? `${items.length} waiting for review` : "All caught up.";
-      toast(action === "approve" ? "Approved. It's in the shared bank now." : "Rejected");
-    } catch (e) { li.querySelectorAll("button").forEach(x => x.disabled = false); toast(e.code === "gone" ? "Someone already reviewed this one." : "Couldn't update it. Try again."); if (e.code === "gone") li.remove(); }
-  });
 }
 
 function renderEdit(){
@@ -4092,29 +4052,30 @@ async function applyPendingLink(){
     if (unsubmittedClaudeQs().length) setTimeout(() => submitClaudeQs(true), 800);
   } catch (e) { toast("That link didn't work. In the Claude version, choose Link Google account again."); }
 }
-// Questions generated in the Claude version (personal, "gen") can be submitted: Claude checks them on the
-// submitter's key, then an admin approves them into the shared pool.
+// Questions generated in the Claude version (personal, "gen") are shared: once linked, they go into the
+// shared pool for everyone (the relay checks format, removes duplicates, and caps each person per day).
 function unsubmittedClaudeQs(){
   const done = new Set(links.submitted || []);
   return COURSES.flatMap(c => c.topicList.flatMap(t => t.base.filter(q => q.gen && !done.has(q.id))));
 }
 async function submitClaudeQs(auto){
   const qs = unsubmittedClaudeQs();
-  if (!qs.length) { if (!auto) toast("No new questions from the Claude version to submit."); return null; }
-  if (!(reviewApi && keyStatus && keyStatus.saved)) { toast(`You have ${qs.length} question${qs.length === 1 ? "" : "s"} from the Claude version. Add your Claude API key on the Account page to submit them for review.`); return null; }
-  if (!(await ensureAiConsent())) return null;
-  toast(`Claude is checking ${qs.length} question${qs.length === 1 ? "" : "s"}…`);
-  const totals = { queued: 0, rejected: [], duplicates: 0 };
+  if (!qs.length) { if (!auto) toast("No new questions from the Claude version to share."); return null; }
+  if (!reviewApi || !userId) return null;
+  const totals = { added: 0, duplicates: 0, overLimit: 0 };
   try {
     for (let i = 0; i < qs.length; i += 20) {
       const batch = qs.slice(i, i + 20);
       const r = await reviewApi.submit(batch.map(q => ({ courseId: q.topic.course.id, topicCode: q.topic.code, stem: q.stem, correct: q.correct, wrong: q.wrong, explanation: q.expl })));
-      totals.queued += r.queued || 0; totals.duplicates += r.duplicates || 0; totals.rejected.push(...(r.rejected || []));
+      (r.added || []).forEach(g => addCommunity({ ...g, source: "claude-app" }));
+      totals.added += r.count || 0; totals.duplicates += r.duplicates || 0; totals.overLimit += r.overLimit || 0;
+      if (r.overLimit) { const sent = batch.length - r.overLimit; links.submitted = [...new Set([...(links.submitted || []), ...batch.slice(0, sent).map(q => q.id)])]; save(LKEY, links); break; }
       links.submitted = [...new Set([...(links.submitted || []), ...batch.map(q => q.id)])]; save(LKEY, links);
     }
-  } catch (e) { toast(sampleErr(e) || "Couldn't submit the questions. Try again."); return null; }
+  } catch (e) { toast(sampleErr(e) || "Couldn't share the questions. Try again."); return null; }
+  if (totals.added) applyEdits();
   lastSubmit = totals;
-  toast(`${totals.queued} sent for admin review` + (totals.rejected.length ? `, ${totals.rejected.length} didn't pass Claude's check` : "") + (totals.duplicates ? `, ${totals.duplicates} already submitted` : "") + ".");
+  toast(`${totals.added} question${totals.added === 1 ? "" : "s"} added to the shared pool` + (totals.duplicates ? `, ${totals.duplicates} already there` : "") + (totals.overLimit ? `. Daily limit reached: the rest will go tomorrow` : "") + ".");
   if (view.name === "account") renderAccount();
   return totals;
 }
@@ -4175,12 +4136,17 @@ function renderAccount(){
   } else if (HOSTED && signed) {
     modeHtml = `
     <div class="acc-cards">
+      ${CFG.claudeAppUrl ? `<section class="acc-card">
+        <h2 class="sec">Use AP Drill Room in Claude</h2>
+        <p>Open the Claude version to get explanations and new questions with your <b>Claude plan's usage</b>, no API key needed. Questions you make there are added to the pool for everyone when you use <b>Link Google account</b> in it.</p>
+        <div class="frow"><a class="btn primary" id="lk-claude" href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Open in Claude</a><span class="muted" style="font-size:12.5px">Also copies a link code, so you can bring this account's progress along: in Claude, paste it under Account → Bring progress from the website.</span></div>
+      </section>` : ""}
       ${unsubmittedClaudeQs().length || lastSubmit ? `<section class="acc-card">
         <h2 class="sec">Questions from the Claude version</h2>
-        <p>${unsubmittedClaudeQs().length ? `You have <b>${unsubmittedClaudeQs().length}</b> question${unsubmittedClaudeQs().length === 1 ? "" : "s"} you generated in the Claude version that aren't in the shared bank yet.` : "All your Claude-version questions have been submitted."}</p>
-        <p class="muted">Submitting sends them to Claude to check accuracy and fit (billed to your API key). Ones that pass wait for an admin's approval, then everyone can practice them.</p>
-        ${lastSubmit ? `<p class="muted">Last submission: ${lastSubmit.queued} sent for review${lastSubmit.rejected.length ? `, ${lastSubmit.rejected.length} didn't pass` : ""}${lastSubmit.duplicates ? `, ${lastSubmit.duplicates} already submitted` : ""}.</p>${lastSubmit.rejected.length ? `<ul class="rejlist">${lastSubmit.rejected.slice(0, 6).map(x => `<li><b>${esc(x.stem)}</b>: ${esc(x.reason)}</li>`).join("")}</ul>` : ""}` : ""}
-        ${unsubmittedClaudeQs().length ? `<div class="frow"><button class="btn small primary" type="button" id="cv-submit">Submit for review</button></div>` : ""}
+        <p>${unsubmittedClaudeQs().length ? `You have <b>${unsubmittedClaudeQs().length}</b> question${unsubmittedClaudeQs().length === 1 ? "" : "s"} you generated in the Claude version that aren't in the shared bank yet.` : "All your Claude-version questions are in the shared pool."}</p>
+        <p class="muted">Sharing adds them to the question pool for everyone. It's free and doesn't use your API key.</p>
+        ${lastSubmit ? `<p class="muted">Last time: ${lastSubmit.added} added${lastSubmit.duplicates ? `, ${lastSubmit.duplicates} already in the pool` : ""}${lastSubmit.overLimit ? ", the rest wait for tomorrow (daily limit)" : ""}.</p>` : ""}
+        ${unsubmittedClaudeQs().length ? `<div class="frow"><button class="btn small primary" type="button" id="cv-submit">Share with everyone</button></div>` : ""}
       </section>` : ""}
       <section class="acc-card">
         <h2 class="sec">Claude API key</h2>
@@ -4287,7 +4253,12 @@ function renderAccount(){
     try { keyStatus = await keyApi.wipe(); visitConsent = false; toast("Your API key was removed from your account"); } catch (e) { toast(sampleErr(e) || "Couldn't remove the key. Try again."); }
     renderAccount();
   });
-  const cvs = $("cv-submit"); if (cvs) cvs.onclick = () => { cvs.disabled = true; cvs.textContent = "Checking…"; submitClaudeQs(false).finally(() => renderAccount()); };
+  const toClaude = $("lk-claude"); if (toClaude) toClaude.onclick = () => {
+    packLink(linkPayload("site")).then(code => navigator.clipboard.writeText(code)).then(
+      () => toast("Link code copied. In Claude, paste it under Account → Bring progress from the website."),
+      () => {});
+  };
+  const cvs = $("cv-submit"); if (cvs) cvs.onclick = () => { cvs.disabled = true; cvs.textContent = "Sharing…"; submitClaudeQs(false).finally(() => renderAccount()); };
   const repl = $("ak-replace"); if (repl) repl.onclick = () => { replacingKey = true; renderAccount(); };
   const cancel = $("ak-cancel"); if (cancel) cancel.onclick = () => { replacingKey = false; renderAccount(); };
   const akForm = $("ak-form"); if (akForm) akForm.onsubmit = async e => {

@@ -43,7 +43,8 @@ for doc in docs:
     try:
         questions = json.loads(f["json"]["stringValue"])
         rec = {"id": doc_id, "course": f["course"]["stringValue"], "topic": f["topic"]["stringValue"],
-               "at": f["createdAt"]["timestampValue"], "model": f.get("model", {}).get("stringValue", "")}
+               "at": f["createdAt"]["timestampValue"], "model": f.get("model", {}).get("stringValue", ""),
+               "source": f.get("source", {}).get("stringValue", "relay")}
     except (KeyError, ValueError):
         continue
     rec["questions"] = [None if f"c-{doc_id}-{i}" in hidden else q for i, q in enumerate(questions)]

@@ -6,6 +6,7 @@
 :root{
   --bg:#f2f3ef; --surface:#ffffff; --sunk:#e8eae4; --ink:#161d19; --muted:#5b645e; --line:#d6dad2;
   --bio:#4a7a12; --bio-soft:#e6efd8; --hug:#1c5d8a; --hug-soft:#dde9f2;
+  --wh:#9a3f22; --wh-soft:#f5e3da; --chem:#6a3fb0; --chem-soft:#ebe3f7;
   --ok:#0d7a52; --ok-soft:#dcf1e7; --bad:#b8321f; --bad-soft:#f8e1dc; --warn:#9a6b00;
   --accent:var(--ink); --accent-soft:var(--sunk);
   --s1:#2563a8; --s2:#c4501b; --s3:#7a4bb0; --s4:#23865a;
@@ -19,7 +20,7 @@
   :root:not([data-theme="light"]){
     color-scheme:dark;
     --bg:#111513; --surface:#191e1b; --sunk:#222924; --ink:#e6ebe6; --muted:#98a39b; --line:#2d3530;
-    --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38;
+    --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38; --wh:#f0906c; --wh-soft:#3a2119; --chem:#b99bf0; --chem-soft:#2a2138;
     --ok:#4fd19a; --ok-soft:#153427; --bad:#f07a66; --bad-soft:#3a1d18; --warn:#e3b341;
     --s1:#6aa8e8; --s2:#f08a55; --s3:#b891e6; --s4:#5cc795;
     --q0:#1c2833; --q1:#24405a; --q2:#2f6391; --q3:#4f8fc8; --q4:#94c5ef;
@@ -28,7 +29,7 @@
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#111513; --surface:#191e1b; --sunk:#222924; --ink:#e6ebe6; --muted:#98a39b; --line:#2d3530;
-  --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38;
+  --bio:#a3cf4e; --bio-soft:#26331a; --hug:#71b3e2; --hug-soft:#172a38; --wh:#f0906c; --wh-soft:#3a2119; --chem:#b99bf0; --chem-soft:#2a2138;
   --ok:#4fd19a; --ok-soft:#153427; --bad:#f07a66; --bad-soft:#3a1d18; --warn:#e3b341;
     --s1:#6aa8e8; --s2:#f08a55; --s3:#b891e6; --s4:#5cc795;
     --q0:#1c2833; --q1:#24405a; --q2:#2f6391; --q3:#4f8fc8; --q4:#94c5ef;
@@ -38,6 +39,8 @@ html,body{background:var(--bg)}
 body{color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 .c-bio{--accent:var(--bio);--accent-soft:var(--bio-soft)}
 .c-hug{--accent:var(--hug);--accent-soft:var(--hug-soft)}
+.c-wh{--accent:var(--wh);--accent-soft:var(--wh-soft)}
+.c-chem{--accent:var(--chem);--accent-soft:var(--chem-soft)}
 .wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
 button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -201,6 +204,9 @@ h2.sec{font-size:20px;font-weight:700;margin-top:10px}
 .fig .d-thin{stroke:var(--muted);stroke-width:1;fill:none}
 .fig .d-water{fill:var(--s1);fill-opacity:.22;stroke:var(--s1);stroke-width:1.5}
 .fig .d-fill{fill:var(--sunk);stroke:var(--ink);stroke-width:1.25}
+.src{margin:0;padding:4px 0 4px 14px;border-left:3px solid var(--accent);font:italic 15px/1.55 var(--sans);color:var(--ink);display:grid;gap:8px}
+.src p{margin:0}
+.srccite{font-size:12.5px;color:var(--muted)}
 .flegend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
 .flegend span{display:inline-flex;align-items:center;gap:6px}
 .flegend i{display:inline-block;width:18px;height:0;border-top:3px solid var(--c)}
@@ -372,7 +378,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outli
 <script>
 (function(){
 "use strict";
-const ORDER = ["hug","bio"];
+const ORDER = ["hug","bio","wh","chem"];
 const COURSES = ORDER.map(id => AP_DATA[id]).filter(Boolean);
 const $app = document.getElementById("app");
 const $crumbs = document.getElementById("crumbs");
@@ -592,6 +598,7 @@ const FIG = {
     return `<div class="fpanels">${f.panels.map(panel).join("")}</div>` + legendHtml(f.legend.map((l, i) => ({ l, c: `var(--q${i})`, sq: 1 })));
   },
   svg(f){ return svgWrap(f.w || 520, f.h || 260, f.svg, f.title); },
+  source(f){ return `<blockquote class="src">${String(f.text).split("\n\n").map(p => `<p>${esc(p)}</p>`).join("")}</blockquote>${f.cite ? `<div class="srccite">— ${esc(f.cite)}</div>` : ""}`; },
   panels(f){ return `<div class="fpanels">${f.items.map(it => `<div class="fpanel">${it.title ? `<h4>${esc(it.title)}</h4>` : ""}${renderFig(it, true)}</div>`).join("")}</div>`; }
 };
 
@@ -1407,7 +1414,7 @@ function renderEdit(){
         <label for="ed-expl">Explanation</label>
         <textarea id="ed-expl" rows="3">${esc(d.expl)}</textarea>
         <details ${d.fig ? "open" : ""}><summary>Figure (JSON, optional)</summary>
-          <p class="devexpl">Types: line, bar, scatter, pyramid, table, tree, gel, pedigree, web, rings, sectors, flow, compartments, choro, panels. Leave empty for no figure.</p>
+          <p class="devexpl">Types: line, bar, scatter, pyramid, table, tree, gel, pedigree, web, rings, sectors, flow, compartments, choro, panels, source (text excerpt: {"t":"source","text":"…","cite":"…"}). Leave empty for no figure.</p>
           <textarea id="ed-fig" rows="10" class="mono" spellcheck="false">${esc(d.fig)}</textarea>
         </details>
         <p class="ederr" id="ed-err" role="alert" hidden></p>

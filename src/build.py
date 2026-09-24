@@ -8,7 +8,7 @@ import pathlib, sys
 
 SRC = pathlib.Path(__file__).parent
 ROOT = SRC.parent
-ORDER = ["hug-a.js", "hug-b.js", "bio-a.js", "bio-b.js", "visuals.js", "visuals2.js", "community.js"]
+ORDER = ["hug-a.js", "hug-b.js", "bio-a.js", "bio-b.js", "wh-a.js", "wh-b.js", "visuals.js", "visuals2.js", "community.js"]
 FIREBASE = "10.12.2"
 
 def app_with_data(prelude=""):
@@ -23,7 +23,7 @@ def site_html(app):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Free AP Biology and AP Human Geography practice: questions for every CED unit and topic, with graphs, diagrams, and progress tracking.">
+<meta name="description" content="Free AP Human Geography, AP Biology, and AP World History practice: questions for every CED unit and topic, with graphs, diagrams, and progress tracking.">
 <style>:root{{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}img{{max-width:100%}}[hidden]{{display:none!important}}</style>
 {head.strip()}
 <script src="config.js"></script>

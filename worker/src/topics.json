@@ -2796,6 +2796,702 @@
 "unitN": 7,
 "unitName": "Industrial and Economic Development Patterns and Processes"
 },
+"pc|1.1": {
+"course": "AP Precalculus",
+"stems": [
+"On an interval where a function is increasing,",
+"The graph of f is shown. On which interval is f decreasing?",
+"A relative maximum of a function occurs where the function",
+"On an interval where the rate of change of f is increasing, the graph of f is"
+],
+"topicName": "Change in Tandem",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.10": {
+"course": "AP Precalculus",
+"stems": [
+"Where does r(x) = (x² − 1) / (x − 1) have a hole?",
+"A hole in a rational function's graph happens when",
+"r(x) = (x − 2)² / (x − 2) has at x = 2",
+"r(x) = (x − 3) / (x − 3)² has at x = 3"
+],
+"topicName": "Rational Functions and Holes",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.11": {
+"course": "AP Precalculus",
+"stems": [
+"Which is equivalent to (x² − 5x + 6) / (x − 2) for x ≠ 2?",
+"Which is a factored form of x³ − 4x?",
+"What is the coefficient of x² in (x + 2)⁴?",
+"Dividing p(x) = x³ + 2x − 5 by (x − 1) gives a remainder of"
+],
+"topicName": "Equivalent Representations of Polynomial and Rational Expressions",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.12": {
+"course": "AP Precalculus",
+"stems": [
+"The graph of g(x) = f(x − 3) + 2 is the graph of f shifted",
+"The graph of g(x) = −f(x) is the graph of f",
+"The graph of g(x) = f(2x) is the graph of f",
+"If f has domain [0, 4], what is the domain of g(x) = f(x + 1)?"
+],
+"topicName": "Transformations of Functions",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.13": {
+"course": "AP Precalculus",
+"stems": [
+"A data set's output values have roughly constant first differences over equal input intervals. Which model fits best?",
+"A ball's height rises and then falls over time. Which model is most appropriate?",
+"A model for the number of people in a line should use which domain restriction?",
+"A rational function could model average cost per item because"
+],
+"topicName": "Function Model Selection and Assumption Articulation",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.14": {
+"course": "AP Precalculus",
+"stems": [
+"A quadratic model passes through (0, 5), (1, 6), and (2, 9). What is it?",
+"A cubic regression predicts negative sales for a future month. The best interpretation is that",
+"A rectangle has perimeter 20 m. Which function gives its area in terms of its width w?",
+"Using A(w) = w(10 − w), what width maximizes the area?"
+],
+"topicName": "Function Model Construction and Application",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.2": {
+"course": "AP Precalculus",
+"stems": [
+"What is the average rate of change of f(x) = x² on the interval [1, 4]?",
+"The average rate of change of a function over [a, b] is the slope of",
+"A car's distance from home is 30 miles at t = 1 hour and 150 miles at t = 3 hours. What is its average rate of change of distance?",
+"If the average rate of change of f on [0, 5] is negative, then"
+],
+"topicName": "Rates of Change",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.3": {
+"course": "AP Precalculus",
+"stems": [
+"The table shows values of a function at equally spaced inputs. What type of function could it be?",
+"For a linear function, the average rate of change over any interval is",
+"For f(x) = −2x² + 8x, the average rates of change over consecutive equal-length intervals",
+"A quadratic function is concave up everywhere when"
+],
+"topicName": "Rates of Change in Linear and Quadratic Functions",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.4": {
+"course": "AP Precalculus",
+"stems": [
+"What is the degree of f(x) = 4x³ − x⁵ + 2?",
+"A polynomial of degree 4 can have at most how many relative extrema?",
+"A point of inflection of a polynomial is where the graph",
+"A polynomial function has an absolute maximum but no absolute minimum. Which could be its degree and leading coefficient?"
+],
+"topicName": "Polynomial Functions and Rates of Change",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.5": {
+"course": "AP Precalculus",
+"stems": [
+"What are the zeros of f(x) = (x − 2)²(x + 3)?",
+"At a zero of even multiplicity, the graph of a polynomial",
+"A polynomial with real coefficients has 3 + 2i as a zero. What must also be a zero?",
+"How many complex zeros (counting multiplicity) does a degree-5 polynomial have?"
+],
+"topicName": "Polynomial Functions and Complex Zeros",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.6": {
+"course": "AP Precalculus",
+"stems": [
+"What is the end behavior of f(x) = −3x⁴ + x?",
+"What is the end behavior of f(x) = 2x³ − 5x²?",
+"The end behavior of a polynomial is determined by",
+"An even function satisfies"
+],
+"topicName": "Polynomial Functions and End Behavior",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.7": {
+"course": "AP Precalculus",
+"stems": [
+"What is the horizontal asymptote of r(x) = (3x² + 1) / (x² − 4)?",
+"What is the end behavior of r(x) = (2x) / (x² + 1)?",
+"A rational function whose numerator's degree is exactly one more than its denominator's has",
+"What is the slant asymptote of r(x) = (x² + 1) / x?"
+],
+"topicName": "Rational Functions and End Behavior",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.8": {
+"course": "AP Precalculus",
+"stems": [
+"What are the zeros of r(x) = (x − 3)(x + 1) / (x + 2)?",
+"Why is x = 2 not a zero of r(x) = (x − 2) / [(x − 2)(x + 5)]?",
+"Solve (x − 1) / (x + 3) ≥ 0.",
+"A rational function has a zero at x = a when"
+],
+"topicName": "Rational Functions and Zeros",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|1.9": {
+"course": "AP Precalculus",
+"stems": [
+"What are the vertical asymptotes of r(x) = (x + 1) / (x² − 9)?",
+"The graph of r is shown. What is the vertical asymptote?",
+"Near a vertical asymptote x = a, the output values of a rational function",
+"For r(x) = 1/(x − 4)², what happens as x → 4 from either side?"
+],
+"topicName": "Rational Functions and Vertical Asymptotes",
+"unitN": 1,
+"unitName": "Polynomial and Rational Functions"
+},
+"pc|2.1": {
+"course": "AP Precalculus",
+"stems": [
+"What is the 10th term of the arithmetic sequence 3, 7, 11, …?",
+"What is the 6th term of the geometric sequence 2, 6, 18, …?",
+"A geometric sequence has g₁ = 5 and g₃ = 45. Which could be its common ratio?",
+"Arithmetic sequences change by a constant"
+],
+"topicName": "Change in Arithmetic and Geometric Sequences",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.10": {
+"course": "AP Precalculus",
+"stems": [
+"What is the inverse of f(x) = 5ˣ?",
+"What is the inverse of f(x) = 2 · eˣ?",
+"Since the range of f(x) = bˣ is (0, ∞), the domain of log_b x is",
+"What is 3^(log₃ 8)?"
+],
+"topicName": "Inverses of Exponential Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.11": {
+"course": "AP Precalculus",
+"stems": [
+"What is the vertical asymptote of f(x) = log(x − 2)?",
+"The graph of f(x) = ln x is",
+"What is the x-intercept of f(x) = log₃ x?",
+"As x → 0⁺, log₂ x approaches"
+],
+"topicName": "Logarithmic Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.12": {
+"course": "AP Precalculus",
+"stems": [
+"Which is equivalent to log 20 + log 5?",
+"Which is equivalent to ln(x³ / y)?",
+"Which is equivalent to log₂ 7 (change of base)?",
+"log₄ 64 − log₄ 4 equals"
+],
+"topicName": "Logarithmic Function Manipulation",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.13": {
+"course": "AP Precalculus",
+"stems": [
+"Solve 3ˣ = 81.",
+"Solve 2eˣ = 10.",
+"Solve log₂(x + 1) = 3.",
+"Solve log x + log(x − 3) = 1."
+],
+"topicName": "Exponential and Logarithmic Equations and Inequalities",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.14": {
+"course": "AP Precalculus",
+"stems": [
+"The pH scale is pH = −log[H⁺]. A solution with pH 3 has how many times the [H⁺] of a solution with pH 5?",
+"An earthquake of magnitude 7 releases shaking amplitude how many times greater than one of magnitude 5?",
+"A logarithmic model is most appropriate for data where the output",
+"How long does it take $500 to grow to $1,000 at 8% per year compounded yearly?"
+],
+"topicName": "Logarithmic Function Context and Data Modeling",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.15": {
+"course": "AP Precalculus",
+"stems": [
+"On a semi-log plot (log y versus x), data from an exponential function appear",
+"The semi-log plot of a data set is a line with slope 0.30 and y-intercept 1 (base 10). Which exponential model fits?",
+"The graph shows log y versus x for a data set. What kind of model fits the original data?",
+"Why are semi-log plots useful?"
+],
+"topicName": "Semi-log Plots",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.2": {
+"course": "AP Precalculus",
+"stems": [
+"The table shows f at equally spaced inputs. What type of function is f?",
+"Over equal-length input intervals, exponential functions have output values that change",
+"A linear function f and an exponential function g both pass through (0, 2) and (1, 6). What is g(3)?",
+"For large enough x, an increasing exponential function will always"
+],
+"topicName": "Change in Linear and Exponential Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.3": {
+"course": "AP Precalculus",
+"stems": [
+"Which function shows exponential decay?",
+"What is the horizontal asymptote of f(x) = 3 · 2ˣ − 4?",
+"The graph of f(x) = abˣ passes through (0, 4). What is a?",
+"For f(x) = 2(3)ˣ, which statement about concavity is true?"
+],
+"topicName": "Exponential Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.4": {
+"course": "AP Precalculus",
+"stems": [
+"Which is equivalent to 2ˣ⁺³?",
+"Which is equivalent to 9ˣ?",
+"A population doubles every 5 years: P(t) = P₀ · 2^(t/5). What is its approximate annual growth factor?",
+"Which is equivalent to 4^(1/2)?"
+],
+"topicName": "Exponential Function Manipulation",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.5": {
+"course": "AP Precalculus",
+"stems": [
+"A $1,000 investment earns 5% interest compounded yearly. Which models its value after t years?",
+"A car loses 15% of its value each year. What is its yearly growth factor?",
+"With continuous compounding at rate r, an amount A₀ grows to",
+"A bacteria culture grows from 100 to 400 in 6 hours. If growth is exponential, how many are there after 3 hours?"
+],
+"topicName": "Exponential Function Context and Data Modeling",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.6": {
+"course": "AP Precalculus",
+"stems": [
+"A residual plot for a model shows a clear U-shaped pattern. This suggests",
+"A residual is calculated as",
+"A model gives a residual of −3 at x = 5. This means the model",
+"Two models fit a data set. Model A's residuals are random and small; Model B's show a curved pattern. Which is more appropriate?"
+],
+"topicName": "Competing Function Model Validation",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.7": {
+"course": "AP Precalculus",
+"stems": [
+"If f(x) = x² and g(x) = x + 3, what is f(g(2))?",
+"If f(x) = 2x and g(x) = x − 1, what is g(f(x))?",
+"Using the table, what is f(g(1))?",
+"Is function composition commutative in general?"
+],
+"topicName": "Composition of Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.8": {
+"course": "AP Precalculus",
+"stems": [
+"What is the inverse of f(x) = 3x − 6?",
+"The graph of f⁻¹ is the reflection of the graph of f over",
+"A function has an inverse function when it is",
+"If f(2) = 7, then f⁻¹(7) ="
+],
+"topicName": "Inverse Functions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|2.9": {
+"course": "AP Precalculus",
+"stems": [
+"What is log₂ 32?",
+"What is log 0.001 (base 10)?",
+"What is ln(e⁴)?",
+"log_b a = c means"
+],
+"topicName": "Logarithmic Expressions",
+"unitN": 2,
+"unitName": "Exponential and Logarithmic Functions"
+},
+"pc|3.1": {
+"course": "AP Precalculus",
+"stems": [
+"A function f is periodic with period 4. If f(1) = 7, what is f(13)?",
+"The graph shows the height of a point on a spinning wheel over time. What is the period?",
+"Which situation is best modeled by a periodic function?",
+"The period of a periodic function is"
+],
+"topicName": "Periodic Phenomena",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.10": {
+"course": "AP Precalculus",
+"stems": [
+"Solve sin x = √2/2 for 0 ≤ x < 2π.",
+"Solve 2 cos x + 1 = 0 for 0 ≤ x < 2π.",
+"How many solutions does sin(2x) = 0 have for 0 ≤ x < 2π?",
+"For 0 ≤ x < 2π, where is sin x > 0?"
+],
+"topicName": "Trigonometric Equations and Inequalities",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.11": {
+"course": "AP Precalculus",
+"stems": [
+"What is sec(π/3)?",
+"What is csc(π/2)?",
+"Where is y = cot x undefined?",
+"If tan θ = 3/4, what is cot θ?"
+],
+"topicName": "The Secant, Cosecant, and Cotangent Functions",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.12": {
+"course": "AP Precalculus",
+"stems": [
+"Which is equivalent to sin²x + cos²x?",
+"Which is equivalent to 1 + tan²x?",
+"Which is equivalent to sin(2x)?",
+"If sin θ = 3/5 and θ is in Quadrant II, what is cos θ?"
+],
+"topicName": "Equivalent Representations of Trigonometric Functions",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.13": {
+"course": "AP Precalculus",
+"stems": [
+"Convert the polar point (4, π/3) to rectangular coordinates.",
+"Convert the rectangular point (0, −5) to polar coordinates with r > 0 and 0 ≤ θ < 2π.",
+"Which polar point represents the same location as (3, π/4)?",
+"In polar coordinates, r represents"
+],
+"topicName": "Trigonometry and Polar Coordinates",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.14": {
+"course": "AP Precalculus",
+"stems": [
+"What is the graph of r = 3?",
+"How many petals does the rose r = 4 sin(3θ) have?",
+"How many petals does the rose r = cos(2θ) have?",
+"The polar graph of r = 2 + 2 cos θ is a"
+],
+"topicName": "Polar Function Graphs",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.15": {
+"course": "AP Precalculus",
+"stems": [
+"For r = f(θ), if r is positive and increasing on an interval of θ, then the points on the graph are",
+"For r = 2θ on 0 ≤ θ ≤ π, what is the average rate of change of r with respect to θ?",
+"For r = 3 sin θ on 0 ≤ θ ≤ π, where is the distance from the origin greatest?",
+"For r = f(θ), if r is negative and decreasing on an interval, then the distance from the origin is"
+],
+"topicName": "Rates of Change in Polar Functions",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.2": {
+"course": "AP Precalculus",
+"stems": [
+"An angle in standard position has terminal ray through (3, 4). What is sin θ?",
+"An angle in standard position has terminal ray through (−5, 12). What is cos θ?",
+"On the unit circle, the point at angle θ has coordinates",
+"tan θ can be interpreted as"
+],
+"topicName": "Sine, Cosine, and Tangent",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.3": {
+"course": "AP Precalculus",
+"stems": [
+"What is sin(π/6)?",
+"What is cos(3π/4)?",
+"What is sin(4π/3)?",
+"How many radians is 150°?"
+],
+"topicName": "Sine and Cosine Function Values",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.4": {
+"course": "AP Precalculus",
+"stems": [
+"What is the period of y = sin x?",
+"On which interval is y = cos x decreasing?",
+"The graph of y = cos x is the graph of y = sin x shifted",
+"Where does y = sin x have zeros?"
+],
+"topicName": "Sine and Cosine Function Graphs",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.5": {
+"course": "AP Precalculus",
+"stems": [
+"What is the amplitude of f(x) = −3 sin(2x) + 1?",
+"What is the period of f(x) = 4 cos(3x)?",
+"What is the midline of f(x) = 2 sin(x) − 5?",
+"The graph shows a sinusoidal function. Which equation matches it?"
+],
+"topicName": "Sinusoidal Functions",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.6": {
+"course": "AP Precalculus",
+"stems": [
+"The graph of y = sin(x − π/3) is the graph of y = sin x shifted",
+"What is the phase shift of y = cos(2x + π)?",
+"Which function has a maximum value of 7 and a minimum value of 1?",
+"Which transformation changes the period of y = sin x?"
+],
+"topicName": "Sinusoidal Function Transformations",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.7": {
+"course": "AP Precalculus",
+"stems": [
+"A Ferris wheel has diameter 40 m, its center is 25 m above the ground, and it turns once every 60 s. What is the amplitude of the height function?",
+"For the same Ferris wheel (center 25 m high, radius 20 m, period 60 s), what is the midline?",
+"The average daily temperature in a city varies from a low of 30°F to a high of 80°F over one year. What is the amplitude of a sinusoidal model?",
+"A sinusoidal model of tides has a period of 12.4 hours. What is b in h(t) = a sin(bt) + d?"
+],
+"topicName": "Sinusoidal Function Context and Data Modeling",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.8": {
+"course": "AP Precalculus",
+"stems": [
+"What is the period of y = tan x?",
+"Where does y = tan x have vertical asymptotes?",
+"What is tan(π/4)?",
+"On each interval between its asymptotes, y = tan x is"
+],
+"topicName": "The Tangent Function",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|3.9": {
+"course": "AP Precalculus",
+"stems": [
+"What is arcsin(1/2)?",
+"What is arccos(−1)?",
+"What is the range of y = arctan x?",
+"Why must the domain of sin x be restricted to define arcsin?"
+],
+"topicName": "Inverse Trigonometric Functions",
+"unitN": 3,
+"unitName": "Trigonometric and Polar Functions"
+},
+"pc|4.1": {
+"course": "AP Precalculus",
+"stems": [
+"For x(t) = t + 1 and y(t) = t², what point corresponds to t = 2?",
+"A parametric function x = f(t), y = g(t) describes",
+"Eliminate the parameter: x = 2t, y = t + 3.",
+"For x(t) = cos t and y(t) = sin t, as t goes from 0 to 2π the point traces"
+],
+"topicName": "Parametric Functions",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.10": {
+"course": "AP Precalculus",
+"stems": [
+"What is [[1, 2], [3, 4]] + [[0, 1], [1, 0]]?",
+"What is the product [[1, 0], [2, 1]] · [[3], [4]]?",
+"A 2 × 3 matrix can be multiplied on the right by a matrix with",
+"Is matrix multiplication commutative in general?"
+],
+"topicName": "Matrices",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.11": {
+"course": "AP Precalculus",
+"stems": [
+"What is the determinant of [[3, 2], [1, 4]]?",
+"A 2 × 2 matrix has an inverse exactly when",
+"What is the inverse of [[2, 0], [0, 4]]?",
+"The absolute value of the determinant of [[a, b], [c, d]] gives"
+],
+"topicName": "The Inverse and Determinant of a Matrix",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.12": {
+"course": "AP Precalculus",
+"stems": [
+"The matrix [[1, 0], [0, −1]] represents a",
+"Which matrix rotates points 90° counterclockwise about the origin?",
+"The matrix [[2, 0], [0, 2]] transforms a shape by",
+"Applying transformation A and then B corresponds to the matrix"
+],
+"topicName": "Linear Transformations and Matrices",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.13": {
+"course": "AP Precalculus",
+"stems": [
+"If A = [[1, 1], [0, 1]], what is A applied to ⟨2, 3⟩?",
+"An inverse matrix A⁻¹ acts as a function that",
+"A transformation with determinant 0",
+"A transformation with determinant −1"
+],
+"topicName": "Matrices as Functions",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.14": {
+"course": "AP Precalculus",
+"stems": [
+"A transition matrix models customers switching between two stores each week. What must each column (of probabilities from one store) add up to?",
+"If 80% of Store A's customers stay and 20% switch to Store B each week, the first column of the transition matrix is",
+"To predict the state two weeks later using transition matrix T and state vector v, compute",
+"A steady state for a transition matrix T is a vector v such that"
+],
+"topicName": "Matrices Modeling Contexts",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.2": {
+"course": "AP Precalculus",
+"stems": [
+"A particle moves with x(t) = 3t and y(t) = 4t. How far is it from its start after t = 2?",
+"For x(t) = t² and y(t) = 2t, is the particle moving left or right at t = −1?",
+"A ball is thrown so that x(t) = 20t and y(t) = −16t² + 32t. At what time does it reach its highest point?",
+"In a parametric motion model, the direction of motion is shown by"
+],
+"topicName": "Parametric Functions Modeling Planar Motion",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.3": {
+"course": "AP Precalculus",
+"stems": [
+"For x(t) = 2t and y(t) = t² on [0, 3], what is the average rate of change of y with respect to x?",
+"For x(t) = t + 1 and y(t) = 3t, the average rate of change of x with respect to t on [0, 4] is",
+"If x(t) is increasing and y(t) is decreasing, the particle is moving",
+"For a parametric curve, Δy/Δx over an interval of t gives"
+],
+"topicName": "Parametric Functions and Rates of Change",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.4": {
+"course": "AP Precalculus",
+"stems": [
+"Which parametrization describes a circle of radius 5 centered at (1, 2)?",
+"Which parametrization gives the line segment from (0, 0) to (4, 2) for 0 ≤ t ≤ 1?",
+"For x = 3 cos t, y = 3 sin t, how many times is the circle traced for 0 ≤ t ≤ 4π?",
+"The parametrization x = cos t, y = −sin t traces the unit circle"
+],
+"topicName": "Parametrically Defined Circles and Lines",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.5": {
+"course": "AP Precalculus",
+"stems": [
+"The equation x² + y² = 25 defines",
+"Which point lies on x² + xy = 10?",
+"For the curve y² = x, which explicit functions together give the whole graph?",
+"An implicitly defined relation is one where"
+],
+"topicName": "Implicitly Defined Functions",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.6": {
+"course": "AP Precalculus",
+"stems": [
+"What conic is x²/9 + y²/4 = 1?",
+"What conic is x²/4 − y²/9 = 1?",
+"What conic is y = x² − 3?",
+"What are the center and radius of (x − 2)² + (y + 1)² = 16?"
+],
+"topicName": "Conic Sections",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.7": {
+"course": "AP Precalculus",
+"stems": [
+"Which parametrization gives the ellipse x²/9 + y²/4 = 1?",
+"A parametrization of y = x² is",
+"Parametrizing an implicitly defined curve is useful because",
+"For x = t, y = √(4 − t²) on −2 ≤ t ≤ 2, which curve is traced?"
+],
+"topicName": "Parametrization of Implicitly Defined Functions",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.8": {
+"course": "AP Precalculus",
+"stems": [
+"What is the magnitude of the vector ⟨3, −4⟩?",
+"What is ⟨2, 5⟩ + ⟨−1, 3⟩?",
+"What is the dot product ⟨1, 2⟩ · ⟨3, −1⟩?",
+"Two nonzero vectors are perpendicular when their dot product is"
+],
+"topicName": "Vectors",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
+"pc|4.9": {
+"course": "AP Precalculus",
+"stems": [
+"For p(t) = ⟨t, t²⟩, what is the position at t = 3?",
+"A vector-valued function p(t) = ⟨x(t), y(t)⟩ is equivalent to",
+"For p(t) = ⟨2t, 3t⟩, what is the displacement from t = 0 to t = 2?",
+"For p(t) = ⟨cos t, sin t⟩, what is the distance from the origin at any t?"
+],
+"topicName": "Vector-Valued Functions",
+"unitN": 4,
+"unitName": "Functions Involving Parameters, Vectors, and Matrices"
+},
 "wh|1.1": {
 "course": "AP World History: Modern",
 "stems": [

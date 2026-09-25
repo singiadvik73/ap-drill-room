@@ -703,7 +703,7 @@ let sample = null, aiOff = null;   // aiOff: why Claude is unavailable in this v
 let db = null, devAllowed = false;
 const devOn = () => devAllowed && !!prefs.dev;
 if (window.claude && typeof window.claude.use === "function") {
-  window.claude.use("sample").then(s => { sample = s || null; if (!sample) aiOff = "unavailable"; softRerender(); }).catch(() => { aiOff = "unavailable"; softRerender(); });
+  connectClaude();
   window.claude.use("user").then(async u => {
     devAllowed = !!(u && await u.canEdit()); updateDevToggle(); if (devAllowed && prefs.dev) softRerender();
     if (u) { me = await u.me(); userId = me.id || null; } else me = null;
@@ -960,10 +960,30 @@ const AI = {
     return await aiProxy("generate", c);  // {id, questions}: saved to the shared pool by the relay itself
   }
 };
+// Ask Claude's viewer for the sample capability. If it isn't available, read the viewer's permission
+// state so the note can say exactly what Claude reports, and offer to ask again.
+let aiPerm = null;
+async function connectClaude(ask){
+  try {
+    if (ask) { const perms = await window.claude.use("permissions"); if (perms) await perms.request(["sample"]); }
+    const s = await window.claude.use("sample");
+    sample = s || null;
+  } catch (e) { sample = null; }
+  if (sample) { aiOff = null; aiPerm = null; }
+  else {
+    aiOff = "unavailable";
+    try { const perms = await window.claude.use("permissions"); aiPerm = perms ? await perms.state("sample") : "no permissions API"; } catch (e) { aiPerm = "unknown"; }
+  }
+  softRerender();
+  if (ask) toast(sample ? "Connected to Claude" : "Claude is still unavailable here (" + aiPerm + ")");
+}
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-connect]"); if (b) { b.disabled = true; b.textContent = "Connecting…"; connectClaude(true); } });
 function aiOffText(){
   if (aiOff === "not_granted") return "Claude wasn't allowed to run on this page, so +5 new and Explain more are off. Reload the page and choose Allow when Claude asks. If it happens again right away, your Claude account or organization may not allow artifacts to use Claude.";
   if (aiOff === "sampling_disabled") return "Claude isn't available to your account in this view, so +5 new and Explain more are off.";
-  if (aiOff === "unavailable") return "Claude isn't connected in this view, so +5 new and Explain more are off. Open this page on claude.ai while signed in, then reload.";
+  if (aiOff === "unavailable") return aiPerm === "prompt" ? "Claude needs your permission before this page can use it. Click Connect to Claude."
+    : aiPerm === "denied" ? "Permission to use Claude was declined in this visit. Reload the page to be asked again."
+    : `Claude's viewer reports that Claude is unavailable to this page (status: ${aiPerm || "checking"}). This usually means AI-powered artifacts are turned off for this Claude account or organization, or this app or browser view doesn't support them. Try opening the link in the Claude desktop app or at claude.ai in another browser, then click Connect to Claude.`;
   return "Claude isn't available in this view right now, so +5 new and Explain more are off. Try reloading the page.";
 }
 function sampleErr(e){
@@ -1064,7 +1084,7 @@ function renderCourse(){
         ${justAdded.shared ? "They're in the shared bank, so everyone can practice them." : sample ? `${justAdded.checked ? `${justAdded.ids.length ? "They passed Claude's check." : ""}${justAdded.dropped.length ? ` ${justAdded.dropped.length} didn't pass and ${justAdded.dropped.length === 1 ? "was" : "were"} removed. ${esc(justAdded.dropped[0].reason)}` : ""} ` : "Claude couldn't check them, so they're only for you for now. You can check them on the Account page. "}${justAdded.ids.length ? (justAdded.saved ? "To add them to the pool for everyone, use Link Google account on the Account page." : "This browser isn't letting the page save, so use Link Google account on the Account page to keep them.") : ""}` : justAdded.saved ? "Saved for you in this browser. To keep them on any device, use Link Google account on the Account page." : "This browser isn't letting the page save, so they'll be gone when you close it. Use Link Google account on the Account page to keep them."}</div>
         <div class="frow">${justAdded.ids.length ? `<button class="btn small primary" type="button" id="ja-go">Practice the new questions</button>` : ""}<button class="btn small ghost" type="button" id="ja-x">Dismiss</button></div>
       </div>` : ""}
-    ${IN_CLAUDE && !sample && aiOff ? `<div class="notice" style="margin-bottom:18px"><b>AI features are off.</b> ${esc(aiOffText())}</div>` : ""}
+    ${IN_CLAUDE && !sample && aiOff ? `<div class="notice" style="margin-bottom:18px"><b>AI features are off.</b> ${esc(aiOffText())}${aiOff === "unavailable" ? `<div class="frow" style="margin-top:8px"><button class="btn small" type="button" data-connect>Connect to Claude</button></div>` : ""}</div>` : ""}
     ${IN_CLAUDE && !storageWorks() ? `<div class="notice" style="margin-bottom:18px"><b>This browser isn't saving your progress here.</b> Claude's viewer is blocking storage for this page, so answers and generated questions disappear when you close it. Use <b>Link Google account</b> on the Account page to keep them.</div>` : ""}
     ${HOSTED && !aiOn() ? `<p class="aihint">AI features (explanations and +5 new questions) need Claude. ${CFG.claudeAppUrl ? `<a href="${esc(CFG.claudeAppUrl)}" target="_blank" rel="noopener">Open AP Drill Room in Claude</a> to use your Claude plan, or add your own API key: ` : ""}${userId ? "the" : "sign in, then the"} <button type="button" class="linkbtn" id="hint-acct">Account page</button> shows how, step by step.</p>` : ""}
     ${devOn() ? `<div class="devpanel">
@@ -1834,7 +1854,7 @@ function renderAccount(){
     <div class="acc-cards">
       <section class="acc-card">
         <h2 class="sec">Claude usage for AI features</h2>
-        ${!sample ? `<p class="muted">${aiOff ? esc(aiOffText()) : "Connecting to Claude…"}</p>`
+        ${!sample ? `<p class="muted">${aiOff ? esc(aiOffText()) : "Connecting to Claude…"}</p>${aiOff === "unavailable" ? `<div class="frow"><button class="btn small" type="button" data-connect>Connect to Claude</button></div>` : ""}`
           : prefs.aiConsent && prefs.aiConsentV >= 2 ? `<p><span class="okdot"></span><b>Allowed</b> on this device since ${esc(fmtDate(prefs.aiConsent))}. Explanations, new questions and the checks on them use your Claude plan's usage (and paid credits, if you've turned on extra usage). +5 new is 2 requests: one to write, one to check.</p><div class="frow"><button class="btn small ghost" type="button" id="cu-off">Turn off</button></div>`
           : `<p>Not turned on. AI features use <b>your own Claude usage</b>, so you'll be asked to agree before the first request.</p><div class="frow"><button class="btn small" type="button" id="cu-on">Review and allow…</button></div>`}
       </section>

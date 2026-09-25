@@ -3492,6 +3492,538 @@
 "unitN": 4,
 "unitName": "Functions Involving Parameters, Vectors, and Matrices"
 },
+"psy|1.1": {
+"course": "AP Psychology",
+"stems": [
+"Identical twins raised in different homes have more similar personalities than fraternal twins raised together. This finding suggests that personality is",
+"Heritability refers to",
+"Adoption studies help separate the effects of nature and nurture by comparing adopted children with",
+"Evolutionary psychologists would most likely explain a widespread fear of snakes as",
+"Epigenetics studies how",
+"A researcher finds that height has high heritability in a population. Which statement is true?"
+],
+"topicName": "Interaction of Heredity and Environment",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.2": {
+"course": "AP Psychology",
+"stems": [
+"The central nervous system consists of",
+"Which division of the nervous system prepares the body for \"fight or flight\"?",
+"After a scare, your heart rate slows and digestion resumes. Which division is most active?",
+"Voluntary movement of skeletal muscles is controlled by the",
+"A reflex, like pulling your hand from a hot stove, is fast because",
+"The endocrine system differs from the nervous system because it"
+],
+"topicName": "Overview of the Nervous System",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.3": {
+"course": "AP Psychology",
+"stems": [
+"Which part of a neuron receives messages from other neurons?",
+"The graph shows the electrical charge inside a neuron during an action potential. What causes the rapid rise at point B?",
+"The all-or-none principle means that",
+"The myelin sheath",
+"Multiple sclerosis damages the myelin sheath. A likely symptom is",
+"After neurotransmitters cross the synapse, reuptake is"
+],
+"topicName": "The Neuron and Neural Firing",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.4": {
+"course": "AP Psychology",
+"stems": [
+"A drug that mimics a neurotransmitter and activates its receptors is called",
+"Selective serotonin reuptake inhibitors (SSRIs) relieve depression by",
+"Which is classified as a depressant?",
+"A person who needs larger and larger doses of a drug to feel the same effect has developed",
+"Uncomfortable symptoms after stopping a drug are called",
+"Curare blocks acetylcholine receptors at muscles, causing paralysis. It acts as"
+],
+"topicName": "Influence of Drugs on Neural Firing",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.5": {
+"course": "AP Psychology",
+"stems": [
+"Damage to Broca's area would most likely cause difficulty",
+"Which brain structure is most involved in forming new explicit memories?",
+"The cerebellum is most involved in",
+"Which lobe contains the primary visual cortex?",
+"The amygdala is most associated with",
+"A researcher wants to see which brain areas are most active while someone reads. Which method is best?"
+],
+"topicName": "The Brain",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.6": {
+"course": "AP Psychology",
+"stems": [
+"During which sleep stage do most vivid dreams occur?",
+"Circadian rhythms are",
+"Sleep apnea is a disorder in which a person",
+"Narcolepsy is characterized by",
+"Deep NREM-3 sleep is marked by",
+"The activation-synthesis theory proposes that dreams"
+],
+"topicName": "Sleep",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|1.7": {
+"course": "AP Psychology",
+"stems": [
+"The minimum stimulation needed to detect a stimulus 50% of the time is the",
+"Weber's law states that",
+"After a few minutes in a room, you no longer notice the smell of paint. This is",
+"The rods in the retina are especially important for",
+"Transduction is the process of",
+"Damage to the hair cells of the cochlea causes"
+],
+"topicName": "Sensation",
+"unitN": 1,
+"unitName": "Biological Bases of Behavior"
+},
+"psy|2.1": {
+"course": "AP Psychology",
+"stems": [
+"Recognizing a word even though some letters are blurry, because you know the language, is an example of",
+"A perceptual set is",
+"Which is a monocular depth cue?",
+"Failing to notice a person in a gorilla suit while counting basketball passes is an example of",
+"Perceiving a door as a rectangle even when it's partly open and forms a trapezoid on the retina is",
+"The Gestalt principle of closure means we tend to"
+],
+"topicName": "Perception",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.2": {
+"course": "AP Psychology",
+"stems": [
+"An algorithm differs from a heuristic because an algorithm",
+"After seeing news reports of plane crashes, a person overestimates the chance of dying in one. This is the",
+"Only searching for information that supports what you already believe is",
+"Being unable to think of using a coin as a screwdriver shows",
+"A food labeled \"90% fat-free\" is preferred over one labeled \"10% fat.\" This shows the",
+"Divergent thinking is most important for"
+],
+"topicName": "Thinking, Problem-Solving, Judgments, and Decision-Making",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.3": {
+"course": "AP Psychology",
+"stems": [
+"Which memory system holds information for only a second or two?",
+"The capacity of short-term memory is often described as about",
+"Knowing how to ride a bike without thinking about it is an example of",
+"Remembering your 10th birthday party is an example of",
+"Working memory differs from the older idea of short-term memory because it emphasizes",
+"Knowing that Paris is the capital of France is"
+],
+"topicName": "Introduction to Memory",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.4": {
+"course": "AP Psychology",
+"stems": [
+"Which encoding method usually leads to the best recall?",
+"Remembering a phone number by grouping it as 555-867-5309 is",
+"Relating new material to your own life improves memory because of the",
+"Spacing study sessions over several days instead of cramming leads to",
+"The method of loci is a mnemonic that",
+"Encoding that happens with little effort, such as remembering where you sat in class, is called"
+],
+"topicName": "Encoding Memories",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.5": {
+"course": "AP Psychology",
+"stems": [
+"Long-term potentiation (LTP) refers to",
+"Patient H.M. could not form new explicit memories after surgery removed parts of his",
+"The inability to form new memories after an injury is",
+"Memory consolidation is the process by which",
+"Strong emotional events are often remembered vividly because",
+"Which structure is most involved in storing procedural (implicit) motor memories?"
+],
+"topicName": "Storing Memories",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.6": {
+"course": "AP Psychology",
+"stems": [
+"A fill-in-the-blank test requires",
+"The graph shows the percentage of words recalled by list position. The high recall at the start and end of the list is called the",
+"Divers who learn words underwater recall them best underwater. This shows",
+"Remembering happy memories more easily when you're in a good mood is",
+"Taking practice tests improves later memory more than rereading. This is the",
+"Relearning something you studied long ago takes less time than learning it the first time. This shows that"
+],
+"topicName": "Retrieving Memories",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.7": {
+"course": "AP Psychology",
+"stems": [
+"The graph shows how much of a list of nonsense syllables people retained over time. What does it show?",
+"Learning a new phone number makes it hard to remember your old one. This is",
+"Your old locker combination keeps coming to mind when you try to recall your new one. This is",
+"In Loftus's studies, people who heard \"smashed\" rather than \"hit\" were more likely to remember broken glass that wasn't there. This shows the",
+"Not being able to recall the color of a penny's letters, because you never paid attention to them, is",
+"Remembering a fact but attributing it to the wrong source is"
+],
+"topicName": "Forgetting and Other Memory Challenges",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|2.8": {
+"course": "AP Psychology",
+"stems": [
+"IQ scores are standardized so that the average is 100 and the standard deviation is 15. About what percent of people score between 85 and 115?",
+"A test that gives consistent results when taken twice has high",
+"A test that predicts future college grades well has high",
+"Fluid intelligence tends to",
+"Stereotype threat refers to",
+"A test measuring what a student has already learned in chemistry is"
+],
+"topicName": "Intelligence and Achievement",
+"unitN": 2,
+"unitName": "Cognition"
+},
+"psy|3.1": {
+"course": "AP Psychology",
+"stems": [
+"A researcher compares 5-, 10-, and 15-year-olds at the same time. This is",
+"A researcher follows the same group of children from age 5 to age 15. This is",
+"A weakness of cross-sectional studies is that",
+"The debate over whether development happens in gradual steps or distinct stages is the",
+"A critical period is",
+"A disadvantage of longitudinal studies is that"
+],
+"topicName": "Themes and Methods in Developmental Psychology",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.2": {
+"course": "AP Psychology",
+"stems": [
+"Teratogens are",
+"A newborn turns its head toward a touch on the cheek. This is the",
+"During adolescence, which brain area is among the last to fully mature?",
+"Menarche refers to",
+"Physical abilities such as muscle strength and reaction time typically",
+"Maturation refers to"
+],
+"topicName": "Physical Development Across the Lifespan",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.3": {
+"course": "AP Psychology",
+"stems": [
+"Gender roles are",
+"Social learning theory explains gender typing mainly through",
+"Gender identity is",
+"Research on sexual orientation suggests it is",
+"Gender schema theory suggests that children",
+"Androgyny refers to"
+],
+"topicName": "Gender and Sexual Orientation",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.4": {
+"course": "AP Psychology",
+"stems": [
+"According to Piaget, an infant who searches for a toy hidden under a blanket has developed",
+"A child says a tall, thin glass has more juice than a short, wide one with the same amount. The child lacks",
+"Using abstract, hypothetical reasoning is typical of which Piagetian stage?",
+"Vygotsky's zone of proximal development is",
+"Adapting an existing schema to fit new information (\"not all four-legged animals are dogs\") is",
+"Theory of mind is"
+],
+"topicName": "Cognitive Development Across the Lifespan",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.5": {
+"course": "AP Psychology",
+"stems": [
+"The smallest unit of sound in a language is a",
+"A child says \"I goed to the store.\" This error shows",
+"\"Want milk\" is an example of",
+"Chomsky argued that humans have",
+"Morphemes are",
+"The rules for combining words into grammatically correct sentences are called"
+],
+"topicName": "Communication and Language Development",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.6": {
+"course": "AP Psychology",
+"stems": [
+"In Ainsworth's strange situation, a securely attached infant typically",
+"Harlow's monkeys preferred a soft cloth mother to a wire mother with food. This showed",
+"According to Erikson, the main challenge of adolescence is",
+"Parents who are demanding but also responsive and explain their rules are",
+"Parents who set strict rules and expect obedience without explanation are",
+"According to Erikson, older adults reflecting on their lives face"
+],
+"topicName": "Social-Emotional Development Across the Lifespan",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.7": {
+"course": "AP Psychology",
+"stems": [
+"In Pavlov's experiment, before conditioning, the food was the",
+"A dog salivates to a bell after it has been paired with food. The salivation to the bell is the",
+"If the bell is presented many times without food, salivation gradually stops. This is",
+"After extinction, the dog salivates to the bell again after a rest. This is",
+"Little Albert feared a white rat and then also feared a white rabbit. This shows",
+"Getting sick after eating a food and then avoiding it, even after one pairing, is"
+],
+"topicName": "Classical Conditioning",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.8": {
+"course": "AP Psychology",
+"stems": [
+"Taking away a teen's phone for breaking curfew, to reduce the behavior, is",
+"Putting on a seat belt to stop a car's annoying beeping is",
+"Which reinforcement schedule produces behavior most resistant to extinction?",
+"Getting paid every two weeks is an example of which schedule?",
+"Rewarding closer and closer approximations to a desired behavior is",
+"Money is an example of a"
+],
+"topicName": "Operant Conditioning",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|3.9": {
+"course": "AP Psychology",
+"stems": [
+"In Bandura's Bobo doll study, children who watched an adult hit a doll were more likely to",
+"Tolman's rats explored a maze without rewards but ran it quickly once food was added. This showed",
+"Mirror neurons are thought to",
+"Learned helplessness occurs when",
+"Insight learning, like Köhler's chimps stacking boxes to reach bananas, involves",
+"Having an internal locus of control means believing that"
+],
+"topicName": "Social, Cognitive, and Neurological Factors in Learning",
+"unitN": 3,
+"unitName": "Development and Learning"
+},
+"psy|4.1": {
+"course": "AP Psychology",
+"stems": [
+"Assuming a driver who cuts you off is a rude person, rather than considering that they might be rushing to a hospital, is",
+"Taking credit for your successes but blaming bad luck for your failures is",
+"Believing that people get what they deserve is the",
+"A teacher expects a student to do well, treats them differently, and the student does do well. This is",
+"Explaining your own behavior by the situation but others' behavior by their traits is the",
+"Social comparison refers to"
+],
+"topicName": "Attribution Theory and Person Perception",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.2": {
+"course": "AP Psychology",
+"stems": [
+"A person who smokes but knows it's unhealthy feels uncomfortable and decides the risks are exaggerated. This illustrates",
+"Agreeing to a small request makes people more likely to agree to a larger one later. This is the",
+"Persuasion through careful arguments and evidence, aimed at people who think carefully, is the",
+"An ad using a popular celebrity instead of facts about the product uses the",
+"Asking for a huge favor that is refused, then asking for a smaller one, is the",
+"Liking something more simply because you've seen it often is the"
+],
+"topicName": "Attitude Formation and Attitude Change",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.3": {
+"course": "AP Psychology",
+"stems": [
+"In Asch's line experiments, many participants gave obviously wrong answers because",
+"In Milgram's study, most participants",
+"People are less likely to help in an emergency when many others are present. This is the",
+"People working in a group project put in less effort than when working alone. This is",
+"A close-knit group ignores warnings and makes a bad decision to keep harmony. This is",
+"Performing a well-practiced skill better in front of an audience is"
+],
+"topicName": "Psychology of Groups",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.4": {
+"course": "AP Psychology",
+"stems": [
+"Cultures that value personal goals and independence are described as",
+"Judging other cultures by the standards of your own is",
+"Favoring members of your own group is called",
+"Believing that members of other groups are \"all alike\" is",
+"The process of adapting to a new culture while keeping some of one's original culture is",
+"Sherif's Robbers Cave study found that hostility between two groups of boys was reduced most by"
+],
+"topicName": "Psychology of Culture",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.5": {
+"course": "AP Psychology",
+"stems": [
+"Personality refers to",
+"A personality test that asks hundreds of true-false questions and compares answers to those of groups is",
+"The Rorschach inkblot test is an example of",
+"A common criticism of projective tests is that they",
+"The Barnum effect is",
+"Which approach to personality focuses on measurable, stable traits?"
+],
+"topicName": "Introduction to Personality",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.6": {
+"course": "AP Psychology",
+"stems": [
+"According to Freud, the part of personality that operates on the pleasure principle is the",
+"A person who is angry at their boss yells at their dog. This defense mechanism is",
+"Accusing others of feelings you have yourself is",
+"Carl Rogers said healthy growth requires",
+"Maslow's highest need in his original hierarchy is",
+"A criticism of humanistic theories is that their concepts are"
+],
+"topicName": "Psychodynamic and Humanistic Theories of Personality",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.7": {
+"course": "AP Psychology",
+"stems": [
+"Which Big Five trait describes being organized, careful, and dependable?",
+"Bandura's reciprocal determinism states that",
+"Self-efficacy is",
+"Someone who is anxious, moody, and easily upset scores high in",
+"A strength of the Big Five model is that its traits",
+"The person-situation controversy asks"
+],
+"topicName": "Social-Cognitive and Trait Theories of Personality",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.8": {
+"course": "AP Psychology",
+"stems": [
+"Drive-reduction theory proposes that",
+"The Yerkes–Dodson law states that performance is best at",
+"Doing a puzzle just because it's fun is an example of",
+"The overjustification effect occurs when",
+"The hormone that signals hunger is",
+"Self-determination theory says people are motivated by needs for"
+],
+"topicName": "Motivation",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|4.9": {
+"course": "AP Psychology",
+"stems": [
+"The James–Lange theory proposes that",
+"The Schachter–Singer two-factor theory says emotions require",
+"The Cannon–Bard theory proposes that",
+"Ekman's research found that",
+"Holding a pen in your teeth, which forces a smile, can make cartoons seem funnier. This supports the",
+"Display rules are"
+],
+"topicName": "Emotion",
+"unitN": 4,
+"unitName": "Social Psychology and Personality"
+},
+"psy|5.1": {
+"course": "AP Psychology",
+"stems": [
+"Selye's general adaptation syndrome describes the body's response to stress in which order?",
+"Problem-focused coping involves",
+"Chronic stress can weaken the immune system because",
+"A conflict between two attractive options (two great colleges) is",
+"Everyday hassles, like traffic and lost keys, can",
+"The tend-and-befriend response describes"
+],
+"topicName": "Introduction to Health Psychology",
+"unitN": 5,
+"unitName": "Mental and Physical Health"
+},
+"psy|5.2": {
+"course": "AP Psychology",
+"stems": [
+"Positive psychology focuses on",
+"Returning to your usual level of happiness soon after a big positive or negative event is called the",
+"Feeling worse off because you compare yourself with people who have more is",
+"Being fully absorbed in a challenging activity that matches your skills is called",
+"Resilience is",
+"Practicing gratitude, such as writing down things you're thankful for, has been linked to"
+],
+"topicName": "Positive Psychology",
+"unitN": 5,
+"unitName": "Mental and Physical Health"
+},
+"psy|5.3": {
+"course": "AP Psychology",
+"stems": [
+"The DSM (Diagnostic and Statistical Manual of Mental Disorders) is used to",
+"The biopsychosocial model explains disorders as resulting from",
+"The diathesis-stress model proposes that",
+"Behavior is usually considered a psychological disorder when it is",
+"A criticism of diagnostic labels is that they can",
+"Which perspective would explain depression mainly as the result of negative thought patterns?"
+],
+"topicName": "Explaining and Classifying Psychological Disorders",
+"unitN": 5,
+"unitName": "Mental and Physical Health"
+},
+"psy|5.4": {
+"course": "AP Psychology",
+"stems": [
+"Persistent, excessive worry about many things for at least six months describes",
+"Repeated unwanted thoughts and ritual behaviors like constant hand-washing suggest",
+"Alternating between depression and manic episodes is characteristic of",
+"Hallucinations and delusions are positive symptoms of",
+"Nightmares, flashbacks, and avoidance of reminders after a traumatic event suggest",
+"A pattern of disregard for others' rights and a lack of remorse is characteristic of"
+],
+"topicName": "Selection of Categories of Psychological Disorders",
+"unitN": 5,
+"unitName": "Mental and Physical Health"
+},
+"psy|5.5": {
+"course": "AP Psychology",
+"stems": [
+"Systematic desensitization, often used for phobias, pairs",
+"Cognitive-behavioral therapy (CBT) focuses on",
+"A therapist who reflects clients' feelings and offers unconditional positive regard practices",
+"Antipsychotic drugs like those used for schizophrenia often work by",
+"Lithium is most commonly used to treat",
+"Meta-analyses of psychotherapy outcomes generally find that"
+],
+"topicName": "Treatment of Psychological Disorders",
+"unitN": 5,
+"unitName": "Mental and Physical Health"
+},
 "wh|1.1": {
 "course": "AP World History: Modern",
 "stems": [

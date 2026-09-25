@@ -3788,6 +3788,394 @@ AP_DATA.ush.units.push(
 ]}
 );
 
+// AP United States Government and Politics — Units 1–2. Question format: [stem, correct, [distractors], explanation, figure?]
+// Excerpts from founding documents are public domain.
+window.AP_DATA = window.AP_DATA || {};
+AP_DATA.gov = {
+  id: "gov",
+  name: "AP United States Government and Politics",
+  short: "Gov",
+  blurb: "How American government works: the Constitution, the three branches, civil liberties and rights, public opinion, and participation.",
+  exam: "Exam: 55 MCQ (80 min) + 4 FRQ: concept application, quantitative analysis, SCOTUS comparison, argument essay (100 min)",
+  units: []
+};
+AP_DATA.gov.units.push(
+{ n: 1, name: "Foundations of American Democracy", weight: "15–22%", topics: [
+  ["1.1", "Ideals of Democracy", [
+    ["John Locke's idea of natural rights most directly influenced which document?", "The Declaration of Independence", ["The Articles of Confederation", "The Federalist Papers only", "Brutus No. 1"], "Jefferson's \"unalienable rights\" to life, liberty, and the pursuit of happiness echo Locke."],
+    ["Social contract theory holds that", "people consent to be governed in exchange for the protection of their rights", ["kings rule by divine right", "government should have unlimited power", "states are more important than people"], "If government breaks the contract, the people may change it."],
+    ["Popular sovereignty means that", "the government's power comes from the people", ["the most popular person rules", "the states hold all power", "the courts are supreme"], "The Constitution begins \"We the People.\""],
+    ["Limited government is the idea that", "government power is restricted to protect individual rights", ["government has no power", "only the president can make laws", "states can ignore federal law"], "The Constitution lists and limits government powers."]
+  ]],
+  ["1.2", "Types of Democracy", [
+    ["Participatory democracy emphasizes", "broad participation by citizens in politics and civil society", ["rule by elites", "interest groups competing", "only elected officials making decisions"], "Town meetings and ballot initiatives are examples."],
+    ["Pluralist democracy emphasizes", "group-based activism by citizens with common interests", ["rule by a small wealthy group", "direct voting on every law", "one-party rule"], "Many groups compete for influence."],
+    ["Elite democracy emphasizes", "limited participation, with educated or wealthy people making decisions", ["mass participation", "interest group competition", "direct democracy"], "The Electoral College is sometimes cited as an example."],
+    ["Read the excerpt. Brutus is warning that", "a large republic cannot represent the diverse interests of its people", ["the states should be abolished", "a large republic will control factions", "the president should be stronger"], "Anti-Federalists favored small republics close to the people.", { t: "source", text: "In a large extended country, it is impossible to have a representation, possessing the sentiments, and of integrity, to declare the minds of the people, without having it so numerous and unwieldy, as to be subject in great measure to the inconveniency of a democratic government.", cite: "Brutus No. 1, 1787" }]
+  ]],
+  ["1.3", "Government Power and Individual Rights", [
+    ["In Federalist No. 10, Madison argues that the best way to control factions is", "a large republic, where many factions compete", ["banning factions", "direct democracy", "a strong monarchy"], "Removing the causes of faction would destroy liberty, so he controlled their effects."],
+    ["Read the excerpt. Madison is describing the purpose of", "separation of powers and checks and balances", ["federalism only", "judicial review", "the Bill of Rights"], "Each branch can resist encroachments by the others.", { t: "source", text: "Ambition must be made to counteract ambition... If men were angels, no government would be necessary... You must first enable the government to control the governed; and in the next place oblige it to control itself.", cite: "James Madison, Federalist No. 51, 1788" }],
+    ["The Bill of Rights was added mainly in response to concerns from", "the Anti-Federalists", ["the Federalists", "the British", "the Supreme Court"], "They feared the new government would threaten individual liberties."],
+    ["The tension between majority rule and minority rights is addressed in the Constitution by", "protections like the Bill of Rights and an independent judiciary", ["letting the majority decide everything", "abolishing elections", "giving states total power"], "Some rights can't be taken away by majority vote."]
+  ]],
+  ["1.4", "Challenges of the Articles of Confederation", [
+    ["Under the Articles of Confederation, Congress could not", "levy taxes or regulate interstate commerce", ["declare war", "make treaties", "exist at all"], "It depended on states for money."],
+    ["Shays' Rebellion showed the need for", "a stronger national government", ["a weaker national government", "a king", "more state power"], "Congress couldn't raise an army to stop it."],
+    ["Amending the Articles required", "unanimous approval of the states", ["a majority of Congress", "the president's approval", "two-thirds of the states"], "This made change nearly impossible."],
+    ["The Articles gave each state", "one vote in Congress regardless of population", ["votes based on population", "two senators", "no representation"], "Large states resented this."]
+  ]],
+  ["1.5", "Ratification of the U.S. Constitution", [
+    ["The Great Compromise resolved the dispute over", "representation of large and small states in Congress", ["slavery", "the presidency", "taxes on imports"], "It created a bicameral legislature."],
+    ["The Three-Fifths Compromise concerned", "how enslaved people would be counted for representation and taxation", ["the size of the Senate", "presidential terms", "the Bill of Rights"], "It increased Southern representation."],
+    ["The Electoral College was a compromise between", "election of the president by Congress and by popular vote", ["the House and the Senate", "the states and the courts", "Federalists and the British"], "Delegates distrusted direct popular election."],
+    ["Article V allows the Constitution to be amended, most commonly by", "a two-thirds vote of both houses of Congress and ratification by three-fourths of the states", ["a simple majority of Congress", "the president alone", "a national referendum"], "The process is difficult on purpose."]
+  ]],
+  ["1.6", "Principles of American Government", [
+    ["The president's power to veto bills is an example of", "checks and balances", ["federalism", "judicial review", "popular sovereignty"], "The executive checks the legislature."],
+    ["Read the excerpt. Madison argues that", "concentrating all powers in the same hands is the definition of tyranny", ["the states should hold all power", "the judiciary is the weakest branch", "factions should be eliminated"], "This supports separation of powers.", { t: "source", text: "The accumulation of all powers, legislative, executive, and judiciary, in the same hands, whether of one, a few, or many... may justly be pronounced the very definition of tyranny.", cite: "James Madison, Federalist No. 47, 1788" }],
+    ["The Senate's power to confirm Supreme Court justices is a check on", "the president", ["the House", "the states", "interest groups"], "The president nominates; the Senate confirms."],
+    ["Congress can override a presidential veto with", "a two-thirds vote in both houses", ["a simple majority in the House", "a three-fourths vote of the states", "a Supreme Court ruling"], "Overrides are rare."]
+  ]],
+  ["1.7", "Relationship Between the States and Federal Government", [
+    ["Powers held by both the national and state governments, such as taxing, are called", "concurrent powers", ["reserved powers", "exclusive powers", "implied powers"], "Both levels can tax and borrow."],
+    ["The Tenth Amendment reserves to the states", "powers not delegated to the national government", ["the power to declare war", "the power to coin money", "all powers of taxation"], "Examples include education and police powers."],
+    ["Categorical grants", "come with specific conditions on how the money must be spent", ["can be used however the state wants", "are loans", "go only to cities"], "Block grants give states more flexibility."],
+    ["An unfunded mandate is", "a federal requirement on states without money to carry it out", ["a grant with no conditions", "a state tax", "a Supreme Court ruling"], "The ADA's requirements are often cited."]
+  ]],
+  ["1.8", "Constitutional Interpretations of Federalism", [
+    ["In McCulloch v. Maryland (1819), the Supreme Court ruled that", "Congress has implied powers and states cannot tax the federal government", ["states can tax the national bank", "the national bank was unconstitutional", "the Tenth Amendment gives states supremacy"], "It relied on the necessary and proper clause and the supremacy clause."],
+    ["In United States v. Lopez (1995), the Court ruled that", "Congress exceeded its commerce clause power by banning guns near schools", ["Congress can regulate anything related to commerce", "states cannot regulate guns", "schools must allow guns"], "It limited federal power."],
+    ["The necessary and proper (elastic) clause allows Congress to", "make laws needed to carry out its enumerated powers", ["do anything it wants", "override the Bill of Rights", "appoint judges"], "It's the basis for implied powers."],
+    ["The supremacy clause states that", "the Constitution and federal laws are the supreme law of the land", ["state laws override federal laws", "the president is supreme", "treaties are not binding"], "Conflicting state laws are invalid."]
+  ]],
+  ["1.9", "Federalism in Action", [
+    ["States legalizing marijuana despite federal law is an example of", "tension between state and federal policy in a federal system", ["unitary government", "judicial review", "the supremacy clause being ignored by courts"], "Federalism lets states experiment, sometimes creating conflict."],
+    ["When Congress required states to raise the drinking age to 21 to receive highway funds, it used", "conditions on federal grants", ["an executive order", "a Supreme Court ruling", "a constitutional amendment"], "South Dakota v. Dole (1987) upheld this."],
+    ["One advantage of federalism is that", "states can serve as \"laboratories\" for new policies", ["all laws are the same nationwide", "the federal government has all power", "states cannot make laws"], "Successful state policies can spread."],
+    ["Devolution refers to", "shifting power from the national government to the states", ["increasing national power", "abolishing states", "the Supreme Court's power"], "Block grants are one tool of devolution."]
+  ]]
+]},
+{ n: 2, name: "Interactions Among Branches of Government", weight: "25–36%", topics: [
+  ["2.1", "Congress: The Senate and the House of Representatives", [
+    ["Senators serve terms of", "six years", ["two years", "four years", "life"], "One-third of the Senate is elected every two years."],
+    ["Representation in the House of Representatives is based on", "state population", ["equal representation for each state", "land area", "wealth"], "Seats are reapportioned after each census."],
+    ["The Senate has the exclusive power to", "ratify treaties and confirm appointments", ["start revenue bills", "impeach officials", "elect the president in a tie"], "The House starts revenue bills and impeaches."],
+    ["The House has the exclusive power to", "bring articles of impeachment", ["try impeachments", "ratify treaties", "confirm judges"], "The Senate holds the trial."]
+  ]],
+  ["2.2", "Structures, Powers, and Functions of Congress", [
+    ["A filibuster is", "a tactic in the Senate to delay or block a vote by extended debate", ["a House rule limiting debate", "a presidential veto", "a type of committee"], "Cloture requires 60 votes."],
+    ["The House Rules Committee", "sets the terms of debate for bills on the House floor", ["writes the budget", "confirms judges", "runs the Senate"], "It's powerful because it controls the agenda."],
+    ["Most of the detailed work on bills in Congress is done in", "standing committees", ["the full chamber", "the Supreme Court", "the White House"], "Committees hold hearings and mark up bills."],
+    ["Mandatory spending, such as Social Security, differs from discretionary spending because it", "is required by existing laws and is not set each year in appropriations", ["is decided by the president alone", "is always smaller", "goes only to the military"], "Mandatory spending is the largest part of the federal budget."]
+  ]],
+  ["2.3", "Congressional Behavior", [
+    ["A member of Congress who votes based on what constituents want is acting as a", "delegate", ["trustee", "politico", "lobbyist"], "Trustees use their own judgment."],
+    ["Gerrymandering is", "drawing district lines to favor one party or group", ["reapportioning seats after the census", "a type of filibuster", "voting against your party"], "It can reduce competitive elections."],
+    ["In Baker v. Carr (1962), the Supreme Court ruled that", "courts can hear cases on redistricting, leading to \"one person, one vote\"", ["gerrymandering is always legal", "districts don't need equal population", "only states can decide redistricting"], "It made redistricting a justiciable question."],
+    ["In Shaw v. Reno (1993), the Court ruled that", "district lines drawn mainly based on race must meet strict scrutiny", ["race must be the main factor in drawing districts", "gerrymandering is unconstitutional in all cases", "districts must be square"], "An oddly shaped majority-minority district was challenged."]
+  ]],
+  ["2.4", "Roles and Powers of the President", [
+    ["The president's formal powers include", "vetoing bills and commanding the armed forces", ["declaring war", "passing laws", "ratifying treaties"], "Congress declares war and the Senate ratifies treaties."],
+    ["An executive agreement differs from a treaty because it", "does not require Senate ratification", ["requires two-thirds of the Senate", "must be approved by the Supreme Court", "is permanent"], "Presidents use them increasingly."],
+    ["A signing statement is", "a president's written comments on how they will interpret or enforce a law", ["a veto", "a treaty", "a court ruling"], "It's an informal power."],
+    ["Read the excerpt. Hamilton is arguing for", "a single, energetic executive", ["a plural executive council", "a weak president", "abolishing the presidency"], "He believed one president acts with decision, speed, and accountability.", { t: "source", text: "Energy in the executive is a leading character in the definition of good government... Decision, activity, secrecy, and dispatch will generally characterize the proceedings of one man in a much more eminent degree than the proceedings of any greater number.", cite: "Alexander Hamilton, Federalist No. 70, 1788" }]
+  ]],
+  ["2.5", "Checks on the Presidency", [
+    ["Which is a check Congress has on the president?", "Overriding a veto", ["Issuing executive orders", "Pardoning criminals", "Appointing ambassadors"], "Congress can also refuse funding and impeach."],
+    ["The 22nd Amendment", "limits the president to two elected terms", ["gave women the vote", "created the vice presidency", "allows unlimited terms"], "It was passed after FDR's four elections."],
+    ["The Senate can check the president's foreign policy by", "refusing to ratify treaties", ["issuing executive orders", "commanding the military", "vetoing bills"], "Treaties need a two-thirds vote."],
+    ["The War Powers Resolution requires the president to", "notify Congress within 48 hours of sending troops and withdraw them within 60–90 days without authorization", ["get Supreme Court approval for war", "never use troops abroad", "declare war formally"], "Presidents have often questioned it."]
+  ]],
+  ["2.6", "Expansion of Presidential Power", [
+    ["Presidents have expanded their power mainly through", "executive orders and interpretations of Article II", ["constitutional amendments", "Supreme Court appointments only", "abolishing Congress"], "Presidents claim broad authority as chief executive."],
+    ["The \"bully pulpit\" refers to", "the president's use of public attention to push their agenda", ["a veto", "a court ruling", "a treaty"], "Theodore Roosevelt coined the term."],
+    ["Critics of expanding presidential power argue that it", "upsets the balance of power among the branches", ["strengthens Congress", "has no effect", "is required by the Constitution"], "They warn of an \"imperial presidency.\""],
+    ["Executive orders", "have the force of law but can be overturned by courts or later presidents", ["are permanent laws", "require Senate approval", "can't be challenged"], "They direct how the executive branch operates."]
+  ]],
+  ["2.7", "Presidential Communication", [
+    ["The State of the Union address allows the president to", "set a policy agenda before Congress and the public", ["pass laws directly", "appoint judges", "declare war"], "It's required by the Constitution."],
+    ["Modern presidents use social media to", "communicate directly with the public without the filter of traditional media", ["pass bills", "avoid all communication", "replace Congress"], "It changed how presidents build support."],
+    ["Presidents are more successful passing their agenda when", "they have high approval ratings and their party controls Congress", ["they have low approval", "Congress is controlled by the other party", "they avoid the media"], "Public support gives them leverage."],
+    ["Going public is a strategy in which the president", "appeals directly to citizens to pressure Congress", ["negotiates in secret", "vetoes every bill", "resigns"], "It can bypass congressional leaders."]
+  ]],
+  ["2.8", "The Judicial Branch", [
+    ["In Federalist No. 78, Hamilton argued that the judiciary", "is the least dangerous branch because it has neither force nor will, only judgment", ["is the most powerful branch", "should be elected", "should serve short terms"], "Life terms protect judicial independence."],
+    ["Marbury v. Madison (1803) established", "judicial review", ["the national bank", "separate but equal", "the right to counsel"], "The Court can strike down unconstitutional laws."],
+    ["Federal judges serve", "during good behavior, which usually means for life", ["four-year terms", "ten-year terms", "until age 60"], "This protects them from political pressure."],
+    ["The Supreme Court has original jurisdiction in cases", "involving ambassadors and those in which a state is a party", ["about all crimes", "about traffic violations", "appealed from state courts"], "Most cases reach it on appeal."]
+  ]],
+  ["2.9", "Legitimacy of the Judicial Branch", [
+    ["Stare decisis means", "following precedent from earlier decisions", ["overturning past decisions", "the Court's power of judicial review", "deciding only new cases"], "It provides stability and predictability."],
+    ["A justice who believes the Court should rarely overturn laws made by elected branches supports", "judicial restraint", ["judicial activism", "strict scrutiny", "original jurisdiction"], "Activism favors striking down laws to protect rights."],
+    ["Brown v. Board of Education (1954), which overturned Plessy v. Ferguson, shows that", "the Court sometimes departs from precedent", ["precedent can never change", "the Court must follow Congress", "segregation was upheld"], "Social science evidence helped the Court reverse course."],
+    ["The Court's legitimacy depends largely on", "public acceptance of its rulings, since it cannot enforce them itself", ["its army", "its control of the budget", "its elections"], "It relies on the executive to enforce decisions."]
+  ]],
+  ["2.10", "The Court in Action", [
+    ["A writ of certiorari is", "an order from the Supreme Court to review a lower court's case", ["a presidential veto", "a jury verdict", "a congressional subpoena"], "Four justices must agree to grant it."],
+    ["A concurring opinion is written by a justice who", "agrees with the majority's decision but for different reasons", ["disagrees with the majority", "writes for the majority", "did not hear the case"], "Dissenting opinions disagree with the outcome."],
+    ["Amicus curiae briefs are submitted by", "interest groups and others who are not parties to the case", ["the president only", "the defendant only", "the jury"], "\"Friend of the court\" briefs offer arguments."],
+    ["Why are dissenting opinions important?", "They may shape future decisions and reversals", ["They become law", "They overturn the majority", "They must be followed by lower courts"], "Some later become majority views."]
+  ]],
+  ["2.11", "Checks on the Judicial Branch", [
+    ["Congress can respond to a Supreme Court ruling it disagrees with by", "passing a new law or proposing a constitutional amendment", ["firing the justices", "ignoring the ruling legally", "vetoing the decision"], "Amendments can overturn constitutional rulings."],
+    ["The president checks the judiciary by", "nominating federal judges", ["overturning court decisions", "removing judges at will", "voting on cases"], "Senate confirmation is required."],
+    ["The Senate checks the judiciary by", "confirming or rejecting judicial nominees", ["hearing appeals", "writing opinions", "setting judges' salaries lower during their terms"], "Confirmation fights have become intense."],
+    ["Which limits the Court's power?", "It relies on the executive branch to enforce its rulings", ["It has its own police force", "It can make laws", "It can veto bills"], "Jackson's refusal to enforce Worcester v. Georgia is a famous example."]
+  ]],
+  ["2.12", "The Bureaucracy", [
+    ["The federal bureaucracy is made up mostly of", "executive branch departments and agencies", ["members of Congress", "federal judges", "state governors"], "Examples include the EPA and the Department of Education."],
+    ["An \"iron triangle\" is a relationship among", "congressional committees, bureaucratic agencies, and interest groups", ["the three branches", "the president, the Senate, and the courts", "voters, parties, and media"], "They cooperate on policy in a specific area."],
+    ["The Pendleton Act (1883) created", "a merit-based civil service system", ["the spoils system", "the cabinet", "independent regulatory commissions"], "It reduced patronage."],
+    ["Independent regulatory agencies, like the Federal Communications Commission (FCC),", "make and enforce rules for specific industries", ["are part of Congress", "are courts", "have no power"], "They're designed to be somewhat insulated from politics."]
+  ]],
+  ["2.13", "Discretionary and Rule-Making Authority", [
+    ["Discretionary authority allows bureaucratic agencies to", "decide how to carry out laws passed by Congress", ["pass new laws", "overturn court decisions", "elect officials"], "Congress often writes broad laws."],
+    ["The EPA setting specific limits on air pollution is an example of", "rule-making authority", ["judicial review", "a presidential veto", "a filibuster"], "Agencies write detailed regulations."],
+    ["Bureaucrats have discretion partly because", "Congress lacks the expertise and time to write detailed rules", ["the Constitution requires it explicitly", "judges write the rules", "states demand it"], "Delegation relies on agency expertise."],
+    ["Before an agency finalizes a new rule, it usually must", "publish the proposed rule and allow public comment", ["get a constitutional amendment", "hold a national referendum", "get Supreme Court approval"], "This is required by the Administrative Procedure Act."]
+  ]],
+  ["2.14", "Holding the Bureaucracy Accountable", [
+    ["Congress holds the bureaucracy accountable through", "oversight hearings and control of funding", ["vetoing agency rules directly", "firing all civil servants", "judicial review"], "Committees can investigate agencies."],
+    ["The president can hold the bureaucracy accountable by", "appointing agency leaders and issuing executive orders", ["passing budget laws", "ruling on cases", "impeaching bureaucrats"], "Political appointees direct agencies."],
+    ["The courts can check the bureaucracy by", "ruling that agency actions exceed their legal authority", ["setting agency budgets", "appointing agency heads", "writing regulations"], "Lawsuits challenge regulations."],
+    ["Whistleblower protections are meant to", "protect employees who report wrongdoing in agencies", ["punish all bureaucrats", "hide agency mistakes", "reduce oversight"], "They encourage accountability."]
+  ]],
+  ["2.15", "Policy and the Branches of Government", [
+    ["Divided government occurs when", "one party controls the presidency and the other controls at least one house of Congress", ["one party controls everything", "the courts are divided", "there are three parties"], "It can lead to gridlock."],
+    ["Gridlock is most likely when", "the branches are controlled by different parties with opposing goals", ["one party controls all branches", "the public agrees on issues", "the president has high approval"], "Checks and balances slow policy change."],
+    ["Lame-duck periods, after an election but before new officials take office, can make it", "harder for outgoing officials to pass their agenda", ["easier to pass constitutional amendments", "impossible to veto bills", "illegal to pass laws"], "Outgoing officials have less influence."],
+    ["The table shows party control of government. In which year was there divided government?", "2019", ["2009", "2017", "2021"], "In 2019, Republicans held the presidency and Senate while Democrats controlled the House.", { t: "table", title: "Party control of the federal government", head: ["Year", "President", "Senate", "House"], rows: [["2009", "Democrat", "Democrat", "Democrat"], ["2017", "Republican", "Republican", "Republican"], ["2019", "Republican", "Republican", "Democrat"], ["2021", "Democrat", "Democrat (tie broken by VP)", "Democrat"]] }]
+  ]]
+]}
+);
+
+// AP United States Government and Politics — Units 3–5. Question format: [stem, correct, [distractors], explanation, figure?]
+AP_DATA.gov.units.push(
+{ n: 3, name: "Civil Liberties and Civil Rights", weight: "13–18%", topics: [
+  ["3.1", "The Bill of Rights", [
+    ["Civil liberties are", "protections of individuals from government power", ["protections against discrimination by other people", "powers of the states", "rules for elections"], "Civil rights guarantee equal treatment."],
+    ["The Bill of Rights originally applied to", "the federal government only", ["state governments only", "private businesses", "both federal and state governments from the start"], "Selective incorporation later applied most of it to the states."],
+    ["Which amendment protects against unreasonable searches and seizures?", "Fourth", ["First", "Fifth", "Eighth"], "Police generally need a warrant based on probable cause."],
+    ["The Eighth Amendment prohibits", "cruel and unusual punishment and excessive bail", ["self-incrimination", "quartering soldiers", "unreasonable searches"], "It's central to death penalty cases."]
+  ]],
+  ["3.2", "First Amendment: Freedom of Religion", [
+    ["In Engel v. Vitale (1962), the Court ruled that", "school-sponsored prayer in public schools violates the establishment clause", ["students cannot pray privately", "prayer is required in schools", "religious schools are illegal"], "Even voluntary, nondenominational prayer led by the school was unconstitutional."],
+    ["In Wisconsin v. Yoder (1972), the Court ruled that", "Amish parents could not be forced to send children to school past eighth grade", ["all children must attend high school", "religious groups have no exemptions", "the establishment clause banned Amish schools"], "The free exercise clause outweighed the state's interest."],
+    ["The establishment clause prohibits", "the government from establishing an official religion or favoring religion", ["individuals from practicing religion", "churches from existing", "religious speech in public"], "It supports separation of church and state."],
+    ["The free exercise clause protects", "the right to practice one's religion", ["government funding of churches", "school prayer led by teachers", "a national church"], "It can conflict with generally applicable laws."]
+  ]],
+  ["3.3", "First Amendment: Freedom of Speech", [
+    ["In Tinker v. Des Moines (1969), the Court ruled that", "students could wear armbands protesting the Vietnam War because it was symbolic speech that didn't disrupt school", ["schools may ban all student speech", "students have no free speech rights", "only teachers have free speech in school"], "Students don't \"shed their constitutional rights... at the schoolhouse gate.\""],
+    ["In Schenck v. United States (1919), the Court upheld limits on speech that", "poses a \"clear and present danger\"", ["criticizes the president", "is offensive", "is symbolic"], "Schenck distributed leaflets opposing the draft during World War I."],
+    ["Which type of speech receives the least First Amendment protection?", "Speech that incites imminent lawless action", ["Political speech", "Symbolic speech", "Speech criticizing the government"], "Brandenburg v. Ohio set the incitement test."],
+    ["Burning an American flag as a protest is protected as", "symbolic speech", ["libel", "obscenity", "a clear and present danger"], "Texas v. Johnson (1989)."]
+  ]],
+  ["3.4", "First Amendment: Freedom of the Press", [
+    ["In New York Times Co. v. United States (1971), the Court ruled that", "the government could not stop newspapers from publishing the Pentagon Papers", ["the government can censor any classified information", "newspapers must get approval before publishing", "the press has no special protection"], "The government failed to justify prior restraint."],
+    ["Prior restraint is", "government action to stop material from being published", ["punishment after publication", "a type of libel", "a court's review of laws"], "The Court strongly disfavors it."],
+    ["Libel is", "false written statements that damage someone's reputation", ["true statements that embarrass someone", "all criticism of public officials", "spoken insults only"], "It isn't protected by the First Amendment."],
+    ["For a public official to win a libel case, they must usually show", "actual malice: the publisher knew the statement was false or recklessly disregarded the truth", ["that the statement was offensive", "that they were upset", "that the newspaper made a mistake"], "New York Times v. Sullivan (1964)."]
+  ]],
+  ["3.5", "Second Amendment: Right to Bear Arms", [
+    ["In McDonald v. Chicago (2010), the Court ruled that", "the Second Amendment right to bear arms applies to state and local governments", ["handguns can be banned by cities", "the Second Amendment applies only to militias", "only federal gun laws are allowed"], "The right was incorporated through the 14th Amendment."],
+    ["District of Columbia v. Heller (2008) held that", "the Second Amendment protects an individual's right to keep a handgun at home for self-defense", ["only militias may own guns", "all gun regulation is unconstitutional", "the Second Amendment doesn't apply in D.C."], "McDonald extended this to the states."],
+    ["The debate over the Second Amendment often involves balancing", "individual rights with public safety", ["federal and state taxes", "religion and speech", "the president and Congress"], "Courts allow some regulations."],
+    ["Which regulation has the Supreme Court indicated can still be permitted?", "Bans on gun possession by felons", ["A complete ban on handguns in the home", "Banning all gun ownership", "Forbidding self-defense"], "Heller noted that some longstanding restrictions remain valid."]
+  ]],
+  ["3.6", "Amendments: Balancing Individual Freedom with Public Order and Safety", [
+    ["Courts often apply strict scrutiny when a law", "limits a fundamental right, requiring a compelling government interest", ["involves taxes only", "is passed by a state", "is popular"], "The law must also be narrowly tailored."],
+    ["Time, place, and manner restrictions on speech are allowed if they are", "content-neutral and reasonable", ["based on the speaker's views", "used to silence critics", "total bans on speech"], "A city can limit protest noise at night, for example."],
+    ["During wartime, the government has sometimes", "restricted civil liberties in the name of national security", ["expanded all freedoms", "abolished the courts", "ended elections"], "Examples include the Sedition Act and Japanese American internment."],
+    ["The exclusionary rule", "bars illegally obtained evidence from being used in court", ["allows all evidence", "applies only in civil cases", "was created by Congress"], "Mapp v. Ohio (1961) applied it to the states."]
+  ]],
+  ["3.7", "Selective Incorporation", [
+    ["Selective incorporation is the process of", "applying the Bill of Rights to the states through the 14th Amendment's due process clause", ["adding new amendments", "applying state laws to the federal government", "removing rights from the Constitution"], "It happened case by case."],
+    ["Which amendment's due process clause is used for selective incorporation?", "14th", ["5th", "10th", "1st"], "\"Nor shall any State deprive any person of life, liberty, or property, without due process of law.\""],
+    ["Gideon v. Wainwright (1963) incorporated", "the right to an attorney for poor defendants in state felony cases", ["freedom of religion", "the right to bear arms", "freedom from quartering soldiers"], "The Sixth Amendment right to counsel."],
+    ["Why is selective incorporation called \"selective\"?", "Rights were applied to the states one at a time, and not all have been incorporated", ["All rights were incorporated at once", "Only Congress decides", "It applies only to some citizens"], "For example, the Third Amendment has not been formally incorporated."]
+  ]],
+  ["3.8", "Amendments: Due Process and the Rights of the Accused", [
+    ["Miranda v. Arizona (1966) requires police to", "inform suspects of their rights before questioning", ["search without a warrant", "provide a jury in all cases", "record every arrest"], "Suspects must be told they can remain silent and have a lawyer."],
+    ["The Fifth Amendment protects against", "self-incrimination and double jeopardy", ["cruel and unusual punishment", "unreasonable searches", "excessive fines"], "People can't be forced to testify against themselves."],
+    ["The Sixth Amendment guarantees", "a speedy and public trial by jury and the right to counsel", ["freedom of speech", "protection from quartering troops", "the right to bear arms"], "Gideon applied the right to counsel to state courts."],
+    ["Double jeopardy means", "a person can't be tried twice for the same crime after acquittal", ["being tried by two juries at once", "two crimes at once", "a harsher sentence"], "It's part of the Fifth Amendment."]
+  ]],
+  ["3.9", "Amendments: Due Process and the Right to Privacy", [
+    ["In Roe v. Wade (1973), the Court based a right to abortion on", "a right to privacy implied by the due process clause", ["the Second Amendment", "the commerce clause", "the establishment clause"], "Dobbs v. Jackson (2022) overturned Roe, returning the issue to the states."],
+    ["The right to privacy is", "not stated explicitly in the Constitution but was recognized by the Court from several amendments", ["listed in the First Amendment", "in Article I", "rejected by all courts"], "Griswold v. Connecticut (1965) found \"penumbras\" of privacy."],
+    ["Substantive due process refers to", "limits on what laws the government may pass affecting fundamental rights", ["the procedures of a trial", "the order of amendments", "the process of passing laws"], "Procedural due process concerns fair procedures."],
+    ["Dobbs v. Jackson Women's Health Organization (2022) is an example of", "the Court overturning its own precedent", ["the Court following stare decisis", "Congress passing a law", "selective incorporation"], "It overruled Roe and Planned Parenthood v. Casey."]
+  ]],
+  ["3.10", "Social Movements and Equal Protection", [
+    ["Brown v. Board of Education (1954) was based on", "the equal protection clause of the 14th Amendment", ["the First Amendment", "the commerce clause", "the Tenth Amendment"], "Segregated schools were \"inherently unequal.\""],
+    ["Martin Luther King Jr.'s \"Letter from Birmingham Jail\" defends", "civil disobedience against unjust laws", ["violent revolution", "segregation", "obeying all laws"], "He argued people have a moral duty to disobey unjust laws."],
+    ["The equal protection clause requires states to", "treat people equally under the law", ["give everyone the same income", "fund private schools", "ban all classifications"], "Classifications based on race get strict scrutiny."],
+    ["Title IX (1972) prohibits", "sex discrimination in education programs receiving federal funds", ["racial discrimination in voting", "age discrimination", "religious schools"], "It greatly expanded women's sports."]
+  ]],
+  ["3.11", "Government Responses to Social Movements", [
+    ["The Civil Rights Act of 1964 was passed using Congress's power under", "the commerce clause", ["the Second Amendment", "the establishment clause", "Article III"], "Heart of Atlanta Motel v. U.S. upheld it."],
+    ["The Voting Rights Act of 1965", "banned literacy tests and gave federal oversight of elections in areas with discrimination", ["created poll taxes", "limited voting to property owners", "ended elections in the South"], "Shelby County v. Holder (2013) struck down its coverage formula."],
+    ["The 24th Amendment", "banned poll taxes in federal elections", ["gave women the vote", "lowered the voting age", "ended slavery"], "Poll taxes had kept poor and Black citizens from voting."],
+    ["The Americans with Disabilities Act (1990)", "prohibits discrimination against people with disabilities", ["ended affirmative action", "gave 18-year-olds the vote", "banned Title IX"], "It requires reasonable accommodations."]
+  ]],
+  ["3.12", "Balancing Minority and Majority Rights", [
+    ["Why might the Supreme Court protect minority rights against majority opinion?", "Justices serve for life and don't face elections", ["Justices are elected by minorities", "The president orders it", "Congress requires it"], "Independence lets the Court make unpopular rulings."],
+    ["Brown v. Board is an example of the Court", "protecting minority rights against state laws supported by majorities", ["deferring to majorities", "supporting segregation", "refusing to hear a case"], "Many Southern whites opposed the ruling."],
+    ["Majority-minority districts are drawn to", "increase the representation of racial minorities", ["reduce minority representation", "favor incumbents only", "eliminate districts"], "Shaw v. Reno limited drawing them mainly on race."],
+    ["A tension in democracy is that", "majority rule can threaten the rights of minorities", ["minorities always win", "majorities never vote", "rights don't matter"], "Madison worried about majority factions."]
+  ]],
+  ["3.13", "Affirmative Action", [
+    ["Affirmative action policies are designed to", "increase opportunities for groups that faced discrimination", ["eliminate all college admissions", "require quotas in every job", "end the equal protection clause"], "They're controversial."],
+    ["In Regents of the University of California v. Bakke (1978), the Court ruled that", "racial quotas were unconstitutional, but race could be one factor in admissions", ["all affirmative action was unconstitutional", "quotas were required", "race could never be considered"], "It set the framework for decades."],
+    ["In Students for Fair Admissions v. Harvard (2023), the Court", "ruled that race-conscious admissions programs at Harvard and UNC violated equal protection", ["required affirmative action", "upheld all racial quotas", "declined to decide"], "It effectively ended race-based admissions."],
+    ["Critics of affirmative action argue that it", "treats individuals differently based on race, violating equal protection", ["does not go far enough", "has no effect", "only helps the wealthy"], "Supporters argue it remedies past discrimination."]
+  ]]
+]},
+{ n: 4, name: "American Political Ideologies and Beliefs", weight: "10–15%", topics: [
+  ["4.1", "American Attitudes About Government and Politics", [
+    ["Individualism, equality of opportunity, free enterprise, the rule of law, and limited government are considered", "core American political values", ["values only of one party", "foreign ideas", "values Americans reject"], "People disagree on how to apply them."],
+    ["Equality of opportunity means", "everyone should have the same chance to succeed", ["everyone should have the same income", "only some people can compete", "the government guarantees success"], "It differs from equality of outcome."],
+    ["The rule of law means that", "everyone, including government officials, must follow the law", ["the president is above the law", "laws apply only to citizens", "judges make all laws"], "No one is above the law."],
+    ["Americans tend to be more individualistic than citizens of many other democracies, which helps explain", "support for limited government programs", ["support for a monarchy", "universal government-run healthcare", "one-party rule"], "Many Americans are skeptical of government solutions."]
+  ]],
+  ["4.2", "Political Socialization", [
+    ["Political socialization is", "the process by which people form political beliefs and values", ["voting in an election", "joining a political party", "running for office"], "Family, school, peers, and media all play roles."],
+    ["The most important early influence on political beliefs is usually", "family", ["the Supreme Court", "foreign governments", "interest groups"], "Children often adopt their parents' party."],
+    ["Generational effects occur when", "major events shape the political views of people who came of age at that time", ["people inherit views", "all ages think alike", "parties change their names"], "The Great Depression and 9/11 are examples."],
+    ["Globalization affects political socialization by", "exposing people to ideas and cultures from around the world", ["isolating Americans", "ending the media", "eliminating political parties"], "Values can spread across borders."]
+  ]],
+  ["4.3", "Changes in Ideology", [
+    ["Life-cycle effects refer to", "changes in political views as people age and their circumstances change", ["events shaping a generation", "switching political parties every election", "the influence of family only"], "Priorities shift, for example after buying a home."],
+    ["Younger voters today are generally more likely than older voters to", "support liberal positions on social issues", ["support all conservative positions", "vote at higher rates", "oppose all change"], "Generational differences appear in polling."],
+    ["A major event like the Great Depression shifted many voters", "toward support for a larger federal role", ["toward abolishing government", "away from voting", "toward monarchy"], "It built the New Deal coalition."],
+    ["Party realignment refers to", "a lasting shift in the coalitions that support each party", ["one election's result", "changes in party names", "a type of primary"], "The South shifting from Democratic to Republican is an example."]
+  ]],
+  ["4.4", "Influence of Political Events on Ideology", [
+    ["After the 9/11 attacks, public support increased for", "stronger national security measures", ["cutting the military", "isolationism", "abolishing intelligence agencies"], "Many accepted the Patriot Act's surveillance powers."],
+    ["The Watergate scandal contributed to", "declining trust in government", ["increased trust in government", "the end of the presidency", "the expansion of executive power"], "Trust has stayed relatively low since."],
+    ["A \"rally-around-the-flag\" effect is", "a short-term rise in a president's approval during a crisis", ["a long-term decline in approval", "a type of protest", "a party convention"], "George W. Bush's approval jumped after 9/11."],
+    ["The Great Recession (2007–2009) led some Americans to", "support more financial regulation and others to oppose government bailouts", ["agree on all economic policies", "stop caring about the economy", "abolish banks"], "It fueled both the Tea Party and Occupy movements."]
+  ]],
+  ["4.5", "Measuring Public Opinion", [
+    ["A random sample in a poll means", "every person in the population has an equal chance of being selected", ["only volunteers are chosen", "only experts are asked", "people are chosen by the pollster's preference"], "Random sampling reduces bias."],
+    ["The margin of error in a poll", "shows the range within which the true value likely falls", ["shows how many people refused", "is always zero", "measures bias in questions"], "Larger samples reduce the margin of error."],
+    ["An exit poll is conducted", "with voters as they leave polling places", ["months before an election", "only online", "only among candidates"], "It helps predict results and explain voter choices."],
+    ["A push poll is", "a political campaign tactic disguised as a poll, meant to spread negative information", ["an accurate scientific poll", "an exit poll", "a type of census"], "It isn't a legitimate measure of opinion."]
+  ]],
+  ["4.6", "Evaluating Public Opinion Data", [
+    ["The table shows a poll with a margin of error of ±4 points. What can you conclude?", "The race is a statistical tie", ["Candidate A will win", "Candidate B will win", "The poll is invalid"], "A leads by 2 points, which is less than the margin of error.", { t: "table", title: "Poll of 800 likely voters (margin of error ±4 points)", head: ["Candidate", "Support (%)"], rows: [["Candidate A", "47"], ["Candidate B", "45"], ["Undecided", "8"]] }],
+    ["Which question wording is least likely to bias results?", "\"Do you support or oppose raising the minimum wage?\"", ["\"Don't you agree the minimum wage should be raised to help struggling families?\"", "\"Should job-killing minimum wage hikes be stopped?\"", "\"Why do you support raising the minimum wage?\""], "Neutral wording avoids leading respondents."],
+    ["A poll surveys only people with landline phones. It may be inaccurate because of", "sampling bias: it underrepresents younger people who use cell phones", ["too large a sample", "random sampling", "a small margin of error"], "The sample doesn't reflect the population."],
+    ["Poll results can be less reliable when", "the sample is small or not representative", ["the sample is large and random", "questions are neutral", "the margin of error is small"], "Representativeness matters most."]
+  ]],
+  ["4.7", "Ideologies of Political Parties", [
+    ["Conservatives generally favor", "limited government in the economy and more traditional social values", ["large government economic programs", "abolishing the military", "higher taxes on everyone"], "Views vary within the ideology."],
+    ["Liberals generally favor", "a larger government role in addressing economic inequality and protecting civil rights", ["no government regulation", "cutting all social programs", "limiting voting rights"], "Views vary within the ideology."],
+    ["Libertarians generally favor", "minimal government in both economic and social matters", ["large government in all areas", "strong government regulation of personal behavior", "a monarchy"], "They emphasize individual liberty."],
+    ["The Democratic Party platform today generally supports", "expanding access to healthcare and stronger environmental regulation", ["eliminating Social Security", "ending all environmental laws", "cutting taxes for the wealthy as its main priority"], "Platforms reflect the party's ideology."]
+  ]],
+  ["4.8", "Ideology and Policymaking", [
+    ["Policy is often shaped by ideology because", "elected officials pursue policies that match their values and voters' views", ["ideology has no effect", "courts decide all policy", "parties don't have views"], "Ideology guides priorities."],
+    ["The debate over the Affordable Care Act reflected ideological differences about", "the government's role in healthcare", ["the right to bear arms", "foreign trade only", "school prayer"], "Liberals supported it; many conservatives opposed it."],
+    ["Libertarians would most likely oppose", "laws that restrict individual personal choices", ["lower taxes", "free markets", "limited government"], "They oppose government interference in both economic and personal life."],
+    ["Conservatives would most likely support", "reducing regulations on businesses", ["expanding federal welfare programs", "higher corporate taxes", "government-run healthcare"], "They favor free markets."]
+  ]],
+  ["4.9", "Ideology and Economic Policy", [
+    ["Fiscal policy involves", "government decisions on taxing and spending", ["the Federal Reserve setting interest rates", "court rulings on the economy", "tariffs set by states"], "Congress and the president control fiscal policy."],
+    ["Monetary policy is controlled by", "the Federal Reserve", ["Congress", "the president", "the Supreme Court"], "It adjusts interest rates and the money supply."],
+    ["Keynesian economics argues that during a recession, the government should", "increase spending or cut taxes to boost demand", ["cut spending sharply", "do nothing", "raise taxes"], "It supported the New Deal and stimulus packages."],
+    ["Supply-side economics argues that", "tax cuts, especially for businesses and investors, lead to economic growth", ["more government spending causes growth", "taxes should be raised", "money supply is all that matters"], "Reagan's policies were based on it."]
+  ]],
+  ["4.10", "Ideology and Social Policy", [
+    ["Social policy refers to", "government policies on issues like healthcare, education, and social welfare", ["only military policy", "only taxes", "foreign trade"], "Ideology shapes views on these issues."],
+    ["Liberals tend to support government action to", "protect civil rights and expand social programs", ["limit civil rights", "cut all social programs", "ban public schools"], "They see government as a tool for equality."],
+    ["Conservatives often argue that social problems are better addressed by", "families, communities, churches, and the private sector", ["the federal government only", "the United Nations", "the courts only"], "They favor limited government."],
+    ["The debate over school choice programs (vouchers) reflects disagreement over", "the role of government in education", ["the right to bear arms", "the Electoral College", "foreign policy"], "Conservatives often favor vouchers; many liberals prefer funding public schools."]
+  ]]
+]},
+{ n: 5, name: "Political Participation", weight: "20–27%", topics: [
+  ["5.1", "Voting Rights and Models of Voting Behavior", [
+    ["The 15th Amendment prohibits denying the vote based on", "race", ["sex", "age", "income"], "The 19th covers sex and the 26th covers age 18."],
+    ["Rational-choice voting means voting", "based on what a voter believes is in their own best interest", ["for the same party every time", "based on the candidate's looks", "based on a candidate's past performance only"], "Voters weigh policy benefits."],
+    ["Retrospective voting means", "judging candidates or parties by past performance", ["voting based on future promises", "always voting for your party", "not voting"], "\"Are you better off than you were four years ago?\""],
+    ["Party-line voting means", "supporting a party by voting for its candidates in every race", ["splitting your ticket", "voting based on issues", "not voting"], "Straight-ticket voting."]
+  ]],
+  ["5.2", "Voter Turnout", [
+    ["The graph shows turnout in presidential and midterm elections. What pattern does it show?", "Turnout is consistently higher in presidential elections than in midterm elections", ["Midterm turnout is always higher", "Turnout is the same in both", "Turnout has fallen to zero"], "Presidential races get more attention and mobilization.", { t: "bar", title: "U.S. voter turnout, eligible voters (approximate)", cats: ["2012", "2014", "2016", "2018", "2020", "2022"], y: { min: 0, max: 80, ticks: [0, 20, 40, 60, 80], label: "Turnout (%)" }, series: [{ name: "Turnout", vals: [58, 37, 60, 50, 66, 46] }] }],
+    ["Which group is most likely to vote?", "Older, more educated citizens", ["Young people with less education", "Non-citizens", "People who just moved"], "Age and education are strong predictors of turnout."],
+    ["Which policy would most likely increase voter turnout?", "Automatic voter registration", ["Stricter voter ID laws", "Fewer polling places", "Shorter early-voting periods"], "Lowering barriers tends to raise turnout."],
+    ["Compared with many other democracies, U.S. voter turnout is", "relatively low", ["the highest in the world", "mandatory", "always above 90%"], "Registration rules and frequent elections are factors."]
+  ]],
+  ["5.3", "Political Parties", [
+    ["Political parties link people to government by", "recruiting candidates, mobilizing voters, and organizing government", ["making laws directly", "running the courts", "counting votes"], "They're linkage institutions."],
+    ["The party-in-government consists of", "elected officials who belong to a party", ["voters who identify with a party", "party organization staff", "interest groups"], "The party-in-the-electorate is voters."],
+    ["Candidate-centered campaigns have", "reduced the role of parties in elections", ["increased party control", "ended primaries", "eliminated fundraising"], "Candidates raise their own money and build their own organizations."],
+    ["A party platform is", "a statement of the party's positions on issues", ["a place where candidates speak", "a type of primary", "a campaign finance law"], "It's adopted at the national convention."]
+  ]],
+  ["5.4", "How and Why Political Parties Change and Adapt", [
+    ["The shift of Southern white voters from the Democratic Party to the Republican Party after the 1960s is an example of", "party realignment", ["dealignment", "a third-party movement", "gerrymandering"], "Civil rights legislation drove the change."],
+    ["Dealignment refers to", "voters becoming less attached to parties and identifying as independents", ["voters switching parties at once", "the creation of new parties", "increasing party loyalty"], "The number of independents has grown."],
+    ["Parties adapt to changes in the electorate by", "adjusting their platforms and outreach to new groups", ["refusing to change", "ending primaries", "banning voters"], "Both parties court Latino and suburban voters, for example."],
+    ["Critical elections are elections that", "signal a lasting realignment of party coalitions", ["have low turnout", "happen every two years", "are decided by the courts"], "1932 is a classic example."]
+  ]],
+  ["5.5", "Third-Party Politics", [
+    ["Third parties rarely win elections in the U.S. mainly because of", "winner-take-all, single-member district elections", ["proportional representation", "a lack of voters", "the Supreme Court"], "Duverger's law: plurality systems favor two parties."],
+    ["Third parties can influence politics by", "raising issues that major parties later adopt", ["winning most elections", "controlling the Senate", "appointing judges"], "Populist ideas like the income tax were later adopted."],
+    ["A \"spoiler\" effect happens when", "a third-party candidate draws votes from a major candidate, affecting the result", ["a third party wins the presidency", "voters don't vote", "a party changes its name"], "Some argue Ralph Nader affected the 2000 election."],
+    ["Ballot access laws can", "make it difficult for third parties to get on the ballot", ["guarantee third-party victories", "ban major parties", "require third parties to win"], "Signature requirements are often high."]
+  ]],
+  ["5.6", "Interest Groups Influencing Policy Making", [
+    ["Lobbying is", "trying to influence government officials' decisions", ["voting in elections", "running for office", "writing court opinions"], "Interest groups hire lobbyists."],
+    ["The free-rider problem occurs when", "people benefit from a group's work without contributing to it", ["groups get too many members", "lobbyists work for free", "voters don't vote"], "Groups offer selective benefits to attract members."],
+    ["Interest groups differ from political parties because they", "seek to influence policy rather than to win elections", ["run candidates for office", "control Congress", "write the Constitution"], "They focus on specific issues."],
+    ["The \"revolving door\" refers to", "officials leaving government to become lobbyists, and vice versa", ["the Senate's voting rules", "presidential succession", "the election cycle"], "Critics say it creates conflicts of interest."]
+  ]],
+  ["5.7", "Groups Influencing Policy Outcomes", [
+    ["Single-issue groups, such as the National Rifle Association (NRA), are", "focused intensely on one policy area", ["concerned with every issue", "parts of the government", "political parties"], "They can mobilize dedicated members."],
+    ["Social movements influence policy through", "protests, public awareness, and mobilizing voters", ["running the courts", "controlling the military", "appointing officials"], "The civil rights movement is a major example."],
+    ["Interest groups may use litigation by", "filing lawsuits and amicus briefs", ["vetoing bills", "passing laws", "confirming judges"], "The NAACP's legal strategy led to Brown v. Board."],
+    ["Groups with more resources tend to", "have more influence on policy", ["have no influence", "stop lobbying", "avoid elections"], "Critics worry this gives an advantage to wealthy interests."]
+  ]],
+  ["5.8", "Electing a President", [
+    ["To win the presidency, a candidate must win", "a majority of electoral votes (at least 270)", ["the popular vote", "a majority of states", "the primaries only"], "A candidate can win the Electoral College but lose the popular vote."],
+    ["Most states award their electoral votes by", "a winner-take-all system", ["proportional representation", "congressional districts in every state", "a vote of the state legislature"], "Maine and Nebraska are exceptions."],
+    ["Primary elections are used to", "choose each party's nominee", ["elect the president directly", "choose the vice president", "count electoral votes"], "Caucuses are an alternative method."],
+    ["Candidates focus campaign resources on swing states because", "those states' electoral votes could go to either party", ["they have the most people", "they vote first", "they have no electoral votes"], "Safe states get less attention."]
+  ]],
+  ["5.9", "Congressional Elections", [
+    ["The incumbency advantage refers to", "the high reelection rate of members of Congress", ["the advantage of new candidates", "term limits", "the president's power over elections"], "Name recognition, fundraising, and casework help incumbents."],
+    ["Midterm elections usually result in", "the president's party losing seats in Congress", ["the president's party gaining seats", "no change", "the president being reelected"], "This is a strong historical pattern."],
+    ["House members face reelection every", "two years", ["four years", "six years", "eight years"], "They're constantly campaigning."],
+    ["Casework helps incumbents win reelection because", "helping constituents with problems builds loyalty", ["it's paid by the voters", "it's required by the Constitution", "it's done only in election years"], "Constituent service is valued."]
+  ]],
+  ["5.10", "Modern Campaigns", [
+    ["Modern campaigns rely heavily on", "professional consultants, data analytics, and social media", ["only door-to-door visits", "newspapers only", "no advertising"], "They target voters precisely."],
+    ["Microtargeting is", "using data to send tailored messages to specific groups of voters", ["a type of primary", "a debate format", "a campaign finance law"], "Campaigns use personal and consumer data."],
+    ["Campaigns have become longer and more expensive partly because of", "front-loading of primaries and the cost of media", ["shorter election seasons", "public financing of all campaigns", "fewer voters"], "Candidates start campaigning years early."],
+    ["Televised debates matter because they", "let voters compare candidates directly", ["decide the election legally", "are required by law", "replace primaries"], "Moments from debates can shape public perceptions."]
+  ]],
+  ["5.11", "Campaign Finance", [
+    ["In Citizens United v. FEC (2010), the Court ruled that", "limits on independent political spending by corporations and unions violate free speech", ["corporations can't spend money on elections", "campaign contributions have no limits", "only individuals can make political ads"], "It led to the rise of super PACs."],
+    ["Super PACs can", "raise and spend unlimited amounts, but can't coordinate directly with candidates", ["give unlimited money directly to candidates", "coordinate directly with campaigns", "only spend public funds"], "They make independent expenditures."],
+    ["The Bipartisan Campaign Reform Act (2002) aimed to", "limit soft money and regulate issue ads", ["ban all political ads", "create super PACs", "end the Federal Election Commission"], "It's also called McCain-Feingold."],
+    ["Supporters of campaign finance limits argue that", "large donations can give wealthy donors too much influence", ["money has no effect on elections", "limits protect free speech", "only corporations should donate"], "Opponents argue spending is protected speech."]
+  ]],
+  ["5.12", "The Media", [
+    ["The media's role as a \"gatekeeper\" means it", "decides which issues get public attention", ["passes laws", "counts votes", "appoints officials"], "Agenda-setting shapes what the public thinks about."],
+    ["Horse-race journalism focuses on", "who is winning or losing in polls rather than on issues", ["detailed policy analysis", "foreign news only", "court cases"], "Critics say it distracts from substance."],
+    ["The media acting as a \"watchdog\" means it", "investigates and exposes wrongdoing by officials", ["supports all government actions", "runs campaigns", "votes in Congress"], "Watergate reporting is a famous example."],
+    ["Linkage institutions connect people to government. Which is one?", "The media", ["The Supreme Court", "The cabinet", "The Federal Reserve"], "Parties, elections, interest groups, and the media are linkage institutions."]
+  ]],
+  ["5.13", "Changing Media", [
+    ["The rise of partisan news sources and social media has contributed to", "increased political polarization", ["more agreement on issues", "the end of news", "less political information"], "People can choose news that fits their views."],
+    ["An \"echo chamber\" is", "an environment where people encounter only views that reinforce their own", ["a type of poll", "a debate", "a congressional committee"], "Social media algorithms can create them."],
+    ["Compared with the past, today more Americans get political news from", "online and social media sources", ["only newspapers", "only radio", "government broadcasts"], "Trust in traditional media has declined."],
+    ["A concern about getting news from social media is", "the spread of misinformation", ["too much fact-checking", "a lack of information", "government ownership"], "False stories can spread quickly."]
+  ]]
+]}
+);
+
 // Figure-based (stimulus) questions. Each entry: [courseId, topicCode, [stem, correct, [wrong x3], explanation, figure]]
 // Figures are data specs drawn by the app (line, bar, scatter, pyramid, table, tree, gel, pedigree, web, rings, sectors, flow, compartments, choro, svg, panels).
 window.AP_VIS = window.AP_VIS || [];

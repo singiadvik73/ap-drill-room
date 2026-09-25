@@ -8,7 +8,7 @@ import pathlib, sys
 
 SRC = pathlib.Path(__file__).parent
 ROOT = SRC.parent
-ORDER = ["hug-a.js", "hug-b.js", "bio-a.js", "bio-b.js", "wh-a.js", "wh-b.js", "chem-a.js", "chem-b.js", "pc-a.js", "pc-b.js", "psy.js", "ush-a.js", "ush-b.js", "ush-c.js", "visuals.js", "visuals2.js", "community.js"]
+ORDER = ["hug-a.js", "hug-b.js", "bio-a.js", "bio-b.js", "wh-a.js", "wh-b.js", "chem-a.js", "chem-b.js", "pc-a.js", "pc-b.js", "psy.js", "ush-a.js", "ush-b.js", "ush-c.js", "gov-a.js", "gov-b.js", "visuals.js", "visuals2.js", "community.js"]
 FIREBASE = "10.12.2"
 
 def app_with_data(prelude=""):

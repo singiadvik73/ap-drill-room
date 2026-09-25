@@ -1925,6 +1925,726 @@
 "unitN": 9,
 "unitName": "Applications of Thermodynamics"
 },
+"gov|1.1": {
+"course": "AP United States Government and Politics",
+"stems": [
+"John Locke's idea of natural rights most directly influenced which document?",
+"Social contract theory holds that",
+"Popular sovereignty means that",
+"Limited government is the idea that"
+],
+"topicName": "Ideals of Democracy",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.2": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Participatory democracy emphasizes",
+"Pluralist democracy emphasizes",
+"Elite democracy emphasizes",
+"Read the excerpt. Brutus is warning that"
+],
+"topicName": "Types of Democracy",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.3": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Federalist No. 10, Madison argues that the best way to control factions is",
+"Read the excerpt. Madison is describing the purpose of",
+"The Bill of Rights was added mainly in response to concerns from",
+"The tension between majority rule and minority rights is addressed in the Constitution by"
+],
+"topicName": "Government Power and Individual Rights",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.4": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Under the Articles of Confederation, Congress could not",
+"Shays' Rebellion showed the need for",
+"Amending the Articles required",
+"The Articles gave each state"
+],
+"topicName": "Challenges of the Articles of Confederation",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.5": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The Great Compromise resolved the dispute over",
+"The Three-Fifths Compromise concerned",
+"The Electoral College was a compromise between",
+"Article V allows the Constitution to be amended, most commonly by"
+],
+"topicName": "Ratification of the U.S. Constitution",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.6": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The president's power to veto bills is an example of",
+"Read the excerpt. Madison argues that",
+"The Senate's power to confirm Supreme Court justices is a check on",
+"Congress can override a presidential veto with"
+],
+"topicName": "Principles of American Government",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.7": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Powers held by both the national and state governments, such as taxing, are called",
+"The Tenth Amendment reserves to the states",
+"Categorical grants",
+"An unfunded mandate is"
+],
+"topicName": "Relationship Between the States and Federal Government",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.8": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In McCulloch v. Maryland (1819), the Supreme Court ruled that",
+"In United States v. Lopez (1995), the Court ruled that",
+"The necessary and proper (elastic) clause allows Congress to",
+"The supremacy clause states that"
+],
+"topicName": "Constitutional Interpretations of Federalism",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|1.9": {
+"course": "AP United States Government and Politics",
+"stems": [
+"States legalizing marijuana despite federal law is an example of",
+"When Congress required states to raise the drinking age to 21 to receive highway funds, it used",
+"One advantage of federalism is that",
+"Devolution refers to"
+],
+"topicName": "Federalism in Action",
+"unitN": 1,
+"unitName": "Foundations of American Democracy"
+},
+"gov|2.1": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Senators serve terms of",
+"Representation in the House of Representatives is based on",
+"The Senate has the exclusive power to",
+"The House has the exclusive power to"
+],
+"topicName": "Congress: The Senate and the House of Representatives",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.10": {
+"course": "AP United States Government and Politics",
+"stems": [
+"A writ of certiorari is",
+"A concurring opinion is written by a justice who",
+"Amicus curiae briefs are submitted by",
+"Why are dissenting opinions important?"
+],
+"topicName": "The Court in Action",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.11": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Congress can respond to a Supreme Court ruling it disagrees with by",
+"The president checks the judiciary by",
+"The Senate checks the judiciary by",
+"Which limits the Court's power?"
+],
+"topicName": "Checks on the Judicial Branch",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.12": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The federal bureaucracy is made up mostly of",
+"An \"iron triangle\" is a relationship among",
+"The Pendleton Act (1883) created",
+"Independent regulatory agencies, like the Federal Communications Commission (FCC),"
+],
+"topicName": "The Bureaucracy",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.13": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Discretionary authority allows bureaucratic agencies to",
+"The EPA setting specific limits on air pollution is an example of",
+"Bureaucrats have discretion partly because",
+"Before an agency finalizes a new rule, it usually must"
+],
+"topicName": "Discretionary and Rule-Making Authority",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.14": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Congress holds the bureaucracy accountable through",
+"The president can hold the bureaucracy accountable by",
+"The courts can check the bureaucracy by",
+"Whistleblower protections are meant to"
+],
+"topicName": "Holding the Bureaucracy Accountable",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.15": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Divided government occurs when",
+"Gridlock is most likely when",
+"Lame-duck periods, after an election but before new officials take office, can make it",
+"The table shows party control of government. In which year was there divided government?"
+],
+"topicName": "Policy and the Branches of Government",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.2": {
+"course": "AP United States Government and Politics",
+"stems": [
+"A filibuster is",
+"The House Rules Committee",
+"Most of the detailed work on bills in Congress is done in",
+"Mandatory spending, such as Social Security, differs from discretionary spending because it"
+],
+"topicName": "Structures, Powers, and Functions of Congress",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.3": {
+"course": "AP United States Government and Politics",
+"stems": [
+"A member of Congress who votes based on what constituents want is acting as a",
+"Gerrymandering is",
+"In Baker v. Carr (1962), the Supreme Court ruled that",
+"In Shaw v. Reno (1993), the Court ruled that"
+],
+"topicName": "Congressional Behavior",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.4": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The president's formal powers include",
+"An executive agreement differs from a treaty because it",
+"A signing statement is",
+"Read the excerpt. Hamilton is arguing for"
+],
+"topicName": "Roles and Powers of the President",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.5": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Which is a check Congress has on the president?",
+"The 22nd Amendment",
+"The Senate can check the president's foreign policy by",
+"The War Powers Resolution requires the president to"
+],
+"topicName": "Checks on the Presidency",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.6": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Presidents have expanded their power mainly through",
+"The \"bully pulpit\" refers to",
+"Critics of expanding presidential power argue that it",
+"Executive orders"
+],
+"topicName": "Expansion of Presidential Power",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.7": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The State of the Union address allows the president to",
+"Modern presidents use social media to",
+"Presidents are more successful passing their agenda when",
+"Going public is a strategy in which the president"
+],
+"topicName": "Presidential Communication",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.8": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Federalist No. 78, Hamilton argued that the judiciary",
+"Marbury v. Madison (1803) established",
+"Federal judges serve",
+"The Supreme Court has original jurisdiction in cases"
+],
+"topicName": "The Judicial Branch",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|2.9": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Stare decisis means",
+"A justice who believes the Court should rarely overturn laws made by elected branches supports",
+"Brown v. Board of Education (1954), which overturned Plessy v. Ferguson, shows that",
+"The Court's legitimacy depends largely on"
+],
+"topicName": "Legitimacy of the Judicial Branch",
+"unitN": 2,
+"unitName": "Interactions Among Branches of Government"
+},
+"gov|3.1": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Civil liberties are",
+"The Bill of Rights originally applied to",
+"Which amendment protects against unreasonable searches and seizures?",
+"The Eighth Amendment prohibits"
+],
+"topicName": "The Bill of Rights",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.10": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Brown v. Board of Education (1954) was based on",
+"Martin Luther King Jr.'s \"Letter from Birmingham Jail\" defends",
+"The equal protection clause requires states to",
+"Title IX (1972) prohibits"
+],
+"topicName": "Social Movements and Equal Protection",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.11": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The Civil Rights Act of 1964 was passed using Congress's power under",
+"The Voting Rights Act of 1965",
+"The 24th Amendment",
+"The Americans with Disabilities Act (1990)"
+],
+"topicName": "Government Responses to Social Movements",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.12": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Why might the Supreme Court protect minority rights against majority opinion?",
+"Brown v. Board is an example of the Court",
+"Majority-minority districts are drawn to",
+"A tension in democracy is that"
+],
+"topicName": "Balancing Minority and Majority Rights",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.13": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Affirmative action policies are designed to",
+"In Regents of the University of California v. Bakke (1978), the Court ruled that",
+"In Students for Fair Admissions v. Harvard (2023), the Court",
+"Critics of affirmative action argue that it"
+],
+"topicName": "Affirmative Action",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.2": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Engel v. Vitale (1962), the Court ruled that",
+"In Wisconsin v. Yoder (1972), the Court ruled that",
+"The establishment clause prohibits",
+"The free exercise clause protects"
+],
+"topicName": "First Amendment: Freedom of Religion",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.3": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Tinker v. Des Moines (1969), the Court ruled that",
+"In Schenck v. United States (1919), the Court upheld limits on speech that",
+"Which type of speech receives the least First Amendment protection?",
+"Burning an American flag as a protest is protected as"
+],
+"topicName": "First Amendment: Freedom of Speech",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.4": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In New York Times Co. v. United States (1971), the Court ruled that",
+"Prior restraint is",
+"Libel is",
+"For a public official to win a libel case, they must usually show"
+],
+"topicName": "First Amendment: Freedom of the Press",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.5": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In McDonald v. Chicago (2010), the Court ruled that",
+"District of Columbia v. Heller (2008) held that",
+"The debate over the Second Amendment often involves balancing",
+"Which regulation has the Supreme Court indicated can still be permitted?"
+],
+"topicName": "Second Amendment: Right to Bear Arms",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.6": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Courts often apply strict scrutiny when a law",
+"Time, place, and manner restrictions on speech are allowed if they are",
+"During wartime, the government has sometimes",
+"The exclusionary rule"
+],
+"topicName": "Amendments: Balancing Individual Freedom with Public Order and Safety",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.7": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Selective incorporation is the process of",
+"Which amendment's due process clause is used for selective incorporation?",
+"Gideon v. Wainwright (1963) incorporated",
+"Why is selective incorporation called \"selective\"?"
+],
+"topicName": "Selective Incorporation",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.8": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Miranda v. Arizona (1966) requires police to",
+"The Fifth Amendment protects against",
+"The Sixth Amendment guarantees",
+"Double jeopardy means"
+],
+"topicName": "Amendments: Due Process and the Rights of the Accused",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|3.9": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Roe v. Wade (1973), the Court based a right to abortion on",
+"The right to privacy is",
+"Substantive due process refers to",
+"Dobbs v. Jackson Women's Health Organization (2022) is an example of"
+],
+"topicName": "Amendments: Due Process and the Right to Privacy",
+"unitN": 3,
+"unitName": "Civil Liberties and Civil Rights"
+},
+"gov|4.1": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Individualism, equality of opportunity, free enterprise, the rule of law, and limited government are considered",
+"Equality of opportunity means",
+"The rule of law means that",
+"Americans tend to be more individualistic than citizens of many other democracies, which helps explain"
+],
+"topicName": "American Attitudes About Government and Politics",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.10": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Social policy refers to",
+"Liberals tend to support government action to",
+"Conservatives often argue that social problems are better addressed by",
+"The debate over school choice programs (vouchers) reflects disagreement over"
+],
+"topicName": "Ideology and Social Policy",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.2": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Political socialization is",
+"The most important early influence on political beliefs is usually",
+"Generational effects occur when",
+"Globalization affects political socialization by"
+],
+"topicName": "Political Socialization",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.3": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Life-cycle effects refer to",
+"Younger voters today are generally more likely than older voters to",
+"A major event like the Great Depression shifted many voters",
+"Party realignment refers to"
+],
+"topicName": "Changes in Ideology",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.4": {
+"course": "AP United States Government and Politics",
+"stems": [
+"After the 9/11 attacks, public support increased for",
+"The Watergate scandal contributed to",
+"A \"rally-around-the-flag\" effect is",
+"The Great Recession (2007–2009) led some Americans to"
+],
+"topicName": "Influence of Political Events on Ideology",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.5": {
+"course": "AP United States Government and Politics",
+"stems": [
+"A random sample in a poll means",
+"The margin of error in a poll",
+"An exit poll is conducted",
+"A push poll is"
+],
+"topicName": "Measuring Public Opinion",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.6": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The table shows a poll with a margin of error of ±4 points. What can you conclude?",
+"Which question wording is least likely to bias results?",
+"A poll surveys only people with landline phones. It may be inaccurate because of",
+"Poll results can be less reliable when"
+],
+"topicName": "Evaluating Public Opinion Data",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.7": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Conservatives generally favor",
+"Liberals generally favor",
+"Libertarians generally favor",
+"The Democratic Party platform today generally supports"
+],
+"topicName": "Ideologies of Political Parties",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.8": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Policy is often shaped by ideology because",
+"The debate over the Affordable Care Act reflected ideological differences about",
+"Libertarians would most likely oppose",
+"Conservatives would most likely support"
+],
+"topicName": "Ideology and Policymaking",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|4.9": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Fiscal policy involves",
+"Monetary policy is controlled by",
+"Keynesian economics argues that during a recession, the government should",
+"Supply-side economics argues that"
+],
+"topicName": "Ideology and Economic Policy",
+"unitN": 4,
+"unitName": "American Political Ideologies and Beliefs"
+},
+"gov|5.1": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The 15th Amendment prohibits denying the vote based on",
+"Rational-choice voting means voting",
+"Retrospective voting means",
+"Party-line voting means"
+],
+"topicName": "Voting Rights and Models of Voting Behavior",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.10": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Modern campaigns rely heavily on",
+"Microtargeting is",
+"Campaigns have become longer and more expensive partly because of",
+"Televised debates matter because they"
+],
+"topicName": "Modern Campaigns",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.11": {
+"course": "AP United States Government and Politics",
+"stems": [
+"In Citizens United v. FEC (2010), the Court ruled that",
+"Super PACs can",
+"The Bipartisan Campaign Reform Act (2002) aimed to",
+"Supporters of campaign finance limits argue that"
+],
+"topicName": "Campaign Finance",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.12": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The media's role as a \"gatekeeper\" means it",
+"Horse-race journalism focuses on",
+"The media acting as a \"watchdog\" means it",
+"Linkage institutions connect people to government. Which is one?"
+],
+"topicName": "The Media",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.13": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The rise of partisan news sources and social media has contributed to",
+"An \"echo chamber\" is",
+"Compared with the past, today more Americans get political news from",
+"A concern about getting news from social media is"
+],
+"topicName": "Changing Media",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.2": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The graph shows turnout in presidential and midterm elections. What pattern does it show?",
+"Which group is most likely to vote?",
+"Which policy would most likely increase voter turnout?",
+"Compared with many other democracies, U.S. voter turnout is"
+],
+"topicName": "Voter Turnout",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.3": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Political parties link people to government by",
+"The party-in-government consists of",
+"Candidate-centered campaigns have",
+"A party platform is"
+],
+"topicName": "Political Parties",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.4": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The shift of Southern white voters from the Democratic Party to the Republican Party after the 1960s is an example of",
+"Dealignment refers to",
+"Parties adapt to changes in the electorate by",
+"Critical elections are elections that"
+],
+"topicName": "How and Why Political Parties Change and Adapt",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.5": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Third parties rarely win elections in the U.S. mainly because of",
+"Third parties can influence politics by",
+"A \"spoiler\" effect happens when",
+"Ballot access laws can"
+],
+"topicName": "Third-Party Politics",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.6": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Lobbying is",
+"The free-rider problem occurs when",
+"Interest groups differ from political parties because they",
+"The \"revolving door\" refers to"
+],
+"topicName": "Interest Groups Influencing Policy Making",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.7": {
+"course": "AP United States Government and Politics",
+"stems": [
+"Single-issue groups, such as the National Rifle Association (NRA), are",
+"Social movements influence policy through",
+"Interest groups may use litigation by",
+"Groups with more resources tend to"
+],
+"topicName": "Groups Influencing Policy Outcomes",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.8": {
+"course": "AP United States Government and Politics",
+"stems": [
+"To win the presidency, a candidate must win",
+"Most states award their electoral votes by",
+"Primary elections are used to",
+"Candidates focus campaign resources on swing states because"
+],
+"topicName": "Electing a President",
+"unitN": 5,
+"unitName": "Political Participation"
+},
+"gov|5.9": {
+"course": "AP United States Government and Politics",
+"stems": [
+"The incumbency advantage refers to",
+"Midterm elections usually result in",
+"House members face reelection every",
+"Casework helps incumbents win reelection because"
+],
+"topicName": "Congressional Elections",
+"unitN": 5,
+"unitName": "Political Participation"
+},
 "hug|1.1": {
 "course": "AP Human Geography",
 "stems": [

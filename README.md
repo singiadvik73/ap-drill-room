@@ -1,6 +1,6 @@
 # AP Drill Room
 
-Free AP practice for **AP Human Geography**, **AP Biology**, **AP World History: Modern**, **AP Chemistry**, **AP Precalculus**, **AP Psychology**, and **AP US History**: a question pool for every CED unit and topic, AP-style figure questions, progress tracking, accounts, and an admin Dev mode for editing questions. Every HuG and Bio topic has at least one figure question.
+Free AP practice for **AP Human Geography**, **AP Biology**, **AP World History: Modern**, **AP Chemistry**, **AP Precalculus**, **AP Psychology**, **AP US History**, and **AP US Government**: a question pool for every CED unit and topic, AP-style figure questions, progress tracking, accounts, and an admin Dev mode for editing questions. Every HuG and Bio topic has at least one figure question.
 
 **Website:** https://ap-drill-room.pages.dev/
 

@@ -41,7 +41,9 @@ const QUESTIONS_SCHEMA = {
 
 export default {
   async fetch(request, env) {
-    const origin = request.headers.get("origin") || "";
+    // Browsers omit Origin on same-origin GETs, which is what the Vercel /api proxy forwards; fall back to Referer.
+    let origin = request.headers.get("origin") || "";
+    if (!origin) try { origin = new URL(request.headers.get("referer") || "").origin; } catch {}
     const allowed = (env.ALLOWED_ORIGINS || "").split(",").map(s => s.trim()).filter(Boolean);
     const cors = {
       "access-control-allow-origin": allowed.includes(origin) ? origin : (allowed[0] || ""),

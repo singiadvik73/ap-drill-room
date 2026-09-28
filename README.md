@@ -2,7 +2,7 @@
 
 Free AP practice for **AP Human Geography**, **AP Biology**, **AP World History: Modern**, **AP Chemistry**, **AP Precalculus**, **AP Psychology**, **AP US History**, and **AP US Government**: a question pool for every CED unit and topic, AP-style figure questions, progress tracking, accounts, and an admin Dev mode for editing questions. Every HuG and Bio topic has at least one figure question.
 
-**Website:** https://ap-drill-room.pages.dev/
+**Website:** https://ap-drill-room.vercel.app/ (also at https://ap-drill-room.pages.dev/)
 
 ## Ways to use it
 
@@ -33,9 +33,11 @@ The relay's prompt is fixed: it asks Claude for 5 questions on one CED topic. Th
 
 ## Setup
 
-### 1. Hosting on Cloudflare Pages (done for you)
+### 1. Hosting on Vercel (done for you)
 
-The site is served by Cloudflare Pages, connected to this repository: every push to `main` (including the daily question sync) deploys automatically. No build step: the output directory is the repository root. The site works right away as a practice site with guest progress.
+The site is served by Vercel at `ap-drill-room.vercel.app`, connected to this repository: every push to `main` (including the daily question sync) deploys automatically. No build step: the repository root is served as-is. `vercel.json` proxies `/api/*` to the Claude relay, so networks that block `.dev` addresses can still use AI features. The site works right away as a practice site with guest progress.
+
+The older Cloudflare Pages copy (`ap-drill-room.pages.dev`) calls the relay directly.
 
 ### 2. Firebase: accounts and the shared database (~15 min, free)
 

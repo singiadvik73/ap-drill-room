@@ -2,7 +2,7 @@
 
   python3 src/build.py                      -> index.html (Cloudflare Pages / any static host, uses config.js + Firebase)
   python3 src/build.py --artifact out.html  -> also a single-file claude.ai artifact build
-                                                (links back to the siteUrl set in config.js)
+                                                (links back to the siteUrl set in config.js; includes the FRQs)
 """
 import pathlib, sys
 
@@ -11,8 +11,12 @@ ROOT = SRC.parent
 ORDER = ["hug-a.js", "hug-b.js", "bio-a.js", "bio-b.js", "wh-a.js", "wh-b.js", "chem-a.js", "chem-b.js", "pc-a.js", "pc-b.js", "psy.js", "ush-a.js", "ush-b.js", "ush-c.js", "gov-a.js", "gov-b.js", "visuals.js", "visuals2.js", "community.js"]
 FIREBASE = "10.12.2"
 
-def app_with_data(prelude=""):
-    data = "\n".join((SRC / "data" / f).read_text() for f in ORDER)
+# Free-response questions (one per topic, with rubrics) ship only in the Claude version, where Claude grades them.
+FRQ = ["frq-hug.js", "frq-bio.js", "frq-wh.js", "frq-chem.js", "frq-pc.js", "frq-psy.js", "frq-ush.js", "frq-gov.js"]
+
+def app_with_data(prelude="", frq=False):
+    files = ORDER + ([f for f in FRQ if (SRC / "data" / f).exists()] if frq else [])
+    data = "\n".join((SRC / "data" / f).read_text() for f in files)
     return (SRC / "app.html").read_text().replace("<!--DATA-->", prelude + "<script>\n" + data + "\n</script>")
 
 def site_html(app):
@@ -65,5 +69,5 @@ if __name__ == "__main__":
         site = re.search(r'siteUrl:\s*"([^"]*)"', (ROOT / "config.js").read_text())
         prelude = "<script>window.APDR_CONFIG = " + json.dumps({"siteUrl": site.group(1) if site else ""}) + ";</script>\n"
         out = pathlib.Path(sys.argv[sys.argv.index("--artifact") + 1])
-        out.write_text(app_with_data(prelude))
+        out.write_text(app_with_data(prelude, frq=True))
         print("wrote", out)

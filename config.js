@@ -13,7 +13,7 @@ window.APDR_CONFIG = {
   // This website's address (the Claude version links here).
   siteUrl: "https://ap-drill-room.pages.dev/",
   // The Claude version of the app (people use it with their own Claude plan). Share it from claude.ai with "Anyone with the link".
-  claudeAppUrl: "https://claude.ai/artifact/KfQcApv2EqBpZiVFK9RpJW",
+  claudeAppUrl: "https://claude.ai/artifact/KhAx6TUBTAuDQSCy6w6KBH",
   // Optional: URL of your deployed Claude relay (see worker/). Leave "" to hide the API-key option.
   // On Vercel, /api is proxied to the relay (vercel.json) so browsers that block .dev addresses still work.
   aiEndpoint: location.hostname.endsWith(".vercel.app") ? "/api" : "https://ap-drill-room-claude.ap-drill-room-claude.workers.dev"

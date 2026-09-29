@@ -836,10 +836,10 @@
 "chem|1.1": {
 "course": "AP Chemistry",
 "stems": [
-"How many moles of water are in 36.0 g of H₂O? (molar mass 18.0 g/mol)",
-"Which sample contains the greatest number of atoms?",
-"What is the mass of 0.250 mol of CO₂? (C = 12.0, O = 16.0 g/mol)",
-"A sample of an element contains 3.01 × 10²³ atoms and has a mass of 20.0 g. What is the element's molar mass?"
+"How many oxygen atoms are in 4.40 g of CO₂ (44.0 g/mol)?",
+"Which 1.0 g sample contains the greatest total number of atoms?",
+"A 0.200 mol sample of an ionic compound has a mass of 11.7 g. Which compound could it be?",
+"What is the mass of 3.01 × 10²³ molecules of O₂?"
 ],
 "topicName": "Moles and Molar Mass",
 "unitN": 1,
@@ -849,9 +849,9 @@
 "course": "AP Chemistry",
 "stems": [
 "The mass spectrum of an element shows two peaks. Based on the data, what is the element's average atomic mass?",
-"In a mass spectrum of an element, each peak corresponds to",
-"Chlorine's average atomic mass is 35.45 amu. Its two isotopes are Cl-35 and Cl-37. Which is true?",
-"Two isotopes of the same element differ in their number of"
+"An element has two isotopes: mass 63 (69.2%) and mass 65 (30.8%). Which element is it?",
+"Boron (average atomic mass 10.81 amu) has two isotopes, ¹⁰B and ¹¹B. About what percent of boron atoms are ¹¹B?",
+"The mass spectrum of Cl₂ gas shows peaks at 70, 72, and 74 amu. What best explains the three peaks?"
 ],
 "topicName": "Mass Spectroscopy of Elements",
 "unitN": 1,
@@ -860,10 +860,10 @@
 "chem|1.3": {
 "course": "AP Chemistry",
 "stems": [
-"What is the empirical formula of a compound with the molecular formula C₆H₁₂O₆?",
-"A compound is 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. What is its empirical formula?",
-"According to the law of definite proportions, a pure sample of water from any source",
-"What is the percent by mass of oxygen in H₂O? (H = 1.0, O = 16.0 g/mol)"
+"What is the percent by mass of nitrogen in NH₄NO₃ (80.0 g/mol)?",
+"Burning 2.10 g of a hydrocarbon produces 6.60 g of CO₂ and 2.70 g of H₂O. What is its empirical formula?",
+"A compound is 52.2% C, 13.0% H, and 34.8% O by mass. What is its empirical formula?",
+"In one compound, 1.00 g of carbon combines with 1.33 g of oxygen; the compound is CO. In a second compound, 1.00 g of carbon combines with 2.66 g of oxygen. What is the second compound?"
 ],
 "topicName": "Elemental Composition of Pure Substances",
 "unitN": 1,
@@ -872,10 +872,10 @@
 "chem|1.4": {
 "course": "AP Chemistry",
 "stems": [
-"A 10.0 g mixture of NaCl and sand contains 2.5 g of NaCl. What is the percent NaCl by mass?",
-"How does a mixture differ from a pure compound?",
-"A sample labeled \"pure KCl\" is found to be 50% chlorine by mass. Pure KCl is about 47.6% Cl. Which impurity could explain the result?",
-"Elemental analysis of a mixture of two compounds is most useful for"
+"A 5.00 g mixture of NaCl and sand is dissolved, and all the chloride is precipitated as 7.17 g of AgCl (143.3 g/mol). What is the percent NaCl in the mixture?",
+"Heating a 3.00 g sample of impure CaCO₃ (100.1 g/mol) releases 1.10 g of CO₂ (44.0 g/mol). What is the percent CaCO₃ in the sample?",
+"In the AgCl experiment, the precipitate is weighed while still damp. How does this affect the calculated percent NaCl?",
+"A gas mixture contains 2.0 mol N₂ (28.0 g/mol) and 3.0 mol O₂ (32.0 g/mol). What is the mass percent of N₂?"
 ],
 "topicName": "Composition of Mixtures",
 "unitN": 1,
@@ -884,10 +884,10 @@
 "chem|1.5": {
 "course": "AP Chemistry",
 "stems": [
-"What is the ground-state electron configuration of a neutral sulfur atom (Z = 16)?",
-"Which ion has the same electron configuration as argon?",
-"According to Coulomb's law, the attraction between the nucleus and an electron increases when",
-"What is the electron configuration of Fe²⁺ (Fe has Z = 26)?"
+"Which species is NOT isoelectronic with neon?",
+"What is the ground-state electron configuration of Fe³⁺?",
+"The first ionization energy of oxygen is lower than that of nitrogen. What best explains this?",
+"How many unpaired electrons does a ground-state cobalt atom (Z = 27) have?"
 ],
 "topicName": "Atomic Structure and Electron Configuration",
 "unitN": 1,
@@ -897,9 +897,9 @@
 "course": "AP Chemistry",
 "stems": [
 "The photoelectron spectrum of an element is shown. Which element is it?",
-"In a photoelectron spectrum, the peak with the highest binding energy corresponds to electrons that are",
-"The 1s peak of sodium appears at a higher binding energy than the 1s peak of neon because sodium has",
-"The relative height of a peak in a photoelectron spectrum shows"
+"In the photoelectron spectrum of magnesium, which peak is the tallest?",
+"How does the 1s peak of Mg compare with the 1s peak of Na in their photoelectron spectra?",
+"A photoelectron spectrum has five peaks with relative heights 2, 2, 6, 2, 1 (from highest to lowest binding energy). Which element is it?"
 ],
 "topicName": "Photoelectron Spectroscopy",
 "unitN": 1,
@@ -908,10 +908,10 @@
 "chem|1.7": {
 "course": "AP Chemistry",
 "stems": [
-"Which atom has the largest atomic radius?",
+"Which of these isoelectronic ions has the largest radius: O²⁻, F⁻, Na⁺, or Mg²⁺?",
 "The data show the first four ionization energies of an element. In which group is the element most likely found?",
-"Why is the first ionization energy of oxygen lower than that of nitrogen?",
-"Which element has the greatest electronegativity?"
+"Which element has the highest second ionization energy?",
+"Which shows the elements in order of increasing first ionization energy?"
 ],
 "topicName": "Periodic Trends",
 "unitN": 1,
@@ -920,10 +920,10 @@
 "chem|1.8": {
 "course": "AP Chemistry",
 "stems": [
-"What is the formula of the ionic compound formed between aluminum and oxygen?",
-"Elements in the same group tend to form compounds with similar formulas because they have",
-"Calcium most commonly forms which ion?",
-"An unknown element X forms the compounds XCl₃ and X₂O₃. X is most likely in the same group as"
+"A period 3 element forms an oxide with the formula X₂O₃. Which element is X?",
+"What is the formula of the compound formed by calcium and phosphorus?",
+"An element's successive ionization energies (kJ/mol) are 580, 1,820, 2,750, and 11,600. What is the formula of its chloride?",
+"What ion does selenium most commonly form?"
 ],
 "topicName": "Valence Electrons and Ionic Compounds",
 "unitN": 1,
@@ -932,10 +932,10 @@
 "chem|2.1": {
 "course": "AP Chemistry",
 "stems": [
-"Which pair of atoms would form the most polar bond?",
-"A solid conducts electricity when melted but not as a solid, and it has a high melting point. What type of bonding does it have?",
-"Metallic bonding is best described as",
-"Which compound contains both ionic and covalent bonds?"
+"Which solid conducts electricity?",
+"Which bond is most polar?",
+"A solid melts at 801°C, does not conduct as a solid, and conducts when melted. What type of solid is it?",
+"Which compound has the greatest ionic character?"
 ],
 "topicName": "Types of Chemical Bonds",
 "unitN": 2,
@@ -945,9 +945,9 @@
 "course": "AP Chemistry",
 "stems": [
 "The graph shows potential energy versus distance between two hydrogen atoms. What does the distance at the lowest point represent?",
-"Compared with a single C–C bond, a C≡C triple bond is",
-"Why does the potential energy rise sharply when two atoms get very close together?",
-"Which bond is expected to be the longest?"
+"Which diatomic molecule has the greatest bond energy?",
+"As the bond order between two atoms increases, what happens to the bond?",
+"Which bond is longest?"
 ],
 "topicName": "Intramolecular Force and Potential Energy",
 "unitN": 2,
@@ -957,9 +957,9 @@
 "course": "AP Chemistry",
 "stems": [
 "Which compound has the greatest lattice energy?",
-"Why are ionic solids brittle?",
-"Which compound would you expect to have the higher melting point, NaF or KCl, and why?",
-"In a crystal of NaCl, each Na⁺ ion is surrounded by"
+"NaF melts at 993°C and KCl at 770°C. What best explains the difference?",
+"Which shows these compounds in order of increasing melting point?",
+"Why do ionic solids shatter instead of bending when struck?"
 ],
 "topicName": "Structure of Ionic Solids",
 "unitN": 2,
@@ -968,10 +968,10 @@
 "chem|2.4": {
 "course": "AP Chemistry",
 "stems": [
-"Steel is harder than pure iron because the small carbon atoms",
-"Brass is made of copper and zinc atoms of similar size. What type of alloy is it?",
-"Metals are malleable because",
-"Why do metals conduct electricity well in the solid state?"
+"Brass is made of copper and zinc, whose atoms are similar in size. What kind of alloy is brass?",
+"Why is steel harder than pure iron?",
+"Which element is most likely to form an interstitial alloy with iron?",
+"Why can metals be hammered into sheets without breaking?"
 ],
 "topicName": "Structure of Metals and Alloys",
 "unitN": 2,
@@ -980,10 +980,10 @@
 "chem|2.5": {
 "course": "AP Chemistry",
 "stems": [
-"How many valence electrons are in the Lewis structure of CO₂?",
-"In the best Lewis structure for N₂, the nitrogen atoms share",
-"Which molecule has an atom with fewer than an octet in its best Lewis structure?",
-"How many lone pairs are on the central atom of NH₃?"
+"How many lone pairs are on the central atom in XeF₄?",
+"How many valence electrons are in the sulfate ion, SO₄²⁻?",
+"Which molecule has a central atom with more than an octet?",
+"How many π bonds are in a molecule of HCN?"
 ],
 "topicName": "Lewis Diagrams",
 "unitN": 2,
@@ -992,10 +992,10 @@
 "chem|2.6": {
 "course": "AP Chemistry",
 "stems": [
-"The nitrate ion (NO₃⁻) has three resonance structures. What is true about its N–O bonds?",
-"What is the formal charge on the carbon atom in the Lewis structure of CO with a triple bond and one lone pair on each atom?",
-"When several Lewis structures are possible, the best one usually",
-"Which species shows resonance?"
+"In the best Lewis structure of the cyanate ion, OCN⁻, which atom carries the −1 formal charge?",
+"What is the average N–O bond order in the nitrite ion, NO₂⁻?",
+"Which species does NOT have resonance structures?",
+"In a Lewis structure of SO₂ with one S=O and one S–O bond, what is the formal charge on S?"
 ],
 "topicName": "Resonance and Formal Charge",
 "unitN": 2,
@@ -1004,10 +1004,10 @@
 "chem|2.7": {
 "course": "AP Chemistry",
 "stems": [
-"What is the molecular geometry of H₂O?",
-"What is the hybridization of carbon in CO₂?",
-"Which molecule is nonpolar even though it has polar bonds?",
-"How many sigma and pi bonds are in ethene, C₂H₄?"
+"What is the molecular geometry of SF₄?",
+"What is the hybridization of carbon in the carbonate ion, CO₃²⁻?",
+"Why is the H–O–H bond angle in water less than 109.5°?",
+"Which molecule is polar?"
 ],
 "topicName": "VSEPR and Bond Hybridization",
 "unitN": 2,
@@ -1016,10 +1016,10 @@
 "chem|3.1": {
 "course": "AP Chemistry",
 "stems": [
-"Which substance has hydrogen bonding between its molecules?",
-"Why does I₂ have a higher boiling point than F₂?",
+"Which substance has the highest boiling point?",
+"n-Pentane boils at 36°C, but neopentane (same formula) boils at 10°C. Why?",
 "The table gives boiling points of Group 16 hydrides. Why is water's boiling point so much higher than the trend would predict?",
-"Which intermolecular forces are present between molecules of HCl?"
+"Which substance has dipole–dipole forces but NO hydrogen bonding between its molecules?"
 ],
 "topicName": "Intermolecular Forces",
 "unitN": 3,
@@ -1028,10 +1028,10 @@
 "chem|3.10": {
 "course": "AP Chemistry",
 "stems": [
-"Which substance is most soluble in water?",
-"Iodine (I₂) dissolves better in hexane than in water because",
-"Why is NaCl soluble in water but not in hexane?",
-"As the length of the carbon chain in an alcohol increases (methanol → hexanol), its solubility in water"
+"Which compound is most soluble in water?",
+"Which substance dissolves best in hexane?",
+"Why is 1-butanol less soluble in water than methanol?",
+"How does the solubility of O₂ gas in water change as the water warms?"
 ],
 "topicName": "Solubility",
 "unitN": 3,
@@ -1040,10 +1040,10 @@
 "chem|3.11": {
 "course": "AP Chemistry",
 "stems": [
-"Absorption of infrared radiation by a molecule usually causes",
-"Which type of radiation has the highest energy per photon?",
-"Microwave radiation is mainly associated with",
-"An atom emits a photon when an electron"
+"Which type of radiation causes molecular vibrations?",
+"Which region has the highest energy per photon?",
+"A solution appears blue. Which color of light does it most strongly absorb?",
+"Which type of radiation causes molecular rotations?"
 ],
 "topicName": "Spectroscopy and the Electromagnetic Spectrum",
 "unitN": 3,
@@ -1052,10 +1052,10 @@
 "chem|3.12": {
 "course": "AP Chemistry",
 "stems": [
-"What is the energy of a photon with a frequency of 5.0 × 10¹⁴ s⁻¹? (h = 6.63 × 10⁻³⁴ J·s)",
-"In the photoelectric effect, increasing the intensity of light that is below the threshold frequency",
-"As the wavelength of light increases, the energy of each photon",
-"The photoelectric effect provided evidence that light"
+"What is the energy of one photon of 400. nm light? (h = 6.626 × 10⁻³⁴ J·s, c = 3.00 × 10⁸ m/s)",
+"What is the frequency of 600. nm light?",
+"What is the energy of one mole of photons with wavelength 500. nm?",
+"Light with photon energy 4.97 × 10⁻¹⁹ J strikes a metal with a work function of 3.00 × 10⁻¹⁹ J. What is the maximum kinetic energy of an ejected electron?"
 ],
 "topicName": "Photoelectric Effect",
 "unitN": 3,
@@ -1065,9 +1065,9 @@
 "course": "AP Chemistry",
 "stems": [
 "The graph shows absorbance versus concentration for a dye. What is the concentration of a sample with absorbance 0.60?",
-"According to the Beer–Lambert law (A = εbc), if the concentration of a solution doubles, the absorbance",
-"A student forgets to wipe fingerprints off the cuvette before measuring a sample. How does this affect the calculated concentration?",
-"Why is the spectrophotometer set to the wavelength of maximum absorbance for the solute?"
+"A solution has absorbance 0.600 in a 1.00 cm cell. The molar absorptivity is 150 M⁻¹cm⁻¹. What is its concentration?",
+"The path length is doubled and the concentration is halved. What happens to the absorbance?",
+"Why is absorbance usually measured at the wavelength of maximum absorbance (λmax)?"
 ],
 "topicName": "Beer-Lambert Law",
 "unitN": 3,
@@ -1076,10 +1076,10 @@
 "chem|3.2": {
 "course": "AP Chemistry",
 "stems": [
-"Diamond has a very high melting point because",
-"Which substance is a molecular solid at room temperature?",
-"Graphite conducts electricity but diamond does not because in graphite",
-"An unknown solid is soft, has a low melting point, and does not conduct electricity when solid or melted. It is most likely"
+"Which solid has the highest melting point?",
+"Which solid conducts electricity?",
+"Which solid dissolves in hexane and melts below 120°C?",
+"Why is graphite a good lubricant while diamond is very hard?"
 ],
 "topicName": "Properties of Solids",
 "unitN": 3,
@@ -1088,10 +1088,10 @@
 "chem|3.3": {
 "course": "AP Chemistry",
 "stems": [
-"Which best explains why gases are easily compressed but liquids are not?",
-"As a liquid is cooled to its freezing point and freezes, its particles",
-"Ice is less dense than liquid water because",
-"Which substance has the highest vapor pressure at 25°C?"
+"Why is ice less dense than liquid water?",
+"Why does vapor pressure increase with temperature?",
+"Which liquid has the highest vapor pressure at 25°C?",
+"A liquid and its vapor are at equilibrium in a sealed container. The volume is doubled at constant temperature, and some liquid remains. What is the new vapor pressure?"
 ],
 "topicName": "Solids, Liquids, and Gases",
 "unitN": 3,
@@ -1100,10 +1100,10 @@
 "chem|3.4": {
 "course": "AP Chemistry",
 "stems": [
-"What volume does 1.00 mol of an ideal gas occupy at 273 K and 1.00 atm?",
-"A gas at 300 K is heated to 600 K at constant volume. What happens to its pressure?",
-"A mixture contains 2.0 mol N₂ and 1.0 mol O₂ at a total pressure of 3.0 atm. What is the partial pressure of O₂?",
-"A gas has a density of 1.25 g/L at 273 K and 1.00 atm. What is its molar mass?"
+"What is the volume of 0.500 mol of gas at 27°C and 2.00 atm? (R = 0.0821 L·atm/mol·K)",
+"A 1.00 g sample of a gas occupies 0.560 L at STP (0°C, 1.00 atm). What is its molar mass?",
+"A mixture of 2.0 mol N₂ and 1.0 mol O₂ has a total pressure of 1.2 atm. What is the partial pressure of O₂?",
+"What is the density of CO₂ (44.0 g/mol) at STP?"
 ],
 "topicName": "Ideal Gas Law",
 "unitN": 3,
@@ -1112,10 +1112,10 @@
 "chem|3.5": {
 "course": "AP Chemistry",
 "stems": [
-"At the same temperature, which gas has the greatest average molecular speed?",
+"At the same temperature, how does the average speed of He (4.0 g/mol) compare with CH₄ (16.0 g/mol)?",
 "The graph shows the distribution of molecular speeds for the same gas at two temperatures. Which curve is at the higher temperature?",
-"According to kinetic molecular theory, the pressure of a gas comes from",
-"Kelvin temperature is directly proportional to"
+"An unknown gas effuses half as fast as helium (4.0 g/mol). What is its molar mass?",
+"Which sample has the greatest average kinetic energy per molecule?"
 ],
 "topicName": "Kinetic Molecular Theory",
 "unitN": 3,
@@ -1124,10 +1124,10 @@
 "chem|3.6": {
 "course": "AP Chemistry",
 "stems": [
-"Under which conditions does a real gas behave most like an ideal gas?",
-"At high pressure, the measured volume of a real gas is often larger than predicted because",
 "Which gas deviates most from ideal behavior at the same conditions?",
-"At low temperatures, a real gas has a lower pressure than predicted by PV = nRT because"
+"At very high pressure, why is a real gas's volume larger than the ideal gas law predicts?",
+"At moderate pressure, a real gas has PV/nRT less than 1. What causes this?",
+"Under which conditions does a gas behave most ideally?"
 ],
 "topicName": "Deviation from Ideal Gas Law",
 "unitN": 3,
@@ -1136,10 +1136,10 @@
 "chem|3.7": {
 "course": "AP Chemistry",
 "stems": [
-"What is the molarity of a solution made by dissolving 0.50 mol of NaCl in enough water to make 250 mL of solution?",
-"How many milliliters of 6.0 M HCl are needed to make 300. mL of 1.0 M HCl?",
-"What is the concentration of chloride ions in 0.20 M CaCl₂?",
-"A solution is best described as"
+"What is the molarity of a solution made from 10.0 g of NaOH (40.0 g/mol) in 500. mL of solution?",
+"What volume of 6.0 M HCl is needed to make 250. mL of 0.30 M HCl?",
+"What is [Cl⁻] in 0.20 M CaCl₂?",
+"100. mL of 0.10 M NaCl is mixed with 100. mL of 0.30 M NaCl. What is the final concentration?"
 ],
 "topicName": "Solutions and Mixtures",
 "unitN": 3,
@@ -1148,10 +1148,10 @@
 "chem|3.8": {
 "course": "AP Chemistry",
 "stems": [
-"In a particle diagram of NaCl dissolved in water, how are water molecules oriented around a Na⁺ ion?",
-"A particle diagram shows 6 solute particles in 2 L of solution A and 6 of the same particles in 3 L of solution B. Which is true?",
-"Around a Cl⁻ ion in water, water molecules point",
-"A diagram of 0.1 M MgCl₂ should show, for every Mg²⁺ ion,"
+"In a particle diagram of aqueous K₃PO₄, what should the ratio of K⁺ to PO₄³⁻ ions be?",
+"How are water molecules oriented around a dissolved Mg²⁺ ion?",
+"Which solution has the highest total concentration of dissolved particles?",
+"What should a particle diagram of HF(aq) mostly show?"
 ],
 "topicName": "Representations of Solutions",
 "unitN": 3,
@@ -1160,10 +1160,10 @@
 "chem|3.9": {
 "course": "AP Chemistry",
 "stems": [
-"In paper chromatography with a nonpolar solvent, which component travels farthest?",
-"A spot travels 3.0 cm while the solvent front travels 6.0 cm. What is its Rf value?",
-"Which method is best for separating ethanol (bp 78°C) from water (bp 100°C)?",
-"Filtration can separate"
+"In thin-layer chromatography on polar silica with a nonpolar solvent, which compound travels farthest?",
+"A spot travels 2.4 cm while the solvent travels 8.0 cm. What is the spot's Rf value?",
+"Distillation separates two liquids mainly because they differ in which property?",
+"On silica, the solvent is changed to a more polar mixture. What happens to the Rf values of polar compounds?"
 ],
 "topicName": "Separation of Solutions and Mixtures Chromatography",
 "unitN": 3,
@@ -1172,10 +1172,10 @@
 "chem|4.1": {
 "course": "AP Chemistry",
 "stems": [
-"Which observation is the best evidence that a chemical reaction has occurred?",
-"Which is a balanced equation for the combustion of methane?",
-"In a balanced chemical equation, what is conserved?",
-"When balanced with the smallest whole numbers, what is the coefficient of O₂ in the reaction: __C₃H₈ + __O₂ → __CO₂ + __H₂O?"
+"A student burns 5.0 g of magnesium ribbon in air, and the white product has a mass of 8.3 g. What best explains the increase in mass?",
+"Which observation is the strongest evidence of a chemical change?",
+"For 2 SO₂ + O₂ → 2 SO₃, a container holds 6 SO₂ molecules and 4 O₂ molecules. What does it contain after the reaction goes to completion?",
+"1.0 mol of N₂ and 3.0 mol of H₂ react completely: N₂ + 3 H₂ → 2 NH₃. What is the total number of moles of gas afterward?"
 ],
 "topicName": "Introduction for Reactions",
 "unitN": 4,
@@ -1184,10 +1184,10 @@
 "chem|4.2": {
 "course": "AP Chemistry",
 "stems": [
-"What is the net ionic equation for the reaction of AgNO₃(aq) with NaCl(aq)?",
-"What is the net ionic equation for the reaction of HCl(aq) with NaOH(aq)?",
-"In the reaction of Ba(NO₃)₂(aq) with Na₂SO₄(aq), which ions are spectators?",
-"When acetic acid (a weak acid) reacts with NaOH(aq), how is acetic acid written in the net ionic equation?"
+"What is the net ionic equation when Pb(NO₃)₂(aq) and KI(aq) are mixed?",
+"What is the net ionic equation for HCl(aq) + NaOH(aq)?",
+"What is the net ionic equation for acetic acid reacting with sodium hydroxide?",
+"Solutions of Na₂SO₄ and KNO₃ are mixed. What is the net ionic equation?"
 ],
 "topicName": "Net Ionic Equations",
 "unitN": 4,
@@ -1196,10 +1196,10 @@
 "chem|4.3": {
 "course": "AP Chemistry",
 "stems": [
-"A particle diagram shows 4 H₂ molecules reacting with 1 O₂ molecule. After the reaction, which particles remain?",
-"A particle diagram shows 3 N₂ molecules and 3 H₂ molecules before they react by N₂ + 3 H₂ → 2 NH₃. Which is the limiting reactant?",
-"In a particle diagram, a correct representation of a balanced reaction must show",
-"A diagram of solid NaCl dissolving should show"
+"When C₂H₆ burns completely, what is the coefficient of O₂ in the balanced equation with the smallest whole-number coefficients?",
+"What is the sum of the smallest whole-number coefficients for Al + O₂ → Al₂O₃?",
+"In the balanced equation Fe₂O₃ + __ CO → 2 Fe + __ CO₂, what coefficient goes in front of CO?",
+"A container holds 2 CH₄ and 5 O₂ molecules. After complete combustion, what does it contain?"
 ],
 "topicName": "Representations of Reactions",
 "unitN": 4,
@@ -1208,10 +1208,10 @@
 "chem|4.4": {
 "course": "AP Chemistry",
 "stems": [
-"Which process is a chemical change?",
-"Why is dissolving NaCl in water sometimes hard to classify as physical or chemical?",
-"Boiling water is a physical change because",
-"Which process breaks covalent bonds?"
+"Which process involves breaking covalent bonds within molecules?",
+"Which best describes what happens when NaCl dissolves in water?",
+"When dry ice (solid CO₂) sublimes, what is overcome?",
+"Which change is chemical?"
 ],
 "topicName": "Physical and Chemical Changes",
 "unitN": 4,
@@ -1220,10 +1220,10 @@
 "chem|4.5": {
 "course": "AP Chemistry",
 "stems": [
-"How many grams of H₂O form when 4.0 g of H₂ reacts completely with excess O₂? (2 H₂ + O₂ → 2 H₂O)",
-"For N₂ + 3 H₂ → 2 NH₃, how many moles of NH₃ can form from 6.0 mol H₂ and excess N₂?",
-"If 2.0 mol Al reacts with 2.0 mol Cl₂ in 2 Al + 3 Cl₂ → 2 AlCl₃, which is the limiting reactant?",
-"A reaction has a theoretical yield of 50.0 g but produces 40.0 g of product. What is the percent yield?"
+"N₂ + 3 H₂ → 2 NH₃. If 28.0 g of N₂ reacts with 4.0 g of H₂ (use 2.0 g/mol), what mass of NH₃ (17.0 g/mol) can form?",
+"The theoretical yield of a reaction is 22.7 g, but only 18.0 g is collected. What is the percent yield?",
+"2 KClO₃ → 2 KCl + 3 O₂. What mass of O₂ (32.0 g/mol) forms from 24.5 g of KClO₃ (122.6 g/mol)?",
+"What mass of CO₂ (44.0 g/mol) forms when 10.0 g of C₃H₈ (44.1 g/mol) burns completely?"
 ],
 "topicName": "Stoichiometry",
 "unitN": 4,
@@ -1232,10 +1232,10 @@
 "chem|4.6": {
 "course": "AP Chemistry",
 "stems": [
-"It takes 25.0 mL of 0.100 M NaOH to neutralize 10.0 mL of HCl. What is the concentration of the HCl?",
-"At the equivalence point of a titration,",
-"A student leaves an air bubble in the buret tip that comes out during the titration. How does this affect the calculated analyte concentration?",
-"How many mL of 0.200 M H₂SO₄ are needed to neutralize 40.0 mL of 0.100 M NaOH?"
+"20.0 mL of H₂SO₄ is titrated to the equivalence point with 30.0 mL of 0.200 M NaOH. What is [H₂SO₄]?",
+"0.500 g of an unknown monoprotic acid requires 25.0 mL of 0.100 M NaOH to reach the equivalence point. What is its molar mass?",
+"During a titration of an acid with NaOH, an air bubble in the buret tip escapes and is recorded as NaOH volume. How is the calculated acid concentration affected?",
+"What is the pH at the equivalence point when HCl is titrated with NaOH at 25°C?"
 ],
 "topicName": "Introduction to Titration",
 "unitN": 4,
@@ -1244,10 +1244,10 @@
 "chem|4.7": {
 "course": "AP Chemistry",
 "stems": [
-"Classify the reaction: Zn(s) + CuSO₄(aq) → ZnSO₄(aq) + Cu(s)",
-"Classify the reaction: Pb(NO₃)₂(aq) + 2 KI(aq) → PbI₂(s) + 2 KNO₃(aq)",
-"Which is a combustion reaction?",
-"Which salt is insoluble in water?"
+"How is the reaction 2 Na + Cl₂ → 2 NaCl classified?",
+"Which reaction is a precipitation reaction?",
+"Which reaction is NOT a redox reaction?",
+"How is HCl + NH₃ → NH₄Cl classified?"
 ],
 "topicName": "Types of Chemical Reactions",
 "unitN": 4,
@@ -1256,10 +1256,10 @@
 "chem|4.8": {
 "course": "AP Chemistry",
 "stems": [
-"In the reaction NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, which species acts as a Brønsted–Lowry acid?",
-"What is the conjugate base of H₂PO₄⁻?",
-"Water is described as amphoteric because it",
-"In the reaction HCl + H₂O → H₃O⁺ + Cl⁻, which is the conjugate acid–base pair?"
+"What is the conjugate base of HCO₃⁻?",
+"Which species is amphoteric?",
+"In NH₃ + HCl → NH₄⁺ + Cl⁻, which species is the Brønsted–Lowry base?",
+"How many moles of NaOH are needed to completely neutralize 0.10 mol of H₃PO₄?"
 ],
 "topicName": "Introduction to Acid-Base Reactions",
 "unitN": 4,
@@ -1268,10 +1268,10 @@
 "chem|4.9": {
 "course": "AP Chemistry",
 "stems": [
-"What is the oxidation number of S in H₂SO₄?",
-"In 2 Na + Cl₂ → 2 NaCl, which species is oxidized?",
-"In a redox reaction, the reducing agent is the species that",
-"Balance in acidic solution: MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺. How many Fe²⁺ react with each MnO₄⁻?"
+"What is the oxidation number of Cr in Cr₂O₇²⁻?",
+"In 2 Al + 3 Cu²⁺ → 2 Al³⁺ + 3 Cu, how many electrons are transferred?",
+"When MnO₄⁻ oxidizes Fe²⁺ to Fe³⁺ in acid (forming Mn²⁺), what is the mole ratio of Fe²⁺ to MnO₄⁻?",
+"In Zn + Cu²⁺ → Zn²⁺ + Cu, which species is the oxidizing agent?"
 ],
 "topicName": "Oxidation-Reduction (Redox) Reactions",
 "unitN": 4,
@@ -1280,10 +1280,10 @@
 "chem|5.1": {
 "course": "AP Chemistry",
 "stems": [
-"Which change usually increases the rate of a reaction between a solid and a solution?",
-"For 2 N₂O₅ → 4 NO₂ + O₂, if N₂O₅ is consumed at 0.020 M/s, at what rate is NO₂ formed?",
+"For 2 N₂O₅ → 4 NO₂ + O₂, N₂O₅ is consumed at 0.020 M/s. At what rate is O₂ formed?",
+"For the same reaction, 2 N₂O₅ → 4 NO₂ + O₂, at what rate is NO₂ formed?",
 "The graph shows the concentration of a reactant over time. What happens to the reaction rate as time goes on?",
-"Which method could be used to measure the rate of CaCO₃(s) + 2 HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)?"
+"Which change would NOT increase the rate of Zn(s) + 2 HCl(aq) → ZnCl₂(aq) + H₂(g)?"
 ],
 "topicName": "Reaction Rates",
 "unitN": 5,
@@ -1292,10 +1292,10 @@
 "chem|5.10": {
 "course": "AP Chemistry",
 "stems": [
-"An energy profile for a two-step reaction has two peaks. The valley between them represents",
-"In a two-step energy profile, the first peak is much higher than the second. Which step is rate-determining?",
-"How many transition states does a three-step mechanism have?",
-"The overall ΔH of a multistep reaction is shown on its energy profile by"
+"An energy profile has three peaks with two valleys between them. How many intermediates are there?",
+"Step 1 has Ea = 40 kJ/mol, step 2 has Ea = 85 kJ/mol, and step 3 has Ea = 20 kJ/mol. Which is rate-determining?",
+"Reactants are at 100 kJ, the intermediate at 130 kJ, products at 60 kJ, and the two peaks at 170 kJ and 150 kJ. What is Ea for the second step?",
+"In the same profile (reactants 100, peak 170, intermediate 130, peak 150, products 60 kJ), which step is rate-determining?"
 ],
 "topicName": "Multistep Reaction Energy Profile",
 "unitN": 5,
@@ -1304,10 +1304,10 @@
 "chem|5.11": {
 "course": "AP Chemistry",
 "stems": [
-"A catalyst speeds up a reaction by",
-"How does adding a catalyst affect ΔH for a reaction?",
-"Enzymes are biological catalysts that work by",
-"A heterogeneous catalyst, such as platinum in a car's catalytic converter, is one that"
+"A catalyst lowers the forward activation energy of a reaction by 20 kJ/mol. What happens to the reverse activation energy?",
+"In an enzyme-catalyzed reaction, the rate levels off as substrate concentration increases. Why?",
+"Why does powdering a solid catalyst increase the rate?",
+"How does a catalyst affect a reaction at equilibrium?"
 ],
 "topicName": "Catalysis",
 "unitN": 5,
@@ -1317,9 +1317,9 @@
 "course": "AP Chemistry",
 "stems": [
 "Use the data to find the rate law for A + B → C.",
-"A reaction has the rate law Rate = k[X][Y]. What is the overall order?",
-"What are the units of k for a first-order reaction?",
-"For Rate = k[NO]²[O₂], if [NO] is tripled and [O₂] stays the same, the rate"
+"Rate = k[A][B]². If [A] doubles and [B] triples, by what factor does the rate change?",
+"What are the units of k for a rate law of the form rate = k[A]², with rate in M/s?",
+"When [A] is doubled with all else constant, the rate does not change. What is the order with respect to A?"
 ],
 "topicName": "Introduction to Rate Law",
 "unitN": 5,
@@ -1328,10 +1328,10 @@
 "chem|5.3": {
 "course": "AP Chemistry",
 "stems": [
-"A first-order reaction has a half-life of 10 minutes. What fraction of the reactant remains after 30 minutes?",
-"For a first-order reaction, which plot gives a straight line?",
-"A plot of 1/[A] versus time is a straight line with a positive slope. What is the order of the reaction?",
-"Radioactive decay is first order. The half-life of a first-order reaction"
+"A first-order reaction has k = 0.0231 min⁻¹. What is its half-life?",
+"A first-order reactant starts at 0.800 M. What is its concentration after three half-lives?",
+"Which plot gives a straight line for a second-order reaction?",
+"For a zero-order reaction, how does the half-life change as the reaction proceeds?"
 ],
 "topicName": "Concentration Changes Over Time",
 "unitN": 5,
@@ -1340,10 +1340,10 @@
 "chem|5.4": {
 "course": "AP Chemistry",
 "stems": [
-"What is the rate law for the elementary step 2 NO₂ → NO₃ + NO?",
-"The elementary step A + B → C is described as",
-"Why can't the rate law for an overall reaction be written from its balanced equation?",
-"Termolecular elementary steps are rare because"
+"What is the rate law for the elementary step NO + O₃ → NO₂ + O₂?",
+"What is the rate law for the elementary step 2 NO₂ → N₂O₄?",
+"What is the molecularity of the elementary step O₃ → O₂ + O?",
+"Why can't the rate law for 2 H₂ + 2 NO → N₂ + 2 H₂O be written from its coefficients?"
 ],
 "topicName": "Elementary Reactions",
 "unitN": 5,
@@ -1352,10 +1352,10 @@
 "chem|5.5": {
 "course": "AP Chemistry",
 "stems": [
-"According to collision theory, a collision leads to a reaction only if the particles",
-"Raising the temperature speeds up most reactions mainly because",
-"Increasing the concentration of a reactant increases the rate because",
-"The shaded region under a Maxwell–Boltzmann curve to the right of Eₐ represents"
+"Raising the temperature from 300 K to 310 K nearly doubles a reaction's rate. What is the main reason?",
+"Why don't all collisions with enough energy lead to a reaction?",
+"How does increasing the concentration of a reactant increase the rate?",
+"How does a catalyst increase the fraction of molecules that can react?"
 ],
 "topicName": "Collision Model",
 "unitN": 5,
@@ -1366,8 +1366,8 @@
 "stems": [
 "The energy profile shows a reaction. What is its activation energy for the forward reaction?",
 "In the same energy profile, the reaction is",
-"The peak of a reaction energy profile corresponds to",
-"For an endothermic reaction, how does the activation energy of the reverse reaction compare with that of the forward reaction?"
+"A reaction has Ea = 50 kJ/mol for the forward reaction and ΔH = −30 kJ/mol. What is Ea for the reverse reaction?",
+"Which statement about the transition state in an energy profile is true?"
 ],
 "topicName": "Reaction Energy Profile",
 "unitN": 5,
@@ -1376,10 +1376,10 @@
 "chem|5.7": {
 "course": "AP Chemistry",
 "stems": [
-"Consider the mechanism: Step 1: NO₂ + NO₂ → NO₃ + NO; Step 2: NO₃ + CO → NO₂ + CO₂. Which species is an intermediate?",
-"What is the overall reaction for the mechanism: Step 1: NO₂ + NO₂ → NO₃ + NO; Step 2: NO₃ + CO → NO₂ + CO₂?",
-"How is a catalyst different from an intermediate in a mechanism?",
-"A proposed mechanism is acceptable if"
+"Mechanism: Cl₂ ⇌ 2 Cl (fast); Cl + CHCl₃ → HCl + CCl₃ (slow); CCl₃ + Cl → CCl₄ (fast). Which species are intermediates?",
+"What is the overall reaction for the mechanism Cl₂ ⇌ 2 Cl; Cl + CHCl₃ → HCl + CCl₃; CCl₃ + Cl → CCl₄?",
+"Mechanism: O₃ + NO → NO₂ + O₂; NO₂ + O → NO + O₂. What is NO?",
+"In the same mechanism (O₃ + NO → NO₂ + O₂; NO₂ + O → NO + O₂), what is NO₂?"
 ],
 "topicName": "Introduction to Reaction Mechanisms",
 "unitN": 5,
@@ -1388,10 +1388,10 @@
 "chem|5.8": {
 "course": "AP Chemistry",
 "stems": [
-"A mechanism has a slow first step: NO₂ + NO₂ → NO₃ + NO, followed by a fast step. What rate law does it predict?",
-"The rate-determining step in a mechanism is",
-"The experimental rate law for 2 NO + O₂ → 2 NO₂ is Rate = k[NO]²[O₂]. Which single elementary step would agree with it?",
-"If a mechanism's rate-determining step is the second step, the rate law may include"
+"Mechanism: NO₂ + NO₂ → NO₃ + NO (slow); NO₃ + CO → NO₂ + CO₂ (fast). What rate law does it predict?",
+"For 2 H₂ + 2 NO → N₂ + 2 H₂O, the experimental rate law is rate = k[H₂][NO]². Which mechanism is consistent?",
+"A proposed mechanism's slow first step is A + B → I. The experimental rate law is rate = k[A]². What can you conclude?",
+"Mechanism: A ⇌ 2 B (fast, equilibrium constant K); B + C → D (slow). What is the rate law in terms of reactants?"
 ],
 "topicName": "Reaction Mechanism and Rate Law",
 "unitN": 5,
@@ -1400,10 +1400,10 @@
 "chem|5.9": {
 "course": "AP Chemistry",
 "stems": [
-"The steady-state approximation assumes that",
-"Mechanism: Step 1 (fast, reversible): 2 NO ⇌ N₂O₂; Step 2 (slow): N₂O₂ + O₂ → 2 NO₂. What is the rate law?",
-"Why can't an intermediate's concentration appear in the final rate law?",
-"In a fast pre-equilibrium followed by a slow step, the fast step"
+"Mechanism: NO + Br₂ ⇌ NOBr₂ (fast); NOBr₂ + NO → 2 NOBr (slow). What is the rate law?",
+"Why is an intermediate's concentration replaced when writing the final rate law?",
+"Mechanism: 2 A ⇌ A₂ (fast); A₂ + B → P (slow). What is the rate law?",
+"For a mechanism with a fast pre-equilibrium (constant K) followed by a slow step (rate constant k₂), K doubles while k₂ stays the same. What happens to the observed rate constant?"
 ],
 "topicName": "Steady-State Approximation",
 "unitN": 5,
@@ -1412,10 +1412,10 @@
 "chem|6.1": {
 "course": "AP Chemistry",
 "stems": [
-"When NH₄NO₃ dissolves in water, the solution gets colder. The process is",
-"Which process is exothermic?",
-"For an exothermic reaction, the sign of ΔH is",
-"Breaking a chemical bond is always"
+"When CaCl₂ dissolves in water, the solution warms. What is the sign of q for the dissolving process?",
+"Which process is endothermic?",
+"An instant hand warmer gets hot as iron reacts with oxygen. Which way does energy flow?",
+"Which step is always endothermic?"
 ],
 "topicName": "Endothermic and Exothermic Processes",
 "unitN": 6,
@@ -1424,10 +1424,10 @@
 "chem|6.2": {
 "course": "AP Chemistry",
 "stems": [
-"On an energy diagram of an endothermic reaction, the products are",
-"An energy diagram shows reactants at 200 kJ and products at 150 kJ. What is ΔH?",
-"What does the difference in height between reactants and products on an energy diagram represent?",
-"On an energy diagram, adding a catalyst would"
+"A reaction has ΔH = +50 kJ. On an energy diagram, how do the products compare with the reactants?",
+"An energy diagram shows reactants at 20 kJ and products at −40 kJ. What is ΔH?",
+"In an exothermic reaction, which is more stable?",
+"A reaction has ΔH = −60 kJ. What is ΔH for the reverse reaction?"
 ],
 "topicName": "Energy Diagrams",
 "unitN": 6,
@@ -1436,10 +1436,10 @@
 "chem|6.3": {
 "course": "AP Chemistry",
 "stems": [
-"A hot piece of metal is placed in cool water in an insulated cup. What happens?",
-"At thermal equilibrium, the metal and the water have the same",
-"In an insulated system, the heat lost by a hot object equals",
-"At the particle level, heat transfer between two objects in contact happens through"
+"50.0 g of water at 80.0°C is mixed with 50.0 g of water at 20.0°C. What is the final temperature?",
+"100. g of water at 80.0°C is mixed with 50.0 g of water at 20.0°C. What is the final temperature?",
+"Equal masses of copper (c = 0.385 J/g·°C) and water (c = 4.18 J/g·°C) absorb the same heat. Which has the larger temperature change?",
+"A hot metal is placed in water in an insulated cup. Which statement is true?"
 ],
 "topicName": "Heat Transfer and Thermal Equilibrium",
 "unitN": 6,
@@ -1448,10 +1448,10 @@
 "chem|6.4": {
 "course": "AP Chemistry",
 "stems": [
-"How much heat is needed to raise 50.0 g of water by 10.0°C? (c = 4.18 J/(g·°C))",
+"50.0 mL of 1.0 M HCl and 50.0 mL of 1.0 M NaOH are mixed, and the temperature rises 6.7°C. Assume 100. g of solution and c = 4.18 J/g·°C. What is ΔH per mole of water formed?",
 "The table shows specific heats. If equal masses of each absorb the same heat, which has the largest temperature increase?",
-"In a coffee-cup calorimeter, a reaction makes 100. g of solution warm by 5.0°C. What is ΔH for the reaction as run? (c = 4.18 J/(g·°C))",
-"If some heat escapes from a calorimeter during an exothermic reaction, the calculated magnitude of ΔH will be"
+"A 25.0 g metal at 95.0°C is put in 100.0 g of water at 22.0°C. The final temperature is 24.0°C. What is the metal's specific heat?",
+"In a coffee-cup calorimeter, some heat from an exothermic reaction escapes to the air. How does this affect the calculated ΔH?"
 ],
 "topicName": "Heat Capacity and Calorimetry",
 "unitN": 6,
@@ -1461,9 +1461,9 @@
 "course": "AP Chemistry",
 "stems": [
 "The heating curve shows water being heated at a steady rate. During the flat segment at 100°C, the added energy is used to",
-"How much energy is needed to melt 36.0 g of ice at 0°C? (ΔH_fus = 6.01 kJ/mol)",
-"For water, ΔH_vap (40.7 kJ/mol) is much larger than ΔH_fus (6.01 kJ/mol) because",
-"A steam burn at 100°C is usually worse than a burn from water at 100°C because"
+"How much energy converts 18.0 g of ice at 0°C into water at 25.0°C? (ΔH_fus = 6.01 kJ/mol; c = 4.18 J/g·°C)",
+"Why is a burn from steam at 100°C more severe than one from water at 100°C?",
+"How much energy is released when 36.0 g of steam condenses at 100°C? (ΔH_vap = 40.7 kJ/mol)"
 ],
 "topicName": "Energy of Phase Changes",
 "unitN": 6,
@@ -1472,10 +1472,10 @@
 "chem|6.6": {
 "course": "AP Chemistry",
 "stems": [
-"For 2 H₂(g) + O₂(g) → 2 H₂O(l), ΔH = −572 kJ. What is ΔH for making 1 mol of H₂O(l)?",
-"If ΔH for A → B is +40 kJ, what is ΔH for B → A?",
-"CH₄ + 2 O₂ → CO₂ + 2 H₂O has ΔH = −890 kJ. How much heat is released when 8.0 g of CH₄ (0.50 mol) burns?",
-"Enthalpy of reaction (ΔH) is the heat exchanged"
+"2 H₂(g) + O₂(g) → 2 H₂O(l), ΔH = −572 kJ. How much heat is released when 4.04 g of H₂ (2.02 g/mol) burns?",
+"For A → 2 B, ΔH = +40 kJ. What is ΔH for 4 B → 2 A?",
+"Compared with burning methane to form H₂O(l), burning it to form H₂O(g) releases",
+"CH₄ + 2 O₂ → CO₂ + 2 H₂O, ΔH = −890 kJ/mol. How much heat is released when 8.0 g of CH₄ (16.0 g/mol) burns?"
 ],
 "topicName": "Introduction to Enthalpy of Reaction",
 "unitN": 6,
@@ -1484,10 +1484,10 @@
 "chem|6.7": {
 "course": "AP Chemistry",
 "stems": [
-"Using bond enthalpies, estimate ΔH for H₂ + Cl₂ → 2 HCl. (H–H 436, Cl–Cl 242, H–Cl 431 kJ/mol)",
-"A reaction is exothermic when",
-"Why are ΔH values from bond enthalpies only estimates?",
-"Which bond requires the most energy to break?"
+"Use bond enthalpies to estimate ΔH for CH₄ + 2 O₂ → CO₂ + 2 H₂O(g). (C–H 413, O=O 498, C=O 799, O–H 463 kJ/mol)",
+"Estimate ΔH for N₂ + 3 H₂ → 2 NH₃. (N≡N 945, H–H 436, N–H 391 kJ/mol)",
+"Why do bond-enthalpy estimates differ from values found using enthalpies of formation?",
+"Breaking 1 mol of C–H bonds requires 413 kJ. What happens when 1 mol of C–H bonds forms?"
 ],
 "topicName": "Bond Enthalpies",
 "unitN": 6,
@@ -1496,10 +1496,10 @@
 "chem|6.8": {
 "course": "AP Chemistry",
 "stems": [
-"What is the standard enthalpy of formation of O₂(g)?",
+"Which substance has a standard enthalpy of formation of zero?",
 "Use the table to find ΔH° for CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
-"Which equation represents the standard enthalpy of formation of H₂O(l)?",
-"ΔH°rxn is calculated from enthalpies of formation as"
+"Use ΔH°f values (NH₃ −46, NO +90, H₂O(g) −242 kJ/mol) to find ΔH° for 4 NH₃ + 5 O₂ → 4 NO + 6 H₂O(g).",
+"Which equation represents the standard enthalpy of formation of liquid water?"
 ],
 "topicName": "Enthalpy of Formation",
 "unitN": 6,
@@ -1508,10 +1508,10 @@
 "chem|6.9": {
 "course": "AP Chemistry",
 "stems": [
-"Given C + O₂ → CO₂ (ΔH = −394 kJ) and CO + ½ O₂ → CO₂ (ΔH = −283 kJ), what is ΔH for C + ½ O₂ → CO?",
-"Hess's law works because enthalpy is",
-"If a reaction is multiplied by 3, its ΔH is",
-"Given A → B (ΔH = +20 kJ) and B → C (ΔH = −50 kJ), what is ΔH for A → C?"
+"Given C + O₂ → CO₂ (−394 kJ), H₂ + ½ O₂ → H₂O(l) (−286 kJ), and CH₄ + 2 O₂ → CO₂ + 2 H₂O(l) (−890 kJ), what is ΔH°f of CH₄?",
+"An equation with ΔH = +25 kJ is reversed and multiplied by 3. What is the new ΔH?",
+"Given 2 S + 3 O₂ → 2 SO₃ (−790 kJ) and S + O₂ → SO₂ (−297 kJ), what is ΔH for 2 SO₂ + O₂ → 2 SO₃?",
+"Given N₂ + 2 O₂ → 2 NO₂ (+68 kJ) and N₂ + O₂ → 2 NO (+180 kJ), what is ΔH for 2 NO + O₂ → 2 NO₂?"
 ],
 "topicName": "Hess's Law",
 "unitN": 6,
@@ -1520,10 +1520,10 @@
 "chem|7.1": {
 "course": "AP Chemistry",
 "stems": [
-"At equilibrium, which statement is true?",
+"A sealed flask of N₂O₄ ⇌ 2 NO₂ has a constant color. Which statement is true?",
 "The graph shows concentrations for A ⇌ B over time. When is equilibrium reached?",
-"A closed bottle of soda has CO₂ in the gas above the liquid and dissolved in it. At equilibrium,",
-"Which describes a system that has NOT yet reached equilibrium?"
+"A flask initially contains only NO₂. What happens as the system approaches equilibrium (2 NO₂ ⇌ N₂O₄)?",
+"Solid AgCl made with radioactive ³⁶Cl is added to a saturated AgCl solution. Later, ³⁶Cl is found dissolved in the solution. What does this show?"
 ],
 "topicName": "Introduction to Equilibrium",
 "unitN": 7,
@@ -1532,10 +1532,10 @@
 "chem|7.10": {
 "course": "AP Chemistry",
 "stems": [
-"After removing some product from a system at equilibrium, Q is",
-"Adding an inert gas like argon at constant volume to an equilibrium gas mixture",
-"For H₂(g) + I₂(g) ⇌ 2 HI(g), doubling the pressure by halving the volume",
-"Diluting the aqueous equilibrium A(aq) ⇌ 2 B(aq) with water shifts it"
+"N₂ is added to N₂ + 3 H₂ ⇌ 2 NH₃ at equilibrium. How do Q and K compare right after?",
+"The volume of an N₂O₄ ⇌ 2 NO₂ mixture at equilibrium is doubled. Which way does it shift, and why?",
+"Water is added to Fe³⁺ + SCN⁻ ⇌ FeSCN²⁺ at equilibrium, doubling the volume. Which way does it shift?",
+"The temperature of an endothermic reaction at equilibrium is raised. What happens?"
 ],
 "topicName": "Reaction Quotient and Le Châtelier's Principle",
 "unitN": 7,
@@ -1544,10 +1544,10 @@
 "chem|7.11": {
 "course": "AP Chemistry",
 "stems": [
-"What is the Ksp expression for PbI₂?",
-"The molar solubility of AgCl is s. What is Ksp in terms of s?",
-"For CaF₂, Ksp = 4s³. If Ksp = 4.0 × 10⁻¹¹, what is its molar solubility?",
-"A precipitate forms when mixing two solutions if"
+"The molar solubility of PbI₂ is 1.5 × 10⁻³ M. What is its Ksp?",
+"CaF₂ has Ksp = 4.0 × 10⁻¹¹. What is its molar solubility?",
+"Which salt has the greatest molar solubility in water? (Ksp: AgCl 1.8 × 10⁻¹⁰, Ag₂CrO₄ 1.1 × 10⁻¹², AgBr 5.0 × 10⁻¹³, AgI 8.3 × 10⁻¹⁷)",
+"Equal volumes of 2.0 × 10⁻⁴ M AgNO₃ and 2.0 × 10⁻⁴ M NaCl are mixed. Does AgCl (Ksp = 1.8 × 10⁻¹⁰) precipitate?"
 ],
 "topicName": "Introduction to Solubility Equilibria",
 "unitN": 7,
@@ -1556,10 +1556,10 @@
 "chem|7.12": {
 "course": "AP Chemistry",
 "stems": [
-"How does the solubility of AgCl in 0.10 M NaCl compare with its solubility in pure water?",
-"The Ksp of AgCl is 1.8 × 10⁻¹⁰. What is its molar solubility in 0.10 M NaCl?",
-"Adding Na₂SO₄ to a saturated BaSO₄ solution will",
-"Does the common-ion effect change the Ksp value?"
+"PbCl₂ has Ksp = 1.7 × 10⁻⁵. What is its molar solubility in 0.10 M NaCl?",
+"In which solution is AgCl least soluble?",
+"NaF is added to a saturated solution of CaF₂. What happens to [Ca²⁺]?",
+"How does the Ksp of AgCl in 0.10 M NaCl compare with its Ksp in pure water?"
 ],
 "topicName": "Common-Ion Effect",
 "unitN": 7,
@@ -1568,10 +1568,10 @@
 "chem|7.13": {
 "course": "AP Chemistry",
 "stems": [
-"Why is Mg(OH)₂ more soluble in acidic solution than in water?",
-"Which salt's solubility would increase the most when the pH is lowered?",
-"Acid rain damages marble statues (CaCO₃) because",
-"The solubility of AgCl is not noticeably affected by pH because"
+"Which salt becomes more soluble when acid is added?",
+"Mg(OH)₂ has Ksp = 5.6 × 10⁻¹². What is its molar solubility in a solution buffered at pH 10.00?",
+"NaOH is added to a saturated solution of Mg(OH)₂. What happens to the solubility of Mg(OH)₂?",
+"Why is CaF₂ more soluble in acidic solution than in pure water?"
 ],
 "topicName": "pH and Solubility",
 "unitN": 7,
@@ -1580,10 +1580,10 @@
 "chem|7.14": {
 "course": "AP Chemistry",
 "stems": [
-"Dissolving NH₄NO₃ in water is endothermic but still happens on its own because",
-"Dissolving an ionic solid involves which energy changes?",
-"A salt has a very small Ksp. For its dissolution, ΔG° is",
-"Why does entropy usually increase when a solid dissolves?"
+"NH₄NO₃ dissolves spontaneously, and the solution gets cold. What are the signs of ΔH and ΔS for dissolving?",
+"What is the sign of ΔS when a gas such as CO₂ dissolves in water?",
+"A salt dissolves with ΔH = +15 kJ/mol and ΔS = +50 J/mol·K. When is dissolving favorable?",
+"A solid dissolves exothermically, and ΔS for dissolving is positive. When is dissolving favorable?"
 ],
 "topicName": "Free Energy of Dissolution",
 "unitN": 7,
@@ -1592,10 +1592,10 @@
 "chem|7.2": {
 "course": "AP Chemistry",
 "stems": [
-"For a reaction at equilibrium, adding more reactant causes the forward rate to",
-"If Q < K, the reaction will",
-"When a reaction starts with only products, it will",
-"At equilibrium, the rate of the forward reaction"
+"A reaction mixture has Q = 5.0, and K = 2.0. Which way will the reaction proceed?",
+"N₂ + 3 H₂ ⇌ 2 NH₃, K = 0.50. A mixture has [N₂] = [H₂] = [NH₃] = 1.0 M. Which way does it shift?",
+"What happens in a mixture where Q = K?",
+"A flask initially contains only reactants. What is Q, and which way does the reaction go?"
 ],
 "topicName": "Direction of Reversible Reactions",
 "unitN": 7,
@@ -1604,10 +1604,10 @@
 "chem|7.3": {
 "course": "AP Chemistry",
 "stems": [
-"What is the equilibrium expression for N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g)?",
-"For CaCO₃(s) ⇌ CaO(s) + CO₂(g), the equilibrium expression is",
-"For a reaction, K = 4.0 and Q = 10. Which way does the reaction shift?",
-"For 2 SO₂(g) + O₂(g) ⇌ 2 SO₃(g), what is the expression for Kp?"
+"What is Kc for 2 SO₂(g) + O₂(g) ⇌ 2 SO₃(g)?",
+"What is Kp for CaCO₃(s) ⇌ CaO(s) + CO₂(g)?",
+"For H₂ + I₂ ⇌ 2 HI, [H₂] = 0.10 M, [I₂] = 0.20 M, and [HI] = 0.40 M. What is Q?",
+"What is Kc for NH₄Cl(s) ⇌ NH₃(g) + HCl(g)?"
 ],
 "topicName": "Reaction Quotient and Equilibrium Constant",
 "unitN": 7,
@@ -1616,10 +1616,10 @@
 "chem|7.4": {
 "course": "AP Chemistry",
 "stems": [
-"At equilibrium, [H₂] = 0.10 M, [I₂] = 0.10 M, and [HI] = 0.80 M for H₂ + I₂ ⇌ 2 HI. What is K?",
-"For A(g) ⇌ 2 B(g), 1.0 mol A is placed in a 1.0 L flask. At equilibrium, [B] = 0.40 M. What is K?",
-"For PCl₅ ⇌ PCl₃ + Cl₂, the equilibrium concentrations are all 0.50 M. What is K?",
-"In an ICE table, the \"C\" row shows"
+"For PCl₅ ⇌ PCl₃ + Cl₂, the equilibrium concentrations are [PCl₅] = 0.20 M, [PCl₃] = 0.10 M, and [Cl₂] = 0.10 M. What is Kc?",
+"1.00 mol of A is placed in a 1.00 L flask: A ⇌ 2 B. At equilibrium, [B] = 0.40 M. What is K?",
+"For 2 NO₂(g) ⇌ N₂O₄(g), the equilibrium pressures are P(NO₂) = 0.50 atm and P(N₂O₄) = 0.25 atm. What is Kp?",
+"H₂ + I₂ ⇌ 2 HI starts with 0.50 M H₂ and 0.50 M I₂. At equilibrium, [HI] = 0.80 M. What is K?"
 ],
 "topicName": "Calculating the Equilibrium Constant",
 "unitN": 7,
@@ -1628,10 +1628,10 @@
 "chem|7.5": {
 "course": "AP Chemistry",
 "stems": [
-"A reaction with K = 1 × 10¹⁵ at equilibrium contains",
-"A reaction with K = 2 × 10⁻⁸ at equilibrium contains",
-"Which K value describes a reaction with significant amounts of both reactants and products at equilibrium?",
-"Does a large K mean the reaction happens quickly?"
+"A reaction has K = 1 × 10⁻¹⁰. What is true of the equilibrium mixture?",
+"A reaction has K = 1 × 10⁸ but is barely observed at room temperature. What best explains this?",
+"Reaction 1 has K = 1 × 10⁵ and Reaction 2 has K = 1 × 10⁻³. Which goes further toward products?",
+"What does K ≈ 1 indicate about an equilibrium mixture?"
 ],
 "topicName": "Magnitude of the Equilibrium Constant",
 "unitN": 7,
@@ -1640,10 +1640,10 @@
 "chem|7.6": {
 "course": "AP Chemistry",
 "stems": [
-"For A ⇌ B, K = 4.0. What is K for B ⇌ A?",
-"For A ⇌ B, K = 3.0. What is K for 2 A ⇌ 2 B?",
-"If reaction 1 has K₁ and reaction 2 has K₂, the K for the sum of the two reactions is",
-"The value of K for a reaction changes only when"
+"For H₂ + I₂ ⇌ 2 HI, K = 50. What is K for HI ⇌ ½ H₂ + ½ I₂?",
+"A ⇌ B has K₁ = 2, and B ⇌ C has K₂ = 3. What is K for A ⇌ C?",
+"A ⇌ B has K = 4. What is K for 2 A ⇌ 2 B?",
+"A reaction has K = 4.0 × 10⁻³. What is K for the reverse reaction?"
 ],
 "topicName": "Properties of the Equilibrium Constant",
 "unitN": 7,
@@ -1652,10 +1652,10 @@
 "chem|7.7": {
 "course": "AP Chemistry",
 "stems": [
-"For A ⇌ B, K = 3.0. If you start with 1.0 M A and no B, what is [B] at equilibrium?",
-"For HA ⇌ H⁺ + A⁻ with a small K, the \"x is small\" approximation is used because",
-"For H₂ + I₂ ⇌ 2 HI with K = 49, starting with 1.0 M each of H₂ and I₂ and no HI, what is [HI] at equilibrium?",
-"For N₂O₄ ⇌ 2 NO₂, K is small. Starting with only N₂O₄, the equilibrium mixture will have"
+"A ⇌ B + C has K = 1.0 × 10⁻⁴, with [A]₀ = 0.10 M. What is [B] at equilibrium?",
+"H₂ + I₂ ⇌ 2 HI, K = 49. Starting with 1.00 M H₂ and 1.00 M I₂, what is [HI] at equilibrium?",
+"When is it valid to assume x is small compared with the initial concentration?",
+"N₂O₄ ⇌ 2 NO₂, K = 0.36, starting with 0.10 M N₂O₄. What is [NO₂] at equilibrium?"
 ],
 "topicName": "Calculating Equilibrium Concentrations",
 "unitN": 7,
@@ -1664,10 +1664,10 @@
 "chem|7.8": {
 "course": "AP Chemistry",
 "stems": [
-"A particle diagram of A ⇌ B at equilibrium shows 6 A and 2 B particles in 1 L. What is K?",
-"Two diagrams of the same system taken a minute apart show the same numbers of each particle. This suggests",
-"A diagram for 2 A ⇌ A₂ shows 4 A and 2 A₂ particles in 1 L. What is K?",
-"If a diagram shows the reaction mixture has Q greater than K, the next diagram should show"
+"For A₂ ⇌ 2 A in a 1.0 L box, each particle represents 0.10 mol. At equilibrium the box shows 3 A₂ and 6 A. What is K?",
+"Two particle diagrams taken 10 minutes apart show the same number of each kind of particle. What can you conclude?",
+"For X ⇌ Y with K = 3, an equilibrium box contains 12 particles. How many are Y?",
+"For X ⇌ Y with K = 3, a box contains 5 Y and 7 X. What happens next?"
 ],
 "topicName": "Representations of Equilibrium",
 "unitN": 7,
@@ -1676,10 +1676,10 @@
 "chem|7.9": {
 "course": "AP Chemistry",
 "stems": [
-"For N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g), what happens when the volume of the container is decreased?",
-"For an exothermic reaction at equilibrium, raising the temperature",
-"For Fe³⁺ + SCN⁻ ⇌ FeSCN²⁺ (red), what happens when more SCN⁻ is added?",
-"How does adding a catalyst affect a system at equilibrium?"
+"For N₂ + 3 H₂ ⇌ 2 NH₃ (ΔH < 0), which change increases the equilibrium amount of NH₃?",
+"Helium is added to an equilibrium mixture at constant volume. What happens?",
+"For CO + 3 H₂ ⇌ CH₄ + H₂O (ΔH < 0), what happens when the temperature is raised?",
+"Fe³⁺ + SCN⁻ ⇌ FeSCN²⁺ (red). Adding Ag⁺ precipitates AgSCN. What happens to the red color?"
 ],
 "topicName": "Introduction to Le Châtelier's Principle",
 "unitN": 7,
@@ -1688,10 +1688,10 @@
 "chem|8.1": {
 "course": "AP Chemistry",
 "stems": [
-"What is the pH of a solution with [H₃O⁺] = 1.0 × 10⁻³ M?",
-"At 25°C, what is [OH⁻] in a solution with [H₃O⁺] = 1.0 × 10⁻⁴ M?",
-"At 25°C, pH + pOH equals",
-"The ionization of water is endothermic. At 50°C, pure water has a pH"
+"What is the pH of 0.0050 M HNO₃?",
+"At 50°C, Kw = 5.5 × 10⁻¹⁴. What is the pH of pure water at 50°C, and is it acidic, basic, or neutral?",
+"A solution has pH 3.40 at 25°C. What is [OH⁻]?",
+"A solution has [H₃O⁺] = 4.0 × 10⁻⁹ M. What are its pH and character?"
 ],
 "topicName": "Introduction to Acids and Bases",
 "unitN": 8,
@@ -1700,10 +1700,10 @@
 "chem|8.10": {
 "course": "AP Chemistry",
 "stems": [
-"Which buffer has the greatest capacity to absorb added acid?",
-"A buffer has much more HA than A⁻. It is better at resisting",
-"A buffer is most effective when",
-"Buffer capacity is exceeded when"
+"Which buffer has the greatest buffer capacity?",
+"A buffer contains 0.10 mol HA and 0.10 mol A⁻. About how much NaOH can it absorb before its capacity is exceeded?",
+"A buffer has 0.20 mol A⁻ and 0.050 mol HA. Which does it resist better?",
+"0.15 mol of HCl is added to a buffer with 0.10 mol A⁻ and 0.10 mol HA. What happens to the pH?"
 ],
 "topicName": "Buffer Capacity",
 "unitN": 8,
@@ -1712,10 +1712,10 @@
 "chem|8.2": {
 "course": "AP Chemistry",
 "stems": [
-"What is the pH of 0.010 M HCl?",
-"What is the pH of 0.0010 M NaOH at 25°C?",
-"What is the pH of 0.050 M Ba(OH)₂ at 25°C?",
-"Which is a strong acid?"
+"What is the pH of 0.020 M Ba(OH)₂?",
+"50.0 mL of 0.10 M HCl is mixed with 50.0 mL of 0.060 M NaOH. What is the pH?",
+"HCl with pH 3.0 is diluted by a factor of 100. What is the new pH?",
+"What is the pH of 1.0 × 10⁻⁸ M HCl at 25°C?"
 ],
 "topicName": "pH and pOH of Strong Acids and Bases",
 "unitN": 8,
@@ -1724,10 +1724,10 @@
 "chem|8.3": {
 "course": "AP Chemistry",
 "stems": [
-"What is the approximate pH of 0.10 M acetic acid? (Ka = 1.8 × 10⁻⁵)",
-"What is Ka for a weak acid HA if a 0.10 M solution has pH 3.00?",
-"For a weak base B, the relationship between Ka of BH⁺ and Kb of B at 25°C is",
-"Diluting a weak acid solution causes its percent ionization to"
+"What is the pH of 0.20 M HF (Ka = 6.8 × 10⁻⁴)?",
+"A 0.10 M solution of a weak acid has pH 3.00. What is Ka?",
+"What is the pH of 0.10 M NH₃ (Kb = 1.8 × 10⁻⁵)?",
+"A weak acid solution is diluted tenfold. What happens to its percent ionization?"
 ],
 "topicName": "Weak Acid and Base Equilibria",
 "unitN": 8,
@@ -1736,10 +1736,10 @@
 "chem|8.4": {
 "course": "AP Chemistry",
 "stems": [
-"Which mixture makes a buffer?",
-"Mixing equal moles of HCl and NH₃ gives a solution that is",
-"When a small amount of strong acid is added to an acetate buffer, the H⁺ reacts with",
-"Mixing 0.10 mol CH₃COOH with 0.05 mol NaOH gives"
+"0.10 mol of acetic acid (pKa 4.74) is mixed with 0.050 mol of NaOH in water. What is the pH?",
+"Which mixture forms a buffer?",
+"Equal moles of NH₃ and HCl are mixed. What is the pH of the resulting solution?",
+"0.010 mol of HCl is added to a buffer containing 0.10 mol CH₃COOH and 0.10 mol CH₃COO⁻ (pKa 4.74). What is the new pH?"
 ],
 "topicName": "Acid-Base Reactions and Buffers",
 "unitN": 8,
@@ -1750,8 +1750,8 @@
 "stems": [
 "The titration curve shows a weak acid titrated with NaOH. What is the pKa of the acid?",
 "In the same titration, why is the pH at the equivalence point above 7?",
-"Which indicator is best for titrating a strong acid with a strong base?",
-"What is the pH at the equivalence point when a weak base (NH₃) is titrated with HCl?"
+"25.0 mL of 0.10 M acetic acid (pKa 4.74) is titrated with 0.10 M NaOH. What is the pH after 12.5 mL of NaOH is added?",
+"A diprotic acid reaches its first equivalence point after 15.0 mL of NaOH. When is the second equivalence point?"
 ],
 "topicName": "Acid-Base Titrations",
 "unitN": 8,
@@ -1760,10 +1760,10 @@
 "chem|8.6": {
 "course": "AP Chemistry",
 "stems": [
-"Which acid is strongest?",
-"Why is HI a stronger acid than HF?",
-"Chloroacetic acid (ClCH₂COOH) is stronger than acetic acid because",
-"Which is the strongest base?"
+"Which is the strongest acid?",
+"Which hydrogen halide is the strongest acid in water?",
+"Why is CCl₃COOH a much stronger acid than CH₃COOH?",
+"Which is the stronger acid, H₂S or H₂O?"
 ],
 "topicName": "Molecular Structure of Acids and Bases",
 "unitN": 8,
@@ -1772,10 +1772,10 @@
 "chem|8.7": {
 "course": "AP Chemistry",
 "stems": [
-"When the pH of a solution equals the pKa of a weak acid,",
-"A weak acid has pKa = 5.0. At pH 7.0, which form mostly exists?",
-"At pH 3.0, an acid with pKa 5.0 is mostly",
-"An indicator changes color near its pKa because"
+"An acid with pKa 6.5 is in a solution at pH 8.5. What is the ratio [A⁻]/[HA]?",
+"An indicator (pKa 9.3) is placed in a solution at pH 5.0. Which form predominates?",
+"An amino acid's carboxyl group has pKa 2.3. At pH 7.4, it is mostly",
+"At pH = pKa − 1, what fraction of an acid is in the protonated form (HA)?"
 ],
 "topicName": "pH and pKa",
 "unitN": 8,
@@ -1784,10 +1784,10 @@
 "chem|8.8": {
 "course": "AP Chemistry",
 "stems": [
-"A buffer resists pH changes because it contains",
-"When NaOH is added to a buffer of HF and F⁻, the OH⁻ reacts with",
-"Diluting a buffer with water (without adding acid or base) changes its pH",
-"Human blood is buffered mainly by"
+"Which acid–base pair is the best choice for a buffer at pH 7.2?",
+"Over about what pH range is a buffer with pKa 5.0 effective?",
+"A small amount of NaOH is added to a buffer. What happens to the pH?",
+"Why is a solution of 0.10 M HCl and 0.10 M NaCl not a buffer?"
 ],
 "topicName": "Properties of Buffers",
 "unitN": 8,
@@ -1796,10 +1796,10 @@
 "chem|8.9": {
 "course": "AP Chemistry",
 "stems": [
-"A buffer has 0.20 M CH₃COOH and 0.20 M CH₃COO⁻ (pKa 4.74). What is its pH?",
-"A buffer has [A⁻] = 0.10 M and [HA] = 1.0 M, with pKa = 5.0. What is the pH?",
-"To make a buffer with pH 9.3, which pair is best?",
-"According to Henderson–Hasselbalch, doubling [A⁻] while keeping [HA] the same raises the pH by"
+"What is the pH of a solution that is 0.30 M HA and 0.10 M NaA (pKa 4.20)?",
+"What ratio [A⁻]/[HA] gives pH 5.00 for an acid with pKa 4.74?",
+"A buffer contains 0.20 mol NH₃ and 0.10 mol NH₄Cl (pKa of NH₄⁺ = 9.26). What is its pH?",
+"0.020 mol of NaOH is added to a buffer with 0.10 mol HA and 0.10 mol A⁻ (pKa 5.00). What is the new pH?"
 ],
 "topicName": "Henderson-Hasselbalch Equation",
 "unitN": 8,
@@ -1808,10 +1808,10 @@
 "chem|9.1": {
 "course": "AP Chemistry",
 "stems": [
-"Which process has a positive ΔS?",
-"Which reaction shows a decrease in entropy?",
-"Which has the highest molar entropy at 25°C?",
-"Entropy is best described as a measure of"
+"Which process has ΔS < 0?",
+"Which has the highest standard molar entropy?",
+"What is the sign of ΔS for CaCO₃(s) → CaO(s) + CO₂(g)?",
+"Why does standard molar entropy increase with molecular complexity (for example, CH₄ < C₂H₆ < C₃H₈)?"
 ],
 "topicName": "Introduction to Entropy",
 "unitN": 9,
@@ -1820,10 +1820,10 @@
 "chem|9.10": {
 "course": "AP Chemistry",
 "stems": [
-"How many moles of electrons are needed to plate 1.0 mol of Cu from Cu²⁺?",
-"A current of 2.00 A runs for 965 s. How many moles of electrons pass through? (F = 96,485 C/mol)",
-"In the electrolysis of molten NaCl, what forms at the cathode?",
-"If the current in an electroplating process is doubled for the same time, the mass of metal plated"
+"How long must a 2.00 A current run to deposit 1.00 g of Ag (107.9 g/mol) from Ag⁺? (F = 96,485 C/mol)",
+"What mass of Al (26.98 g/mol) is produced from Al³⁺ by a 3.00 A current for 1.00 h?",
+"The same current passes through Ag⁺ and Cu²⁺ cells in series. How do the moles of metal deposited compare?",
+"During electrolysis of molten NaCl, what forms at the anode?"
 ],
 "topicName": "Electrolysis and Faraday's Law",
 "unitN": 9,
@@ -1833,9 +1833,9 @@
 "course": "AP Chemistry",
 "stems": [
 "Use the table to find ΔS° for N₂(g) + 3 H₂(g) → 2 NH₃(g).",
-"The standard molar entropy of an element in its standard state is",
-"Which substance has the greater molar entropy, and why: CH₄(g) or C₂H₆(g)?",
-"ΔS° for a reaction is calculated as"
+"Use S° values (SO₂ 248, O₂ 205, SO₃ 257 J/mol·K) to find ΔS° for 2 SO₂ + O₂ → 2 SO₃.",
+"S° for H₂O(l) is 70 J/mol·K and for H₂O(g) is 189 J/mol·K. What is ΔS° for vaporizing 1 mol of water?",
+"Which has an absolute entropy of zero?"
 ],
 "topicName": "Absolute Entropy and Entropy Change",
 "unitN": 9,
@@ -1844,10 +1844,10 @@
 "chem|9.3": {
 "course": "AP Chemistry",
 "stems": [
-"A reaction has ΔH = −100 kJ and ΔS = +50 J/K. It is thermodynamically favored",
-"A reaction has ΔH = +50 kJ and ΔS = +100 J/K. Above what temperature is it favored?",
-"A reaction with ΔH < 0 and ΔS < 0 is favored",
-"Calculate ΔG° at 298 K for a reaction with ΔH° = −92 kJ and ΔS° = −199 J/K."
+"A reaction has ΔH = +40 kJ and ΔS = +100 J/K. When is it favorable?",
+"A reaction has ΔH = −50 kJ and ΔS = +20 J/K. When is it favorable?",
+"ΔH° = −92.2 kJ and ΔS° = −198.7 J/K. What is ΔG° at 298 K?",
+"A reaction has ΔG° > 0 at 298 K. What is true of K at 298 K?"
 ],
 "topicName": "Gibbs Free Energy and Thermodynamic Favorability",
 "unitN": 9,
@@ -1856,10 +1856,10 @@
 "chem|9.4": {
 "course": "AP Chemistry",
 "stems": [
-"Diamond turning into graphite has ΔG° < 0, but diamonds last for millions of years because",
-"A mixture of H₂ and O₂ can sit unchanged for years until a spark is added. This shows that",
-"Thermodynamic favorability (ΔG < 0) tells you",
-"Which change would speed up a thermodynamically favored but slow reaction without changing ΔG?"
+"Diamond → graphite has ΔG° < 0, but diamonds last for centuries. Why?",
+"Gasoline and oxygen don't react at room temperature until a spark is applied. The reaction is",
+"A catalyst is added to a slow reaction with ΔG° = −200 kJ. What changes?",
+"Which quantity does a catalyst change?"
 ],
 "topicName": "Thermodynamic and Kinetic Control",
 "unitN": 9,
@@ -1868,10 +1868,10 @@
 "chem|9.5": {
 "course": "AP Chemistry",
 "stems": [
-"If ΔG° for a reaction is negative, then K is",
-"At equilibrium, ΔG (not ΔG°) equals",
-"A reaction has K = 1.0 at 298 K. What is ΔG°?",
-"A reaction has ΔG° = +10 kJ/mol. Which is true?"
+"A reaction has ΔG° = +5.70 kJ/mol at 298 K. What is K? (R = 8.314 J/mol·K)",
+"A reaction has K = 1.0 × 10⁵ at 298 K. What is ΔG°?",
+"What is true at equilibrium?",
+"A reaction mixture has Q < K. What is the sign of ΔG?"
 ],
 "topicName": "Free Energy and Equilibrium",
 "unitN": 9,
@@ -1880,10 +1880,10 @@
 "chem|9.6": {
 "course": "AP Chemistry",
 "stems": [
-"Cells drive unfavorable reactions by coupling them with",
-"Reaction 1 has ΔG° = +20 kJ; reaction 2 has ΔG° = −30 kJ. If coupled (added), the overall ΔG° is",
-"Iron is extracted from Fe₂O₃ by reacting it with carbon (as CO). Why does this work when Fe₂O₃ alone doesn't decompose?",
-"An external current forcing an electrolytic cell to run is another example of"
+"A reaction with ΔG° = +20 kJ is coupled to one with ΔG° = −35 kJ. What is ΔG° for the combined process?",
+"Cu₂S → 2 Cu + S has ΔG° = +86 kJ. It is coupled with S + O₂ → SO₂ (ΔG° = −300 kJ). What is ΔG° for Cu₂S + O₂ → 2 Cu + SO₂?",
+"Why can a favorable reaction drive an unfavorable one?",
+"What supplies the energy that drives the thermodynamically unfavorable reactions of photosynthesis?"
 ],
 "topicName": "Coupled Reactions",
 "unitN": 9,
@@ -1892,10 +1892,10 @@
 "chem|9.7": {
 "course": "AP Chemistry",
 "stems": [
-"In the galvanic cell Zn | Zn²⁺ || Cu²⁺ | Cu, where does oxidation occur?",
-"In a galvanic cell, electrons flow through the wire from",
-"The salt bridge in a galvanic cell",
-"An electrolytic cell differs from a galvanic cell because it"
+"A galvanic cell uses Ag⁺/Ag (E° = +0.80 V) and Zn²⁺/Zn (E° = −0.76 V). What is E°cell?",
+"In the Ag/Zn cell, in which direction do electrons flow in the external wire?",
+"In a galvanic cell, which way do anions in the salt bridge move?",
+"In an electrolytic cell, what happens at the cathode?"
 ],
 "topicName": "Galvanic (Voltaic) and Electrolytic Cells",
 "unitN": 9,
@@ -1905,9 +1905,9 @@
 "course": "AP Chemistry",
 "stems": [
 "Use the table to find E°cell for Zn + Cu²⁺ → Zn²⁺ + Cu.",
-"A cell has a positive E°cell. Its ΔG° is",
-"What is ΔG° for a reaction with n = 2 and E° = +1.10 V? (F = 96,485 C/mol)",
-"Which metal is the best reducing agent: Zn (E° = −0.76 V), Cu (E° = +0.34 V), or Ag (E° = +0.80 V)?"
+"The Ag/Zn cell has E° = 1.56 V with n = 2. What is ΔG°? (F = 96,485 C/mol)",
+"A cell has E°cell > 0. What must be true of K?",
+"A redox reaction has E° = −0.20 V as written. Which is true?"
 ],
 "topicName": "Cell Potential and Free Energy",
 "unitN": 9,
@@ -1916,10 +1916,10 @@
 "chem|9.9": {
 "course": "AP Chemistry",
 "stems": [
-"In a Zn/Cu cell, raising [Cu²⁺] above 1 M will",
-"As a galvanic cell runs down, its voltage drops because",
-"For a cell reaction at equilibrium, E_cell equals",
-"A concentration cell has the same metal and ion in both half-cells at different concentrations. It produces a voltage because"
+"For the Zn/Cu cell (E° = 1.10 V), [Zn²⁺] = 1.0 M and [Cu²⁺] = 0.010 M. What is E?",
+"A cell has Cu | Cu²⁺ (0.010 M) || Cu²⁺ (1.0 M) | Cu. Which is true?",
+"A battery is 'dead.' What is true?",
+"In a Zn/Cu cell, [Zn²⁺] is increased. What happens to E?"
 ],
 "topicName": "Cell Potential Under Nonstandard Conditions",
 "unitN": 9,

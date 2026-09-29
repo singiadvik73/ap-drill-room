@@ -3,180 +3,180 @@ const pcSine = (a, b, c, d, x0, x1, n) => Array.from({ length: n + 1 }, (_, i) =
 AP_DATA.pc.units.push(
 { n: 3, name: "Trigonometric and Polar Functions", weight: "30–35%", topics: [
   ["3.1", "Periodic Phenomena", [
-    ["A function f is periodic with period 4. If f(1) = 7, what is f(13)?", "7", ["13", "28", "It cannot be determined"], "13 = 1 + 3(4), so f(13) = f(1)."],
+    ["A periodic function f has period 6, and f(2) = −3. What is f(32)?", "−3", ["3", "−48", "It cannot be determined"], "32 = 2 + 5 · 6, so f(32) = f(2)."],
     ["The graph shows the height of a point on a spinning wheel over time. What is the period?", "8 seconds", ["4 seconds", "2 seconds", "16 seconds"], "The pattern repeats every 8 seconds (for example, peaks at t = 2 and t = 10).", { t: "line", title: "Height of a point on a wheel", x: { min: 0, max: 16, ticks: [0, 2, 4, 6, 8, 10, 12, 14, 16], label: "Time (s)" }, y: { min: 0, max: 10, ticks: [0, 2, 4, 6, 8, 10], label: "Height (m)" }, series: [{ name: "Height", pts: pcSine(4, Math.PI / 4, 0, 5, 0, 16, 64) }] }],
-    ["Which situation is best modeled by a periodic function?", "Daily high tides at a beach", ["The balance of a savings account", "The height of a growing tree", "The cooling of a cup of coffee"], "Tides repeat in a regular cycle."],
-    ["The period of a periodic function is", "the smallest positive length of the input interval over which the pattern repeats", ["the largest output value", "the difference between the max and min", "the first x-intercept"], "f(x + p) = f(x) for all x, with p as small as possible."]
+    ["A seat on a Ferris wheel reaches a maximum height of 42 m and a minimum of 2 m. What are the midline and amplitude of its height?", "Midline 22 m, amplitude 20 m", ["Midline 20 m, amplitude 22 m", "Midline 21 m, amplitude 40 m", "Midline 22 m, amplitude 40 m"], "Midline = (42 + 2)/2 = 22 and amplitude = (42 − 2)/2 = 20."],
+    ["High tide is at 3:00 a.m., and the next low tide is at 9:15 a.m. If the tides are periodic, what is the period?", "12.5 hours", ["6.25 hours", "12 hours", "25 hours"], "High to low is half a cycle (6.25 hours), so a full cycle is 12.5 hours."]
   ]],
   ["3.2", "Sine, Cosine, and Tangent", [
-    ["An angle in standard position has terminal ray through (3, 4). What is sin θ?", "4/5", ["3/5", "4/3", "3/4"], "r = √(3² + 4²) = 5, and sin θ = y/r."],
-    ["An angle in standard position has terminal ray through (−5, 12). What is cos θ?", "−5/13", ["5/13", "12/13", "−12/5"], "r = 13, and cos θ = x/r."],
-    ["On the unit circle, the point at angle θ has coordinates", "(cos θ, sin θ)", ["(sin θ, cos θ)", "(tan θ, 1)", "(θ, sin θ)"], "Cosine gives the x-coordinate and sine gives the y-coordinate."],
-    ["tan θ can be interpreted as", "the slope of the terminal ray", ["the length of the terminal ray", "the x-coordinate on the unit circle", "the arc length"], "tan θ = sin θ / cos θ = y/x."]
+    ["An angle in standard position has a terminal ray through (−8, −6). What is sin θ?", "−3/5", ["3/5", "−4/5", "3/4"], "r = √(64 + 36) = 10, so sin θ = y/r = −6/10."],
+    ["A point on a circle of radius 10 centered at the origin is at angle π/3. What are its coordinates?", "(5, 5√3)", ["(5√3, 5)", "(10, π/3)", "(5, 5)"], "(10 cos(π/3), 10 sin(π/3)) = (5, 5√3)."],
+    ["θ is in Quadrant II and sin θ = 3/5. What is tan θ?", "−3/4", ["3/4", "−4/3", "4/5"], "cos θ = −4/5 in Quadrant II, so tan θ = (3/5)/(−4/5) = −3/4."],
+    ["A ramp rises 3 feet over a horizontal distance of 10 feet. About what angle does it make with the ground?", "About 16.7°", ["About 17.5°", "About 73.3°", "About 0.3°"], "tan θ = 3/10, so θ = arctan(0.3) ≈ 16.7°."]
   ]],
   ["3.3", "Sine and Cosine Function Values", [
-    ["What is sin(π/6)?", "1/2", ["√3/2", "√2/2", "1"], "The reference triangle for 30° has opposite side 1 and hypotenuse 2."],
-    ["What is cos(3π/4)?", "−√2/2", ["√2/2", "−1/2", "−√3/2"], "3π/4 is in Quadrant II, where cosine is negative, with a reference angle of π/4."],
-    ["What is sin(4π/3)?", "−√3/2", ["√3/2", "−1/2", "1/2"], "4π/3 is in Quadrant III (sine negative), with a reference angle of π/3."],
-    ["How many radians is 150°?", "5π/6", ["3π/4", "2π/3", "5π/3"], "150 × π/180 = 5π/6."]
+    ["What is sin(5π/6)?", "1/2", ["−1/2", "√3/2", "−√3/2"], "5π/6 is in Quadrant II with reference angle π/6, and sine is positive there."],
+    ["What is cos(−π/3)?", "1/2", ["−1/2", "√3/2", "−√3/2"], "Cosine is even, so cos(−π/3) = cos(π/3) = 1/2."],
+    ["What is sin(7π/4) + cos(7π/4)?", "0", ["√2", "−√2", "1"], "sin(7π/4) = −√2/2 and cos(7π/4) = √2/2."],
+    ["What are the coordinates of the point on the unit circle at angle 11π/6?", "(√3/2, −1/2)", ["(−√3/2, −1/2)", "(1/2, −√3/2)", "(√3/2, 1/2)"], "11π/6 is in Quadrant IV with reference angle π/6."]
   ]],
   ["3.4", "Sine and Cosine Function Graphs", [
-    ["What is the period of y = sin x?", "2π", ["π", "1", "4π"], "The unit circle repeats after one full turn."],
-    ["On which interval is y = cos x decreasing?", "(0, π)", ["(π, 2π)", "(−π, 0)", "(π/2, 3π/2)"], "cos x goes from 1 at 0 to −1 at π."],
-    ["The graph of y = cos x is the graph of y = sin x shifted", "left by π/2", ["right by π/2", "up by 1", "left by π"], "cos x = sin(x + π/2)."],
-    ["Where does y = sin x have zeros?", "At integer multiples of π", ["At odd multiples of π/2", "At multiples of 2π only", "Nowhere"], "sin x = 0 when the point on the unit circle is on the x-axis."]
+    ["On which interval is y = cos x increasing?", "(π, 2π)", ["(0, π)", "(π/2, 3π/2)", "(−π/2, π/2)"], "cos x decreases from 1 to −1 on (0, π), then increases back to 1 on (π, 2π)."],
+    ["How many zeros does y = sin x have on the closed interval [0, 4π]?", "5", ["4", "2", "8"], "sin x = 0 at 0, π, 2π, 3π, and 4π."],
+    ["On which interval is y = sin x concave up?", "(π, 2π)", ["(0, π)", "(π/2, 3π/2)", "(0, 2π)"], "sin x is concave up where it is below its midline, on (π, 2π)."],
+    ["How many solutions does sin x = 0.6 have on [0, 2π)?", "2", ["1", "0", "4"], "The line y = 0.6 crosses the sine curve once in Quadrant I and once in Quadrant II."]
   ]],
   ["3.5", "Sinusoidal Functions", [
-    ["What is the amplitude of f(x) = −3 sin(2x) + 1?", "3", ["−3", "2", "1"], "Amplitude is |a| = 3."],
-    ["What is the period of f(x) = 4 cos(3x)?", "2π/3", ["3", "6π", "4"], "Period = 2π / |b| = 2π/3."],
-    ["What is the midline of f(x) = 2 sin(x) − 5?", "y = −5", ["y = 2", "y = 0", "y = −3"], "The vertical shift is −5."],
+    ["What is the range of f(x) = −4 cos(3x) + 1?", "[−3, 5]", ["[−5, 3]", "[−4, 4]", "[1, 5]"], "Amplitude 4 around midline 1 gives 1 − 4 = −3 to 1 + 4 = 5."],
+    ["What is the period of f(x) = 2 sin(πx/6)?", "12", ["6", "π/6", "2"], "Period = 2π/(π/6) = 12."],
+    ["What is the maximum value of f(x) = 5 sin(2x) − 3, and where does it first occur for x > 0?", "2, at x = π/4", ["5, at x = π/4", "2, at x = π/2", "8, at x = π/4"], "The max is 5 − 3 = 2 when sin(2x) = 1, so 2x = π/2 and x = π/4."],
     ["The graph shows a sinusoidal function. Which equation matches it?", "y = 2 sin(x) + 3", ["y = 3 sin(x) + 2", "y = 2 sin(2x) + 3", "y = 2 cos(x) + 3"], "Midline y = 3, amplitude 2, period 2π, and it starts at the midline going up.", { t: "line", title: "A sinusoidal function", x: { min: 0, max: 6.2832, ticks: [0, 1.5708, 3.1416, 4.7124, 6.2832], fmt: t => ["0", "π/2", "π", "3π/2", "2π"][Math.round(t / 1.5708)], label: "x" }, y: { min: 0, max: 6, ticks: [0, 1, 2, 3, 4, 5, 6], label: "y" }, series: [{ name: "y", pts: pcSine(2, 1, 0, 3, 0, 6.2832, 48) }] }]
   ]],
   ["3.6", "Sinusoidal Function Transformations", [
-    ["The graph of y = sin(x − π/3) is the graph of y = sin x shifted", "right by π/3", ["left by π/3", "up by π/3", "down by π/3"], "Replacing x with x − c shifts right by c."],
-    ["What is the phase shift of y = cos(2x + π)?", "π/2 to the left", ["π to the left", "π to the right", "π/2 to the right"], "cos(2(x + π/2)): the shift is π/2 left."],
-    ["Which function has a maximum value of 7 and a minimum value of 1?", "y = 3 sin x + 4", ["y = 7 sin x + 1", "y = 6 sin x + 1", "y = 4 sin x + 3"], "Midline (7 + 1)/2 = 4; amplitude (7 − 1)/2 = 3."],
-    ["Which transformation changes the period of y = sin x?", "Multiplying the input by a constant, as in sin(bx)", ["Adding a constant to the output", "Multiplying the output by a constant", "Subtracting a constant from the input"], "Only a horizontal dilation changes the period."]
+    ["Which describes g(x) = 3 sin(2(x − π/4)) + 1?", "Period π, shifted right π/4, midline y = 1", ["Period 2π, shifted left π/4, midline y = 1", "Period π, shifted right π/2, midline y = 3", "Period π/2, shifted right π/4, midline y = 1"], "Period = 2π/2 = π, the phase shift is π/4 right, and the vertical shift is 1."],
+    ["The point (π/6, 1/2) is on y = sin x. Which point is on g(x) = 2 sin x − 1?", "(π/6, 0)", ["(π/6, 1)", "(π/3, 0)", "(π/6, −1/2)"], "g(π/6) = 2(1/2) − 1 = 0."],
+    ["A sinusoid has a maximum of 10 at x = 0 and its next minimum of 2 at x = 3. Which function matches?", "y = 4 cos(πx/3) + 6", ["y = 4 cos(πx/6) + 6", "y = 8 cos(πx/3) + 2", "y = 4 sin(πx/3) + 6"], "Amplitude (10 − 2)/2 = 4, midline 6, and period 6 (max to min is half a period), so b = 2π/6 = π/3. Cosine starts at a max."],
+    ["Which expression is equal to cos x for all x?", "sin(x + π/2)", ["sin(x − π/2)", "−sin x", "sin(x + π)"], "Shifting sine left by π/2 gives cosine."]
   ]],
   ["3.7", "Sinusoidal Function Context and Data Modeling", [
-    ["A Ferris wheel has diameter 40 m, its center is 25 m above the ground, and it turns once every 60 s. What is the amplitude of the height function?", "20 m", ["40 m", "25 m", "60 m"], "The amplitude is the radius, half the diameter."],
-    ["For the same Ferris wheel (center 25 m high, radius 20 m, period 60 s), what is the midline?", "h = 25 m", ["h = 20 m", "h = 45 m", "h = 5 m"], "The height oscillates around the center's height."],
-    ["The average daily temperature in a city varies from a low of 30°F to a high of 80°F over one year. What is the amplitude of a sinusoidal model?", "25°F", ["50°F", "55°F", "80°F"], "(80 − 30)/2 = 25."],
-    ["A sinusoidal model of tides has a period of 12.4 hours. What is b in h(t) = a sin(bt) + d?", "2π/12.4", ["12.4", "12.4/2π", "π/12.4"], "Period = 2π/b, so b = 2π/12.4."]
+    ["The temperature t hours after midnight is T(t) = 15 − 10 cos(πt/12) °C. What is the maximum temperature, and when does it occur?", "25°C at noon", ["25°C at midnight", "15°C at noon", "10°C at 6 a.m."], "−cos is largest (1) when πt/12 = π, so t = 12, and T = 15 + 10 = 25."],
+    ["A city gets a maximum of 15 hours of daylight and a minimum of 9 hours. What are the midline and amplitude of a sinusoidal model?", "Midline 12 hours, amplitude 3 hours", ["Midline 12 hours, amplitude 6 hours", "Midline 15 hours, amplitude 9 hours", "Midline 3 hours, amplitude 12 hours"], "Midline = (15 + 9)/2 = 12, and amplitude = (15 − 9)/2 = 3."],
+    ["A Ferris wheel rider's height is h(t) = 30 − 25 cos(πt/5) meters after t minutes. What is the height at t = 3?", "About 37.7 m", ["About 22.3 m", "30 m", "55 m"], "cos(3π/5) ≈ −0.309, so h ≈ 30 + 7.73 = 37.7."],
+    ["A weight on a spring has displacement y = 4 sin(2πt) cm after t seconds. When is y = 2 for the first time?", "t = 1/12 s", ["t = 1/6 s", "t = 1/4 s", "t = 1/2 s"], "sin(2πt) = 1/2 first when 2πt = π/6, so t = 1/12."]
   ]],
   ["3.8", "The Tangent Function", [
-    ["What is the period of y = tan x?", "π", ["2π", "π/2", "4π"], "tan repeats every π because tan(x + π) = tan x."],
-    ["Where does y = tan x have vertical asymptotes?", "At x = π/2 + kπ for integer k", ["At x = kπ", "At x = 2kπ", "Nowhere"], "tan x = sin x / cos x is undefined where cos x = 0."],
-    ["What is tan(π/4)?", "1", ["0", "√3", "√2/2"], "sin and cos are equal at π/4."],
-    ["On each interval between its asymptotes, y = tan x is", "increasing", ["decreasing", "constant", "periodic with period 2π"], "The slope of the terminal ray grows as θ goes from −π/2 to π/2."]
+    ["What is tan(2π/3)?", "−√3", ["√3", "−1/√3", "1/√3"], "2π/3 is in Quadrant II with reference angle π/3, and tangent is negative there."],
+    ["What is the period of f(x) = tan(2x)?", "π/2", ["π", "2π", "π/4"], "The period of tan(bx) is π/b = π/2."],
+    ["A line through the origin makes a 150° angle with the positive x-axis. What is its slope?", "−√3/3", ["−√3", "√3/3", "−1/2"], "Slope = tan 150° = −tan 30° = −√3/3."],
+    ["tan θ = 2 and θ is in Quadrant III. What is sin θ?", "−2/√5", ["2/√5", "−1/√5", "−2"], "Use the point (−1, −2): r = √5, so sin θ = −2/√5."]
   ]],
   ["3.9", "Inverse Trigonometric Functions", [
-    ["What is arcsin(1/2)?", "π/6", ["5π/6", "π/3", "π/4"], "The range of arcsin is [−π/2, π/2], and sin(π/6) = 1/2."],
-    ["What is arccos(−1)?", "π", ["−π", "0", "−π/2"], "The range of arccos is [0, π]."],
-    ["What is the range of y = arctan x?", "(−π/2, π/2)", ["[0, π]", "[−π/2, π/2]", "All real numbers"], "tan is restricted to (−π/2, π/2) to make it one-to-one."],
-    ["Why must the domain of sin x be restricted to define arcsin?", "sin x is not one-to-one on all real numbers", ["sin x has no outputs", "sin x is undefined at 0", "sin x is not periodic"], "Restricting to [−π/2, π/2] makes it one-to-one."]
+    ["What is arctan(−1)?", "−π/4", ["3π/4", "7π/4", "π/4"], "arctan's range is (−π/2, π/2), and tan(−π/4) = −1."],
+    ["What is arcsin(sin(5π/6))?", "π/6", ["5π/6", "−π/6", "1/2"], "sin(5π/6) = 1/2, and arcsin(1/2) = π/6 (in the range [−π/2, π/2])."],
+    ["What is cos(arcsin(3/5))?", "4/5", ["3/5", "−4/5", "5/3"], "The angle has opposite 3 and hypotenuse 5, so adjacent is 4. arcsin's range gives a positive cosine."],
+    ["A 10-foot ladder reaches 8 feet up a wall. About what angle does it make with the ground?", "About 53.1°", ["About 36.9°", "About 38.7°", "About 0.8°"], "sin θ = 8/10, so θ = arcsin(0.8) ≈ 53.1°."]
   ]],
   ["3.10", "Trigonometric Equations and Inequalities", [
-    ["Solve sin x = √2/2 for 0 ≤ x < 2π.", "x = π/4 and x = 3π/4", ["x = π/4 only", "x = π/4 and x = 7π/4", "x = 3π/4 and x = 5π/4"], "Sine is positive in Quadrants I and II."],
-    ["Solve 2 cos x + 1 = 0 for 0 ≤ x < 2π.", "x = 2π/3 and x = 4π/3", ["x = π/3 and x = 5π/3", "x = 2π/3 only", "x = π/6 and x = 11π/6"], "cos x = −1/2 in Quadrants II and III."],
-    ["How many solutions does sin(2x) = 0 have for 0 ≤ x < 2π?", "4", ["2", "1", "8"], "2x = 0, π, 2π, 3π → x = 0, π/2, π, 3π/2."],
-    ["For 0 ≤ x < 2π, where is sin x > 0?", "0 < x < π", ["π < x < 2π", "π/2 < x < 3π/2", "0 < x < π/2 only"], "Sine is positive in Quadrants I and II."]
+    ["Solve 2 cos x + √3 = 0 on [0, 2π).", "x = 5π/6 and 7π/6", ["x = π/6 and 11π/6", "x = 2π/3 and 4π/3", "x = 5π/6 only"], "cos x = −√3/2 in Quadrants II and III, with reference angle π/6."],
+    ["Solve sin(2x) = 1 on [0, 2π).", "x = π/4 and 5π/4", ["x = π/2", "x = π/4 only", "x = π/4 and 3π/4"], "2x = π/2 or 5π/2 (since 2x ranges over [0, 4π)), so x = π/4 or 5π/4."],
+    ["Solve tan x = √3 on [0, 2π).", "x = π/3 and 4π/3", ["x = π/3 and 2π/3", "x = π/6 and 7π/6", "x = π/3 only"], "tan x = √3 at π/3, and tangent repeats every π."],
+    ["Solve sin x ≥ 1/2 on [0, 2π).", "π/6 ≤ x ≤ 5π/6", ["π/6 ≤ x ≤ π/3", "0 ≤ x ≤ π/6", "5π/6 ≤ x < 2π"], "sin x = 1/2 at π/6 and 5π/6, and sine is above 1/2 between them."]
   ]],
   ["3.11", "The Secant, Cosecant, and Cotangent Functions", [
-    ["What is sec(π/3)?", "2", ["1/2", "√3", "2/√3"], "sec θ = 1/cos θ = 1/(1/2) = 2."],
-    ["What is csc(π/2)?", "1", ["0", "Undefined", "−1"], "csc θ = 1/sin θ = 1/1."],
-    ["Where is y = cot x undefined?", "At x = kπ for integer k", ["At x = π/2 + kπ", "Nowhere", "At x = 2kπ only"], "cot x = cos x / sin x is undefined where sin x = 0."],
-    ["If tan θ = 3/4, what is cot θ?", "4/3", ["3/4", "5/4", "−3/4"], "cot θ = 1/tan θ."]
+    ["What is sec(2π/3)?", "−2", ["2", "−1/2", "−2/√3"], "cos(2π/3) = −1/2, so sec = 1/(−1/2) = −2."],
+    ["sin θ = −5/13 and cos θ = 12/13. What is cot θ?", "−12/5", ["12/5", "−5/12", "13/12"], "cot θ = cos θ/sin θ = (12/13)/(−5/13)."],
+    ["Solve csc x = 2 on [0, 2π).", "x = π/6 and 5π/6", ["x = π/3 and 2π/3", "x = 7π/6 and 11π/6", "x = π/6 only"], "csc x = 2 means sin x = 1/2."],
+    ["For which x-values is y = csc x undefined?", "x = kπ for any integer k", ["x = π/2 + kπ", "x = 2kπ only", "It is defined everywhere"], "csc x = 1/sin x, and sin x = 0 at every multiple of π."]
   ]],
   ["3.12", "Equivalent Representations of Trigonometric Functions", [
-    ["Which is equivalent to sin²x + cos²x?", "1", ["0", "2 sin x cos x", "tan²x"], "This is the Pythagorean identity."],
-    ["Which is equivalent to 1 + tan²x?", "sec²x", ["csc²x", "cot²x", "1"], "Divide sin²x + cos²x = 1 by cos²x."],
-    ["Which is equivalent to sin(2x)?", "2 sin x cos x", ["2 sin x", "sin²x − cos²x", "sin x + cos x"], "This is the double-angle identity for sine."],
-    ["If sin θ = 3/5 and θ is in Quadrant II, what is cos θ?", "−4/5", ["4/5", "−3/5", "3/4"], "cos²θ = 1 − 9/25 = 16/25; cosine is negative in Quadrant II."]
+    ["θ is in Quadrant I and sin θ = 0.6. What is sin(2θ)?", "0.96", ["1.2", "0.48", "0.28"], "cos θ = 0.8, so sin(2θ) = 2(0.6)(0.8) = 0.96."],
+    ["cos θ = 0.8. What is cos(2θ)?", "0.28", ["1.6", "0.64", "0.96"], "cos(2θ) = 2cos²θ − 1 = 2(0.64) − 1 = 0.28."],
+    ["What is the exact value of sin 75°?", "(√6 + √2)/4", ["(√6 − √2)/4", "(√3 + √2)/2", "√2/4"], "sin(45° + 30°) = sin45 cos30 + cos45 sin30 = (√6 + √2)/4."],
+    ["Simplify (1 − cos²x)/sin x.", "sin x", ["cos x", "1", "tan x"], "1 − cos²x = sin²x, and sin²x/sin x = sin x."]
   ]],
   ["3.13", "Trigonometry and Polar Coordinates", [
-    ["Convert the polar point (4, π/3) to rectangular coordinates.", "(2, 2√3)", ["(2√3, 2)", "(4, π/3)", "(−2, 2√3)"], "x = r cos θ = 4(1/2) = 2, y = r sin θ = 4(√3/2) = 2√3."],
-    ["Convert the rectangular point (0, −5) to polar coordinates with r > 0 and 0 ≤ θ < 2π.", "(5, 3π/2)", ["(5, π/2)", "(−5, π/2)", "(5, π)"], "r = 5, and the point is on the negative y-axis."],
-    ["Which polar point represents the same location as (3, π/4)?", "(−3, 5π/4)", ["(3, −π/4)", "(−3, π/4)", "(3, 5π/4)"], "A negative r points the opposite direction, which is adding π to θ."],
-    ["In polar coordinates, r represents", "the directed distance from the origin", ["the angle from the x-axis", "the x-coordinate", "the slope"], "θ is the angle, r is the distance."]
+    ["Convert the polar point (6, 5π/6) to rectangular coordinates.", "(−3√3, 3)", ["(3√3, 3)", "(−3, 3√3)", "(3√3, −3)"], "x = 6 cos(5π/6) = −3√3 and y = 6 sin(5π/6) = 3."],
+    ["Which polar coordinates with r > 0 and 0 ≤ θ < 2π represent the point (0, −4)?", "(4, 3π/2)", ["(4, π/2)", "(4, π)", "(4, 0)"], "The point is 4 units from the origin, straight down."],
+    ["What are the modulus and argument of z = −1 + i√3?", "Modulus 2, argument 2π/3", ["Modulus 2, argument π/3", "Modulus 4, argument 2π/3", "Modulus √2, argument 3π/4"], "|z| = √(1 + 3) = 2, and the point (−1, √3) is at angle 2π/3."],
+    ["What is the product of 2(cos π/6 + i sin π/6) and 3(cos π/3 + i sin π/3)?", "6i", ["5i", "6", "6 + 6i"], "Multiply moduli (6) and add angles (π/2): 6(cos π/2 + i sin π/2) = 6i."]
   ]],
   ["3.14", "Polar Function Graphs", [
-    ["What is the graph of r = 3?", "A circle of radius 3 centered at the origin", ["A line through the origin", "A spiral", "A rose with 3 petals"], "Every point is 3 units from the origin."],
-    ["How many petals does the rose r = 4 sin(3θ) have?", "3", ["6", "4", "12"], "For r = a sin(nθ) with n odd, there are n petals."],
-    ["How many petals does the rose r = cos(2θ) have?", "4", ["2", "1", "8"], "For n even, there are 2n petals."],
-    ["The polar graph of r = 2 + 2 cos θ is a", "cardioid", ["circle", "rose", "straight line"], "r = a + a cos θ is heart-shaped."]
+    ["Which describes the graph of r = 4 cos θ?", "A circle centered at (2, 0) with radius 2", ["A circle centered at (4, 0) with radius 4", "A circle centered at (0, 2) with radius 2", "A circle centered at the origin with radius 4"], "r² = 4r cos θ gives x² + y² = 4x, or (x − 2)² + y² = 4."],
+    ["How many petals does r = 5 sin(3θ) have?", "3", ["6", "5", "9"], "For r = a sin(nθ) with n odd, there are n petals."],
+    ["At which angles in [0, 2π) does r = 1 + 2 cos θ pass through the pole?", "θ = 2π/3 and 4π/3", ["θ = π/3 and 5π/3", "θ = π", "θ = π/2 and 3π/2"], "r = 0 when cos θ = −1/2."],
+    ["What is the greatest distance from the origin on r = 3 + 3 sin θ, and at what angle?", "6, at θ = π/2", ["3, at θ = π/2", "6, at θ = 3π/2", "6, at θ = 0"], "sin θ = 1 at θ = π/2 gives r = 6."]
   ]],
   ["3.15", "Rates of Change in Polar Functions", [
-    ["For r = f(θ), if r is positive and increasing on an interval of θ, then the points on the graph are", "moving away from the origin", ["moving toward the origin", "staying the same distance from the origin", "on the x-axis"], "A larger positive r means a greater distance."],
-    ["For r = 2θ on 0 ≤ θ ≤ π, what is the average rate of change of r with respect to θ?", "2", ["π", "2π", "1/2"], "(2π − 0) / (π − 0) = 2."],
-    ["For r = 3 sin θ on 0 ≤ θ ≤ π, where is the distance from the origin greatest?", "At θ = π/2", ["At θ = 0", "At θ = π", "At θ = π/4"], "|r| is largest when sin θ = 1."],
-    ["For r = f(θ), if r is negative and decreasing on an interval, then the distance from the origin is", "increasing", ["decreasing", "constant", "zero"], "r going from −1 to −3 means |r| grows from 1 to 3."]
+    ["For r = 2 + sin θ, what is the average rate of change of r on [0, π/2]?", "2/π", ["π/2", "1", "1/2"], "r goes from 2 to 3, so (3 − 2)/(π/2) = 2/π."],
+    ["For r = 3 cos θ on (π/2, π), r is negative and decreasing. What happens to the points on the graph?", "They move farther from the origin", ["They move closer to the origin", "They stay the same distance from the origin", "They pass through the origin repeatedly"], "r goes from 0 to −3, so |r| increases and the points get farther from the origin."],
+    ["For r = θ², what is the average rate of change of r on [1, 3]?", "4", ["8", "2", "9"], "(9 − 1)/(3 − 1) = 4."],
+    ["For r = 2 − 4 cos θ on (0, π/3), r is negative and increasing toward 0. What happens to the points on the graph?", "They move closer to the origin", ["They move farther from the origin", "They stay the same distance from the origin", "They move away and then back"], "r goes from −2 to 0, so |r| decreases and the points approach the origin."]
   ]]
 ]},
 { n: 4, name: "Functions Involving Parameters, Vectors, and Matrices", weight: "Not on the AP exam", topics: [
   ["4.1", "Parametric Functions", [
-    ["For x(t) = t + 1 and y(t) = t², what point corresponds to t = 2?", "(3, 4)", ["(2, 4)", "(4, 3)", "(3, 2)"], "x = 2 + 1 = 3, y = 2² = 4."],
-    ["A parametric function x = f(t), y = g(t) describes", "the position of a point in the plane as t changes", ["a single number", "a function of y only", "a vertical line only"], "t is often time."],
-    ["Eliminate the parameter: x = 2t, y = t + 3.", "y = x/2 + 3", ["y = 2x + 3", "y = x + 3", "y = 2x − 3"], "t = x/2, so y = x/2 + 3."],
-    ["For x(t) = cos t and y(t) = sin t, as t goes from 0 to 2π the point traces", "the unit circle once counterclockwise", ["a line segment", "the unit circle clockwise", "a parabola"], "cos²t + sin²t = 1."]
+    ["For x(t) = 2t − 1 and y(t) = t², what point corresponds to t = 3?", "(5, 9)", ["(6, 9)", "(5, 6)", "(3, 5)"], "x(3) = 5 and y(3) = 9."],
+    ["Eliminate the parameter: x = t + 2, y = 3t − 1.", "y = 3x − 7", ["y = 3x + 5", "y = 3x − 1", "y = (x − 2)/3"], "t = x − 2, so y = 3(x − 2) − 1 = 3x − 7."],
+    ["A particle moves with x(t) = t² and y(t) = t³. At t = −1, which way is it moving?", "Left and up", ["Right and up", "Left and down", "Right and down"], "As t increases through −1, t² decreases (left) and t³ increases (up)."],
+    ["For x(t) = t² − 4 and y(t) = t + 1, at which t-values does the curve cross the y-axis?", "t = 2 and t = −2", ["t = 4", "t = −1", "t = 0"], "The curve crosses the y-axis where x = 0: t² = 4."]
   ]],
   ["4.2", "Parametric Functions Modeling Planar Motion", [
-    ["A particle moves with x(t) = 3t and y(t) = 4t. How far is it from its start after t = 2?", "10 units", ["14 units", "7 units", "12 units"], "The position is (6, 8), which is √(36 + 64) = 10 from the origin."],
-    ["For x(t) = t² and y(t) = 2t, is the particle moving left or right at t = −1?", "Left, because x is decreasing there", ["Right", "Neither", "Up only"], "x = t² decreases for t < 0."],
-    ["A ball is thrown so that x(t) = 20t and y(t) = −16t² + 32t. At what time does it reach its highest point?", "t = 1", ["t = 2", "t = 0.5", "t = 20"], "The vertex of y(t) is at t = −32 / (2 · −16) = 1."],
-    ["In a parametric motion model, the direction of motion is shown by", "how the points move as t increases", ["the y-intercept only", "the value of t at the start only", "the slope of the x-axis"], "Plotting points in order of t reveals the direction."]
+    ["A ball's position is x(t) = 40t, y(t) = −16t² + 48t + 4, in feet. What is its maximum height?", "40 feet", ["44 feet", "36 feet", "52 feet"], "The vertex is at t = 1.5, and y(1.5) = −36 + 72 + 4 = 40."],
+    ["For the same ball, x(t) = 40t and y(t) = −16t² + 48t + 4, how far has it traveled horizontally when it returns to a height of 4 feet?", "120 feet", ["60 feet", "160 feet", "40 feet"], "−16t² + 48t = 0 at t = 3, and x(3) = 120."],
+    ["A particle moves with x(t) = 3t + 1 and y(t) = 4t − 2. How far does it travel each second?", "5 units", ["7 units", "1 unit", "25 units"], "Each second it moves 3 right and 4 up: √(3² + 4²) = 5."],
+    ["A boat's position is x(t) = 2 + 3t, y(t) = 1 + 4t (in km) after t hours. Where is it at t = 2?", "(8, 9)", ["(6, 8)", "(5, 5)", "(8, 8)"], "x(2) = 8 and y(2) = 9."]
   ]],
   ["4.3", "Parametric Functions and Rates of Change", [
-    ["For x(t) = 2t and y(t) = t² on [0, 3], what is the average rate of change of y with respect to x?", "1.5", ["3", "9", "0.5"], "Δy = 9, Δx = 6, so 9/6 = 1.5."],
-    ["For x(t) = t + 1 and y(t) = 3t, the average rate of change of x with respect to t on [0, 4] is", "1", ["3", "4", "1/3"], "Δx/Δt = (5 − 1)/4 = 1."],
-    ["If x(t) is increasing and y(t) is decreasing, the particle is moving", "right and down", ["left and up", "right and up", "left and down"], "Increasing x is right; decreasing y is down."],
-    ["For a parametric curve, Δy/Δx over an interval of t gives", "the slope of the secant line between the two points", ["the speed of the particle", "the distance traveled", "the value of t"], "It compares vertical and horizontal changes."]
+    ["For x(t) = t² and y(t) = 4t, what is the average rate of change of y with respect to x from t = 1 to t = 3?", "1", ["4", "2", "1/2"], "Δy = 12 − 4 = 8 and Δx = 9 − 1 = 8."],
+    ["For x(t) = 2t + 1 and y(t) = t² − 3, what is the average rate of change of y with respect to t on [0, 2]?", "2", ["4", "1", "3"], "y(2) − y(0) = 1 − (−3) = 4, divided by 2."],
+    ["A particle moves with x(t) = t³ and y(t) = 4 − t². At t = 1, which way is it moving?", "Right and down", ["Right and up", "Left and down", "Left and up"], "t³ is increasing (right) and 4 − t² is decreasing for t > 0 (down)."],
+    ["For x(t) = t + 1 and y(t) = t³, what is the slope of the secant line between t = 0 and t = 2?", "4", ["8", "2", "6"], "Δy = 8 and Δx = 2, so the slope is 8/2 = 4."]
   ]],
   ["4.4", "Parametrically Defined Circles and Lines", [
-    ["Which parametrization describes a circle of radius 5 centered at (1, 2)?", "x = 1 + 5 cos t, y = 2 + 5 sin t", ["x = 5 + cos t, y = 5 + sin t", "x = 5 cos t, y = 5 sin t", "x = 1 + cos t, y = 2 + sin t"], "Center (h, k), radius r: x = h + r cos t, y = k + r sin t."],
-    ["Which parametrization gives the line segment from (0, 0) to (4, 2) for 0 ≤ t ≤ 1?", "x = 4t, y = 2t", ["x = 2t, y = 4t", "x = t, y = 2t", "x = 4 + t, y = 2 + t"], "Start + t(end − start)."],
-    ["For x = 3 cos t, y = 3 sin t, how many times is the circle traced for 0 ≤ t ≤ 4π?", "2", ["1", "4", "3"], "Each 2π is one full turn."],
-    ["The parametrization x = cos t, y = −sin t traces the unit circle", "clockwise", ["counterclockwise", "not at all", "as a line"], "At t = 0 it's at (1, 0) and then y becomes negative."]
+    ["What are the center and radius of x = 4 + 2 cos t, y = −1 + 2 sin t?", "Center (4, −1), radius 2", ["Center (−4, 1), radius 2", "Center (4, −1), radius 4", "Center (2, 2), radius 4"], "(x − 4)² + (y + 1)² = 4 cos²t + 4 sin²t = 4."],
+    ["Which parametrizes the segment from (−2, 5) to (4, 2) for 0 ≤ t ≤ 1?", "x = −2 + 6t, y = 5 − 3t", ["x = −2 + 4t, y = 5 + 2t", "x = −2 + 4t, y = 5 − 2t", "x = 6t, y = −3t"], "Start at (−2, 5) and add t times the change (6, −3)."],
+    ["Which parametrizes the circle of radius 3 centered at the origin, moving clockwise?", "x = 3 cos t, y = −3 sin t", ["x = 3 cos t, y = 3 sin t", "x = cos 3t, y = sin 3t", "x = 3 cos t, y = 3 cos t"], "Starting at (3, 0), y becomes negative right away, so the point moves clockwise."],
+    ["Where does the line x = 1 + 2t, y = 3 − t cross the x-axis?", "(7, 0)", ["(3, 0)", "(0, 3.5)", "(−5, 0)"], "y = 0 when t = 3, and x(3) = 7."]
   ]],
   ["4.5", "Implicitly Defined Functions", [
-    ["The equation x² + y² = 25 defines", "a circle that is not the graph of a single function y = f(x)", ["a function y = f(x)", "a line", "a parabola"], "It fails the vertical line test, but it can be split into y = ±√(25 − x²)."],
-    ["Which point lies on x² + xy = 10?", "(2, 3)", ["(1, 3)", "(3, 2)", "(5, 1)"], "4 + 6 = 10."],
-    ["For the curve y² = x, which explicit functions together give the whole graph?", "y = √x and y = −√x", ["y = x² only", "y = √x only", "y = 1/x"], "Solving for y gives two branches."],
-    ["An implicitly defined relation is one where", "x and y are related by an equation not solved for y", ["y is always a function of x", "there is no y", "x is a constant"], "Examples include circles and ellipses."]
+    ["On the curve x² + y² = 169, what are the y-values when x = 5?", "y = 12 and y = −12", ["y = 12 only", "y = 13 and y = −13", "y = √164 and y = −√164"], "y² = 169 − 25 = 144."],
+    ["On the curve x² + xy = 10, what is y when x = 2?", "3", ["6", "2", "7"], "4 + 2y = 10, so y = 3."],
+    ["What are the x-intercepts of 4x² + y² = 36?", "(3, 0) and (−3, 0)", ["(6, 0) and (−6, 0)", "(9, 0) and (−9, 0)", "(2, 0) and (−2, 0)"], "Setting y = 0: 4x² = 36, so x = ±3."],
+    ["Which function describes the part of x² + y² = 25 that contains the point (3, 4)?", "y = √(25 − x²)", ["y = −√(25 − x²)", "y = 25 − x²", "y = √(x² − 25)"], "(3, 4) is on the upper half, where y is positive."]
   ]],
   ["4.6", "Conic Sections", [
-    ["What conic is x²/9 + y²/4 = 1?", "An ellipse", ["A hyperbola", "A parabola", "A circle"], "A sum of squared terms with different denominators, set equal to 1."],
-    ["What conic is x²/4 − y²/9 = 1?", "A hyperbola", ["An ellipse", "A circle", "A parabola"], "A difference of squared terms gives a hyperbola."],
-    ["What conic is y = x² − 3?", "A parabola", ["A circle", "An ellipse", "A hyperbola"], "Only one variable is squared."],
-    ["What are the center and radius of (x − 2)² + (y + 1)² = 16?", "Center (2, −1), radius 4", ["Center (−2, 1), radius 16", "Center (2, 1), radius 4", "Center (2, −1), radius 16"], "Compare with (x − h)² + (y − k)² = r²."]
+    ["What are the center and major-axis length of (x − 2)²/16 + (y + 1)²/9 = 1?", "Center (2, −1), major axis length 8", ["Center (−2, 1), major axis length 8", "Center (2, −1), major axis length 16", "Center (2, −1), major axis length 6"], "a² = 16, so a = 4 and the major axis is 2a = 8."],
+    ["What are the asymptotes of x²/9 − y²/16 = 1?", "y = ±(4/3)x", ["y = ±(3/4)x", "y = ±(16/9)x", "y = ±4x"], "For x²/a² − y²/b² = 1, the asymptotes are y = ±(b/a)x."],
+    ["What is the vertex of the parabola y = (x − 3)² + 2?", "(3, 2)", ["(−3, 2)", "(3, −2)", "(2, 3)"], "Vertex form y = (x − h)² + k has vertex (h, k)."],
+    ["Which describes x² + y² − 6x + 4y = 12?", "A circle with center (3, −2) and radius 5", ["A circle with center (−3, 2) and radius 5", "A circle with center (3, −2) and radius √12", "An ellipse with center (3, −2)"], "Complete the square: (x − 3)² + (y + 2)² = 12 + 9 + 4 = 25."]
   ]],
   ["4.7", "Parametrization of Implicitly Defined Functions", [
-    ["Which parametrization gives the ellipse x²/9 + y²/4 = 1?", "x = 3 cos t, y = 2 sin t", ["x = 9 cos t, y = 4 sin t", "x = 2 cos t, y = 3 sin t", "x = 3t, y = 2t"], "(3 cos t)²/9 + (2 sin t)²/4 = cos²t + sin²t = 1."],
-    ["A parametrization of y = x² is", "x = t, y = t²", ["x = t², y = t", "x = cos t, y = sin t", "x = 2t, y = t"], "Let x = t, then y = t²."],
-    ["Parametrizing an implicitly defined curve is useful because", "it describes the whole curve with functions of a single parameter", ["it removes the curve's shape", "it makes the curve a function of x", "it only works for lines"], "Each coordinate becomes a function of t."],
-    ["For x = t, y = √(4 − t²) on −2 ≤ t ≤ 2, which curve is traced?", "The upper half of the circle x² + y² = 4", ["The whole circle x² + y² = 4", "The lower half of the circle", "A parabola"], "y is never negative here."]
+    ["Which parametrizes (x − 1)²/4 + y²/9 = 1?", "x = 1 + 2 cos t, y = 3 sin t", ["x = 1 + 4 cos t, y = 9 sin t", "x = 2 cos t, y = 3 sin t", "x = 1 + 3 cos t, y = 2 sin t"], "Substitute cos t = (x − 1)/2 and sin t = y/3 into cos²t + sin²t = 1."],
+    ["Which parametrizes the curve y² = x?", "x = t², y = t", ["x = t, y = t²", "x = √t, y = t", "x = t², y = t²"], "With y = t, x = y² = t²."],
+    ["Which parametrizes x²/25 − y²/4 = 1?", "x = 5 sec t, y = 2 tan t", ["x = 5 cos t, y = 2 sin t", "x = 25 sec t, y = 4 tan t", "x = 5 tan t, y = 2 sec t"], "sec²t − tan²t = 1 matches x²/25 − y²/4 = 1."],
+    ["Which parametrizes the circle x² + y² = 16 starting at (0, 4) and moving counterclockwise?", "x = −4 sin t, y = 4 cos t", ["x = 4 sin t, y = 4 cos t", "x = 4 cos t, y = 4 sin t", "x = 4 cos t, y = −4 sin t"], "At t = 0 the point is (0, 4). As t increases, x becomes negative, so it moves left from the top: counterclockwise."]
   ]],
   ["4.8", "Vectors", [
-    ["What is the magnitude of the vector ⟨3, −4⟩?", "5", ["7", "1", "−1"], "√(9 + 16) = 5."],
-    ["What is ⟨2, 5⟩ + ⟨−1, 3⟩?", "⟨1, 8⟩", ["⟨3, 2⟩", "⟨1, 2⟩", "⟨−2, 15⟩"], "Add components."],
-    ["What is the dot product ⟨1, 2⟩ · ⟨3, −1⟩?", "1", ["5", "⟨3, −2⟩", "7"], "1(3) + 2(−1) = 1."],
-    ["Two nonzero vectors are perpendicular when their dot product is", "0", ["1", "−1", "equal to their magnitudes"], "u · v = |u||v| cos θ, and cos 90° = 0."]
+    ["Let u = ⟨2, −3⟩ and v = ⟨−1, 4⟩. What is 3u − v?", "⟨7, −13⟩", ["⟨5, −5⟩", "⟨7, −5⟩", "⟨6, −13⟩"], "3u = ⟨6, −9⟩, and ⟨6, −9⟩ − ⟨−1, 4⟩ = ⟨7, −13⟩."],
+    ["What is the angle between ⟨1, 0⟩ and ⟨1, 1⟩?", "45°", ["30°", "60°", "90°"], "cos θ = (1)/(1 · √2) = 1/√2."],
+    ["What is the magnitude of ⟨5, −12⟩?", "13", ["7", "17", "169"], "√(25 + 144) = 13."],
+    ["A plane flies east at 300 km/h while the wind blows north at 40 km/h. What is its speed relative to the ground?", "About 302.7 km/h", ["340 km/h", "260 km/h", "300 km/h"], "|⟨300, 40⟩| = √(90,000 + 1,600) ≈ 302.7."]
   ]],
   ["4.9", "Vector-Valued Functions", [
-    ["For p(t) = ⟨t, t²⟩, what is the position at t = 3?", "(3, 9)", ["(9, 3)", "(3, 6)", "(1, 9)"], "Evaluate each component."],
-    ["A vector-valued function p(t) = ⟨x(t), y(t)⟩ is equivalent to", "the parametric function x = x(t), y = y(t)", ["a single real-valued function", "a matrix", "a conic section"], "Both give a point's position in terms of t."],
-    ["For p(t) = ⟨2t, 3t⟩, what is the displacement from t = 0 to t = 2?", "⟨4, 6⟩", ["⟨2, 3⟩", "⟨6, 4⟩", "⟨0, 0⟩"], "p(2) − p(0) = ⟨4, 6⟩."],
-    ["For p(t) = ⟨cos t, sin t⟩, what is the distance from the origin at any t?", "1", ["t", "0", "2"], "√(cos²t + sin²t) = 1."]
+    ["For p(t) = ⟨t², 3t⟩, what is the displacement vector from t = 1 to t = 3?", "⟨8, 6⟩", ["⟨9, 9⟩", "⟨4, 6⟩", "⟨8, 3⟩"], "p(3) − p(1) = ⟨9, 9⟩ − ⟨1, 3⟩."],
+    ["For p(t) = ⟨t², 3t⟩, what is the magnitude of the displacement from t = 1 to t = 3?", "10", ["14", "6", "100"], "|⟨8, 6⟩| = √(64 + 36) = 10."],
+    ["For p(t) = ⟨2 + 3t, 1 − t⟩, what is the average velocity on [0, 4]?", "⟨3, −1⟩", ["⟨12, −4⟩", "⟨14, −3⟩", "⟨2, 1⟩"], "Displacement ⟨12, −4⟩ divided by 4."],
+    ["For p(t) = ⟨cos t, sin t⟩, where is the particle at t = π?", "(−1, 0)", ["(1, 0)", "(0, −1)", "(0, 1)"], "cos π = −1 and sin π = 0."]
   ]],
   ["4.10", "Matrices", [
-    ["What is [[1, 2], [3, 4]] + [[0, 1], [1, 0]]?", "[[1, 3], [4, 4]]", ["[[1, 2], [3, 4]]", "[[0, 2], [3, 0]]", "[[2, 3], [4, 5]]"], "Add matching entries."],
-    ["What is the product [[1, 0], [2, 1]] · [[3], [4]]?", "[[3], [10]]", ["[[3], [4]]", "[[7], [10]]", "[[3], [8]]"], "Row 1: 1·3 + 0·4 = 3; row 2: 2·3 + 1·4 = 10."],
-    ["A 2 × 3 matrix can be multiplied on the right by a matrix with", "3 rows", ["2 rows", "3 columns", "2 columns"], "The inner dimensions must match."],
-    ["Is matrix multiplication commutative in general?", "No; AB usually differs from BA", ["Yes, always", "Only for 3 × 3 matrices", "Only when A is the zero matrix"], "The order of multiplication matters."]
+    ["What is [[2, 1], [0, 3]] · [[1, 4], [2, −1]]?", "[[4, 7], [6, −3]]", ["[[2, 4], [0, −3]]", "[[4, 7], [6, 3]]", "[[3, 5], [2, 2]]"], "Row 1: 2·1 + 1·2 = 4, 2·4 + 1·(−1) = 7. Row 2: 0 + 3·2 = 6, 0 + 3·(−1) = −3."],
+    ["A = [[1, 2], [3, 4]] and B = [[0, 1], [5, 2]]. What is 2A − B?", "[[2, 3], [1, 6]]", ["[[2, 4], [6, 8]]", "[[1, 1], [−2, 2]]", "[[2, 3], [11, 10]]"], "2A = [[2, 4], [6, 8]], minus B gives [[2, 3], [1, 6]]."],
+    ["A is a 2 × 3 matrix and B is a 3 × 4 matrix. What are the dimensions of AB?", "2 × 4", ["3 × 3", "4 × 2", "AB is undefined"], "The inner dimensions (3) match, and the result has A's rows and B's columns."],
+    ["A = [[1, 2], [3, 4]]. What is A times the vector ⟨3, −1⟩?", "⟨1, 5⟩", ["⟨3, −2⟩", "⟨5, 13⟩", "⟨1, −1⟩"], "1·3 + 2·(−1) = 1 and 3·3 + 4·(−1) = 5."]
   ]],
   ["4.11", "The Inverse and Determinant of a Matrix", [
-    ["What is the determinant of [[3, 2], [1, 4]]?", "10", ["14", "12", "2"], "ad − bc = 12 − 2 = 10."],
-    ["A 2 × 2 matrix has an inverse exactly when", "its determinant is not 0", ["its determinant is 0", "all its entries are positive", "it is symmetric"], "The inverse formula divides by the determinant."],
-    ["What is the inverse of [[2, 0], [0, 4]]?", "[[1/2, 0], [0, 1/4]]", ["[[−2, 0], [0, −4]]", "[[4, 0], [0, 2]]", "[[2, 0], [0, 4]]"], "Invert each diagonal entry."],
-    ["The absolute value of the determinant of [[a, b], [c, d]] gives", "the area of the parallelogram formed by its column vectors", ["the sum of its entries", "its trace", "the number of solutions"], "Determinants measure how a transformation scales area."]
+    ["What is the determinant of [[3, 5], [2, 4]]?", "2", ["22", "−2", "7"], "3·4 − 5·2 = 2."],
+    ["What is the inverse of [[3, 5], [2, 4]]?", "[[2, −2.5], [−1, 1.5]]", ["[[4, −5], [−2, 3]]", "[[1/3, 1/5], [1/2, 1/4]]", "[[−2, 2.5], [1, −1.5]]"], "(1/2)[[4, −5], [−2, 3]]."],
+    ["For what value of k is [[k, 6], [2, 3]] not invertible?", "k = 4", ["k = 9", "k = 1", "k = −4"], "The determinant 3k − 12 = 0 gives k = 4."],
+    ["A linear transformation has a matrix with determinant −3. A region of area 5 is transformed. What is the area of the image?", "15", ["−15", "5/3", "8"], "Areas are multiplied by |det| = 3. The negative sign only means orientation is reversed."]
   ]],
   ["4.12", "Linear Transformations and Matrices", [
-    ["The matrix [[1, 0], [0, −1]] represents a", "reflection over the x-axis", ["reflection over the y-axis", "rotation by 90°", "dilation by 2"], "(x, y) → (x, −y)."],
-    ["Which matrix rotates points 90° counterclockwise about the origin?", "[[0, −1], [1, 0]]", ["[[0, 1], [−1, 0]]", "[[1, 0], [0, 1]]", "[[−1, 0], [0, −1]]"], "(1, 0) → (0, 1) and (0, 1) → (−1, 0)."],
-    ["The matrix [[2, 0], [0, 2]] transforms a shape by", "dilating it by a factor of 2", ["rotating it 180°", "reflecting it", "translating it"], "Each coordinate doubles."],
-    ["Applying transformation A and then B corresponds to the matrix", "BA", ["AB", "A + B", "A − B"], "The first transformation is applied to the vector first: B(Av) = (BA)v."]
+    ["The matrix [[0, 1], [1, 0]] is applied to the point (5, −2). What is the image?", "(−2, 5)", ["(5, −2)", "(2, −5)", "(−5, 2)"], "This matrix swaps x and y: a reflection over y = x."],
+    ["Which matrix rotates points 180° about the origin?", "[[−1, 0], [0, −1]]", ["[[0, −1], [1, 0]]", "[[1, 0], [0, −1]]", "[[−1, 0], [0, 1]]"], "A 180° rotation sends (x, y) to (−x, −y)."],
+    ["The point (1, 0) is rotated 60° counterclockwise about the origin. What is the image?", "(1/2, √3/2)", ["(√3/2, 1/2)", "(−1/2, √3/2)", "(1/2, −√3/2)"], "(cos 60°, sin 60°)."],
+    ["The unit square is transformed by [[3, 0], [0, 3]]. What is the area of the image?", "9", ["3", "6", "1"], "The determinant is 9, so areas are multiplied by 9."]
   ]],
   ["4.13", "Matrices as Functions", [
-    ["If A = [[1, 1], [0, 1]], what is A applied to ⟨2, 3⟩?", "⟨5, 3⟩", ["⟨2, 5⟩", "⟨3, 2⟩", "⟨2, 3⟩"], "⟨1·2 + 1·3, 0·2 + 1·3⟩ = ⟨5, 3⟩."],
-    ["An inverse matrix A⁻¹ acts as a function that", "undoes the transformation A", ["doubles the transformation", "always rotates by 90°", "has determinant 0"], "A⁻¹(Av) = v."],
-    ["A transformation with determinant 0", "collapses the plane onto a line or a point, so it cannot be undone", ["preserves area", "is a rotation", "has an inverse"], "Different inputs can map to the same output."],
-    ["A transformation with determinant −1", "preserves area but reverses orientation, like a reflection", ["doubles area", "collapses the plane", "has no effect"], "|det| = 1 preserves area; the negative sign flips orientation."]
+    ["R = [[0, −1], [1, 0]] rotates points 90° counterclockwise. What transformation does R² perform?", "A 180° rotation", ["A 90° clockwise rotation", "A reflection over the x-axis", "No change"], "R² = [[−1, 0], [0, −1]], which is two 90° rotations."],
+    ["A = [[2, 0], [0, 1]]. Where does A⁻¹ send the point (6, 5)?", "(3, 5)", ["(12, 5)", "(6, 2.5)", "(3, 2.5)"], "A⁻¹ = [[1/2, 0], [0, 1]], which halves x."],
+    ["F = [[1, 0], [0, −1]] reflects over the x-axis, and R = [[0, −1], [1, 0]] rotates 90° counterclockwise. What single transformation is 'reflect with F, then rotate with R'?", "A reflection over the line y = x", ["A reflection over the line y = −x", "A 270° rotation", "A 90° rotation"], "RF = [[0, 1], [1, 0]], which swaps x and y."],
+    ["The shear matrix [[1, 2], [0, 1]] is applied to (2, 3). What is the image?", "(8, 3)", ["(2, 7)", "(5, 3)", "(8, 6)"], "x' = 2 + 2·3 = 8 and y' = 3."]
   ]],
   ["4.14", "Matrices Modeling Contexts", [
-    ["A transition matrix models customers switching between two stores each week. What must each column (of probabilities from one store) add up to?", "1", ["0", "2", "100 in all cases"], "Every customer ends up somewhere, so the probabilities out of each state total 1."],
-    ["If 80% of Store A's customers stay and 20% switch to Store B each week, the first column of the transition matrix is", "[[0.8], [0.2]]", ["[[0.2], [0.8]]", "[[0.8], [0.8]]", "[[1], [0]]"], "The column for A lists where A's customers go: 0.8 to A, 0.2 to B."],
-    ["To predict the state two weeks later using transition matrix T and state vector v, compute", "T²v", ["2Tv", "T + v", "v²"], "Apply T twice."],
-    ["A steady state for a transition matrix T is a vector v such that", "Tv = v", ["Tv = 0", "Tv = 2v", "T = v"], "Applying the transition leaves the distribution unchanged."]
+    ["Two gyms share 1,000 members. Each month, gym A keeps 90% and loses 10% to B; gym B keeps 80% and loses 20% to A. Starting with 600 at A and 400 at B, how many are at each gym after one month?", "620 at A and 380 at B", ["600 at A and 400 at B", "580 at A and 420 at B", "640 at A and 360 at B"], "A: 0.9(600) + 0.2(400) = 620. B: 0.1(600) + 0.8(400) = 380."],
+    ["Using the same gyms (A keeps 90%, B keeps 80%), what is the steady-state number of members at gym A?", "About 667", ["500", "600", "About 750"], "At steady state, 0.1A = 0.2B, so A = 2B and A = 2,000/3 ≈ 667."],
+    ["Using the same gyms, starting with 600 at A and 400 at B, how many are at gym A after two months?", "634", ["620", "640", "658"], "After one month: 620 and 380. Then A = 0.9(620) + 0.2(380) = 558 + 76 = 634."],
+    ["If P is the transition matrix and this month's distribution is known, how can you find last month's distribution?", "Multiply this month's distribution by P⁻¹", ["Multiply this month's distribution by P", "Multiply this month's distribution by 2P", "Subtract P from this month's distribution"], "If x₁ = Px₀, then x₀ = P⁻¹x₁."]
   ]]
 ]}
 );

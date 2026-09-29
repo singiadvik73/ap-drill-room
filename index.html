@@ -2443,180 +2443,180 @@ AP_DATA.pc = {
 AP_DATA.pc.units.push(
 { n: 1, name: "Polynomial and Rational Functions", weight: "30–40%", topics: [
   ["1.1", "Change in Tandem", [
-    ["On an interval where a function is increasing,", "as the input values increase, the output values increase", ["as the input values increase, the output values decrease", "the output values stay constant", "the graph is always concave up"], "Increasing means larger inputs give larger outputs."],
+    ["The number of people in line at a coffee shop at t = 0, 1, 2, 3, and 4 minutes is 4, 7, 12, 15, and 13. During which minute did the line grow the fastest?", "From t = 1 to t = 2", ["From t = 0 to t = 1", "From t = 2 to t = 3", "From t = 3 to t = 4"], "The changes are +3, +5, +3, and −2, so the biggest increase (5 people) is from t = 1 to t = 2."],
     ["The graph of f is shown. On which interval is f decreasing?", "(−1, 2)", ["(−3, −1)", "(2, 4)", "(−3, 4)"], "The graph rises until x = −1, falls until x = 2, then rises again.", { t: "line", title: "y = f(x)", x: { min: -3, max: 4, ticks: [-3, -2, -1, 0, 1, 2, 3, 4], label: "x" }, y: { min: -6, max: 6, ticks: [-6, -4, -2, 0, 2, 4, 6], label: "y" }, series: [{ name: "f", pts: [[-3, -4.5], [-2.5, 0.1], [-2, 2.7], [-1.5, 3.9], [-1, 4.2], [-0.5, 3.7], [0, 2.7], [0.5, 1.2], [1, -0.3], [1.5, -1.4], [2, -1.8], [2.5, -1.2], [3, 0.8], [3.5, 4.4], [3.7, 5.8]] }] }],
-    ["A relative maximum of a function occurs where the function", "changes from increasing to decreasing", ["changes from decreasing to increasing", "crosses the x-axis", "has a vertical asymptote"], "Just before, outputs rise; just after, they fall."],
-    ["On an interval where the rate of change of f is increasing, the graph of f is", "concave up", ["concave down", "linear", "decreasing"], "Concave up means the slopes are getting larger as x increases."]
+    ["A ball's height is h(t) = −5t² + 20t + 1 meters after t seconds. On which interval is the height increasing?", "0 < t < 2", ["t > 2", "0 < t < 4", "1 < t < 3"], "The vertex is at t = −20/(2·−5) = 2, so the height rises until t = 2 and falls after."],
+    ["For f(x) = x³ − 12x, f(−3) = 9, f(−2) = 16, f(−1) = 11, f(1) = −11, f(2) = −16, and f(3) = −9. At which x-value does f have a relative maximum?", "x = −2", ["x = 2", "x = 0", "x = −3"], "Outputs rise to 16 at x = −2 and then fall, so f changes from increasing to decreasing there."]
   ]],
   ["1.2", "Rates of Change", [
-    ["What is the average rate of change of f(x) = x² on the interval [1, 4]?", "5", ["3", "15", "16"], "(f(4) − f(1)) / (4 − 1) = (16 − 1) / 3 = 5."],
-    ["The average rate of change of a function over [a, b] is the slope of", "the secant line through (a, f(a)) and (b, f(b))", ["the tangent line at x = a", "the x-axis", "the line y = x"], "Average rate of change = Δy/Δx between the two points."],
-    ["A car's distance from home is 30 miles at t = 1 hour and 150 miles at t = 3 hours. What is its average rate of change of distance?", "60 miles per hour", ["75 miles per hour", "120 miles per hour", "50 miles per hour"], "(150 − 30) / (3 − 1) = 60 mi/h."],
-    ["If the average rate of change of f on [0, 5] is negative, then", "f(5) is less than f(0)", ["f is decreasing on the whole interval", "f(5) is greater than f(0)", "f has no zeros"], "A negative average rate only compares the endpoints; f could rise in between."]
+    ["What is the average rate of change of f(x) = x² + 3x on the interval [1, 5]?", "9", ["8", "10", "36"], "f(5) = 40 and f(1) = 4, so (40 − 4)/(5 − 1) = 9."],
+    ["A town had 2,400 residents in 2015 and 3,000 residents in 2023. What was the average rate of change of the population?", "75 people per year", ["600 people per year", "80 people per year", "125 people per year"], "(3,000 − 2,400)/(2023 − 2015) = 600/8 = 75."],
+    ["Using the interval [1.9, 2.1], which is the best estimate of the rate of change of f(x) = x³ at x = 2?", "About 12", ["About 8", "About 4", "About 6"], "f(2.1) = 9.261 and f(1.9) = 6.859, so (9.261 − 6.859)/0.2 ≈ 12.01."],
+    ["The temperature was 52°F at 8 a.m., 70°F at noon, and 61°F at 6 p.m. What was the average rate of change from noon to 6 p.m.?", "−1.5°F per hour", ["1.5°F per hour", "−9°F per hour", "0.75°F per hour"], "(61 − 70)/(6 hours) = −1.5°F per hour."]
   ]],
   ["1.3", "Rates of Change in Linear and Quadratic Functions", [
     ["The table shows values of a function at equally spaced inputs. What type of function could it be?", "Quadratic", ["Linear", "Exponential", "Cubic only"], "The first differences are 3, 5, 7, 9 and the second differences are all 2. Constant second differences mean quadratic.", { t: "table", title: "Values of g(x)", head: ["x", "0", "1", "2", "3", "4"], rows: [["g(x)", "1", "4", "9", "16", "25"]] }],
-    ["For a linear function, the average rate of change over any interval is", "constant", ["increasing", "decreasing", "zero"], "Linear functions have the same slope everywhere."],
-    ["For f(x) = −2x² + 8x, the average rates of change over consecutive equal-length intervals", "decrease by the same amount each time", ["stay the same", "increase by the same amount each time", "double each time"], "A quadratic with a negative leading coefficient has rates of change that change at a constant negative rate (it's concave down)."],
-    ["A quadratic function is concave up everywhere when", "its leading coefficient is positive", ["its leading coefficient is negative", "its constant term is positive", "it has two real zeros"], "For f(x) = ax² + bx + c, the second differences have the sign of a."]
+    ["For f(x) = 3x² − 2x, find the average rates of change on [0, 1], [1, 2], and [2, 3]. By how much does the rate increase from each interval to the next?", "6", ["3", "2", "7"], "f(0) = 0, f(1) = 1, f(2) = 8, f(3) = 21, so the rates are 1, 7, and 13, increasing by 6 each time."],
+    ["A linear function g has g(2) = 11 and g(6) = 23. What is g(10)?", "35", ["34", "46", "30"], "The slope is (23 − 11)/(6 − 2) = 3, so g(10) = 23 + 3·4 = 35."],
+    ["A quadratic function has outputs 5, 8, 9, and 8 at x = 0, 1, 2, and 3. What is its output at x = 4?", "5", ["6", "7", "3"], "First differences are 3, 1, −1, decreasing by 2 each time, so the next difference is −3 and the output is 8 − 3 = 5."]
   ]],
   ["1.4", "Polynomial Functions and Rates of Change", [
-    ["What is the degree of f(x) = 4x³ − x⁵ + 2?", "5", ["3", "4", "2"], "The degree is the greatest exponent."],
-    ["A polynomial of degree 4 can have at most how many relative extrema?", "3", ["4", "2", "5"], "A degree-n polynomial has at most n − 1 turning points."],
-    ["A point of inflection of a polynomial is where the graph", "changes concavity", ["crosses the x-axis", "has a relative maximum", "has a vertical asymptote"], "Concavity switches between up and down, which is where the rate of change is at a max or min."],
-    ["A polynomial function has an absolute maximum but no absolute minimum. Which could be its degree and leading coefficient?", "Degree 4, negative leading coefficient", ["Degree 4, positive leading coefficient", "Degree 3, negative leading coefficient", "Degree 5, positive leading coefficient"], "Even degree with a negative leading coefficient falls toward −∞ at both ends, so it has a highest point but no lowest point."]
+    ["For p(x) = (x − 1)²(x + 3), what happens to the graph at x = 1?", "It touches the x-axis and turns around", ["It crosses the x-axis", "It has a vertical asymptote", "It has a hole"], "The zero x = 1 has even multiplicity (2), so the graph touches the axis without crossing."],
+    ["For p(x) = x³ − 6x² + 9x, p(0) = 0, p(1) = 4, p(2) = 2, p(3) = 0, and p(4) = 4. What is the relative maximum value of p on 0 < x < 4?", "4", ["2", "0", "3"], "The outputs rise to 4 at x = 1 and then fall, so the relative maximum value is 4."],
+    ["A polynomial has a zero at x = −2, a zero of multiplicity 2 at x = 1, and a zero at x = 4. What is its least possible degree?", "4", ["3", "5", "2"], "Counting multiplicity: 1 + 2 + 1 = 4 zeros, so the degree is at least 4."],
+    ["An odd polynomial function f has f(3) = −7. What is f(−3)?", "7", ["−7", "3", "0"], "Odd functions satisfy f(−x) = −f(x), so f(−3) = −(−7) = 7."]
   ]],
   ["1.5", "Polynomial Functions and Complex Zeros", [
-    ["What are the zeros of f(x) = (x − 2)²(x + 3)?", "x = 2 (multiplicity 2) and x = −3", ["x = −2 and x = 3", "x = 2 only", "x = 4 and x = −3"], "Set each factor to zero. (x − 2)² gives x = 2 twice."],
-    ["At a zero of even multiplicity, the graph of a polynomial", "touches the x-axis and turns around", ["crosses the x-axis", "has a vertical asymptote", "has a hole"], "The output doesn't change sign there."],
-    ["A polynomial with real coefficients has 3 + 2i as a zero. What must also be a zero?", "3 − 2i", ["−3 + 2i", "−3 − 2i", "2 + 3i"], "Non-real zeros of real polynomials come in conjugate pairs."],
-    ["How many complex zeros (counting multiplicity) does a degree-5 polynomial have?", "Exactly 5", ["At most 4", "At least 6", "Exactly 1"], "By the Fundamental Theorem of Algebra, a degree-n polynomial has exactly n complex zeros counting multiplicity."]
+    ["What are all the zeros of p(x) = x³ + 4x?", "0, 2i, and −2i", ["0, 2, and −2", "0, 4, and −4", "0 only"], "x³ + 4x = x(x² + 4), and x² + 4 = 0 gives x = ±2i."],
+    ["A polynomial with real coefficients has zeros at 3 and 1 + i. What is its least possible degree?", "3", ["2", "4", "1"], "1 + i requires its conjugate 1 − i, so there are at least three zeros: 3, 1 + i, and 1 − i."],
+    ["How many real zeros does p(x) = x⁴ − 16 have?", "2", ["4", "0", "1"], "x⁴ − 16 = (x − 2)(x + 2)(x² + 4). The zeros are ±2 (real) and ±2i (not real)."],
+    ["Which polynomial has zeros 2, i, and −i?", "(x − 2)(x² + 1)", ["(x + 2)(x² + 1)", "(x − 2)(x² − 1)", "(x − 2)(x + 1)²"], "i and −i are the zeros of x² + 1, and 2 is the zero of x − 2."]
   ]],
   ["1.6", "Polynomial Functions and End Behavior", [
-    ["What is the end behavior of f(x) = −3x⁴ + x?", "As x → ±∞, f(x) → −∞", ["As x → ±∞, f(x) → +∞", "As x → ∞, f(x) → ∞; as x → −∞, f(x) → −∞", "f(x) → 0"], "Even degree, negative leading coefficient: both ends go down."],
-    ["What is the end behavior of f(x) = 2x³ − 5x²?", "As x → ∞, f(x) → ∞; as x → −∞, f(x) → −∞", ["As x → ±∞, f(x) → ∞", "As x → ±∞, f(x) → −∞", "As x → ∞, f(x) → −∞; as x → −∞, f(x) → ∞"], "Odd degree with a positive leading coefficient rises to the right and falls to the left."],
-    ["The end behavior of a polynomial is determined by", "its leading term", ["its constant term", "its smallest-degree term", "its number of zeros"], "For large |x|, the highest-degree term dominates."],
-    ["An even function satisfies", "f(−x) = f(x) for all x, so its graph is symmetric about the y-axis", ["f(−x) = −f(x)", "f(x) = 0 at x = 0", "f(x + 1) = f(x)"], "Example: f(x) = x⁴ − 2x²."]
+    ["For f(x) = −3x⁵ + 2x² − 7, what happens to f(x) as x → −∞?", "f(x) → ∞", ["f(x) → −∞", "f(x) → 0", "f(x) → −7"], "The leading term −3x⁵ dominates. For large negative x, x⁵ is very negative, and multiplying by −3 makes it very positive."],
+    ["Let p(x) = 0.01x⁴ and q(x) = 100x³. Which is true for very large positive x?", "p(x) > q(x)", ["q(x) > p(x)", "p(x) = q(x)", "Neither grows without bound"], "p has the higher degree, so it eventually passes q (for x > 10,000)."],
+    ["A company models revenue as R(x) = −2x³ + 60x² for x hundred units. What does the end behavior imply about this model?", "R(x) → −∞ as x grows, so the model is only reasonable on a limited domain", ["R(x) → ∞, so revenue always grows", "R(x) levels off at 60", "The model is linear for large x"], "The leading term −2x³ makes R negative for large x, which doesn't make sense for revenue, so the domain must be restricted."],
+    ["What is the leading term of f(x) = (2x − 1)³(x + 4)²?", "8x⁵", ["2x⁵", "8x⁶", "6x⁵"], "(2x)³ · x² = 8x⁵."]
   ]],
   ["1.7", "Rational Functions and End Behavior", [
-    ["What is the horizontal asymptote of r(x) = (3x² + 1) / (x² − 4)?", "y = 3", ["y = 0", "y = −1/4", "There is none"], "Equal degrees: the asymptote is the ratio of leading coefficients, 3/1."],
-    ["What is the end behavior of r(x) = (2x) / (x² + 1)?", "r(x) → 0 as x → ±∞", ["r(x) → 2 as x → ±∞", "r(x) → ∞ as x → ∞", "r(x) → −2 as x → ∞"], "The denominator has higher degree, so y = 0 is a horizontal asymptote."],
-    ["A rational function whose numerator's degree is exactly one more than its denominator's has", "a slant (oblique) asymptote", ["a horizontal asymptote at y = 0", "no end behavior", "a vertical asymptote at every zero"], "Dividing gives a linear quotient that the graph approaches."],
-    ["What is the slant asymptote of r(x) = (x² + 1) / x?", "y = x", ["y = 1", "y = 0", "x = 0"], "(x² + 1)/x = x + 1/x, and 1/x → 0."]
+    ["What is the horizontal asymptote of r(x) = (6x² − 1)/(3x² + x)?", "y = 2", ["y = 6", "y = 0", "There is none"], "The degrees are equal, so the asymptote is the ratio of leading coefficients: 6/3 = 2."],
+    ["What is the horizontal asymptote of r(x) = (5x + 2)/(x² − 9)?", "y = 0", ["y = 5", "y = 3", "There is none"], "The denominator has higher degree, so r(x) → 0."],
+    ["The concentration of a drug in the blood t hours after a dose is C(t) = 40t/(t² + 4) mg/L. What happens to C(t) in the long run?", "It approaches 0 mg/L", ["It approaches 40 mg/L", "It approaches 10 mg/L", "It grows without bound"], "The denominator has higher degree than the numerator, so C(t) → 0 as t → ∞."],
+    ["What is the slant asymptote of r(x) = (x² + 3)/(x − 1)?", "y = x + 1", ["y = x", "y = x − 1", "y = 1"], "Dividing gives x² + 3 = (x − 1)(x + 1) + 4, so r(x) = x + 1 + 4/(x − 1)."]
   ]],
   ["1.8", "Rational Functions and Zeros", [
-    ["What are the zeros of r(x) = (x − 3)(x + 1) / (x + 2)?", "x = 3 and x = −1", ["x = −2", "x = 3, −1, and −2", "x = −3 and x = 1"], "Zeros come from numerator factors that don't cancel with the denominator."],
-    ["Why is x = 2 not a zero of r(x) = (x − 2) / [(x − 2)(x + 5)]?", "The factor cancels, so x = 2 is a hole, not a zero", ["x = 2 makes the numerator positive", "x = 2 is a vertical asymptote", "r has no zeros at all because it is rational"], "r(2) is undefined, so it can't be a zero."],
-    ["Solve (x − 1) / (x + 3) ≥ 0.", "x < −3 or x ≥ 1", ["−3 < x ≤ 1", "x ≥ 1 only", "x > −3"], "Sign changes at x = −3 (excluded) and x = 1 (included). Test intervals: positive for x < −3 and x > 1."],
-    ["A rational function has a zero at x = a when", "the numerator is 0 at a and the denominator is not", ["the denominator is 0 at a", "both are 0 at a", "the function is undefined at a"], "Otherwise the function isn't defined there."]
+    ["What are the zeros of r(x) = (x² − 4x)/(x + 2)?", "x = 0 and x = 4", ["x = −2", "x = 0, x = 4, and x = −2", "x = 4 only"], "The numerator x(x − 4) is zero at 0 and 4, and the denominator is not zero there."],
+    ["What are the zeros of r(x) = (x − 3)(x + 1)/(x − 3)?", "x = −1 only", ["x = 3 and x = −1", "x = 3 only", "There are none"], "At x = 3 the function is undefined (a hole), so the only zero is x = −1."],
+    ["For which x-values is r(x) = (x − 2)/(x + 1) positive?", "x < −1 or x > 2", ["−1 < x < 2", "x > 2 only", "x > −1"], "The sign changes at x = −1 and x = 2. Testing x = −2 (positive), x = 0 (negative), and x = 3 (positive)."],
+    ["The average cost per item is C(x) = (500 + 2x)/x dollars for x items. For how many items is the average cost $7?", "100", ["50", "250", "71"], "(500 + 2x)/x = 7 gives 500 + 2x = 7x, so x = 100."]
   ]],
   ["1.9", "Rational Functions and Vertical Asymptotes", [
-    ["What are the vertical asymptotes of r(x) = (x + 1) / (x² − 9)?", "x = 3 and x = −3", ["x = −1", "y = 0", "x = 9"], "The denominator is zero at ±3 and the numerator is not."],
+    ["What are the vertical asymptotes of r(x) = (x + 1)/(x² − 5x + 6)?", "x = 2 and x = 3", ["x = −1", "x = −2 and x = −3", "x = 6"], "x² − 5x + 6 = (x − 2)(x − 3), and neither factor cancels with the numerator."],
     ["The graph of r is shown. What is the vertical asymptote?", "x = 2", ["x = 0", "y = 1", "x = −2"], "The graph shoots up and down near x = 2 and never reaches it.", { t: "line", title: "y = r(x)", x: { min: -2, max: 6, ticks: [-2, -1, 0, 1, 2, 3, 4, 5, 6], label: "x" }, y: { min: -6, max: 8, ticks: [-6, -4, -2, 0, 2, 4, 6, 8], label: "y" }, series: [{ name: "r(x)", pts: [[-2, 0.75], [-1, 0.67], [0, 0.5], [1, 0], [1.5, -1], [1.75, -3], [1.85, -5.67]] }, { name: "", pts: [[2.15, 7.67], [2.25, 5], [2.5, 3], [3, 2], [4, 1.5], [5, 1.33], [6, 1.25]], k: 1 }] }],
-    ["Near a vertical asymptote x = a, the output values of a rational function", "grow without bound in absolute value", ["approach 0", "approach a", "stay constant"], "As x → a, |r(x)| → ∞."],
-    ["For r(x) = 1/(x − 4)², what happens as x → 4 from either side?", "r(x) → +∞ from both sides", ["r(x) → −∞ from both sides", "r(x) → +∞ from the right and −∞ from the left", "r(x) → 0"], "The squared factor keeps the denominator positive on both sides."]
+    ["For r(x) = 3/(x − 4), what happens as x approaches 4 from the right?", "r(x) → ∞", ["r(x) → −∞", "r(x) → 0", "r(x) → 3"], "For x slightly more than 4, x − 4 is a small positive number, so 3/(x − 4) is very large and positive."],
+    ["What are the vertical asymptotes of r(x) = (x + 5)/((x + 5)(x − 1))?", "x = 1 only", ["x = −5 and x = 1", "x = −5 only", "There are none"], "The factor x + 5 cancels, making a hole at x = −5. Only x − 1 remains in the denominator."]
   ]],
   ["1.10", "Rational Functions and Holes", [
-    ["Where does r(x) = (x² − 1) / (x − 1) have a hole?", "At (1, 2)", ["At x = −1", "At (1, 0)", "It has no hole"], "(x − 1)(x + 1)/(x − 1) = x + 1 for x ≠ 1, so the hole is at x = 1, y = 2."],
-    ["A hole in a rational function's graph happens when", "a factor cancels from the numerator and denominator", ["the numerator is zero", "the denominator has a factor that doesn't cancel", "the degrees are equal"], "The function is undefined there, but the output approaches a finite value."],
-    ["r(x) = (x − 2)² / (x − 2) has at x = 2", "a hole at (2, 0)", ["a vertical asymptote", "a zero at x = 2", "no special feature"], "It simplifies to x − 2 for x ≠ 2, so the hole's y-value is 0. The function is still undefined at x = 2."],
-    ["r(x) = (x − 3) / (x − 3)² has at x = 3", "a vertical asymptote", ["a hole", "a zero", "a horizontal asymptote"], "After canceling, a factor of (x − 3) remains in the denominator."]
+    ["Where is the hole in the graph of r(x) = (x² − 9)/(x − 3)?", "(3, 6)", ["(3, 0)", "(−3, 0)", "(3, 9)"], "r(x) = (x − 3)(x + 3)/(x − 3) = x + 3 for x ≠ 3, so the hole is at (3, 3 + 3) = (3, 6)."],
+    ["For r(x) = (x² + x − 6)/(x² − 4), which describes the graph?", "A hole at (2, 5/4) and a vertical asymptote at x = −2", ["Vertical asymptotes at x = 2 and x = −2", "A hole at (−2, 1/4) and a vertical asymptote at x = 2", "A hole at (2, 0) and no vertical asymptote"], "r(x) = (x + 3)(x − 2)/((x + 2)(x − 2)). The x − 2 cancels, leaving (x + 3)/(x + 2), which is 5/4 at x = 2."],
+    ["What happens at x = 1 on the graph of r(x) = (x − 1)²/(x − 1)?", "There is a hole at (1, 0)", ["There is a vertical asymptote at x = 1", "There is no break in the graph", "There is a hole at (1, 1)"], "It simplifies to x − 1 for x ≠ 1, so the graph is the line y = x − 1 with the point (1, 0) missing."],
+    ["Which function has a hole at x = −4?", "r(x) = (x + 4)(x − 1)/(x + 4)", ["r(x) = (x − 4)(x − 1)/(x − 4)", "r(x) = (x + 1)/(x + 4)", "r(x) = (x + 4)/(x − 1)"], "A hole appears where a factor cancels from the numerator and denominator; here x + 4 cancels."]
   ]],
   ["1.11", "Equivalent Representations of Polynomial and Rational Expressions", [
-    ["Which is equivalent to (x² − 5x + 6) / (x − 2) for x ≠ 2?", "x − 3", ["x + 3", "x − 2", "x² − 3"], "x² − 5x + 6 = (x − 2)(x − 3)."],
-    ["Which is a factored form of x³ − 4x?", "x(x − 2)(x + 2)", ["x(x − 4)", "(x − 2)³", "x²(x − 4)"], "Factor out x, then use the difference of squares."],
-    ["What is the coefficient of x² in (x + 2)⁴?", "24", ["6", "16", "4"], "By the binomial theorem, C(4, 2)·x²·2² = 6 · 4 = 24."],
-    ["Dividing p(x) = x³ + 2x − 5 by (x − 1) gives a remainder of", "−2", ["0", "−5", "3"], "By the Remainder Theorem, the remainder is p(1) = 1 + 2 − 5 = −2."]
+    ["What is (x³ − 2x² + 4) ÷ (x − 2)?", "x² + 4/(x − 2)", ["x² + 2 + 4/(x − 2)", "x² − 4/(x − 2)", "x²"], "Synthetic division with 2 on 1, −2, 0, 4 gives 1, 0, 0 with remainder 4."],
+    ["What is the coefficient of x² in the expansion of (x − 2)⁴?", "24", ["6", "16", "−24"], "The term is C(4, 2) · x² · (−2)² = 6 · 4 · x² = 24x²."],
+    ["Which is the complete factorization of 2x³ − 16?", "2(x − 2)(x² + 2x + 4)", ["2(x − 2)³", "(2x − 4)(x² + 4)", "2(x + 2)(x² − 2x + 4)"], "2x³ − 16 = 2(x³ − 8), and x³ − 8 is a difference of cubes: (x − 2)(x² + 2x + 4)."],
+    ["What is the remainder when p(x) = x⁴ − 3x + 5 is divided by x + 1?", "9", ["3", "1", "7"], "By the remainder theorem, the remainder is p(−1) = 1 + 3 + 5 = 9."]
   ]],
   ["1.12", "Transformations of Functions", [
-    ["The graph of g(x) = f(x − 3) + 2 is the graph of f shifted", "right 3 units and up 2 units", ["left 3 and up 2", "right 3 and down 2", "left 3 and down 2"], "Replacing x with x − 3 shifts right; adding 2 shifts up."],
-    ["The graph of g(x) = −f(x) is the graph of f", "reflected over the x-axis", ["reflected over the y-axis", "shifted down", "stretched vertically"], "Every output changes sign."],
-    ["The graph of g(x) = f(2x) is the graph of f", "compressed horizontally by a factor of 1/2", ["stretched horizontally by a factor of 2", "stretched vertically by 2", "shifted left 2"], "Each input is reached twice as fast."],
-    ["If f has domain [0, 4], what is the domain of g(x) = f(x + 1)?", "[−1, 3]", ["[1, 5]", "[0, 4]", "[0, 3]"], "x + 1 must be in [0, 4], so x is in [−1, 3]."]
+    ["The point (2, 5) is on the graph of f. Which point must be on the graph of g(x) = f(x + 3) − 4?", "(−1, 1)", ["(5, 1)", "(−1, 9)", "(5, 9)"], "f(x + 3) shifts left 3 and −4 shifts down 4: (2 − 3, 5 − 4)."],
+    ["The point (6, 3) is on the graph of f. Which point must be on the graph of g(x) = −f(2x)?", "(3, −3)", ["(12, −3)", "(3, 3)", "(6, −3)"], "f(2x) compresses horizontally by 1/2 (x = 3), and the negative reflects over the x-axis (y = −3)."],
+    ["The graph of f(x) = x² is shifted right 4, stretched vertically by a factor of 3, and then shifted down 2. What is the new function?", "g(x) = 3(x − 4)² − 2", ["g(x) = 3(x + 4)² − 2", "g(x) = (3x − 4)² − 2", "g(x) = 3(x − 4)² + 2"], "Right 4 gives (x − 4)², the stretch multiplies by 3, and down 2 subtracts 2."],
+    ["A function f has zeros at x = −1 and x = 5. What are the zeros of g(x) = f(x − 2)?", "x = 1 and x = 7", ["x = −3 and x = 3", "x = −1 and x = 5", "x = 1 and x = 3"], "f(x − 2) shifts the graph right 2, so each zero moves right 2."]
   ]],
   ["1.13", "Function Model Selection and Assumption Articulation", [
-    ["A data set's output values have roughly constant first differences over equal input intervals. Which model fits best?", "Linear", ["Quadratic", "Exponential", "Cubic"], "Constant rate of change is the hallmark of a linear model."],
-    ["A ball's height rises and then falls over time. Which model is most appropriate?", "Quadratic", ["Linear", "Exponential", "Logarithmic"], "A quadratic has one turning point and constant second differences, like projectile motion."],
-    ["A model for the number of people in a line should use which domain restriction?", "Whole numbers greater than or equal to 0", ["All real numbers", "Negative numbers", "Only irrational numbers"], "The context limits the inputs and outputs that make sense."],
-    ["A rational function could model average cost per item because", "fixed costs are spread over more items, so the average approaches a constant", ["costs always grow exponentially", "cost is always linear", "average cost is periodic"], "C(x) = (fixed + vx)/x approaches the variable cost v as x grows."]
+    ["A store's monthly sales were 120, 150, 180, and 210 units in months 1–4. Using an appropriate model, what are the predicted sales in month 6?", "270 units", ["240 units", "300 units", "250 units"], "Sales rise by a constant 30 per month, so a linear model fits: 210 + 30 · 2 = 270."],
+    ["A ball's height at t = 0, 1, 2, 3, 4 seconds is 0, 48, 64, 48, 0 feet. Which model is most appropriate?", "Quadratic, because the second differences are constant", ["Linear, because the heights change by the same amount", "Exponential, because the heights have a constant ratio", "Quadratic, because the first differences are constant"], "First differences are 48, 16, −16, −48, and second differences are all −32."],
+    ["A linear model of algae coverage in a pond predicts 120% coverage after 10 weeks. What does this show about the model?", "Its domain must be restricted, because coverage cannot exceed 100%", ["The pond will be covered 1.2 times", "The model should be linear with a steeper slope", "The algae will grow exponentially after week 10"], "A model must make sense in context; predictions over 100% show it can't be used that far out."],
+    ["A town of 5,000 people grows by 3% each year. Which function models the population after t years?", "P(t) = 5000(1.03)ᵗ", ["P(t) = 5000 + 0.03t", "P(t) = 5000(0.03)ᵗ", "P(t) = 5000 + 150t"], "Growing by a constant percent means multiplying by 1.03 each year, which is exponential."]
   ]],
   ["1.14", "Function Model Construction and Application", [
-    ["A quadratic model passes through (0, 5), (1, 6), and (2, 9). What is it?", "y = x² + 5", ["y = x + 5", "y = 2x² − x + 5", "y = x² + x + 5"], "c = 5; a + b = 1; 4a + 2b = 4 → a = 1, b = 0."],
-    ["A cubic regression predicts negative sales for a future month. The best interpretation is that", "the model is not valid that far outside the data", ["sales will be negative", "the data are wrong", "a linear model must be exact"], "Extrapolating a polynomial far beyond the data can give unrealistic results."],
-    ["A rectangle has perimeter 20 m. Which function gives its area in terms of its width w?", "A(w) = w(10 − w)", ["A(w) = 20w", "A(w) = w(20 − w)", "A(w) = w²/20"], "Length = 10 − w, so area = w(10 − w)."],
-    ["Using A(w) = w(10 − w), what width maximizes the area?", "5 m", ["10 m", "2.5 m", "20 m"], "The vertex of this downward parabola is halfway between the zeros 0 and 10."]
+    ["A farmer has 100 m of fence for a rectangular pen. The area is A(w) = w(50 − w), where w is the width. What is the maximum area?", "625 m²", ["2,500 m²", "50 m²", "1,250 m²"], "The vertex is at w = 25, so A = 25 · 25 = 625 m²."],
+    ["An open box is made from a 20 cm by 20 cm sheet by cutting squares of side x from each corner. Its volume is V(x) = x(20 − 2x)². What is a reasonable domain for V?", "0 < x < 10", ["0 < x < 20", "x > 0", "0 ≤ x ≤ 5"], "The cut must be positive and 20 − 2x must stay positive, so x < 10."],
+    ["At a ticket price of p dollars, a theater sells 500 − 10p tickets. What price maximizes revenue R(p) = p(500 − 10p)?", "$25", ["$50", "$10", "$500"], "R(p) = −10p² + 500p has its vertex at p = −500/(2 · −10) = 25."],
+    ["A company's profit is P(x) = −x² + 14x − 24 thousand dollars when x thousand units are sold. At which sales levels does the company break even?", "2,000 and 12,000 units", ["2,000 units only", "7,000 units", "24,000 units"], "−x² + 14x − 24 = 0 gives x² − 14x + 24 = (x − 2)(x − 12) = 0."]
   ]]
 ]},
 { n: 2, name: "Exponential and Logarithmic Functions", weight: "27–40%", topics: [
   ["2.1", "Change in Arithmetic and Geometric Sequences", [
-    ["What is the 10th term of the arithmetic sequence 3, 7, 11, …?", "39", ["43", "40", "35"], "aₙ = 3 + 4(n − 1) = 3 + 36 = 39."],
-    ["What is the 6th term of the geometric sequence 2, 6, 18, …?", "486", ["162", "1,458", "36"], "gₙ = 2 · 3ⁿ⁻¹; g₆ = 2 · 3⁵ = 486."],
-    ["A geometric sequence has g₁ = 5 and g₃ = 45. Which could be its common ratio?", "3 (or −3)", ["9", "40", "15"], "g₃ = g₁r² → r² = 9 → r = ±3."],
-    ["Arithmetic sequences change by a constant", "difference, like linear functions", ["ratio, like exponential functions", "percentage", "exponent"], "Geometric sequences change by a constant ratio, like exponential functions."]
+    ["An arithmetic sequence has a₁ = 7 and common difference −3. What is a₂₀?", "−50", ["−53", "−47", "67"], "a₂₀ = 7 + 19(−3) = −50."],
+    ["A geometric sequence has g₁ = 3 and g₄ = 81. What is g₆?", "729", ["243", "2,187", "486"], "r³ = 81/3 = 27, so r = 3 and g₆ = 3 · 3⁵ = 729."],
+    ["Maya saves $50 in the first week and $15 more each week than the week before. How much does she save in week 12?", "$215", ["$230", "$180", "$200"], "This is arithmetic: 50 + 11 · 15 = 215."],
+    ["A geometric sequence has g₂ = 12 and g₅ = 96. What is g₁?", "6", ["3", "4", "12"], "r³ = 96/12 = 8, so r = 2 and g₁ = 12/2 = 6."]
   ]],
   ["2.2", "Change in Linear and Exponential Functions", [
     ["The table shows f at equally spaced inputs. What type of function is f?", "Exponential", ["Linear", "Quadratic", "Logarithmic"], "Each output is 3 times the one before: a constant ratio means exponential.", { t: "table", title: "Values of f(x)", head: ["x", "0", "1", "2", "3", "4"], rows: [["f(x)", "2", "6", "18", "54", "162"]] }],
-    ["Over equal-length input intervals, exponential functions have output values that change", "by a constant proportion", ["by a constant amount", "by a constant second difference", "by zero"], "For f(x) = abˣ, adding 1 to x multiplies f by b."],
-    ["A linear function f and an exponential function g both pass through (0, 2) and (1, 6). What is g(3)?", "54", ["14", "18", "162"], "g(x) = 2 · 3ˣ, so g(3) = 54. (f(3) = 14.)"],
-    ["For large enough x, an increasing exponential function will always", "exceed any increasing linear function", ["stay below every linear function", "equal a linear function", "stop increasing"], "Exponential growth eventually outpaces any constant rate."]
+    ["An exponential function g passes through (0, 5) and (2, 20). What is g(4)?", "80", ["35", "40", "60"], "g(x) = 5bˣ with 5b² = 20, so b = 2 and g(4) = 5 · 16 = 80."],
+    ["Job A pays $40,000 and adds $2,000 per year. Job B pays $40,000 and grows 4% per year. After 10 years, which pays more?", "Job A, by about $790", ["Job B, by about $790", "Job A, by about $20,000", "They pay the same"], "Job A: 40,000 + 20,000 = 60,000. Job B: 40,000(1.04)¹⁰ ≈ 59,210."],
+    ["A linear function f increases by 6 every time x increases by 2, and f(1) = 4. What is f(9)?", "28", ["52", "24", "16"], "The slope is 6/2 = 3, so f(9) = 4 + 3 · 8 = 28."]
   ]],
   ["2.3", "Exponential Functions", [
-    ["Which function shows exponential decay?", "f(x) = 5(0.8)ˣ", ["f(x) = 5(1.2)ˣ", "f(x) = 0.8x + 5", "f(x) = 5x^0.8"], "In f(x) = abˣ with a > 0, decay happens when 0 < b < 1."],
-    ["What is the horizontal asymptote of f(x) = 3 · 2ˣ − 4?", "y = −4", ["y = 0", "y = 3", "x = −4"], "3 · 2ˣ → 0 as x → −∞, so f(x) → −4."],
-    ["The graph of f(x) = abˣ passes through (0, 4). What is a?", "4", ["0", "1", "It depends on b"], "f(0) = ab⁰ = a."],
-    ["For f(x) = 2(3)ˣ, which statement about concavity is true?", "It is concave up everywhere", ["It is concave down everywhere", "It changes concavity at x = 0", "It is linear"], "Growth factor greater than 1 with a > 0 gives an increasing, concave up graph."]
+    ["For f(x) = 200(0.75)ˣ, what is f(2)?", "112.5", ["150", "50", "262.5"], "200 · 0.75² = 200 · 0.5625 = 112.5."],
+    ["An exponential function f(x) = a · bˣ passes through (0, 6) and (1, 15). What is f(3)?", "93.75", ["37.5", "54", "234.375"], "a = 6 and b = 15/6 = 2.5, so f(3) = 6 · 2.5³ = 93.75."],
+    ["Which function is decreasing and has a y-intercept of 4?", "f(x) = 4(0.5)ˣ", ["f(x) = 4(2)ˣ", "f(x) = 0.5(4)ˣ", "f(x) = −4(2)ˣ"], "The base 0.5 is between 0 and 1 (decreasing), and f(0) = 4."],
+    ["A $30,000 car loses 15% of its value each year. What is it worth after 3 years?", "$18,423.75", ["$16,500.00", "$25,500.00", "$21,675.00"], "30,000(0.85)³ = 30,000 · 0.614125 = 18,423.75."]
   ]],
   ["2.4", "Exponential Function Manipulation", [
-    ["Which is equivalent to 2ˣ⁺³?", "8 · 2ˣ", ["2ˣ + 8", "6 · 2ˣ", "2ˣ + 3"], "2ˣ⁺³ = 2ˣ · 2³."],
-    ["Which is equivalent to 9ˣ?", "3²ˣ", ["3ˣ⁺²", "(3ˣ)³", "18ˣ"], "9 = 3², so 9ˣ = (3²)ˣ = 3²ˣ."],
-    ["A population doubles every 5 years: P(t) = P₀ · 2^(t/5). What is its approximate annual growth factor?", "2^(1/5) ≈ 1.149", ["2/5 = 0.4", "5/2 = 2.5", "2⁵ = 32"], "P₀ · 2^(t/5) = P₀ · (2^(1/5))ᵗ."],
-    ["Which is equivalent to 4^(1/2)?", "2", ["8", "1/2", "16"], "b^(1/n) is the nth root: √4 = 2."]
+    ["Which expression is equivalent to 4^(x + 1)?", "4 · 4ˣ", ["4ˣ + 4", "4ˣ + 1", "x · 4ˣ"], "By the product property, 4^(x + 1) = 4ˣ · 4¹."],
+    ["Which expression is equivalent to 8^(2x/3)?", "2^(2x)", ["2ˣ", "2^(3x)", "4^(3x)"], "8 = 2³, so 8^(2x/3) = 2^(3 · 2x/3) = 2^(2x)."],
+    ["An investment grows by the model P(t) = 500(1.2)ᵗ, where t is in years. What is the equivalent quarterly growth factor?", "About 1.0466", ["1.05", "1.3", "About 2.07"], "Each quarter is 1/4 year: 1.2^(1/4) ≈ 1.0466."],
+    ["A population is modeled by P(t) = 100e^(0.05t), with t in years. By about what percent does it grow each year?", "5.13%", ["5%", "50%", "105%"], "The annual growth factor is e^0.05 ≈ 1.0513, a 5.13% increase."]
   ]],
   ["2.5", "Exponential Function Context and Data Modeling", [
-    ["A $1,000 investment earns 5% interest compounded yearly. Which models its value after t years?", "V(t) = 1,000(1.05)ᵗ", ["V(t) = 1,000(0.05)ᵗ", "V(t) = 1,000 + 0.05t", "V(t) = 1,000(1.5)ᵗ"], "Each year the value is multiplied by 1 + 0.05."],
-    ["A car loses 15% of its value each year. What is its yearly growth factor?", "0.85", ["0.15", "1.15", "−0.15"], "Keeping 85% each year means multiplying by 0.85."],
-    ["With continuous compounding at rate r, an amount A₀ grows to", "A₀e^(rt)", ["A₀(1 + r)", "A₀ + rt", "A₀r^t"], "Continuous growth uses base e."],
-    ["A bacteria culture grows from 100 to 400 in 6 hours. If growth is exponential, how many are there after 3 hours?", "200", ["250", "150", "300"], "The count multiplies by 4 in 6 hours, so by √4 = 2 in 3 hours."]
+    ["A drug has a half-life of 6 hours. A patient takes 80 mg. How much remains after 18 hours?", "10 mg", ["20 mg", "40 mg", "26.7 mg"], "18 hours is 3 half-lives: 80 → 40 → 20 → 10."],
+    ["A bacteria culture has 500 cells at t = 0 hours and 4,500 cells at t = 2 hours. Which exponential model fits?", "N(t) = 500 · 3ᵗ", ["N(t) = 500 · 9ᵗ", "N(t) = 500 + 2,000t", "N(t) = 500 · 4.5ᵗ"], "500b² = 4,500 gives b² = 9, so b = 3."],
+    ["$1,000 is invested at 6% annual interest compounded monthly. What is it worth after 5 years?", "$1,348.85", ["$1,300.00", "$1,338.23", "$1,349.86"], "1,000(1 + 0.06/12)^(60) = 1,000(1.005)⁶⁰ ≈ 1,348.85."],
+    ["A regression model for a plant's height is h(x) = 2.1(1.35)ˣ cm, where x is weeks. What does 1.35 mean?", "The height increases by 35% each week", ["The height increases by 1.35 cm each week", "The height starts at 1.35 cm", "The height increases by 135% each week"], "A growth factor of 1.35 means each week's height is 135% of the previous, a 35% increase."]
   ]],
   ["2.6", "Competing Function Model Validation", [
-    ["A residual plot for a model shows a clear U-shaped pattern. This suggests", "the model is not appropriate for the data", ["the model fits perfectly", "the data are linear", "there are no errors"], "A good model's residuals look randomly scattered around 0."],
-    ["A residual is calculated as", "actual value − predicted value", ["predicted − actual", "actual × predicted", "predicted ÷ actual"], "Positive residuals mean the model underestimated."],
-    ["A model gives a residual of −3 at x = 5. This means the model", "overestimated the actual value by 3", ["underestimated by 3", "was exact", "predicted −3"], "actual − predicted = −3 → predicted is 3 more than actual."],
-    ["Two models fit a data set. Model A's residuals are random and small; Model B's show a curved pattern. Which is more appropriate?", "Model A", ["Model B", "Both equally", "Neither can be judged"], "A curved residual pattern means Model B misses a systematic trend."]
+    ["A model predicts 46 for a data point whose actual value is 50. What is the residual?", "4", ["−4", "96", "1.087"], "Residual = actual − predicted = 50 − 46 = 4."],
+    ["A linear model's residuals for x = 1 to 6 are 4, 1, −2, −3, −1, 3. What does this suggest?", "A linear model is not appropriate, because the residuals follow a curved pattern", ["The linear model fits well because the residuals add to about 2", "The data are exponential because some residuals are negative", "The model is appropriate because the residuals are small"], "Residuals that go from positive to negative and back form a U shape, showing the data curve."],
+    ["In year 10, Model A predicts 180 and Model B predicts 240. The actual value is 235. Which model is more accurate for year 10?", "Model B, because its error is 5 and Model A's is 55", ["Model A, because it predicts a smaller value", "Model B, because it predicts a larger value", "Neither, because both have errors"], "|235 − 240| = 5 and |235 − 180| = 55."],
+    ["Two models are fit to the same data. The sum of squared residuals is 12.4 for Model A and 3.1 for Model B. Which statement is best supported?", "Model B fits the data more closely", ["Model A fits the data more closely", "Both models fit equally well", "Model B is exponential"], "A smaller sum of squared residuals means predictions are closer to the actual values."]
   ]],
   ["2.7", "Composition of Functions", [
-    ["If f(x) = x² and g(x) = x + 3, what is f(g(2))?", "25", ["7", "10", "13"], "g(2) = 5, then f(5) = 25."],
-    ["If f(x) = 2x and g(x) = x − 1, what is g(f(x))?", "2x − 1", ["2x − 2", "2(x − 1)", "x − 2"], "Put f(x) into g: 2x − 1."],
+    ["Let f(x) = 2x + 1 and g(x) = x². What is f(g(3))?", "19", ["49", "13", "7"], "g(3) = 9, and f(9) = 19."],
+    ["Let f(x) = √x and g(x) = x − 5. What is the domain of f(g(x))?", "x ≥ 5", ["x ≥ 0", "x ≥ −5", "All real numbers"], "f(g(x)) = √(x − 5) requires x − 5 ≥ 0."],
     ["Using the table, what is f(g(1))?", "4", ["3", "2", "1"], "g(1) = 3, and f(3) = 4.", { t: "table", title: "Values of f and g", head: ["x", "1", "2", "3", "4"], rows: [["f(x)", "2", "1", "4", "3"], ["g(x)", "3", "4", "1", "2"]] }],
-    ["Is function composition commutative in general?", "No; f(g(x)) usually differs from g(f(x))", ["Yes, always", "Only for linear functions", "Only when f = g"], "Example: f(x) = x², g(x) = x + 1: (x + 1)² ≠ x² + 1."]
+    ["h(x) = (3x − 2)⁵ can be written as h(x) = f(g(x)). Which choice works?", "f(x) = x⁵ and g(x) = 3x − 2", ["f(x) = 3x − 2 and g(x) = x⁵", "f(x) = 3x⁵ and g(x) = x − 2", "f(x) = x − 2 and g(x) = 3x⁵"], "The inside function is 3x − 2, and the outside function raises it to the 5th power."]
   ]],
   ["2.8", "Inverse Functions", [
-    ["What is the inverse of f(x) = 3x − 6?", "f⁻¹(x) = (x + 6) / 3", ["f⁻¹(x) = 3x + 6", "f⁻¹(x) = (x − 6) / 3", "f⁻¹(x) = 1/(3x − 6)"], "Swap x and y and solve: x = 3y − 6 → y = (x + 6)/3."],
-    ["The graph of f⁻¹ is the reflection of the graph of f over", "the line y = x", ["the x-axis", "the y-axis", "the origin"], "Inverses swap inputs and outputs."],
-    ["A function has an inverse function when it is", "one-to-one (each output comes from exactly one input)", ["always increasing and decreasing", "even", "periodic"], "Otherwise the inverse wouldn't be a function."],
-    ["If f(2) = 7, then f⁻¹(7) =", "2", ["7", "1/7", "−2"], "The inverse undoes f."]
+    ["If f(x) = (x − 4)/3, what is f⁻¹(2)?", "10", ["−2/3", "2", "6"], "f⁻¹(x) = 3x + 4, so f⁻¹(2) = 10. Check: f(10) = 2."],
+    ["Fahrenheit is F = 1.8C + 32. Use the inverse to find the Celsius temperature when F = 68.", "20°C", ["37.8°C", "154.4°C", "36°C"], "C = (F − 32)/1.8 = 36/1.8 = 20."],
+    ["A one-to-one function f has f(2) = 9 and f(5) = 12. What is f⁻¹(12)?", "5", ["1/12", "9", "2"], "f(5) = 12 means f⁻¹(12) = 5."],
+    ["f(x) = x² + 1 with domain x ≥ 0. What is f⁻¹(x)?", "√(x − 1)", ["√x − 1", "√(x + 1)", "1/(x² + 1)"], "Solve x = y² + 1 for y ≥ 0: y = √(x − 1)."]
   ]],
   ["2.9", "Logarithmic Expressions", [
-    ["What is log₂ 32?", "5", ["16", "6", "1/5"], "2⁵ = 32."],
-    ["What is log 0.001 (base 10)?", "−3", ["3", "−1/3", "0.001"], "10⁻³ = 0.001."],
-    ["What is ln(e⁴)?", "4", ["e⁴", "1/4", "4e"], "ln is the logarithm with base e."],
-    ["log_b a = c means", "b^c = a", ["a^c = b", "c^b = a", "b · c = a"], "A logarithm is an exponent."]
+    ["What is log₃ 81?", "4", ["3", "27", "9"], "3⁴ = 81."],
+    ["What is log₅(1/25)?", "−2", ["2", "−1/2", "1/2"], "5⁻² = 1/25."],
+    ["Given log 3 ≈ 0.477, what is log 300?", "About 2.477", ["About 47.7", "About 1.431", "About 0.954"], "log 300 = log 3 + log 100 = 0.477 + 2."],
+    ["Between which two consecutive integers is log₂ 50?", "5 and 6", ["4 and 5", "6 and 7", "24 and 25"], "2⁵ = 32 and 2⁶ = 64, and 50 is between them."]
   ]],
   ["2.10", "Inverses of Exponential Functions", [
-    ["What is the inverse of f(x) = 5ˣ?", "f⁻¹(x) = log₅ x", ["f⁻¹(x) = x⁵", "f⁻¹(x) = 5/x", "f⁻¹(x) = ln 5x"], "Exponential and logarithmic functions with the same base are inverses."],
-    ["What is the inverse of f(x) = 2 · eˣ?", "f⁻¹(x) = ln(x / 2)", ["f⁻¹(x) = 2 ln x", "f⁻¹(x) = e^(x/2)", "f⁻¹(x) = ln x − 2"], "x = 2eʸ → eʸ = x/2 → y = ln(x/2)."],
-    ["Since the range of f(x) = bˣ is (0, ∞), the domain of log_b x is", "(0, ∞)", ["(−∞, ∞)", "[0, ∞)", "(−∞, 0)"], "Domain and range swap for inverses."],
-    ["What is 3^(log₃ 8)?", "8", ["3", "24", "log 8"], "Composing inverses returns the input."]
+    ["If f(x) = 5ˣ, what is f⁻¹(125)?", "3", ["25", "1/3", "625"], "f⁻¹(x) = log₅ x, and log₅ 125 = 3."],
+    ["Let g be the inverse of f(x) = 2ˣ. What is g(1/8)?", "−3", ["3", "1/3", "−1/3"], "g(x) = log₂ x, and 2⁻³ = 1/8."],
+    ["What is the inverse of f(x) = 3 · 2ˣ?", "f⁻¹(x) = log₂(x/3)", ["f⁻¹(x) = log₂(x)/3", "f⁻¹(x) = 3 log₂ x", "f⁻¹(x) = log₃(x/2)"], "Solve x = 3 · 2ʸ: 2ʸ = x/3, so y = log₂(x/3)."],
+    ["f(x) = 2ˣ + 3. What is the domain of f⁻¹?", "x > 3", ["x > 0", "All real numbers", "x > −3"], "The range of f is y > 3, and the range of f becomes the domain of f⁻¹."]
   ]],
   ["2.11", "Logarithmic Functions", [
-    ["What is the vertical asymptote of f(x) = log(x − 2)?", "x = 2", ["x = 0", "y = 2", "x = −2"], "The argument must be positive: x > 2."],
-    ["The graph of f(x) = ln x is", "increasing and concave down", ["increasing and concave up", "decreasing and concave down", "decreasing and concave up"], "It keeps rising, but more and more slowly."],
-    ["What is the x-intercept of f(x) = log₃ x?", "(1, 0)", ["(0, 1)", "(3, 0)", "It has none"], "log₃ 1 = 0."],
-    ["As x → 0⁺, log₂ x approaches", "−∞", ["0", "∞", "1"], "Small positive inputs give large negative exponents."]
+    ["What is the domain of f(x) = log₂(x − 3)?", "x > 3", ["x > 0", "x > −3", "x ≥ 3"], "The argument must be positive: x − 3 > 0."],
+    ["For f(x) = log₃ x + 2, what is f(27)?", "5", ["3", "29", "11"], "log₃ 27 = 3, and 3 + 2 = 5."],
+    ["Solve log₄ x = 1.5.", "x = 8", ["x = 6", "x = 2.5", "x = 16"], "x = 4^1.5 = (√4)³ = 8."],
+    ["For f(x) = log x, what is the average rate of change on [10, 100]?", "1/90", ["1/9", "1", "90"], "(log 100 − log 10)/(100 − 10) = (2 − 1)/90."]
   ]],
   ["2.12", "Logarithmic Function Manipulation", [
-    ["Which is equivalent to log 20 + log 5?", "2", ["log 25", "log 4", "1"], "log 20 + log 5 = log 100 = 2."],
-    ["Which is equivalent to ln(x³ / y)?", "3 ln x − ln y", ["ln 3x − ln y", "3 ln x + ln y", "(ln x)³ / ln y"], "Use the quotient and power rules."],
-    ["Which is equivalent to log₂ 7 (change of base)?", "ln 7 / ln 2", ["ln 2 / ln 7", "ln 7 − ln 2", "7 / 2"], "log_b a = log a / log b in any common base."],
-    ["log₄ 64 − log₄ 4 equals", "2", ["60", "16", "3"], "log₄ (64/4) = log₄ 16 = 2."]
+    ["What is log₂ 12 − log₂ 3?", "2", ["log₂ 9", "4", "3"], "log₂(12/3) = log₂ 4 = 2."],
+    ["Which expression is equivalent to ln(x³√y)?", "3 ln x + (1/2) ln y", ["3 ln x · (1/2) ln y", "ln(3x) + ln(y/2)", "3 ln x − (1/2) ln y"], "ln(x³) + ln(y^(1/2)) = 3 ln x + (1/2) ln y."],
+    ["Given log 2 ≈ 0.301 and log 3 ≈ 0.477, what is log 12?", "About 1.079", ["About 0.778", "About 1.431", "About 0.903"], "log 12 = log(2² · 3) = 2(0.301) + 0.477."],
+    ["Use the change of base formula to find log₇ 50.", "About 2.010", ["About 7.14", "About 1.69", "About 0.497"], "ln 50 / ln 7 ≈ 3.912/1.946 ≈ 2.010."]
   ]],
   ["2.13", "Exponential and Logarithmic Equations and Inequalities", [
-    ["Solve 3ˣ = 81.", "x = 4", ["x = 27", "x = 3", "x = 9"], "81 = 3⁴."],
-    ["Solve 2eˣ = 10.", "x = ln 5", ["x = ln 10", "x = 5", "x = 2 ln 5"], "eˣ = 5, so x = ln 5."],
-    ["Solve log₂(x + 1) = 3.", "x = 7", ["x = 8", "x = 5", "x = 2"], "x + 1 = 2³ = 8."],
-    ["Solve log x + log(x − 3) = 1.", "x = 5", ["x = −2 and x = 5", "x = −2", "x = 10"], "log(x(x − 3)) = 1 → x² − 3x − 10 = 0 → x = 5 or −2; x = −2 is outside the domain."]
+    ["Solve 2^(x + 1) = 32.", "x = 4", ["x = 5", "x = 16", "x = 3"], "32 = 2⁵, so x + 1 = 5."],
+    ["Solve 3e^(2x) = 60.", "x = ln(20)/2 ≈ 1.498", ["x = ln(60)/2 ≈ 2.047", "x = ln 20 ≈ 2.996", "x = 10"], "e^(2x) = 20, so 2x = ln 20."],
+    ["Solve log₃ x + log₃(x − 8) = 2.", "x = 9", ["x = 9 and x = −1", "x = −1", "x = 1"], "x(x − 8) = 9 gives x² − 8x − 9 = (x − 9)(x + 1) = 0. x = −1 is rejected because log₃(−1) is undefined."],
+    ["An investment grows by V(t) = 5(1.08)ᵗ thousand dollars. When does it first exceed $10,000?", "After about 9.01 years", ["After 12.5 years", "After 8 years", "After about 5.5 years"], "1.08ᵗ > 2 gives t > ln 2/ln 1.08 ≈ 9.006."]
   ]],
   ["2.14", "Logarithmic Function Context and Data Modeling", [
-    ["The pH scale is pH = −log[H⁺]. A solution with pH 3 has how many times the [H⁺] of a solution with pH 5?", "100 times", ["2 times", "10 times", "1,000 times"], "Each unit is a factor of 10: 10² = 100."],
-    ["An earthquake of magnitude 7 releases shaking amplitude how many times greater than one of magnitude 5?", "100 times", ["2 times", "20 times", "1,000 times"], "The Richter scale is base-10 logarithmic in amplitude."],
-    ["A logarithmic model is most appropriate for data where the output", "increases quickly at first and then more and more slowly", ["doubles at a constant rate", "increases at a constant rate", "repeats periodically"], "Logarithmic growth is increasing and concave down."],
-    ["How long does it take $500 to grow to $1,000 at 8% per year compounded yearly?", "t = ln 2 / ln 1.08 ≈ 9 years", ["t = 2 / 0.08 = 25 years", "t = 8 years", "t = 500 / 0.08 years"], "Solve 1.08ᵗ = 2 with logarithms."]
+    ["pH = −log[H⁺]. What is the pH of a solution with [H⁺] = 3.2 × 10⁻⁵ M?", "About 4.49", ["About 5.49", "3.2", "5"], "−log(3.2 × 10⁻⁵) = 5 − log 3.2 ≈ 5 − 0.505 = 4.49."],
+    ["Loudness in decibels is 10 log(I/I₀). If a sound goes from 60 dB to 90 dB, by what factor does its intensity increase?", "1,000", ["30", "1.5", "3"], "An increase of 30 dB means log(I/I₀) goes up by 3, so intensity is multiplied by 10³."],
+    ["On the Richter scale, how many times greater is the wave amplitude of a magnitude 6.5 earthquake than a magnitude 4.5 earthquake?", "100", ["2", "20", "1,000"], "A difference of 2 magnitudes means 10² times the amplitude."],
+    ["A population is modeled by P(t) = 2,000e^(0.03t). About how many years until it reaches 5,000?", "About 30.5 years", ["About 50 years", "About 25 years", "About 83.3 years"], "e^(0.03t) = 2.5, so t = ln 2.5/0.03 ≈ 30.54."]
   ]],
   ["2.15", "Semi-log Plots", [
-    ["On a semi-log plot (log y versus x), data from an exponential function appear", "linear", ["curved upward", "periodic", "as a horizontal line only"], "log(abˣ) = log a + x log b is linear in x."],
-    ["The semi-log plot of a data set is a line with slope 0.30 and y-intercept 1 (base 10). Which exponential model fits?", "y = 10 · 2ˣ", ["y = 0.30 · 10ˣ", "y = 2 · 10ˣ", "y = 1 · 0.3ˣ"], "log y = 1 + 0.30x → y = 10¹ · (10^0.30)ˣ ≈ 10 · 2ˣ."],
+    ["A semi-log plot of data (log y versus x) is the line log y = 0.5x + 1. Which model fits the original data?", "y = 10(3.16)ˣ", ["y = 0.5x + 1", "y = 3.16(10)ˣ", "y = 10(0.5)ˣ"], "y = 10^(0.5x + 1) = 10 · (10^0.5)ˣ ≈ 10(3.16)ˣ."],
+    ["Data from y = 4 · 3ˣ are plotted as log y (base 10) versus x. What is the slope of the resulting line?", "About 0.477", ["3", "4", "About 0.602"], "log y = log 4 + x log 3, so the slope is log 3 ≈ 0.477."],
     ["The graph shows log y versus x for a data set. What kind of model fits the original data?", "Exponential decay", ["Exponential growth", "Linear", "Logarithmic"], "A decreasing line on a semi-log plot means y is multiplied by a constant less than 1 for each step in x.", { t: "line", title: "Semi-log plot", x: { min: 0, max: 5, ticks: [0, 1, 2, 3, 4, 5], label: "x" }, y: { min: 0, max: 3, ticks: [0, 1, 2, 3], label: "log y" }, series: [{ name: "log y", pts: [[0, 2.8], [1, 2.4], [2, 2], [3, 1.6], [4, 1.2], [5, 0.8]], dots: true }] }],
-    ["Why are semi-log plots useful?", "They make it easy to check whether data are exponential and to find the growth factor", ["They remove all error from data", "They turn every function into a line", "They only work for linear data"], "A straight semi-log plot confirms an exponential model; its slope gives log b."]
+    ["On a semi-log plot, the line through the data passes through (0, 2) and (4, 1.2), where the vertical axis is log y. Which model fits the data?", "y = 100(0.631)ˣ", ["y = 2(0.8)ˣ", "y = 100(0.8)ˣ", "y = 2 − 0.2x"], "The slope is −0.2, so b = 10^(−0.2) ≈ 0.631, and the intercept 2 gives a = 10² = 100."]
   ]]
 ]}
 );
@@ -2626,180 +2626,180 @@ const pcSine = (a, b, c, d, x0, x1, n) => Array.from({ length: n + 1 }, (_, i) =
 AP_DATA.pc.units.push(
 { n: 3, name: "Trigonometric and Polar Functions", weight: "30–35%", topics: [
   ["3.1", "Periodic Phenomena", [
-    ["A function f is periodic with period 4. If f(1) = 7, what is f(13)?", "7", ["13", "28", "It cannot be determined"], "13 = 1 + 3(4), so f(13) = f(1)."],
+    ["A periodic function f has period 6, and f(2) = −3. What is f(32)?", "−3", ["3", "−48", "It cannot be determined"], "32 = 2 + 5 · 6, so f(32) = f(2)."],
     ["The graph shows the height of a point on a spinning wheel over time. What is the period?", "8 seconds", ["4 seconds", "2 seconds", "16 seconds"], "The pattern repeats every 8 seconds (for example, peaks at t = 2 and t = 10).", { t: "line", title: "Height of a point on a wheel", x: { min: 0, max: 16, ticks: [0, 2, 4, 6, 8, 10, 12, 14, 16], label: "Time (s)" }, y: { min: 0, max: 10, ticks: [0, 2, 4, 6, 8, 10], label: "Height (m)" }, series: [{ name: "Height", pts: pcSine(4, Math.PI / 4, 0, 5, 0, 16, 64) }] }],
-    ["Which situation is best modeled by a periodic function?", "Daily high tides at a beach", ["The balance of a savings account", "The height of a growing tree", "The cooling of a cup of coffee"], "Tides repeat in a regular cycle."],
-    ["The period of a periodic function is", "the smallest positive length of the input interval over which the pattern repeats", ["the largest output value", "the difference between the max and min", "the first x-intercept"], "f(x + p) = f(x) for all x, with p as small as possible."]
+    ["A seat on a Ferris wheel reaches a maximum height of 42 m and a minimum of 2 m. What are the midline and amplitude of its height?", "Midline 22 m, amplitude 20 m", ["Midline 20 m, amplitude 22 m", "Midline 21 m, amplitude 40 m", "Midline 22 m, amplitude 40 m"], "Midline = (42 + 2)/2 = 22 and amplitude = (42 − 2)/2 = 20."],
+    ["High tide is at 3:00 a.m., and the next low tide is at 9:15 a.m. If the tides are periodic, what is the period?", "12.5 hours", ["6.25 hours", "12 hours", "25 hours"], "High to low is half a cycle (6.25 hours), so a full cycle is 12.5 hours."]
   ]],
   ["3.2", "Sine, Cosine, and Tangent", [
-    ["An angle in standard position has terminal ray through (3, 4). What is sin θ?", "4/5", ["3/5", "4/3", "3/4"], "r = √(3² + 4²) = 5, and sin θ = y/r."],
-    ["An angle in standard position has terminal ray through (−5, 12). What is cos θ?", "−5/13", ["5/13", "12/13", "−12/5"], "r = 13, and cos θ = x/r."],
-    ["On the unit circle, the point at angle θ has coordinates", "(cos θ, sin θ)", ["(sin θ, cos θ)", "(tan θ, 1)", "(θ, sin θ)"], "Cosine gives the x-coordinate and sine gives the y-coordinate."],
-    ["tan θ can be interpreted as", "the slope of the terminal ray", ["the length of the terminal ray", "the x-coordinate on the unit circle", "the arc length"], "tan θ = sin θ / cos θ = y/x."]
+    ["An angle in standard position has a terminal ray through (−8, −6). What is sin θ?", "−3/5", ["3/5", "−4/5", "3/4"], "r = √(64 + 36) = 10, so sin θ = y/r = −6/10."],
+    ["A point on a circle of radius 10 centered at the origin is at angle π/3. What are its coordinates?", "(5, 5√3)", ["(5√3, 5)", "(10, π/3)", "(5, 5)"], "(10 cos(π/3), 10 sin(π/3)) = (5, 5√3)."],
+    ["θ is in Quadrant II and sin θ = 3/5. What is tan θ?", "−3/4", ["3/4", "−4/3", "4/5"], "cos θ = −4/5 in Quadrant II, so tan θ = (3/5)/(−4/5) = −3/4."],
+    ["A ramp rises 3 feet over a horizontal distance of 10 feet. About what angle does it make with the ground?", "About 16.7°", ["About 17.5°", "About 73.3°", "About 0.3°"], "tan θ = 3/10, so θ = arctan(0.3) ≈ 16.7°."]
   ]],
   ["3.3", "Sine and Cosine Function Values", [
-    ["What is sin(π/6)?", "1/2", ["√3/2", "√2/2", "1"], "The reference triangle for 30° has opposite side 1 and hypotenuse 2."],
-    ["What is cos(3π/4)?", "−√2/2", ["√2/2", "−1/2", "−√3/2"], "3π/4 is in Quadrant II, where cosine is negative, with a reference angle of π/4."],
-    ["What is sin(4π/3)?", "−√3/2", ["√3/2", "−1/2", "1/2"], "4π/3 is in Quadrant III (sine negative), with a reference angle of π/3."],
-    ["How many radians is 150°?", "5π/6", ["3π/4", "2π/3", "5π/3"], "150 × π/180 = 5π/6."]
+    ["What is sin(5π/6)?", "1/2", ["−1/2", "√3/2", "−√3/2"], "5π/6 is in Quadrant II with reference angle π/6, and sine is positive there."],
+    ["What is cos(−π/3)?", "1/2", ["−1/2", "√3/2", "−√3/2"], "Cosine is even, so cos(−π/3) = cos(π/3) = 1/2."],
+    ["What is sin(7π/4) + cos(7π/4)?", "0", ["√2", "−√2", "1"], "sin(7π/4) = −√2/2 and cos(7π/4) = √2/2."],
+    ["What are the coordinates of the point on the unit circle at angle 11π/6?", "(√3/2, −1/2)", ["(−√3/2, −1/2)", "(1/2, −√3/2)", "(√3/2, 1/2)"], "11π/6 is in Quadrant IV with reference angle π/6."]
   ]],
   ["3.4", "Sine and Cosine Function Graphs", [
-    ["What is the period of y = sin x?", "2π", ["π", "1", "4π"], "The unit circle repeats after one full turn."],
-    ["On which interval is y = cos x decreasing?", "(0, π)", ["(π, 2π)", "(−π, 0)", "(π/2, 3π/2)"], "cos x goes from 1 at 0 to −1 at π."],
-    ["The graph of y = cos x is the graph of y = sin x shifted", "left by π/2", ["right by π/2", "up by 1", "left by π"], "cos x = sin(x + π/2)."],
-    ["Where does y = sin x have zeros?", "At integer multiples of π", ["At odd multiples of π/2", "At multiples of 2π only", "Nowhere"], "sin x = 0 when the point on the unit circle is on the x-axis."]
+    ["On which interval is y = cos x increasing?", "(π, 2π)", ["(0, π)", "(π/2, 3π/2)", "(−π/2, π/2)"], "cos x decreases from 1 to −1 on (0, π), then increases back to 1 on (π, 2π)."],
+    ["How many zeros does y = sin x have on the closed interval [0, 4π]?", "5", ["4", "2", "8"], "sin x = 0 at 0, π, 2π, 3π, and 4π."],
+    ["On which interval is y = sin x concave up?", "(π, 2π)", ["(0, π)", "(π/2, 3π/2)", "(0, 2π)"], "sin x is concave up where it is below its midline, on (π, 2π)."],
+    ["How many solutions does sin x = 0.6 have on [0, 2π)?", "2", ["1", "0", "4"], "The line y = 0.6 crosses the sine curve once in Quadrant I and once in Quadrant II."]
   ]],
   ["3.5", "Sinusoidal Functions", [
-    ["What is the amplitude of f(x) = −3 sin(2x) + 1?", "3", ["−3", "2", "1"], "Amplitude is |a| = 3."],
-    ["What is the period of f(x) = 4 cos(3x)?", "2π/3", ["3", "6π", "4"], "Period = 2π / |b| = 2π/3."],
-    ["What is the midline of f(x) = 2 sin(x) − 5?", "y = −5", ["y = 2", "y = 0", "y = −3"], "The vertical shift is −5."],
+    ["What is the range of f(x) = −4 cos(3x) + 1?", "[−3, 5]", ["[−5, 3]", "[−4, 4]", "[1, 5]"], "Amplitude 4 around midline 1 gives 1 − 4 = −3 to 1 + 4 = 5."],
+    ["What is the period of f(x) = 2 sin(πx/6)?", "12", ["6", "π/6", "2"], "Period = 2π/(π/6) = 12."],
+    ["What is the maximum value of f(x) = 5 sin(2x) − 3, and where does it first occur for x > 0?", "2, at x = π/4", ["5, at x = π/4", "2, at x = π/2", "8, at x = π/4"], "The max is 5 − 3 = 2 when sin(2x) = 1, so 2x = π/2 and x = π/4."],
     ["The graph shows a sinusoidal function. Which equation matches it?", "y = 2 sin(x) + 3", ["y = 3 sin(x) + 2", "y = 2 sin(2x) + 3", "y = 2 cos(x) + 3"], "Midline y = 3, amplitude 2, period 2π, and it starts at the midline going up.", { t: "line", title: "A sinusoidal function", x: { min: 0, max: 6.2832, ticks: [0, 1.5708, 3.1416, 4.7124, 6.2832], fmt: t => ["0", "π/2", "π", "3π/2", "2π"][Math.round(t / 1.5708)], label: "x" }, y: { min: 0, max: 6, ticks: [0, 1, 2, 3, 4, 5, 6], label: "y" }, series: [{ name: "y", pts: pcSine(2, 1, 0, 3, 0, 6.2832, 48) }] }]
   ]],
   ["3.6", "Sinusoidal Function Transformations", [
-    ["The graph of y = sin(x − π/3) is the graph of y = sin x shifted", "right by π/3", ["left by π/3", "up by π/3", "down by π/3"], "Replacing x with x − c shifts right by c."],
-    ["What is the phase shift of y = cos(2x + π)?", "π/2 to the left", ["π to the left", "π to the right", "π/2 to the right"], "cos(2(x + π/2)): the shift is π/2 left."],
-    ["Which function has a maximum value of 7 and a minimum value of 1?", "y = 3 sin x + 4", ["y = 7 sin x + 1", "y = 6 sin x + 1", "y = 4 sin x + 3"], "Midline (7 + 1)/2 = 4; amplitude (7 − 1)/2 = 3."],
-    ["Which transformation changes the period of y = sin x?", "Multiplying the input by a constant, as in sin(bx)", ["Adding a constant to the output", "Multiplying the output by a constant", "Subtracting a constant from the input"], "Only a horizontal dilation changes the period."]
+    ["Which describes g(x) = 3 sin(2(x − π/4)) + 1?", "Period π, shifted right π/4, midline y = 1", ["Period 2π, shifted left π/4, midline y = 1", "Period π, shifted right π/2, midline y = 3", "Period π/2, shifted right π/4, midline y = 1"], "Period = 2π/2 = π, the phase shift is π/4 right, and the vertical shift is 1."],
+    ["The point (π/6, 1/2) is on y = sin x. Which point is on g(x) = 2 sin x − 1?", "(π/6, 0)", ["(π/6, 1)", "(π/3, 0)", "(π/6, −1/2)"], "g(π/6) = 2(1/2) − 1 = 0."],
+    ["A sinusoid has a maximum of 10 at x = 0 and its next minimum of 2 at x = 3. Which function matches?", "y = 4 cos(πx/3) + 6", ["y = 4 cos(πx/6) + 6", "y = 8 cos(πx/3) + 2", "y = 4 sin(πx/3) + 6"], "Amplitude (10 − 2)/2 = 4, midline 6, and period 6 (max to min is half a period), so b = 2π/6 = π/3. Cosine starts at a max."],
+    ["Which expression is equal to cos x for all x?", "sin(x + π/2)", ["sin(x − π/2)", "−sin x", "sin(x + π)"], "Shifting sine left by π/2 gives cosine."]
   ]],
   ["3.7", "Sinusoidal Function Context and Data Modeling", [
-    ["A Ferris wheel has diameter 40 m, its center is 25 m above the ground, and it turns once every 60 s. What is the amplitude of the height function?", "20 m", ["40 m", "25 m", "60 m"], "The amplitude is the radius, half the diameter."],
-    ["For the same Ferris wheel (center 25 m high, radius 20 m, period 60 s), what is the midline?", "h = 25 m", ["h = 20 m", "h = 45 m", "h = 5 m"], "The height oscillates around the center's height."],
-    ["The average daily temperature in a city varies from a low of 30°F to a high of 80°F over one year. What is the amplitude of a sinusoidal model?", "25°F", ["50°F", "55°F", "80°F"], "(80 − 30)/2 = 25."],
-    ["A sinusoidal model of tides has a period of 12.4 hours. What is b in h(t) = a sin(bt) + d?", "2π/12.4", ["12.4", "12.4/2π", "π/12.4"], "Period = 2π/b, so b = 2π/12.4."]
+    ["The temperature t hours after midnight is T(t) = 15 − 10 cos(πt/12) °C. What is the maximum temperature, and when does it occur?", "25°C at noon", ["25°C at midnight", "15°C at noon", "10°C at 6 a.m."], "−cos is largest (1) when πt/12 = π, so t = 12, and T = 15 + 10 = 25."],
+    ["A city gets a maximum of 15 hours of daylight and a minimum of 9 hours. What are the midline and amplitude of a sinusoidal model?", "Midline 12 hours, amplitude 3 hours", ["Midline 12 hours, amplitude 6 hours", "Midline 15 hours, amplitude 9 hours", "Midline 3 hours, amplitude 12 hours"], "Midline = (15 + 9)/2 = 12, and amplitude = (15 − 9)/2 = 3."],
+    ["A Ferris wheel rider's height is h(t) = 30 − 25 cos(πt/5) meters after t minutes. What is the height at t = 3?", "About 37.7 m", ["About 22.3 m", "30 m", "55 m"], "cos(3π/5) ≈ −0.309, so h ≈ 30 + 7.73 = 37.7."],
+    ["A weight on a spring has displacement y = 4 sin(2πt) cm after t seconds. When is y = 2 for the first time?", "t = 1/12 s", ["t = 1/6 s", "t = 1/4 s", "t = 1/2 s"], "sin(2πt) = 1/2 first when 2πt = π/6, so t = 1/12."]
   ]],
   ["3.8", "The Tangent Function", [
-    ["What is the period of y = tan x?", "π", ["2π", "π/2", "4π"], "tan repeats every π because tan(x + π) = tan x."],
-    ["Where does y = tan x have vertical asymptotes?", "At x = π/2 + kπ for integer k", ["At x = kπ", "At x = 2kπ", "Nowhere"], "tan x = sin x / cos x is undefined where cos x = 0."],
-    ["What is tan(π/4)?", "1", ["0", "√3", "√2/2"], "sin and cos are equal at π/4."],
-    ["On each interval between its asymptotes, y = tan x is", "increasing", ["decreasing", "constant", "periodic with period 2π"], "The slope of the terminal ray grows as θ goes from −π/2 to π/2."]
+    ["What is tan(2π/3)?", "−√3", ["√3", "−1/√3", "1/√3"], "2π/3 is in Quadrant II with reference angle π/3, and tangent is negative there."],
+    ["What is the period of f(x) = tan(2x)?", "π/2", ["π", "2π", "π/4"], "The period of tan(bx) is π/b = π/2."],
+    ["A line through the origin makes a 150° angle with the positive x-axis. What is its slope?", "−√3/3", ["−√3", "√3/3", "−1/2"], "Slope = tan 150° = −tan 30° = −√3/3."],
+    ["tan θ = 2 and θ is in Quadrant III. What is sin θ?", "−2/√5", ["2/√5", "−1/√5", "−2"], "Use the point (−1, −2): r = √5, so sin θ = −2/√5."]
   ]],
   ["3.9", "Inverse Trigonometric Functions", [
-    ["What is arcsin(1/2)?", "π/6", ["5π/6", "π/3", "π/4"], "The range of arcsin is [−π/2, π/2], and sin(π/6) = 1/2."],
-    ["What is arccos(−1)?", "π", ["−π", "0", "−π/2"], "The range of arccos is [0, π]."],
-    ["What is the range of y = arctan x?", "(−π/2, π/2)", ["[0, π]", "[−π/2, π/2]", "All real numbers"], "tan is restricted to (−π/2, π/2) to make it one-to-one."],
-    ["Why must the domain of sin x be restricted to define arcsin?", "sin x is not one-to-one on all real numbers", ["sin x has no outputs", "sin x is undefined at 0", "sin x is not periodic"], "Restricting to [−π/2, π/2] makes it one-to-one."]
+    ["What is arctan(−1)?", "−π/4", ["3π/4", "7π/4", "π/4"], "arctan's range is (−π/2, π/2), and tan(−π/4) = −1."],
+    ["What is arcsin(sin(5π/6))?", "π/6", ["5π/6", "−π/6", "1/2"], "sin(5π/6) = 1/2, and arcsin(1/2) = π/6 (in the range [−π/2, π/2])."],
+    ["What is cos(arcsin(3/5))?", "4/5", ["3/5", "−4/5", "5/3"], "The angle has opposite 3 and hypotenuse 5, so adjacent is 4. arcsin's range gives a positive cosine."],
+    ["A 10-foot ladder reaches 8 feet up a wall. About what angle does it make with the ground?", "About 53.1°", ["About 36.9°", "About 38.7°", "About 0.8°"], "sin θ = 8/10, so θ = arcsin(0.8) ≈ 53.1°."]
   ]],
   ["3.10", "Trigonometric Equations and Inequalities", [
-    ["Solve sin x = √2/2 for 0 ≤ x < 2π.", "x = π/4 and x = 3π/4", ["x = π/4 only", "x = π/4 and x = 7π/4", "x = 3π/4 and x = 5π/4"], "Sine is positive in Quadrants I and II."],
-    ["Solve 2 cos x + 1 = 0 for 0 ≤ x < 2π.", "x = 2π/3 and x = 4π/3", ["x = π/3 and x = 5π/3", "x = 2π/3 only", "x = π/6 and x = 11π/6"], "cos x = −1/2 in Quadrants II and III."],
-    ["How many solutions does sin(2x) = 0 have for 0 ≤ x < 2π?", "4", ["2", "1", "8"], "2x = 0, π, 2π, 3π → x = 0, π/2, π, 3π/2."],
-    ["For 0 ≤ x < 2π, where is sin x > 0?", "0 < x < π", ["π < x < 2π", "π/2 < x < 3π/2", "0 < x < π/2 only"], "Sine is positive in Quadrants I and II."]
+    ["Solve 2 cos x + √3 = 0 on [0, 2π).", "x = 5π/6 and 7π/6", ["x = π/6 and 11π/6", "x = 2π/3 and 4π/3", "x = 5π/6 only"], "cos x = −√3/2 in Quadrants II and III, with reference angle π/6."],
+    ["Solve sin(2x) = 1 on [0, 2π).", "x = π/4 and 5π/4", ["x = π/2", "x = π/4 only", "x = π/4 and 3π/4"], "2x = π/2 or 5π/2 (since 2x ranges over [0, 4π)), so x = π/4 or 5π/4."],
+    ["Solve tan x = √3 on [0, 2π).", "x = π/3 and 4π/3", ["x = π/3 and 2π/3", "x = π/6 and 7π/6", "x = π/3 only"], "tan x = √3 at π/3, and tangent repeats every π."],
+    ["Solve sin x ≥ 1/2 on [0, 2π).", "π/6 ≤ x ≤ 5π/6", ["π/6 ≤ x ≤ π/3", "0 ≤ x ≤ π/6", "5π/6 ≤ x < 2π"], "sin x = 1/2 at π/6 and 5π/6, and sine is above 1/2 between them."]
   ]],
   ["3.11", "The Secant, Cosecant, and Cotangent Functions", [
-    ["What is sec(π/3)?", "2", ["1/2", "√3", "2/√3"], "sec θ = 1/cos θ = 1/(1/2) = 2."],
-    ["What is csc(π/2)?", "1", ["0", "Undefined", "−1"], "csc θ = 1/sin θ = 1/1."],
-    ["Where is y = cot x undefined?", "At x = kπ for integer k", ["At x = π/2 + kπ", "Nowhere", "At x = 2kπ only"], "cot x = cos x / sin x is undefined where sin x = 0."],
-    ["If tan θ = 3/4, what is cot θ?", "4/3", ["3/4", "5/4", "−3/4"], "cot θ = 1/tan θ."]
+    ["What is sec(2π/3)?", "−2", ["2", "−1/2", "−2/√3"], "cos(2π/3) = −1/2, so sec = 1/(−1/2) = −2."],
+    ["sin θ = −5/13 and cos θ = 12/13. What is cot θ?", "−12/5", ["12/5", "−5/12", "13/12"], "cot θ = cos θ/sin θ = (12/13)/(−5/13)."],
+    ["Solve csc x = 2 on [0, 2π).", "x = π/6 and 5π/6", ["x = π/3 and 2π/3", "x = 7π/6 and 11π/6", "x = π/6 only"], "csc x = 2 means sin x = 1/2."],
+    ["For which x-values is y = csc x undefined?", "x = kπ for any integer k", ["x = π/2 + kπ", "x = 2kπ only", "It is defined everywhere"], "csc x = 1/sin x, and sin x = 0 at every multiple of π."]
   ]],
   ["3.12", "Equivalent Representations of Trigonometric Functions", [
-    ["Which is equivalent to sin²x + cos²x?", "1", ["0", "2 sin x cos x", "tan²x"], "This is the Pythagorean identity."],
-    ["Which is equivalent to 1 + tan²x?", "sec²x", ["csc²x", "cot²x", "1"], "Divide sin²x + cos²x = 1 by cos²x."],
-    ["Which is equivalent to sin(2x)?", "2 sin x cos x", ["2 sin x", "sin²x − cos²x", "sin x + cos x"], "This is the double-angle identity for sine."],
-    ["If sin θ = 3/5 and θ is in Quadrant II, what is cos θ?", "−4/5", ["4/5", "−3/5", "3/4"], "cos²θ = 1 − 9/25 = 16/25; cosine is negative in Quadrant II."]
+    ["θ is in Quadrant I and sin θ = 0.6. What is sin(2θ)?", "0.96", ["1.2", "0.48", "0.28"], "cos θ = 0.8, so sin(2θ) = 2(0.6)(0.8) = 0.96."],
+    ["cos θ = 0.8. What is cos(2θ)?", "0.28", ["1.6", "0.64", "0.96"], "cos(2θ) = 2cos²θ − 1 = 2(0.64) − 1 = 0.28."],
+    ["What is the exact value of sin 75°?", "(√6 + √2)/4", ["(√6 − √2)/4", "(√3 + √2)/2", "√2/4"], "sin(45° + 30°) = sin45 cos30 + cos45 sin30 = (√6 + √2)/4."],
+    ["Simplify (1 − cos²x)/sin x.", "sin x", ["cos x", "1", "tan x"], "1 − cos²x = sin²x, and sin²x/sin x = sin x."]
   ]],
   ["3.13", "Trigonometry and Polar Coordinates", [
-    ["Convert the polar point (4, π/3) to rectangular coordinates.", "(2, 2√3)", ["(2√3, 2)", "(4, π/3)", "(−2, 2√3)"], "x = r cos θ = 4(1/2) = 2, y = r sin θ = 4(√3/2) = 2√3."],
-    ["Convert the rectangular point (0, −5) to polar coordinates with r > 0 and 0 ≤ θ < 2π.", "(5, 3π/2)", ["(5, π/2)", "(−5, π/2)", "(5, π)"], "r = 5, and the point is on the negative y-axis."],
-    ["Which polar point represents the same location as (3, π/4)?", "(−3, 5π/4)", ["(3, −π/4)", "(−3, π/4)", "(3, 5π/4)"], "A negative r points the opposite direction, which is adding π to θ."],
-    ["In polar coordinates, r represents", "the directed distance from the origin", ["the angle from the x-axis", "the x-coordinate", "the slope"], "θ is the angle, r is the distance."]
+    ["Convert the polar point (6, 5π/6) to rectangular coordinates.", "(−3√3, 3)", ["(3√3, 3)", "(−3, 3√3)", "(3√3, −3)"], "x = 6 cos(5π/6) = −3√3 and y = 6 sin(5π/6) = 3."],
+    ["Which polar coordinates with r > 0 and 0 ≤ θ < 2π represent the point (0, −4)?", "(4, 3π/2)", ["(4, π/2)", "(4, π)", "(4, 0)"], "The point is 4 units from the origin, straight down."],
+    ["What are the modulus and argument of z = −1 + i√3?", "Modulus 2, argument 2π/3", ["Modulus 2, argument π/3", "Modulus 4, argument 2π/3", "Modulus √2, argument 3π/4"], "|z| = √(1 + 3) = 2, and the point (−1, √3) is at angle 2π/3."],
+    ["What is the product of 2(cos π/6 + i sin π/6) and 3(cos π/3 + i sin π/3)?", "6i", ["5i", "6", "6 + 6i"], "Multiply moduli (6) and add angles (π/2): 6(cos π/2 + i sin π/2) = 6i."]
   ]],
   ["3.14", "Polar Function Graphs", [
-    ["What is the graph of r = 3?", "A circle of radius 3 centered at the origin", ["A line through the origin", "A spiral", "A rose with 3 petals"], "Every point is 3 units from the origin."],
-    ["How many petals does the rose r = 4 sin(3θ) have?", "3", ["6", "4", "12"], "For r = a sin(nθ) with n odd, there are n petals."],
-    ["How many petals does the rose r = cos(2θ) have?", "4", ["2", "1", "8"], "For n even, there are 2n petals."],
-    ["The polar graph of r = 2 + 2 cos θ is a", "cardioid", ["circle", "rose", "straight line"], "r = a + a cos θ is heart-shaped."]
+    ["Which describes the graph of r = 4 cos θ?", "A circle centered at (2, 0) with radius 2", ["A circle centered at (4, 0) with radius 4", "A circle centered at (0, 2) with radius 2", "A circle centered at the origin with radius 4"], "r² = 4r cos θ gives x² + y² = 4x, or (x − 2)² + y² = 4."],
+    ["How many petals does r = 5 sin(3θ) have?", "3", ["6", "5", "9"], "For r = a sin(nθ) with n odd, there are n petals."],
+    ["At which angles in [0, 2π) does r = 1 + 2 cos θ pass through the pole?", "θ = 2π/3 and 4π/3", ["θ = π/3 and 5π/3", "θ = π", "θ = π/2 and 3π/2"], "r = 0 when cos θ = −1/2."],
+    ["What is the greatest distance from the origin on r = 3 + 3 sin θ, and at what angle?", "6, at θ = π/2", ["3, at θ = π/2", "6, at θ = 3π/2", "6, at θ = 0"], "sin θ = 1 at θ = π/2 gives r = 6."]
   ]],
   ["3.15", "Rates of Change in Polar Functions", [
-    ["For r = f(θ), if r is positive and increasing on an interval of θ, then the points on the graph are", "moving away from the origin", ["moving toward the origin", "staying the same distance from the origin", "on the x-axis"], "A larger positive r means a greater distance."],
-    ["For r = 2θ on 0 ≤ θ ≤ π, what is the average rate of change of r with respect to θ?", "2", ["π", "2π", "1/2"], "(2π − 0) / (π − 0) = 2."],
-    ["For r = 3 sin θ on 0 ≤ θ ≤ π, where is the distance from the origin greatest?", "At θ = π/2", ["At θ = 0", "At θ = π", "At θ = π/4"], "|r| is largest when sin θ = 1."],
-    ["For r = f(θ), if r is negative and decreasing on an interval, then the distance from the origin is", "increasing", ["decreasing", "constant", "zero"], "r going from −1 to −3 means |r| grows from 1 to 3."]
+    ["For r = 2 + sin θ, what is the average rate of change of r on [0, π/2]?", "2/π", ["π/2", "1", "1/2"], "r goes from 2 to 3, so (3 − 2)/(π/2) = 2/π."],
+    ["For r = 3 cos θ on (π/2, π), r is negative and decreasing. What happens to the points on the graph?", "They move farther from the origin", ["They move closer to the origin", "They stay the same distance from the origin", "They pass through the origin repeatedly"], "r goes from 0 to −3, so |r| increases and the points get farther from the origin."],
+    ["For r = θ², what is the average rate of change of r on [1, 3]?", "4", ["8", "2", "9"], "(9 − 1)/(3 − 1) = 4."],
+    ["For r = 2 − 4 cos θ on (0, π/3), r is negative and increasing toward 0. What happens to the points on the graph?", "They move closer to the origin", ["They move farther from the origin", "They stay the same distance from the origin", "They move away and then back"], "r goes from −2 to 0, so |r| decreases and the points approach the origin."]
   ]]
 ]},
 { n: 4, name: "Functions Involving Parameters, Vectors, and Matrices", weight: "Not on the AP exam", topics: [
   ["4.1", "Parametric Functions", [
-    ["For x(t) = t + 1 and y(t) = t², what point corresponds to t = 2?", "(3, 4)", ["(2, 4)", "(4, 3)", "(3, 2)"], "x = 2 + 1 = 3, y = 2² = 4."],
-    ["A parametric function x = f(t), y = g(t) describes", "the position of a point in the plane as t changes", ["a single number", "a function of y only", "a vertical line only"], "t is often time."],
-    ["Eliminate the parameter: x = 2t, y = t + 3.", "y = x/2 + 3", ["y = 2x + 3", "y = x + 3", "y = 2x − 3"], "t = x/2, so y = x/2 + 3."],
-    ["For x(t) = cos t and y(t) = sin t, as t goes from 0 to 2π the point traces", "the unit circle once counterclockwise", ["a line segment", "the unit circle clockwise", "a parabola"], "cos²t + sin²t = 1."]
+    ["For x(t) = 2t − 1 and y(t) = t², what point corresponds to t = 3?", "(5, 9)", ["(6, 9)", "(5, 6)", "(3, 5)"], "x(3) = 5 and y(3) = 9."],
+    ["Eliminate the parameter: x = t + 2, y = 3t − 1.", "y = 3x − 7", ["y = 3x + 5", "y = 3x − 1", "y = (x − 2)/3"], "t = x − 2, so y = 3(x − 2) − 1 = 3x − 7."],
+    ["A particle moves with x(t) = t² and y(t) = t³. At t = −1, which way is it moving?", "Left and up", ["Right and up", "Left and down", "Right and down"], "As t increases through −1, t² decreases (left) and t³ increases (up)."],
+    ["For x(t) = t² − 4 and y(t) = t + 1, at which t-values does the curve cross the y-axis?", "t = 2 and t = −2", ["t = 4", "t = −1", "t = 0"], "The curve crosses the y-axis where x = 0: t² = 4."]
   ]],
   ["4.2", "Parametric Functions Modeling Planar Motion", [
-    ["A particle moves with x(t) = 3t and y(t) = 4t. How far is it from its start after t = 2?", "10 units", ["14 units", "7 units", "12 units"], "The position is (6, 8), which is √(36 + 64) = 10 from the origin."],
-    ["For x(t) = t² and y(t) = 2t, is the particle moving left or right at t = −1?", "Left, because x is decreasing there", ["Right", "Neither", "Up only"], "x = t² decreases for t < 0."],
-    ["A ball is thrown so that x(t) = 20t and y(t) = −16t² + 32t. At what time does it reach its highest point?", "t = 1", ["t = 2", "t = 0.5", "t = 20"], "The vertex of y(t) is at t = −32 / (2 · −16) = 1."],
-    ["In a parametric motion model, the direction of motion is shown by", "how the points move as t increases", ["the y-intercept only", "the value of t at the start only", "the slope of the x-axis"], "Plotting points in order of t reveals the direction."]
+    ["A ball's position is x(t) = 40t, y(t) = −16t² + 48t + 4, in feet. What is its maximum height?", "40 feet", ["44 feet", "36 feet", "52 feet"], "The vertex is at t = 1.5, and y(1.5) = −36 + 72 + 4 = 40."],
+    ["For the same ball, x(t) = 40t and y(t) = −16t² + 48t + 4, how far has it traveled horizontally when it returns to a height of 4 feet?", "120 feet", ["60 feet", "160 feet", "40 feet"], "−16t² + 48t = 0 at t = 3, and x(3) = 120."],
+    ["A particle moves with x(t) = 3t + 1 and y(t) = 4t − 2. How far does it travel each second?", "5 units", ["7 units", "1 unit", "25 units"], "Each second it moves 3 right and 4 up: √(3² + 4²) = 5."],
+    ["A boat's position is x(t) = 2 + 3t, y(t) = 1 + 4t (in km) after t hours. Where is it at t = 2?", "(8, 9)", ["(6, 8)", "(5, 5)", "(8, 8)"], "x(2) = 8 and y(2) = 9."]
   ]],
   ["4.3", "Parametric Functions and Rates of Change", [
-    ["For x(t) = 2t and y(t) = t² on [0, 3], what is the average rate of change of y with respect to x?", "1.5", ["3", "9", "0.5"], "Δy = 9, Δx = 6, so 9/6 = 1.5."],
-    ["For x(t) = t + 1 and y(t) = 3t, the average rate of change of x with respect to t on [0, 4] is", "1", ["3", "4", "1/3"], "Δx/Δt = (5 − 1)/4 = 1."],
-    ["If x(t) is increasing and y(t) is decreasing, the particle is moving", "right and down", ["left and up", "right and up", "left and down"], "Increasing x is right; decreasing y is down."],
-    ["For a parametric curve, Δy/Δx over an interval of t gives", "the slope of the secant line between the two points", ["the speed of the particle", "the distance traveled", "the value of t"], "It compares vertical and horizontal changes."]
+    ["For x(t) = t² and y(t) = 4t, what is the average rate of change of y with respect to x from t = 1 to t = 3?", "1", ["4", "2", "1/2"], "Δy = 12 − 4 = 8 and Δx = 9 − 1 = 8."],
+    ["For x(t) = 2t + 1 and y(t) = t² − 3, what is the average rate of change of y with respect to t on [0, 2]?", "2", ["4", "1", "3"], "y(2) − y(0) = 1 − (−3) = 4, divided by 2."],
+    ["A particle moves with x(t) = t³ and y(t) = 4 − t². At t = 1, which way is it moving?", "Right and down", ["Right and up", "Left and down", "Left and up"], "t³ is increasing (right) and 4 − t² is decreasing for t > 0 (down)."],
+    ["For x(t) = t + 1 and y(t) = t³, what is the slope of the secant line between t = 0 and t = 2?", "4", ["8", "2", "6"], "Δy = 8 and Δx = 2, so the slope is 8/2 = 4."]
   ]],
   ["4.4", "Parametrically Defined Circles and Lines", [
-    ["Which parametrization describes a circle of radius 5 centered at (1, 2)?", "x = 1 + 5 cos t, y = 2 + 5 sin t", ["x = 5 + cos t, y = 5 + sin t", "x = 5 cos t, y = 5 sin t", "x = 1 + cos t, y = 2 + sin t"], "Center (h, k), radius r: x = h + r cos t, y = k + r sin t."],
-    ["Which parametrization gives the line segment from (0, 0) to (4, 2) for 0 ≤ t ≤ 1?", "x = 4t, y = 2t", ["x = 2t, y = 4t", "x = t, y = 2t", "x = 4 + t, y = 2 + t"], "Start + t(end − start)."],
-    ["For x = 3 cos t, y = 3 sin t, how many times is the circle traced for 0 ≤ t ≤ 4π?", "2", ["1", "4", "3"], "Each 2π is one full turn."],
-    ["The parametrization x = cos t, y = −sin t traces the unit circle", "clockwise", ["counterclockwise", "not at all", "as a line"], "At t = 0 it's at (1, 0) and then y becomes negative."]
+    ["What are the center and radius of x = 4 + 2 cos t, y = −1 + 2 sin t?", "Center (4, −1), radius 2", ["Center (−4, 1), radius 2", "Center (4, −1), radius 4", "Center (2, 2), radius 4"], "(x − 4)² + (y + 1)² = 4 cos²t + 4 sin²t = 4."],
+    ["Which parametrizes the segment from (−2, 5) to (4, 2) for 0 ≤ t ≤ 1?", "x = −2 + 6t, y = 5 − 3t", ["x = −2 + 4t, y = 5 + 2t", "x = −2 + 4t, y = 5 − 2t", "x = 6t, y = −3t"], "Start at (−2, 5) and add t times the change (6, −3)."],
+    ["Which parametrizes the circle of radius 3 centered at the origin, moving clockwise?", "x = 3 cos t, y = −3 sin t", ["x = 3 cos t, y = 3 sin t", "x = cos 3t, y = sin 3t", "x = 3 cos t, y = 3 cos t"], "Starting at (3, 0), y becomes negative right away, so the point moves clockwise."],
+    ["Where does the line x = 1 + 2t, y = 3 − t cross the x-axis?", "(7, 0)", ["(3, 0)", "(0, 3.5)", "(−5, 0)"], "y = 0 when t = 3, and x(3) = 7."]
   ]],
   ["4.5", "Implicitly Defined Functions", [
-    ["The equation x² + y² = 25 defines", "a circle that is not the graph of a single function y = f(x)", ["a function y = f(x)", "a line", "a parabola"], "It fails the vertical line test, but it can be split into y = ±√(25 − x²)."],
-    ["Which point lies on x² + xy = 10?", "(2, 3)", ["(1, 3)", "(3, 2)", "(5, 1)"], "4 + 6 = 10."],
-    ["For the curve y² = x, which explicit functions together give the whole graph?", "y = √x and y = −√x", ["y = x² only", "y = √x only", "y = 1/x"], "Solving for y gives two branches."],
-    ["An implicitly defined relation is one where", "x and y are related by an equation not solved for y", ["y is always a function of x", "there is no y", "x is a constant"], "Examples include circles and ellipses."]
+    ["On the curve x² + y² = 169, what are the y-values when x = 5?", "y = 12 and y = −12", ["y = 12 only", "y = 13 and y = −13", "y = √164 and y = −√164"], "y² = 169 − 25 = 144."],
+    ["On the curve x² + xy = 10, what is y when x = 2?", "3", ["6", "2", "7"], "4 + 2y = 10, so y = 3."],
+    ["What are the x-intercepts of 4x² + y² = 36?", "(3, 0) and (−3, 0)", ["(6, 0) and (−6, 0)", "(9, 0) and (−9, 0)", "(2, 0) and (−2, 0)"], "Setting y = 0: 4x² = 36, so x = ±3."],
+    ["Which function describes the part of x² + y² = 25 that contains the point (3, 4)?", "y = √(25 − x²)", ["y = −√(25 − x²)", "y = 25 − x²", "y = √(x² − 25)"], "(3, 4) is on the upper half, where y is positive."]
   ]],
   ["4.6", "Conic Sections", [
-    ["What conic is x²/9 + y²/4 = 1?", "An ellipse", ["A hyperbola", "A parabola", "A circle"], "A sum of squared terms with different denominators, set equal to 1."],
-    ["What conic is x²/4 − y²/9 = 1?", "A hyperbola", ["An ellipse", "A circle", "A parabola"], "A difference of squared terms gives a hyperbola."],
-    ["What conic is y = x² − 3?", "A parabola", ["A circle", "An ellipse", "A hyperbola"], "Only one variable is squared."],
-    ["What are the center and radius of (x − 2)² + (y + 1)² = 16?", "Center (2, −1), radius 4", ["Center (−2, 1), radius 16", "Center (2, 1), radius 4", "Center (2, −1), radius 16"], "Compare with (x − h)² + (y − k)² = r²."]
+    ["What are the center and major-axis length of (x − 2)²/16 + (y + 1)²/9 = 1?", "Center (2, −1), major axis length 8", ["Center (−2, 1), major axis length 8", "Center (2, −1), major axis length 16", "Center (2, −1), major axis length 6"], "a² = 16, so a = 4 and the major axis is 2a = 8."],
+    ["What are the asymptotes of x²/9 − y²/16 = 1?", "y = ±(4/3)x", ["y = ±(3/4)x", "y = ±(16/9)x", "y = ±4x"], "For x²/a² − y²/b² = 1, the asymptotes are y = ±(b/a)x."],
+    ["What is the vertex of the parabola y = (x − 3)² + 2?", "(3, 2)", ["(−3, 2)", "(3, −2)", "(2, 3)"], "Vertex form y = (x − h)² + k has vertex (h, k)."],
+    ["Which describes x² + y² − 6x + 4y = 12?", "A circle with center (3, −2) and radius 5", ["A circle with center (−3, 2) and radius 5", "A circle with center (3, −2) and radius √12", "An ellipse with center (3, −2)"], "Complete the square: (x − 3)² + (y + 2)² = 12 + 9 + 4 = 25."]
   ]],
   ["4.7", "Parametrization of Implicitly Defined Functions", [
-    ["Which parametrization gives the ellipse x²/9 + y²/4 = 1?", "x = 3 cos t, y = 2 sin t", ["x = 9 cos t, y = 4 sin t", "x = 2 cos t, y = 3 sin t", "x = 3t, y = 2t"], "(3 cos t)²/9 + (2 sin t)²/4 = cos²t + sin²t = 1."],
-    ["A parametrization of y = x² is", "x = t, y = t²", ["x = t², y = t", "x = cos t, y = sin t", "x = 2t, y = t"], "Let x = t, then y = t²."],
-    ["Parametrizing an implicitly defined curve is useful because", "it describes the whole curve with functions of a single parameter", ["it removes the curve's shape", "it makes the curve a function of x", "it only works for lines"], "Each coordinate becomes a function of t."],
-    ["For x = t, y = √(4 − t²) on −2 ≤ t ≤ 2, which curve is traced?", "The upper half of the circle x² + y² = 4", ["The whole circle x² + y² = 4", "The lower half of the circle", "A parabola"], "y is never negative here."]
+    ["Which parametrizes (x − 1)²/4 + y²/9 = 1?", "x = 1 + 2 cos t, y = 3 sin t", ["x = 1 + 4 cos t, y = 9 sin t", "x = 2 cos t, y = 3 sin t", "x = 1 + 3 cos t, y = 2 sin t"], "Substitute cos t = (x − 1)/2 and sin t = y/3 into cos²t + sin²t = 1."],
+    ["Which parametrizes the curve y² = x?", "x = t², y = t", ["x = t, y = t²", "x = √t, y = t", "x = t², y = t²"], "With y = t, x = y² = t²."],
+    ["Which parametrizes x²/25 − y²/4 = 1?", "x = 5 sec t, y = 2 tan t", ["x = 5 cos t, y = 2 sin t", "x = 25 sec t, y = 4 tan t", "x = 5 tan t, y = 2 sec t"], "sec²t − tan²t = 1 matches x²/25 − y²/4 = 1."],
+    ["Which parametrizes the circle x² + y² = 16 starting at (0, 4) and moving counterclockwise?", "x = −4 sin t, y = 4 cos t", ["x = 4 sin t, y = 4 cos t", "x = 4 cos t, y = 4 sin t", "x = 4 cos t, y = −4 sin t"], "At t = 0 the point is (0, 4). As t increases, x becomes negative, so it moves left from the top: counterclockwise."]
   ]],
   ["4.8", "Vectors", [
-    ["What is the magnitude of the vector ⟨3, −4⟩?", "5", ["7", "1", "−1"], "√(9 + 16) = 5."],
-    ["What is ⟨2, 5⟩ + ⟨−1, 3⟩?", "⟨1, 8⟩", ["⟨3, 2⟩", "⟨1, 2⟩", "⟨−2, 15⟩"], "Add components."],
-    ["What is the dot product ⟨1, 2⟩ · ⟨3, −1⟩?", "1", ["5", "⟨3, −2⟩", "7"], "1(3) + 2(−1) = 1."],
-    ["Two nonzero vectors are perpendicular when their dot product is", "0", ["1", "−1", "equal to their magnitudes"], "u · v = |u||v| cos θ, and cos 90° = 0."]
+    ["Let u = ⟨2, −3⟩ and v = ⟨−1, 4⟩. What is 3u − v?", "⟨7, −13⟩", ["⟨5, −5⟩", "⟨7, −5⟩", "⟨6, −13⟩"], "3u = ⟨6, −9⟩, and ⟨6, −9⟩ − ⟨−1, 4⟩ = ⟨7, −13⟩."],
+    ["What is the angle between ⟨1, 0⟩ and ⟨1, 1⟩?", "45°", ["30°", "60°", "90°"], "cos θ = (1)/(1 · √2) = 1/√2."],
+    ["What is the magnitude of ⟨5, −12⟩?", "13", ["7", "17", "169"], "√(25 + 144) = 13."],
+    ["A plane flies east at 300 km/h while the wind blows north at 40 km/h. What is its speed relative to the ground?", "About 302.7 km/h", ["340 km/h", "260 km/h", "300 km/h"], "|⟨300, 40⟩| = √(90,000 + 1,600) ≈ 302.7."]
   ]],
   ["4.9", "Vector-Valued Functions", [
-    ["For p(t) = ⟨t, t²⟩, what is the position at t = 3?", "(3, 9)", ["(9, 3)", "(3, 6)", "(1, 9)"], "Evaluate each component."],
-    ["A vector-valued function p(t) = ⟨x(t), y(t)⟩ is equivalent to", "the parametric function x = x(t), y = y(t)", ["a single real-valued function", "a matrix", "a conic section"], "Both give a point's position in terms of t."],
-    ["For p(t) = ⟨2t, 3t⟩, what is the displacement from t = 0 to t = 2?", "⟨4, 6⟩", ["⟨2, 3⟩", "⟨6, 4⟩", "⟨0, 0⟩"], "p(2) − p(0) = ⟨4, 6⟩."],
-    ["For p(t) = ⟨cos t, sin t⟩, what is the distance from the origin at any t?", "1", ["t", "0", "2"], "√(cos²t + sin²t) = 1."]
+    ["For p(t) = ⟨t², 3t⟩, what is the displacement vector from t = 1 to t = 3?", "⟨8, 6⟩", ["⟨9, 9⟩", "⟨4, 6⟩", "⟨8, 3⟩"], "p(3) − p(1) = ⟨9, 9⟩ − ⟨1, 3⟩."],
+    ["For p(t) = ⟨t², 3t⟩, what is the magnitude of the displacement from t = 1 to t = 3?", "10", ["14", "6", "100"], "|⟨8, 6⟩| = √(64 + 36) = 10."],
+    ["For p(t) = ⟨2 + 3t, 1 − t⟩, what is the average velocity on [0, 4]?", "⟨3, −1⟩", ["⟨12, −4⟩", "⟨14, −3⟩", "⟨2, 1⟩"], "Displacement ⟨12, −4⟩ divided by 4."],
+    ["For p(t) = ⟨cos t, sin t⟩, where is the particle at t = π?", "(−1, 0)", ["(1, 0)", "(0, −1)", "(0, 1)"], "cos π = −1 and sin π = 0."]
   ]],
   ["4.10", "Matrices", [
-    ["What is [[1, 2], [3, 4]] + [[0, 1], [1, 0]]?", "[[1, 3], [4, 4]]", ["[[1, 2], [3, 4]]", "[[0, 2], [3, 0]]", "[[2, 3], [4, 5]]"], "Add matching entries."],
-    ["What is the product [[1, 0], [2, 1]] · [[3], [4]]?", "[[3], [10]]", ["[[3], [4]]", "[[7], [10]]", "[[3], [8]]"], "Row 1: 1·3 + 0·4 = 3; row 2: 2·3 + 1·4 = 10."],
-    ["A 2 × 3 matrix can be multiplied on the right by a matrix with", "3 rows", ["2 rows", "3 columns", "2 columns"], "The inner dimensions must match."],
-    ["Is matrix multiplication commutative in general?", "No; AB usually differs from BA", ["Yes, always", "Only for 3 × 3 matrices", "Only when A is the zero matrix"], "The order of multiplication matters."]
+    ["What is [[2, 1], [0, 3]] · [[1, 4], [2, −1]]?", "[[4, 7], [6, −3]]", ["[[2, 4], [0, −3]]", "[[4, 7], [6, 3]]", "[[3, 5], [2, 2]]"], "Row 1: 2·1 + 1·2 = 4, 2·4 + 1·(−1) = 7. Row 2: 0 + 3·2 = 6, 0 + 3·(−1) = −3."],
+    ["A = [[1, 2], [3, 4]] and B = [[0, 1], [5, 2]]. What is 2A − B?", "[[2, 3], [1, 6]]", ["[[2, 4], [6, 8]]", "[[1, 1], [−2, 2]]", "[[2, 3], [11, 10]]"], "2A = [[2, 4], [6, 8]], minus B gives [[2, 3], [1, 6]]."],
+    ["A is a 2 × 3 matrix and B is a 3 × 4 matrix. What are the dimensions of AB?", "2 × 4", ["3 × 3", "4 × 2", "AB is undefined"], "The inner dimensions (3) match, and the result has A's rows and B's columns."],
+    ["A = [[1, 2], [3, 4]]. What is A times the vector ⟨3, −1⟩?", "⟨1, 5⟩", ["⟨3, −2⟩", "⟨5, 13⟩", "⟨1, −1⟩"], "1·3 + 2·(−1) = 1 and 3·3 + 4·(−1) = 5."]
   ]],
   ["4.11", "The Inverse and Determinant of a Matrix", [
-    ["What is the determinant of [[3, 2], [1, 4]]?", "10", ["14", "12", "2"], "ad − bc = 12 − 2 = 10."],
-    ["A 2 × 2 matrix has an inverse exactly when", "its determinant is not 0", ["its determinant is 0", "all its entries are positive", "it is symmetric"], "The inverse formula divides by the determinant."],
-    ["What is the inverse of [[2, 0], [0, 4]]?", "[[1/2, 0], [0, 1/4]]", ["[[−2, 0], [0, −4]]", "[[4, 0], [0, 2]]", "[[2, 0], [0, 4]]"], "Invert each diagonal entry."],
-    ["The absolute value of the determinant of [[a, b], [c, d]] gives", "the area of the parallelogram formed by its column vectors", ["the sum of its entries", "its trace", "the number of solutions"], "Determinants measure how a transformation scales area."]
+    ["What is the determinant of [[3, 5], [2, 4]]?", "2", ["22", "−2", "7"], "3·4 − 5·2 = 2."],
+    ["What is the inverse of [[3, 5], [2, 4]]?", "[[2, −2.5], [−1, 1.5]]", ["[[4, −5], [−2, 3]]", "[[1/3, 1/5], [1/2, 1/4]]", "[[−2, 2.5], [1, −1.5]]"], "(1/2)[[4, −5], [−2, 3]]."],
+    ["For what value of k is [[k, 6], [2, 3]] not invertible?", "k = 4", ["k = 9", "k = 1", "k = −4"], "The determinant 3k − 12 = 0 gives k = 4."],
+    ["A linear transformation has a matrix with determinant −3. A region of area 5 is transformed. What is the area of the image?", "15", ["−15", "5/3", "8"], "Areas are multiplied by |det| = 3. The negative sign only means orientation is reversed."]
   ]],
   ["4.12", "Linear Transformations and Matrices", [
-    ["The matrix [[1, 0], [0, −1]] represents a", "reflection over the x-axis", ["reflection over the y-axis", "rotation by 90°", "dilation by 2"], "(x, y) → (x, −y)."],
-    ["Which matrix rotates points 90° counterclockwise about the origin?", "[[0, −1], [1, 0]]", ["[[0, 1], [−1, 0]]", "[[1, 0], [0, 1]]", "[[−1, 0], [0, −1]]"], "(1, 0) → (0, 1) and (0, 1) → (−1, 0)."],
-    ["The matrix [[2, 0], [0, 2]] transforms a shape by", "dilating it by a factor of 2", ["rotating it 180°", "reflecting it", "translating it"], "Each coordinate doubles."],
-    ["Applying transformation A and then B corresponds to the matrix", "BA", ["AB", "A + B", "A − B"], "The first transformation is applied to the vector first: B(Av) = (BA)v."]
+    ["The matrix [[0, 1], [1, 0]] is applied to the point (5, −2). What is the image?", "(−2, 5)", ["(5, −2)", "(2, −5)", "(−5, 2)"], "This matrix swaps x and y: a reflection over y = x."],
+    ["Which matrix rotates points 180° about the origin?", "[[−1, 0], [0, −1]]", ["[[0, −1], [1, 0]]", "[[1, 0], [0, −1]]", "[[−1, 0], [0, 1]]"], "A 180° rotation sends (x, y) to (−x, −y)."],
+    ["The point (1, 0) is rotated 60° counterclockwise about the origin. What is the image?", "(1/2, √3/2)", ["(√3/2, 1/2)", "(−1/2, √3/2)", "(1/2, −√3/2)"], "(cos 60°, sin 60°)."],
+    ["The unit square is transformed by [[3, 0], [0, 3]]. What is the area of the image?", "9", ["3", "6", "1"], "The determinant is 9, so areas are multiplied by 9."]
   ]],
   ["4.13", "Matrices as Functions", [
-    ["If A = [[1, 1], [0, 1]], what is A applied to ⟨2, 3⟩?", "⟨5, 3⟩", ["⟨2, 5⟩", "⟨3, 2⟩", "⟨2, 3⟩"], "⟨1·2 + 1·3, 0·2 + 1·3⟩ = ⟨5, 3⟩."],
-    ["An inverse matrix A⁻¹ acts as a function that", "undoes the transformation A", ["doubles the transformation", "always rotates by 90°", "has determinant 0"], "A⁻¹(Av) = v."],
-    ["A transformation with determinant 0", "collapses the plane onto a line or a point, so it cannot be undone", ["preserves area", "is a rotation", "has an inverse"], "Different inputs can map to the same output."],
-    ["A transformation with determinant −1", "preserves area but reverses orientation, like a reflection", ["doubles area", "collapses the plane", "has no effect"], "|det| = 1 preserves area; the negative sign flips orientation."]
+    ["R = [[0, −1], [1, 0]] rotates points 90° counterclockwise. What transformation does R² perform?", "A 180° rotation", ["A 90° clockwise rotation", "A reflection over the x-axis", "No change"], "R² = [[−1, 0], [0, −1]], which is two 90° rotations."],
+    ["A = [[2, 0], [0, 1]]. Where does A⁻¹ send the point (6, 5)?", "(3, 5)", ["(12, 5)", "(6, 2.5)", "(3, 2.5)"], "A⁻¹ = [[1/2, 0], [0, 1]], which halves x."],
+    ["F = [[1, 0], [0, −1]] reflects over the x-axis, and R = [[0, −1], [1, 0]] rotates 90° counterclockwise. What single transformation is 'reflect with F, then rotate with R'?", "A reflection over the line y = x", ["A reflection over the line y = −x", "A 270° rotation", "A 90° rotation"], "RF = [[0, 1], [1, 0]], which swaps x and y."],
+    ["The shear matrix [[1, 2], [0, 1]] is applied to (2, 3). What is the image?", "(8, 3)", ["(2, 7)", "(5, 3)", "(8, 6)"], "x' = 2 + 2·3 = 8 and y' = 3."]
   ]],
   ["4.14", "Matrices Modeling Contexts", [
-    ["A transition matrix models customers switching between two stores each week. What must each column (of probabilities from one store) add up to?", "1", ["0", "2", "100 in all cases"], "Every customer ends up somewhere, so the probabilities out of each state total 1."],
-    ["If 80% of Store A's customers stay and 20% switch to Store B each week, the first column of the transition matrix is", "[[0.8], [0.2]]", ["[[0.2], [0.8]]", "[[0.8], [0.8]]", "[[1], [0]]"], "The column for A lists where A's customers go: 0.8 to A, 0.2 to B."],
-    ["To predict the state two weeks later using transition matrix T and state vector v, compute", "T²v", ["2Tv", "T + v", "v²"], "Apply T twice."],
-    ["A steady state for a transition matrix T is a vector v such that", "Tv = v", ["Tv = 0", "Tv = 2v", "T = v"], "Applying the transition leaves the distribution unchanged."]
+    ["Two gyms share 1,000 members. Each month, gym A keeps 90% and loses 10% to B; gym B keeps 80% and loses 20% to A. Starting with 600 at A and 400 at B, how many are at each gym after one month?", "620 at A and 380 at B", ["600 at A and 400 at B", "580 at A and 420 at B", "640 at A and 360 at B"], "A: 0.9(600) + 0.2(400) = 620. B: 0.1(600) + 0.8(400) = 380."],
+    ["Using the same gyms (A keeps 90%, B keeps 80%), what is the steady-state number of members at gym A?", "About 667", ["500", "600", "About 750"], "At steady state, 0.1A = 0.2B, so A = 2B and A = 2,000/3 ≈ 667."],
+    ["Using the same gyms, starting with 600 at A and 400 at B, how many are at gym A after two months?", "634", ["620", "640", "658"], "After one month: 620 and 380. Then A = 0.9(620) + 0.2(380) = 558 + 76 = 634."],
+    ["If P is the transition matrix and this month's distribution is known, how can you find last month's distribution?", "Multiply this month's distribution by P⁻¹", ["Multiply this month's distribution by P", "Multiply this month's distribution by 2P", "Subtract P from this month's distribution"], "If x₁ = Px₀, then x₀ = P⁻¹x₁."]
   ]]
 ]}
 );

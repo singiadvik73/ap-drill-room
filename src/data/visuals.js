@@ -252,8 +252,7 @@ V("hug", "1.4", ["The graph shows where customers of a store live. Which concept
     series: [{ name: "Customers", pts: [[2.5, 36], [7.5, 22], [12.5, 14], [17.5, 9], [22.5, 6], [27.5, 4.5], [32.5, 3.3], [37.5, 2.5], [42.5, 1.6], [47.5, 1.1]], dots: true }] }]);
 
 // 1.6 scale panels
-V("hug", "1.6", ["The two maps show the same unemployment data for one region. What do the maps best illustrate?", "Showing data at a broader scale can hide variation that appears at a more local scale",
-  ["State-level data is always more accurate than county-level data", "Unemployment is evenly distributed within each state", "The scale of analysis does not affect the patterns you see"],
+V("hug", "1.6", ["The two maps show the same unemployment data for one region. What do the maps best illustrate?", "Broader-scale data can hide local variation", ["State-level data is always more accurate", "Unemployment is even within each state", "Scale doesn't change the patterns you see"],
   "Map A averages each state (outlined blocks), so each state looks uniform. Map B shows sharp county-level contrasts inside those same states.",
   { t: "choro", title: "Unemployment rate", legend: ["Under 3%", "3–4%", "4–5%", "5–6%", "Over 6%"],
     panels: [{ title: "Map A: by state", grid: [[2, 2, 2, 1, 1, 1], [2, 2, 2, 1, 1, 1], [2, 2, 2, 1, 1, 1], [3, 3, 3, 2, 2, 2], [3, 3, 3, 2, 2, 2], [3, 3, 3, 2, 2, 2]], outline: [[0, 0, 3, 3], [0, 3, 3, 3], [3, 0, 3, 3], [3, 3, 3, 3]] },
@@ -265,16 +264,13 @@ const expansive = { t: "pyramid", title: "Population pyramid, Country A", ages: 
   m: [9.4, 8.0, 6.8, 5.6, 4.5, 3.7, 3.0, 2.4, 1.9, 1.5, 1.2, 0.9, 0.7, 0.5, 0.3, 0.2, 0.1], f: [9.1, 7.8, 6.6, 5.5, 4.5, 3.8, 3.1, 2.5, 2.0, 1.6, 1.3, 1.0, 0.8, 0.6, 0.4, 0.2, 0.1] };
 V("hug", "2.3", ["Country A's population pyramid is most characteristic of which stage of the Demographic Transition Model?", "Stage 2", ["Stage 1", "Stage 4", "Stage 5"],
   "A very wide base narrowing sharply toward the top shows high birth rates and a young population, with death rates already falling. That combination produces rapid growth, the mark of Stage 2 (e.g., Niger).", expansive]);
-V("hug", "2.3", ["Which challenge is Country A most likely to face in the next 20 years?", "Providing enough schools, jobs, and housing for a large young population",
-  ["Funding pensions for a large elderly population", "A shrinking labor force", "Natural decrease in population"],
+V("hug", "2.3", ["Which challenge is Country A most likely to face in the next 20 years?", "Providing schools and jobs for many young people", ["Funding pensions for a large elderly population", "Replacing a shrinking labor force", "Managing natural decrease in population"],
   "Nearly half the population is under 15, so demand for education and, later, jobs will surge. This is the youthful dependency challenge.", expansive]);
-V("hug", "2.9", ["Country B's pyramid suggests which policy response is most likely?", "Pronatalist incentives and increased immigration to expand the workforce",
-  ["Antinatalist policies to reduce birth rates", "Building many new primary schools", "Restricting immigration to protect jobs"],
+V("hug", "2.9", ["Country B's pyramid suggests which policy response is most likely?", "Pronatalist incentives and more immigration", ["Antinatalist policies to reduce births", "Building many new primary schools", "Restricting immigration to protect jobs"],
   "A narrow base with a top-heavy shape means low fertility and an aging population, as in Japan. Governments respond with incentives to have children and by bringing in workers from abroad.",
   { t: "pyramid", title: "Population pyramid, Country B", ages: AGES, max: 6, ticks: [0, 3, 6],
     m: [1.8, 2.0, 2.2, 2.3, 2.4, 2.5, 2.7, 3.0, 3.4, 3.9, 3.4, 3.1, 3.0, 3.3, 3.4, 2.4, 2.6], f: [1.7, 1.9, 2.1, 2.2, 2.3, 2.4, 2.6, 2.9, 3.3, 3.8, 3.4, 3.2, 3.1, 3.6, 4.0, 3.2, 5.4] }]);
-V("hug", "2.12", ["Country C's population pyramid shows a large bulge of males aged 20–44. What is the most likely explanation?", "Large-scale immigration of male workers for jobs in construction and the oil industry",
-  ["A recent baby boom", "A war that killed many young women", "High female emigration"],
+V("hug", "2.12", ["Country C's population pyramid shows a large bulge of males aged 20–44. What is the most likely explanation?", "Immigration of male workers for construction", ["A recent baby boom among citizens", "A war that killed many young women", "High emigration of women abroad"],
   "Gulf states such as Qatar and the UAE recruit many male guest workers. This skews the sex ratio and creates a bulge in working ages that births alone can't explain.",
   { t: "pyramid", title: "Population pyramid, Country C", ages: ["0–4", "5–9", "10–14", "15–19", "20–24", "25–29", "30–34", "35–39", "40–44", "45–49", "50–54", "55–59", "60–64", "65+"], max: 14, ticks: [0, 7, 14],
     m: [3.5, 3.3, 2.8, 2.8, 8.0, 12.0, 11.0, 8.0, 5.5, 4.0, 2.8, 1.8, 1.0, 0.7], f: [3.3, 3.1, 2.6, 2.0, 2.0, 2.8, 3.0, 2.4, 1.6, 1.1, 0.8, 0.5, 0.3, 0.3] }]);
@@ -294,13 +290,11 @@ const dtm = { t: "line", title: "The Demographic Transition Model", bands: [{ fr
     { name: "Crude death rate", pts: curve(x => x < 20 ? 35.4 + 3 * Math.sin(x * 1.3) * (20 - x) / 20 : x < 80 ? 10 + 27 / (1 + Math.exp((x - 31) / 4)) : 10 + (x - 80) * 0.1, 0, 100, 120), k: 2, dash: true }] };
 V("hug", "2.5", ["In which stage of the model is the rate of natural increase highest?", "Late Stage 2", ["Stage 1", "Stage 4", "Stage 5"],
   "The gap between birth rate and death rate is widest at the end of Stage 2. Death rates have fallen with better food and medicine, but birth rates are still high.", dtm]);
-V("hug", "2.5", ["What distinguishes Stage 5 from Stage 4 in the model?", "The death rate rises above the birth rate, producing natural decrease",
-  ["Birth rates rise sharply", "Death rates fall sharply because of medical advances", "Both rates become high and unstable"],
+V("hug", "2.5", ["What distinguishes Stage 5 from Stage 4 in the model?", "Death rates exceed birth rates (natural decrease)", ["Birth rates rise sharply again", "Death rates fall because of medicine", "Both rates become high and unstable"],
   "In Stage 5, very low fertility and an aging population push deaths above births. Italy and Japan are examples.", dtm]);
 
 // 2.6 Malthus
-V("hug", "2.6", ["According to the model shown, what happens after year 25?", "Population grows faster than food supply, leading to shortages and 'checks' such as famine",
-  ["Food supply grows faster than population", "Population and food supply grow at the same rate", "Population stops growing entirely"],
+V("hug", "2.6", ["According to the model shown, what happens after year 25?", "Population outgrows food, causing famine", ["Food supply outgrows population", "Population and food grow at the same rate", "Population stops growing entirely"],
   "Malthus argued that population grows geometrically (1, 2, 4, 8…) while food grows arithmetically (1, 2, 3, 4…). Critics note he didn't foresee advances like the Green Revolution.",
   { t: "line", title: "Malthus's model of population and food supply", x: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Years" }, y: { min: 0, max: 16, ticks: [0, 4, 8, 12, 16], label: "Relative amount" },
     series: [{ name: "Population (geometric)", pts: curve(x => Math.pow(2, x / 25), 0, 100) }, { name: "Food supply (arithmetic)", pts: [[0, 1], [100, 5]], k: 2, dash: true }] }]);
@@ -318,8 +312,7 @@ V("hug", "3.4", ["The diagram shows how a new fashion trend spread. Which type o
     edges: [["a", "b"], ["a", "c"], ["b", "d"], ["b", "e"], ["c", "f"], ["c", "g"]] }]);
 
 // 3.7 language tree
-V("hug", "3.7", ["Based on the language tree, which statement is best supported?", "English and Hindi share a distant common ancestor, Proto-Indo-European",
-  ["English is more closely related to French than to German", "Spanish descended from Portuguese", "Hindi and Bengali belong to the Romance branch"],
+V("hug", "3.7", ["Based on the language tree, which statement is best supported?", "English and Hindi share a common ancestor", ["English is closer to French than to German", "Spanish descended directly from Portuguese", "Hindi and Bengali are Romance languages"],
   "All the languages shown descend from Proto-Indo-European, the root of the tree. English groups with German and Dutch (Germanic). Spanish and Portuguese are sister languages; neither comes from the other.",
   { t: "tree", title: "Part of the Indo-European language family", root: [{ l: "Germanic", c: ["English", ["German", "Dutch"]] }, { l: "Romance", c: [["Spanish", "Portuguese"], "French", "Italian"] }, { l: "Indo-Iranian", c: ["Hindi", "Bengali"] }] }]);
 
@@ -330,14 +323,12 @@ V("hug", "3.7", ["The graph shows the approximate share of the world's populatio
     series: [{ name: "Share", vals: [31, 24, 16, 15, 7, 6] }] }]);
 
 // 4.5 maritime zones
-V("hug", "4.5", ["According to UNCLOS, what right does a coastal state have in zone X?", "Exclusive rights to fish and extract resources, while other countries' ships may still pass through",
-  ["Full sovereignty, identical to its land territory", "No special rights; zone X is international waters", "The right to block all foreign ships from entering"],
+V("hug", "4.5", ["According to UNCLOS, what right does a coastal state have in zone X?", "Exclusive resource rights; ships may still pass", ["Full sovereignty, identical to its land", "No special rights; it's international water", "The right to block all foreign ships"],
   "Zone X is the Exclusive Economic Zone (up to 200 nautical miles). The state controls resources there, but navigation and overflight remain open to others.",
   { t: "flow", title: "Maritime zones under the UN Convention on the Law of the Sea", strip: true, steps: [{ l: "Land", w: 0.8 }, { l: "Territorial sea", s: "0–12 nm", w: 1.1 }, { l: "Contiguous zone", s: "12–24 nm", w: 1.1 }, { l: "X", s: "to 200 nm", x: 1, w: 2.2 }, { l: "High seas", w: 1.3 }] }]);
 
 // 4.6 gerrymandering
-V("hug", "4.6", ["Party A won about 60% of the statewide vote but only 2 of 5 districts. Which redistricting technique best explains the result?", "Packing Party A voters into Districts 1 and 2 and spreading the rest thinly across the other districts",
-  ["Reapportionment after the census", "Drawing compact, equal districts", "Majority-minority districting required by law"],
+V("hug", "4.6", ["Party A won about 60% of the statewide vote but only 2 of 5 districts. Which redistricting technique best explains the result?", "Packing and cracking Party A's voters", ["Reapportionment after the census", "Drawing compact districts of equal size", "Majority-minority districts required by law"],
   "Party A's voters are concentrated in two districts it wins by huge margins, wasting votes (packing). Its remaining voters are split so it narrowly loses Districts 3–5 (cracking).",
   { t: "bar", title: "Party A's vote share by congressional district", cats: ["District 1", "District 2", "District 3", "District 4", "District 5"], y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Party A vote share (%)" }, values: true, hlines: [{ y: 50 }],
     series: [{ name: "Party A", vals: [88, 85, 44, 43, 42] }], note: "Dashed line marks 50%." }]);
@@ -353,8 +344,7 @@ V("hug", "5.2", ["Which survey pattern is typical of French settlement along the
   { t: "panels", title: "Three rural land survey patterns", items: [{ t: "svg", title: "Pattern A", w: 220, h: 160, svg: surveySvg.a }, { t: "svg", title: "Pattern B", w: 220, h: 160, svg: surveySvg.b }, { t: "svg", title: "Pattern C", w: 220, h: 160, svg: surveySvg.c }] }]);
 
 // 5.5 India wheat yields
-V("hug", "5.5", ["What best explains the change in wheat yields in India shown on the graph?", "Adoption of high-yield seed varieties, fertilizers, and irrigation during the Green Revolution",
-  ["The spread of shifting cultivation", "Reduced use of chemical inputs", "A decline in the number of farmers"],
+V("hug", "5.5", ["What best explains the change in wheat yields in India shown on the graph?", "Green Revolution seeds, fertilizer, and irrigation", ["The spread of shifting cultivation", "Reduced use of chemical inputs", "A decline in the number of farmers"],
   "Yields were nearly flat until the mid-1960s, then climbed steeply as Green Revolution technologies spread, especially in Punjab and Haryana.",
   { t: "line", title: "Average wheat yield in India (approximate)", x: { min: 1950, max: 2000, ticks: range(1950, 2000, 10), label: "Year" }, y: { min: 0, max: 3, ticks: [0, 1, 2, 3], label: "Yield (tonnes per hectare)" },
     vlines: [{ x: 1966, l: "High-yield wheat introduced" }], series: [{ name: "Yield", pts: [[1950, 0.66], [1955, 0.7], [1960, 0.85], [1965, 0.83], [1970, 1.2], [1975, 1.3], [1980, 1.44], [1985, 1.87], [1990, 2.12], [1995, 2.56], [2000, 2.78]], dots: true }] }]);
@@ -363,13 +353,11 @@ V("hug", "5.5", ["What best explains the change in wheat yields in India shown o
 const vonThunen = { t: "rings", title: "Von Thünen's model of agricultural land use", rings: ["Market", "A", "B", "C", "D"] };
 V("hug", "5.8", ["In von Thünen's original model, which ring represents forestry?", "B", ["A", "C", "D"],
   "The rings, moving outward, are market gardening and dairy (A), forestry (B), grain and field crops (C), and ranching (D). Wood was heavy and costly to haul but needed in the city for fuel and building.", vonThunen]);
-V("hug", "5.8", ["Which activity would von Thünen place in ring D, and why?", "Ranching, because it needs large amounts of cheap land and animals can walk to market",
-  ["Dairy, because milk is perishable", "Market gardening, because vegetables need to reach the city quickly", "Forestry, because wood is bulky"],
+V("hug", "5.8", ["Which activity would von Thünen place in ring D, and why?", "Ranching, which needs large amounts of cheap land", ["Dairy, because milk is perishable", "Market gardening, since vegetables spoil fast", "Forestry, because wood is bulky and heavy"],
   "Land rent falls with distance from the market, so the most land-extensive activity with the lowest transport cost per unit of value ends up farthest out.", vonThunen]);
 
 // 6.2 urbanization by region
-V("hug", "6.2", ["Which statement is best supported by the graph?", "Africa and Asia are the least urbanized regions, so most future urban growth is expected there",
-  ["Europe is the most urbanized region in the world", "Asia is more urbanized than Latin America", "All regions have nearly the same level of urbanization"],
+V("hug", "6.2", ["Which statement is best supported by the graph?", "Africa and Asia will see most future urban growth", ["Europe is the most urbanized region on Earth", "Asia is more urbanized than Latin America", "All regions are about equally urbanized"],
   "About 43% of Africa's population and 50% of Asia's live in cities, compared with more than 80% in North America and Latin America. Rapid rural-to-urban migration is ongoing in both regions.",
   { t: "bar", title: "Urban population as a share of total population (approx.)", cats: ["N. America", "Latin Am.", "Europe", "Oceania", "Asia", "Africa"], y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Urban population (%)" }, values: true,
     series: [{ name: "Urban share", vals: [82, 81, 74, 68, 50, 43] }] }]);
@@ -383,7 +371,7 @@ V("hug", "6.4", ["The graphs show the five largest cities in two countries. Whic
       { t: "bar", title: "Country Y", h: 240, cats: ["1", "2", "3", "4", "5"], y: { min: 0, max: 12, ticks: [0, 4, 8, 12] }, values: true, series: [{ name: "Y", vals: [12, 2, 1.6, 1.2, 1] }] }] }]);
 
 // 6.5 Burgess
-V("hug", "6.5", ["In the Burgess concentric zone model shown, what is found in zone 2?", "The zone of transition, with industry and deteriorating housing", ["High-income commuter homes", "Middle-class single-family housing", "The central business district"],
+V("hug", "6.5", ["In the Burgess concentric zone model shown, what is found in zone 2?", "The zone of transition", ["The high-income commuter zone", "Middle-class single-family housing", "The central business district"],
   "Zone 1 is the CBD, zone 2 is the zone in transition, zone 3 is working-class homes, zone 4 is middle-class residences, and zone 5 is the commuter zone. Income generally rises with distance from the center.",
   { t: "rings", title: "Concentric zone model", rings: ["1", "2", "3", "4", "5"], key: ["1 = CBD", "2 = ?", "3 = Working-class housing", "4 = Middle-class housing", "5 = Commuter zone"] }]);
 
@@ -397,8 +385,7 @@ const bidRent = { t: "line", title: "Bid-rent curves", x: { min: 0, max: 20, tic
   series: [{ name: "Commercial", pts: [[0, 100], [5, 0]] }, { name: "Industrial", pts: [[0, 60], [11, 0]], k: 2 }, { name: "Residential", pts: [[0, 35], [18, 0]], k: 3, dash: true }] };
 V("hug", "6.6", ["According to bid-rent theory and the graph, which land use would occupy land 4 km from the CBD?", "Industrial", ["Commercial", "Residential", "Agricultural"],
   "Land goes to the highest bidder. At 4 km, industrial users would pay about $38/m², more than residential (about $27) or commercial (about $20).", bidRent]);
-V("hug", "6.6", ["Why does the commercial curve have the steepest slope?", "Businesses value accessibility highly and will pay the most for central locations, but their willingness falls quickly with distance",
-  ["Commercial land is always cheaper than residential land", "Businesses prefer locations far from the CBD", "Residential users value accessibility more than businesses"],
+V("hug", "6.6", ["Why does the commercial curve have the steepest slope?", "Businesses pay most for central, accessible land", ["Commercial land is always cheaper than housing", "Businesses prefer land far from the CBD", "Residents value accessibility more than firms"],
   "Retail and offices depend on foot traffic and accessibility, so central sites are worth far more to them than to other users.", bidRent]);
 
 // 7.2 employment by sector
@@ -408,21 +395,18 @@ V("hug", "7.2", ["Which country is most likely the most economically developed?"
     series: [{ name: "Primary", vals: [60, 30, 2] }, { name: "Secondary", vals: [15, 30, 18], k: 2 }, { name: "Tertiary", vals: [25, 40, 80], k: 3 }] }]);
 
 // 7.3 scatter GNI vs TFR
-V("hug", "7.3", ["The scatterplot compares income and fertility for a sample of countries. Which relationship does it show?", "As GNI per capita increases, total fertility rate generally decreases",
-  ["As GNI per capita increases, total fertility rate increases", "There is no relationship between income and fertility", "Only countries with high income have fertility above replacement"],
+V("hug", "7.3", ["The scatterplot compares income and fertility for a sample of countries. Which relationship does it show?", "Higher GNI per capita, lower fertility", ["Higher GNI per capita, higher fertility", "No relationship between income and fertility", "Only high-income countries exceed replacement"],
   "Higher-income countries tend to have more education and employment for women, better access to contraception, and lower infant mortality, all of which lower fertility.",
   { t: "scatter", title: "GNI per capita vs. total fertility rate (illustrative sample)", x: { min: 0, max: 70, ticks: range(0, 70, 10), label: "GNI per capita (thousands of US$)" }, y: { min: 0, max: 7, ticks: range(0, 7, 1), label: "Total fertility rate" },
     pts: [[1.2, 6.7], [2.1, 5.0], [2.5, 4.4], [4, 3.6], [6, 2.7], [8, 2.3], [12, 1.8], [16, 1.7], [25, 1.5], [35, 1.6], [45, 1.8], [55, 1.7], [65, 1.6]] }]);
 
 // 7.3 HDI table
-V("hug", "7.3", ["Based on the table, Country B most likely has", "a large share of its workforce in the primary sector and a high infant mortality rate",
-  ["a mostly tertiary economy and very low fertility", "the highest Human Development Index of the three", "a larger GNI per capita than Country C"],
+V("hug", "7.3", ["Based on the table, Country B most likely has", "a large primary sector and high infant mortality", ["a mostly tertiary economy with very low fertility", "the highest HDI of the three countries", "a larger GNI per capita than Country C"],
   "Low life expectancy, few years of schooling, and low income all point to a less developed country. Such countries typically have more agricultural workers and higher infant mortality.",
   { t: "table", title: "Human Development Index indicators", head: ["Country", "Life expectancy (yrs)", "Mean years of schooling", "GNI per capita (US$)", "HDI"], rows: [["A", "82", "13.4", "50,000", "0.94"], ["B", "64", "4.9", "2,300", "0.55"], ["C", "75", "8.5", "14,000", "0.77"]] }]);
 
 // 7.5 Rostow
-V("hug", "7.5", ["In Rostow's stages of economic growth, what happens during stage X?", "Takeoff: rapid growth concentrated in a few manufacturing industries",
-  ["High mass consumption of durable goods", "Subsistence agriculture with limited technology", "Widespread diffusion of technology across the whole economy"],
+V("hug", "7.5", ["In Rostow's stages of economic growth, what happens during stage X?", "Takeoff, with growth in a few industries", ["High mass consumption of durable goods", "Traditional subsistence agriculture", "Drive to maturity across the whole economy"],
   "Takeoff comes after the preconditions stage: a few leading industries (often textiles or manufacturing) grow quickly, and investment rises. Critics call the model Eurocentric.",
   { t: "flow", title: "Rostow's stages of economic growth", steps: ["Traditional society", "Preconditions for takeoff", "X", "Drive to maturity", "High mass consumption"] }]);
 
@@ -433,8 +417,7 @@ V("hug", "7.6", ["Based on the table, which specialization would benefit both co
   { t: "table", title: "Output per worker per day", head: ["Country", "Wheat (tonnes)", "Cloth (meters)"], rows: [["A", "6", "3"], ["B", "2", "2"]] }]);
 
 // 7.7 US manufacturing
-V("hug", "7.7", ["Which process best explains the trend in U.S. manufacturing employment after 1980?", "Deindustrialization driven by automation and the offshoring of factory jobs to lower-wage countries",
-  ["Rapid industrialization in the Rust Belt", "Growth of the primary sector", "A decline in U.S. manufacturing output to zero"],
+V("hug", "7.7", ["Which process best explains the trend in U.S. manufacturing employment after 1980?", "Deindustrialization from automation and offshoring", ["Rapid industrialization in the Rust Belt", "Growth of the primary sector in cities", "Manufacturing output falling to zero"],
   "Manufacturing jobs fell from about 19 million to about 12 million as factories automated and production moved abroad. U.S. manufacturing output did not collapse; it now takes fewer workers.",
   { t: "line", title: "U.S. manufacturing employment (approximate)", x: { min: 1970, max: 2020, ticks: range(1970, 2020, 10), label: "Year" }, y: { min: 0, max: 20, ticks: range(0, 20, 5), label: "Workers (millions)" },
     series: [{ name: "Manufacturing jobs", pts: [[1970, 17.8], [1979, 19.4], [1985, 17.8], [1990, 17.7], [1995, 17.2], [2000, 17.3], [2005, 14.2], [2010, 11.5], [2015, 12.3], [2019, 12.8]], dots: true }] }]);

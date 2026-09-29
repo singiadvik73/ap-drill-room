@@ -185,19 +185,16 @@ const snowMap = (() => {
   Object.entries(pumps).forEach(([k, [x, y]]) => { s += `<circle cx="${x}" cy="${y}" r="9" fill="${"var(--s2)"}"/><text x="${x}" y="${y}" dy="0.35em" text-anchor="middle" style="fill:#fff;font:700 11px var(--sans)">${k}</text>`; });
   return s;
 })();
-V("hug", "1.3", ["The map shows deaths during a cholera outbreak (squares) and three water pumps (A, B, C). Which conclusion is best supported?", "Pump B is the most likely source, because deaths cluster around it",
-  ["Pump A is the most likely source", "Deaths are spread evenly, so water isn't involved", "Pump C is the most likely source"],
+V("hug", "1.3", ["The map shows deaths during a cholera outbreak (squares) and three water pumps (A, B, C). Which conclusion is best supported?", "Pump B, because deaths cluster around it", ["Pump A, because it is closest to the river", "Pump C, because it serves the most homes", "None, because deaths are spread evenly"],
   "This mirrors John Snow's 1854 map of London. Mapping cases revealed a cluster around one pump, and removing its handle helped end the outbreak. It's a classic example of geographic data informing a decision.",
   { t: "svg", title: "Cholera deaths and water pumps (based on Snow's 1854 map)", w: 520, h: 260, svg: snowMap }]);
 
-V("hug", "1.5", ["The graph shows the surface area of the Aral Sea after rivers feeding it were diverted to irrigate cotton. It is an example of", "human modification of the environment with major unintended consequences",
-  ["environmental determinism", "a natural climate cycle unrelated to human activity", "sustainable water management"],
+V("hug", "1.5", ["The graph shows the surface area of the Aral Sea after rivers feeding it were diverted to irrigate cotton. It is an example of", "human modification with unintended results", ["environmental determinism in action", "a natural climate cycle unrelated to people", "sustainable management of water resources"],
   "Soviet irrigation projects diverted the Amu Darya and Syr Darya rivers. The sea shrank drastically, which hurt fishing, raised salinity, and caused dust storms.",
   { t: "line", title: "Surface area of the Aral Sea (approximate)", x: { min: 1960, max: 2015, ticks: range(1960, 2010, 10), label: "Year" }, y: { min: 0, max: 70, ticks: range(0, 70, 10), label: "Area (thousand km²)" },
     series: [{ name: "Area", pts: [[1960, 68], [1970, 60], [1980, 51], [1987, 41], [1995, 30], [2000, 24], [2005, 17], [2010, 14], [2014, 8]], dots: true }] }]);
 
-V("hug", "1.7", ["The diagram shows where a regional newspaper is delivered. What kind of region does it show?", "A functional (nodal) region organized around a central city",
-  ["A formal region defined by one shared characteristic", "A perceptual region based on people's feelings", "A physical region defined by landforms"],
+V("hug", "1.7", ["The diagram shows where a regional newspaper is delivered. What kind of region does it show?", "A functional (nodal) region", ["A formal region with one shared trait", "A perceptual region based on feelings", "A physical region defined by landforms"],
   "Functional regions are defined by connections to a node, here the newspaper's home city. Ties weaken with distance.",
   { t: "web", title: "Newspaper delivery routes from Riverton", h: 280, nodes: [{ id: "c", l: "Riverton (newspaper HQ)", x: 50, y: 50 }, { id: "a", l: "Oak Hill", x: 16, y: 16 }, { id: "b", l: "Millbrook", x: 84, y: 16 }, { id: "d", l: "Cedar Falls", x: 14, y: 84 }, { id: "e", l: "Pine Grove", x: 86, y: 84 }, { id: "f", l: "Lakeview", x: 50, y: 92 }],
     edges: [["c", "a"], ["c", "b"], ["c", "d"], ["c", "e"], ["c", "f"]] }]);
@@ -206,21 +203,18 @@ V("hug", "2.1", ["Based on the table, which country has the highest physiologica
   "Physiological density is people per unit of arable land. Egypt's roughly 110 million people depend on about 3% of its land along the Nile, which gives about 3,700 people per km² of farmland.",
   { t: "table", title: "Population and land (approximate)", head: ["Country", "Population", "Land area (km²)", "Arable land"], rows: [["Egypt", "110 million", "1,000,000", "3%"], ["Netherlands", "18 million", "41,500", "25%"], ["Canada", "40 million", "9,000,000", "4%"]] }]);
 
-V("hug", "2.2", ["The graph shows arable land per person worldwide. What is a likely consequence of this trend?", "More pressure to raise yields on existing farmland through intensive agriculture",
-  ["Food production must be falling everywhere", "Farmland per person is rising", "Population is shrinking"],
+V("hug", "2.2", ["The graph shows arable land per person worldwide. What is a likely consequence of this trend?", "More pressure to farm existing land intensively", ["Food production falling in every country", "Farmland per person rising over time", "A shrinking population in most regions"],
   "As population grows faster than farmland expands, each hectare must feed more people. That encourages intensification (fertilizer, irrigation, high-yield seeds) or expansion into forests.",
   { t: "line", title: "Arable land per person, world (approximate)", x: { min: 1960, max: 2020, ticks: range(1960, 2020, 10), label: "Year" }, y: { min: 0, max: 0.4, ticks: [0, 0.1, 0.2, 0.3, 0.4], label: "Hectares per person" },
     series: [{ name: "Arable land per person", pts: [[1961, 0.37], [1970, 0.33], [1980, 0.28], [1990, 0.24], [2000, 0.22], [2010, 0.2], [2020, 0.18]], dots: true }] }]);
 
-V("hug", "2.7", ["The graph shows China's total fertility rate (TFR). Which statement is best supported?", "Fertility had already fallen sharply before the one-child policy began in 1979, and relaxing the policy did not bring it back up",
-  ["The one-child policy caused TFR to rise", "TFR increased sharply after the two-child policy in 2016", "China's TFR has stayed constant since 1950"],
+V("hug", "2.7", ["The graph shows China's total fertility rate (TFR). Which statement is best supported?", "Fertility fell before 1979 and didn't rebound later", ["The one-child policy caused TFR to rise", "TFR rose sharply after the 2016 policy change", "China's TFR has stayed constant since 1950"],
   "TFR fell from about 6 to under 3 in the 1970s under earlier campaigns. After 2016, it kept falling as urbanization, costs, and changing norms mattered more than the rules.",
   { t: "line", title: "Total fertility rate in China (approximate)", x: { min: 1950, max: 2022, ticks: range(1950, 2020, 10), label: "Year" }, y: { min: 0, max: 7, ticks: range(0, 7, 1), label: "Children per woman" },
     vlines: [{ x: 1979, l: "One-child policy" }, { x: 2016, l: "Two-child" }],
     series: [{ name: "TFR", pts: [[1950, 5.8], [1960, 5.7], [1965, 6.3], [1970, 5.8], [1975, 3.6], [1980, 2.7], [1990, 2.4], [2000, 1.6], [2010, 1.6], [2016, 1.8], [2020, 1.3], [2022, 1.1]], dots: true }] }]);
 
-V("hug", "2.8", ["The scatterplot compares women's secondary school completion with total fertility rate in a sample of countries. Which relationship does it show?", "Countries where more women complete secondary school tend to have lower fertility",
-  ["More education for women is linked to higher fertility", "There is no relationship", "Fertility only changes when men's education changes"],
+V("hug", "2.8", ["The scatterplot compares women's secondary school completion with total fertility rate in a sample of countries. Which relationship does it show?", "More educated women, lower fertility", ["More educated women, higher fertility", "No relationship between the two", "Fertility changes only with men's education"],
   "Education delays marriage and childbearing, expands job opportunities, and improves knowledge of family planning and child health, all of which lower fertility.",
   { t: "scatter", title: "Women's education vs. fertility (illustrative sample)", x: { min: 0, max: 100, ticks: range(0, 100, 20), label: "Women completing secondary school (%)" }, y: { min: 0, max: 7, ticks: range(0, 7, 1), label: "Total fertility rate" },
     pts: [[5, 6.6], [10, 6.0], [18, 5.2], [25, 4.6], [35, 3.8], [45, 3.0], [55, 2.6], [65, 2.2], [75, 1.9], [85, 1.7], [92, 1.6], [96, 1.5]] }]);
@@ -229,7 +223,7 @@ V("hug", "2.11", ["Which person in the table is an internally displaced person (
   "IDPs are forced from their homes but stay inside their own country. Person A crossed a border fleeing war (a refugee), B moved voluntarily for work, and D practices transhumance.",
   { t: "table", title: "Four people who moved", head: ["Person", "Situation"], rows: [["A", "Fled civil war and crossed into a neighboring country"], ["B", "Moved to another country for a better-paying job"], ["C", "Forced from home by a flood; now lives in a camp in another region of the same country"], ["D", "Moves livestock between mountain and valley pastures each season"]] }]);
 
-V("hug", "3.1", ["Which item in the table is a nonmaterial culture trait?", "A belief that elders should make family decisions", ["Adobe houses", "Rice-based dishes", "Traditional wool clothing"],
+V("hug", "3.1", ["Which item in the table is a nonmaterial culture trait?", "A belief that elders should decide", ["Adobe houses in the village", "Rice-based dishes at meals", "Traditional wool clothing"],
   "Material culture is the physical things a group makes and uses. Nonmaterial culture is beliefs, values, language, and customs.",
   { t: "table", title: "Culture traits observed in one community", head: ["Trait", "Description"], rows: [["Housing", "Adobe houses with flat roofs"], ["Food", "Rice-based dishes"], ["Clothing", "Traditional wool clothing"], ["Values", "A belief that elders should make family decisions"]] }]);
 
@@ -237,26 +231,22 @@ V("hug", "3.2", ["The timeline shows the groups that shaped one place's landscap
   "Each group left marks on the cultural landscape (mission buildings, ranch boundaries, street grids) that build up in layers over time.",
   { t: "flow", title: "Groups that shaped San Antonio, Texas", steps: ["Coahuiltecan settlements", "Spanish missions (1700s)", "Mexican ranches (1820s)", "American railroad city (1880s)", "Modern metro area"] }]);
 
-V("hug", "3.3", ["The map shows the percentage of residents who speak Spanish at home in counties of a U.S. state that borders Mexico (the southern border is at the bottom). Which explanation best fits the pattern?", "Proximity to Mexico and a long history of Spanish-speaking settlement and migration",
-  ["Environmental determinism causes Spanish to be spoken in hot places", "Random distribution with no spatial pattern", "Recent migration only from Europe"],
+V("hug", "3.3", ["The map shows the percentage of residents who speak Spanish at home in counties of a U.S. state that borders Mexico (the southern border is at the bottom). Which explanation best fits the pattern?", "Proximity to Mexico and Hispanic settlement", ["Environmental determinism in hot places", "A random pattern with no spatial order", "Recent migration only from Europe"],
   "Spanish speakers are concentrated near the border, which reflects Spanish and Mexican settlement history, continued migration, and chain migration into established communities.",
   { t: "choro", title: "Residents speaking Spanish at home, by county (illustrative)", legend: ["Under 10%", "10–25%", "25–45%", "45–70%", "Over 70%"],
     panels: [{ grid: [[0, 0, 0, 1, 0, 0, 0], [0, 1, 1, 1, 1, 0, 0], [1, 1, 2, 2, 1, 1, 1], [2, 2, 3, 2, 2, 2, 1], [3, 3, 4, 3, 3, 2, 2], [4, 4, 4, 4, 3, 3, null]] }] }]);
 
-V("hug", "3.5", ["The graph shows how many African countries have each European language as an official language. What best explains the pattern?", "The legacy of European colonialism, which brought colonizers' languages into government and schools",
-  ["Recent migration from Europe to Africa", "Contagious diffusion through social media", "The spread of Islam across North Africa"],
+V("hug", "3.5", ["The graph shows how many African countries have each European language as an official language. What best explains the pattern?", "The legacy of European colonialism", ["Recent migration from Europe to Africa", "Contagious diffusion through social media", "The spread of Islam across North Africa"],
   "Colonial powers imposed their languages for administration and education. After independence, many states kept them as official languages that cut across local language groups.",
   { t: "bar", title: "African countries with each language as an official language (approximate)", cats: ["English", "French", "Portuguese", "Spanish"], y: { min: 0, max: 30, ticks: [0, 10, 20, 30], label: "Number of countries" }, values: true,
     series: [{ name: "Countries", vals: [24, 21, 6, 1] }] }]);
 
-V("hug", "3.6", ["The graph shows the share of the world's population using the internet. How has this trend most affected cultural diffusion?", "It has sped up the diffusion of popular culture through time-space compression",
-  ["It has stopped cultural diffusion", "It has made relocation diffusion the only type", "It has increased distance decay"],
+V("hug", "3.6", ["The graph shows the share of the world's population using the internet. How has this trend most affected cultural diffusion?", "It speeds pop culture diffusion", ["It has stopped cultural diffusion", "It makes relocation diffusion the only kind", "It has increased distance decay"],
   "The internet lets music, memes, and trends spread across the globe in days. Reduced friction of distance speeds contagious and hierarchical diffusion.",
   { t: "line", title: "Internet users as a share of world population (approximate)", x: { min: 2000, max: 2024, ticks: range(2000, 2020, 5), label: "Year" }, y: { min: 0, max: 80, ticks: range(0, 80, 20), label: "Share of people (%)" },
     series: [{ name: "Internet users", pts: [[2000, 7], [2005, 16], [2010, 29], [2015, 40], [2020, 60], [2023, 67]], dots: true }] }]);
 
-V("hug", "3.8", ["About 40% of the world's roughly 7,000 languages are endangered. Which process most contributes to this?", "Cultural convergence, as younger generations adopt dominant languages for school, work, and media",
-  ["Cultural divergence strengthening minority languages", "Environmental determinism", "Increasing isolation of rural communities"],
+V("hug", "3.8", ["About 40% of the world's roughly 7,000 languages are endangered. Which process most contributes to this?", "Cultural convergence toward dominant languages", ["Cultural divergence strengthening minority tongues", "Environmental determinism shaping language", "Growing isolation of rural communities"],
   "Globalization and assimilation pressure speakers to shift to national and global languages. When children stop learning a language, it becomes endangered.",
   { t: "sectors", title: "Status of the world's ~7,000 languages (approximate)", center: "~7,000", wedges: [{ l: "Endangered|about 40%", a: 144, k: 2 }, { l: "Not endangered|about 60%", a: 216, k: 1 }] }]);
 
@@ -264,8 +254,7 @@ V("hug", "4.1", ["Which description in the table is a multistate nation?", "Desc
   "A multistate nation is one nation spread across two or more states, as with Koreans. A is a nation-state, B is a stateless nation (like the Kurds), and C is a multinational state.",
   { t: "table", title: "Four political-geography situations", head: ["", "Description"], rows: [["A", "One state; nearly all residents share one ethnicity and language"], ["B", "About 30 million people sharing a culture, spread across four states, with no state of their own"], ["C", "One state containing more than 100 ethnic groups, several with their own republics"], ["D", "One ethnic group whose homeland is divided between two neighboring states"]] }]);
 
-V("hug", "4.2", ["The graph shows the number of UN member states. What best explains the sharp increase between about 1955 and 1970?", "Decolonization in Africa and Asia created many new independent states",
-  ["The breakup of the Soviet Union", "The formation of the European Union", "World War I peace treaties"],
+V("hug", "4.2", ["The graph shows the number of UN member states. What best explains the sharp increase between about 1955 and 1970?", "Decolonization in Africa and Asia", ["The breakup of the Soviet Union", "The formation of the European Union", "The peace treaties after World War I"],
   "Dozens of former colonies became independent, including 17 African states in 1960 alone. The later jump around 1991 came from the breakup of the USSR and Yugoslavia.",
   { t: "line", title: "Number of UN member states", x: { min: 1945, max: 2020, ticks: range(1945, 2015, 10), label: "Year" }, y: { min: 0, max: 200, ticks: range(0, 200, 50), label: "Member states" },
     series: [{ name: "Members", pts: [[1945, 51], [1955, 76], [1960, 99], [1965, 117], [1970, 127], [1980, 154], [1990, 159], [1993, 184], [2000, 189], [2011, 193], [2020, 193]], dots: true }] }]);
@@ -288,20 +277,17 @@ V("hug", "4.7", ["Based on the table, which country has a federal system of gove
   "In a federal state, power is constitutionally shared between national and regional governments, and regions have their own legislatures. In a unitary state (B), the central government holds most power.",
   { t: "table", title: "How two countries divide power", head: ["", "Country A", "Country B"], rows: [["Regions have their own elected legislatures", "Yes", "No"], ["Constitution guarantees regional powers", "Yes", "No"], ["Central government can abolish regions", "No", "Yes"]] }]);
 
-V("hug", "4.8", ["The graph shows GDP per person in three regions of one country, as a percentage of the national average. Which devolutionary pressure does it suggest?", "Resentment in the wealthy North over tax money transferred to poorer regions",
-  ["A shared language that unifies all regions", "Physical isolation of the North", "A strong national sports team"],
+V("hug", "4.8", ["The graph shows GDP per person in three regions of one country, as a percentage of the national average. Which devolutionary pressure does it suggest?", "Northern resentment over tax transfers", ["A shared language uniting all regions", "Physical isolation of the North", "A strong national sports team"],
   "Economic differences can drive devolution. Richer regions may push for autonomy to keep more of their tax revenue, as seen in Catalonia and northern Italy.",
   { t: "bar", title: "GDP per person by region (% of national average, illustrative)", cats: ["North", "Center", "South"], y: { min: 0, max: 150, ticks: [0, 50, 100, 150], label: "% of national average" }, values: true, hlines: [{ y: 100 }],
     series: [{ name: "GDP per person", vals: [135, 100, 65] }] }]);
 
-V("hug", "4.9", ["The graph shows the number of European Union member states. What does the drop after 2019 represent?", "The United Kingdom leaving the EU (Brexit) to regain national sovereignty",
-  ["Decolonization of European colonies", "The founding of NATO", "The breakup of the Soviet Union"],
+V("hug", "4.9", ["The graph shows the number of European Union member states. What does the drop after 2019 represent?", "Brexit, to regain national sovereignty", ["Decolonization of European colonies", "The founding of NATO in 1949", "The breakup of the Soviet Union"],
   "The EU grew from 6 founding members to 28 as states gave up some sovereignty for economic and political integration (supranationalism). Brexit in 2020 was the first departure.",
   { t: "line", title: "Number of EU (and predecessor) member states", x: { min: 1955, max: 2025, ticks: range(1955, 2025, 10), label: "Year" }, y: { min: 0, max: 30, ticks: [0, 10, 20, 30], label: "Member states" },
     series: [{ name: "Members", pts: [[1958, 6], [1972, 6], [1973, 9], [1980, 9], [1981, 10], [1985, 10], [1986, 12], [1994, 12], [1995, 15], [2003, 15], [2004, 25], [2006, 25], [2007, 27], [2012, 27], [2013, 28], [2019, 28], [2020, 27], [2024, 27]] }] }]);
 
-V("hug", "4.10", ["The graph shows the main languages spoken in Belgium. How has this pattern affected the Belgian state?", "The language divide is a centrifugal force that led Belgium to shift power to its regions (federalism)",
-  ["It is a centripetal force that unified Belgium under one language", "It caused Belgium to join a larger state", "It had no political effect"],
+V("hug", "4.10", ["The graph shows the main languages spoken in Belgium. How has this pattern affected the Belgian state?", "A centrifugal force leading to federalism", ["A centripetal force unifying Belgium", "A cause of Belgium joining a larger state", "A division with no political effects"],
   "Dutch-speaking Flanders and French-speaking Wallonia have different identities and economies. Tensions pushed Belgium from a unitary state to a federal one with strong regional governments.",
   { t: "bar", title: "Main languages in Belgium (approximate share of population)", cats: ["Dutch (Flemish)", "French", "German"], y: { min: 0, max: 70, ticks: [0, 20, 40, 60], label: "Share of population (%)" }, values: true,
     series: [{ name: "Speakers", vals: [59, 40, 1] }] }]);
@@ -314,8 +300,7 @@ V("hug", "5.3", ["Using the table, which pair of crops was domesticated in the A
   "Maize comes from Mesoamerica and potatoes from the Andes. After 1492, both became staple crops across Europe, Africa, and Asia.",
   { t: "table", title: "Agricultural hearths and early crops", head: ["Hearth", "Crops domesticated"], rows: [["Fertile Crescent (Southwest Asia)", "Wheat, barley, lentils"], ["East Asia", "Rice, millet, soybeans"], ["Mesoamerica", "Maize, beans, squash"], ["Andes", "Potatoes, quinoa"]] }]);
 
-V("hug", "5.4", ["The graph shows the share of U.S. workers employed in farming. What best explains the change?", "Mechanization and other advances from the Second Agricultural Revolution let fewer farmers produce more food, freeing workers for factories and cities",
-  ["A decline in food production", "The Green Revolution in the 1990s", "Environmental determinism"],
+V("hug", "5.4", ["The graph shows the share of U.S. workers employed in farming. What best explains the change?", "Mechanization let fewer farmers feed more people", ["A decline in food production after 1800", "The Green Revolution in the 1990s", "Environmental determinism of farm regions"],
   "Seed drills, mechanical reapers, tractors, and better breeding raised output per worker. Surplus labor moved to industrial jobs, which fueled urbanization.",
   { t: "line", title: "Share of U.S. workers in agriculture (approximate)", x: { min: 1840, max: 2000, ticks: range(1840, 2000, 20), label: "Year" }, y: { min: 0, max: 80, ticks: range(0, 80, 20), label: "Share of workforce (%)" },
     series: [{ name: "Farm workers", pts: [[1840, 69], [1870, 53], [1900, 38], [1930, 21], [1950, 12], [1970, 4], [2000, 2]], dots: true }] }]);
@@ -324,31 +309,26 @@ V("hug", "5.6", ["Which region in the table is best suited to Mediterranean agri
   "Mediterranean agriculture fits hot, dry summers and mild, wet winters, as in California, Chile, and southern Europe. B fits nomadic herding, C fits plantations or shifting cultivation, and D fits commercial grain.",
   { t: "table", title: "Four climate regions", head: ["Region", "Climate"], rows: [["A", "Hot, dry summers; mild, rainy winters"], ["B", "Very dry year-round with sparse grass"], ["C", "Hot and humid all year with heavy rain"], ["D", "Flat interior with cold winters and warm, moderately rainy summers"]] }]);
 
-V("hug", "5.7", ["The diagram shows how chocolate reaches a consumer. What concept does it illustrate?", "A global commodity chain in which most of the value is added after the raw crop leaves the farm",
-  ["Subsistence agriculture", "Von Thünen's model", "Relocation diffusion"],
+V("hug", "5.7", ["The diagram shows how chocolate reaches a consumer. What concept does it illustrate?", "A global commodity chain adding value off the farm", ["Subsistence agriculture for local families", "Von Thünen's model of land use rings", "Relocation diffusion of coffee culture"],
   "Cacao is grown mostly in West Africa, but processing, branding, and retail, where most of the price is captured, happen largely in wealthier countries.",
   { t: "flow", title: "From cacao farm to chocolate bar", steps: ["Cacao farmer (Côte d'Ivoire)", "Exporter", "Processor (Netherlands)", "Chocolate manufacturer", "Retailer", "Consumer"] }]);
 
-V("hug", "5.9", ["Country Z earns most of its export income from coffee. Based on the graph, what risk does Country Z face?", "Its economy is vulnerable because coffee prices swing widely on the world market",
-  ["Coffee prices only rise over time", "It controls the world price of coffee", "It has a diversified economy"],
+V("hug", "5.9", ["Country Z earns most of its export income from coffee. Based on the graph, what risk does Country Z face?", "It's vulnerable to swings in coffee prices", ["It benefits because coffee prices only rise", "It controls the world price of coffee", "It has a highly diversified economy"],
   "Depending on one or a few commodity exports ties a country's income to volatile global prices. A price crash can cut earnings, jobs, and government revenue at once.",
   { t: "line", title: "World coffee price (illustrative index)", x: { min: 2000, max: 2024, ticks: range(2000, 2020, 5), label: "Year" }, y: { min: 0, max: 200, ticks: range(0, 200, 50), label: "Price index" },
     series: [{ name: "Coffee price", pts: [[2000, 90], [2002, 45], [2005, 80], [2008, 110], [2011, 190], [2013, 95], [2014, 130], [2016, 105], [2019, 80], [2021, 130], [2022, 170], [2023, 120], [2024, 180]], dots: true }] }]);
 
-V("hug", "5.10", ["The graph shows yearly deforestation in the Brazilian Amazon. What has been the leading direct cause of this forest loss?", "Clearing land for cattle pasture and commercial crops such as soy",
-  ["Urban sprawl from Rio de Janeiro", "Natural wildfires unrelated to people", "Terracing for rice farming"],
+V("hug", "5.10", ["The graph shows yearly deforestation in the Brazilian Amazon. What has been the leading direct cause of this forest loss?", "Clearing land for cattle and soy", ["Urban sprawl from Rio de Janeiro", "Natural wildfires unrelated to people", "Terracing hillsides for rice farming"],
   "Cattle ranching accounts for most cleared land, with soy and logging also important. Loss rose again after 2012 as enforcement weakened, then fell in 2023.",
   { t: "line", title: "Yearly forest loss in the Brazilian Amazon (approximate)", x: { min: 2004, max: 2023, ticks: range(2004, 2022, 3), label: "Year" }, y: { min: 0, max: 30000, ticks: range(0, 30000, 10000), label: "Area cleared (km²)" },
     series: [{ name: "Deforestation", pts: [[2004, 27772], [2006, 14286], [2008, 12911], [2010, 7000], [2012, 4571], [2014, 5012], [2016, 7893], [2019, 10129], [2021, 13038], [2022, 11594], [2023, 9001]], dots: true }] }]);
 
-V("hug", "5.11", ["The graph shows the water needed to produce 1 kg of different foods. What challenge does rising global meat consumption create?", "Greater pressure on water and land resources, because meat takes far more water per kilogram",
-  ["Less water use, because meat needs little irrigation", "No change in resource use", "A decline in feed-grain demand"],
+V("hug", "5.11", ["The graph shows the water needed to produce 1 kg of different foods. What challenge does rising global meat consumption create?", "More pressure on water and land for meat", ["Less water use, since meat needs little irrigation", "No change in overall resource use", "A decline in demand for feed grains"],
   "Beef needs roughly 15,000 liters per kilogram, mostly to grow feed, versus a few hundred for vegetables. Growing meat demand strains water and farmland.",
   { t: "bar", title: "Water needed per kilogram of food (approximate)", cats: ["Beef", "Chicken", "Wheat", "Vegetables"], y: { min: 0, max: 16000, ticks: [0, 4000, 8000, 12000, 16000], label: "Liters of water" }, values: true,
     series: [{ name: "Water", vals: [15400, 4300, 1800, 300] }] }]);
 
-V("hug", "5.12", ["The graph compares women's share of the agricultural workforce with their share of agricultural landholders. What does it suggest?", "Women do a large share of farm work but control far less farmland, which limits their access to credit and decisions",
-  ["Women own most farmland worldwide", "Women do little agricultural work", "Land ownership is equal between men and women"],
+V("hug", "5.12", ["The graph compares women's share of the agricultural workforce with their share of agricultural landholders. What does it suggest?", "Women farm heavily but control little land", ["Women own most farmland around the world", "Women do little agricultural work", "Land ownership is equal between men and women"],
   "Legal and customary barriers often keep land titles with men, even where women grow much of the food. Secure land rights help women farmers invest and borrow.",
   { t: "bar", title: "Women in agriculture, low- and middle-income countries (approximate)", cats: ["Share of farm workforce", "Share of landholders"], y: { min: 0, max: 50, ticks: [0, 10, 20, 30, 40, 50], label: "Women (%)" }, values: true,
     series: [{ name: "Women", vals: [43, 15] }] }]);
@@ -363,13 +343,11 @@ V("hug", "6.3", ["The diagram shows major financial and airline connections amon
   { t: "web", title: "Major financial and air links among six cities (illustrative)", h: 290, nodes: [{ id: "l", l: "London", x: 45, y: 40 }, { id: "n", l: "New York", x: 14, y: 22 }, { id: "t", l: "Tokyo", x: 86, y: 22 }, { id: "s", l: "São Paulo", x: 16, y: 82 }, { id: "g", l: "Lagos", x: 50, y: 88 }, { id: "m", l: "Mumbai", x: 84, y: 76 }],
     edges: [["l", "n"], ["l", "t"], ["l", "s"], ["l", "g"], ["l", "m"], ["n", "t"], ["n", "s"], ["t", "m"]] }]);
 
-V("hug", "6.7", ["Based on the table, Neighborhood B is most likely", "an informal (squatter) settlement that grew faster than the city could build infrastructure",
-  ["a wealthy gated suburb", "the central business district", "a planned new town"],
+V("hug", "6.7", ["Based on the table, Neighborhood B is most likely", "an informal (squatter) settlement", ["a wealthy gated suburb on the edge", "the central business district", "a planned new town with services"],
   "Informal settlements often lack piped water, sanitation, and legal electricity, because they're built on land without official plans or services.",
   { t: "table", title: "Households with basic services (%)", head: ["Service", "Neighborhood A", "Neighborhood B"], rows: [["Piped water", "99", "40"], ["Sewer or toilet facilities", "98", "25"], ["Electricity", "100", "60"]] }]);
 
-V("hug", "6.8", ["The graph compares transportation fuel use per person in five cities. Which conclusion best supports smart-growth planning?", "Denser cities with good transit use far less transportation fuel per person",
-  ["Low-density cities use less fuel", "Density has no relationship to fuel use", "Hong Kong uses the most fuel because it is the densest"],
+V("hug", "6.8", ["The graph compares transportation fuel use per person in five cities. Which conclusion best supports smart-growth planning?", "Denser cities use less fuel per person", ["Low-density cities use less fuel per person", "Density has no link to fuel use", "Hong Kong uses the most fuel per person"],
   "Compact, transit-rich cities shorten trips and make walking and transit practical. This classic comparison supports smart growth and New Urbanism.",
   { t: "bar", title: "Transportation fuel use per person (approximate, 1990s data)", cats: ["Houston", "Los Angeles", "Toronto", "London", "Hong Kong"], y: { min: 0, max: 80, ticks: [0, 20, 40, 60, 80], label: "Gigajoules per person per year" }, values: true,
     series: [{ name: "Fuel use", vals: [74, 62, 34, 12, 3] }] }]);
@@ -379,33 +357,28 @@ V("hug", "6.9", ["The map shows median household income by census tract, with th
   { t: "choro", title: "Median household income by census tract (illustrative)", legend: ["Lowest", "Low", "Middle", "High", "Highest"],
     panels: [{ grid: [[4, 4, 4, 4, 4, 4, 4], [4, 3, 3, 3, 3, 3, 4], [4, 3, 1, 1, 1, 3, 4], [4, 3, 1, 0, 1, 3, 4], [4, 3, 1, 1, 1, 3, 4], [4, 3, 3, 3, 3, 3, 4], [4, 4, 4, 4, 4, 4, 4]], outline: [[3, 3, 1, 1]] }] }]);
 
-V("hug", "6.10", ["The graph shows the population of Detroit, Michigan. Which processes best explain the trend?", "Deindustrialization of the auto industry and suburbanization, including white flight",
-  ["Rapid industrial growth", "Gentrification of the whole city", "A rising birth rate"],
+V("hug", "6.10", ["The graph shows the population of Detroit, Michigan. Which processes best explain the trend?", "Deindustrialization and suburbanization", ["Rapid industrial growth after 1970", "Gentrification of the whole city", "A rising birth rate in the city"],
   "As auto jobs automated and moved away and highways and discrimination pushed white families to suburbs, Detroit lost nearly two-thirds of its population, leaving vacant housing and a smaller tax base.",
   { t: "line", title: "Population of Detroit (approximate)", x: { min: 1950, max: 2020, ticks: range(1950, 2020, 10), label: "Year" }, y: { min: 0, max: 2, ticks: [0, 0.5, 1, 1.5, 2], label: "Population (millions)" },
     series: [{ name: "Population", pts: [[1950, 1.85], [1960, 1.67], [1970, 1.51], [1980, 1.2], [1990, 1.03], [2000, 0.95], [2010, 0.71], [2020, 0.64]], dots: true }] }]);
 
-V("hug", "6.11", ["The graph shows afternoon air temperature across a city on a summer day. What does it illustrate?", "An urban heat island, with pavement and buildings holding heat and green space cooling the area around it",
-  ["Temperatures are highest in rural farmland", "Parks are the hottest part of the city", "Cities are cooler than their surroundings"],
+V("hug", "6.11", ["The graph shows afternoon air temperature across a city on a summer day. What does it illustrate?", "An urban heat island, cooled near parks", ["Rural farmland is the hottest area", "Parks are the hottest part of the city", "Cities are cooler than their surroundings"],
   "Downtown is about 3 °C warmer than the countryside, and the park dips back down. Trees, green roofs, and reflective surfaces help cool cities.",
   { t: "line", title: "Afternoon temperature across a city (illustrative)", x: { min: 0, max: 10, label: "Rural → Suburbs → Downtown → Park → Suburbs → Rural" }, y: { min: 28, max: 35, ticks: [28, 30, 32, 34], label: "Air temperature (°C)" },
     series: [{ name: "Temperature", pts: [[0, 30], [1.5, 30.3], [3, 31.6], [4.2, 33.2], [5, 31.6], [5.8, 33], [7, 31.8], [8.5, 30.4], [10, 30]] }],
     marks: [{ x: 5, y: 31.6, l: "Park", dx: 8, dy: 18 }] }]);
 
-V("hug", "7.1", ["The graph shows coal production in Great Britain. How is this connected to Britain being the first country to industrialize?", "Abundant coal powered steam engines, ironworks, and railways, fueling industrial growth",
-  ["Britain had no coal and relied on imported oil", "Coal production fell during the Industrial Revolution", "Coal was used only for home heating"],
+V("hug", "7.1", ["The graph shows coal production in Great Britain. How is this connected to Britain being the first country to industrialize?", "Coal powered engines, ironworks, and railways", ["Britain relied on imported oil instead", "Coal production fell during industrialization", "Coal was used only to heat homes"],
   "Britain's coal and iron deposits, plus capital from trade and colonies, let factories and steam power expand rapidly after 1750.",
   { t: "line", title: "Coal production in Great Britain (approximate)", x: { min: 1700, max: 1913, ticks: range(1700, 1900, 50), label: "Year" }, y: { min: 0, max: 300, ticks: range(0, 300, 100), label: "Million tonnes per year" },
     series: [{ name: "Coal output", pts: [[1700, 3], [1750, 5], [1800, 11], [1830, 30], [1850, 60], [1870, 110], [1900, 225], [1913, 287]], dots: true }] }]);
 
-V("hug", "7.4", ["The scatterplot compares the Human Development Index (HDI) with the Gender Inequality Index (GII). Which statement is best supported?", "Countries with higher human development generally have less gender inequality",
-  ["Higher HDI is linked to more gender inequality", "There is no relationship", "Gender inequality only exists in high-HDI countries"],
+V("hug", "7.4", ["The scatterplot compares the Human Development Index (HDI) with the Gender Inequality Index (GII). Which statement is best supported?", "Higher HDI, less gender inequality", ["Higher HDI, more gender inequality", "No relationship between the two", "Inequality exists only in high-HDI countries"],
   "A lower GII means more equality. As education, health, and income rise, women's political representation, education, and labor-force participation tend to improve.",
   { t: "scatter", title: "HDI vs. Gender Inequality Index (illustrative sample)", x: { min: 0.4, max: 1, ticks: [0.4, 0.6, 0.8, 1], label: "Human Development Index" }, y: { min: 0, max: 0.8, ticks: [0, 0.2, 0.4, 0.6, 0.8], label: "Gender Inequality Index (higher = less equal)" },
     pts: [[0.42, 0.64], [0.48, 0.6], [0.53, 0.55], [0.58, 0.52], [0.63, 0.47], [0.7, 0.42], [0.74, 0.35], [0.79, 0.28], [0.84, 0.2], [0.88, 0.12], [0.92, 0.07], [0.95, 0.04]] }]);
 
-V("hug", "7.8", ["The graph shows global installed solar power capacity. How does this trend support sustainable development?", "It expands energy access while cutting greenhouse gas emissions from electricity",
-  ["It increases dependence on fossil fuels", "Solar power is a nonrenewable resource", "It only benefits countries with no sunlight"],
+V("hug", "7.8", ["The graph shows global installed solar power capacity. How does this trend support sustainable development?", "It expands energy access and cuts emissions", ["It increases dependence on fossil fuels", "It uses a nonrenewable energy resource", "It only helps countries without sunlight"],
   "Renewables let economies grow without the pollution of coal or oil, which supports UN Sustainable Development Goals on clean energy (SDG 7) and climate (SDG 13).",
   { t: "line", title: "Global solar power capacity (approximate)", x: { min: 2010, max: 2023, ticks: range(2010, 2022, 3), label: "Year" }, y: { min: 0, max: 1500, ticks: range(0, 1500, 500), label: "Capacity (gigawatts)" },
     series: [{ name: "Solar capacity", pts: [[2010, 40], [2012, 100], [2014, 180], [2016, 300], [2018, 490], [2020, 720], [2022, 1060], [2023, 1420]], dots: true }] }]);

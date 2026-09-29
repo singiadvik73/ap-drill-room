@@ -2648,12 +2648,12 @@
 "hug|1.1": {
 "course": "AP Human Geography",
 "stems": [
-"The Mercator projection is useful for navigation because it",
-"A map shows the percentage of each county's population that voted for a candidate, using shades of one color. This is a",
-"A map that resizes countries according to their population rather than land area is a",
-"Contour lines on a topographic map are an example of",
-"A map at a scale of 1:24,000 compared with a map at 1:1,000,000 shows",
-"The Gall-Peters projection is often chosen to"
+"A ship's navigator wants a map where a straight line keeps a constant compass bearing. Which projection is best?",
+"A map showing population density by county using shades of color is a",
+"Which map would best show that some countries have huge populations compared with their land area?",
+"On a Mercator map, Greenland looks as large as Africa. This is because Mercator distorts",
+"A map scale of 1:24,000 compared with 1:1,000,000 shows",
+"The Robinson projection is often used for world maps because it"
 ],
 "topicName": "Introduction to Maps",
 "unitN": 1,
@@ -2662,11 +2662,11 @@
 "hug|1.2": {
 "course": "AP Human Geography",
 "stems": [
-"A geographer interviews residents about how safe they feel in different neighborhoods. This is",
-"Which technology combines layers of spatial data to analyze patterns, such as overlaying flood zones and housing?",
-"Satellite imagery used to monitor deforestation in the Amazon is an example of",
-"A ride-share app pinpoints a user's exact location. This relies on",
-"A national census is an example of"
+"Emergency planners overlay flood-zone, road, and population layers to plan evacuation. They are using",
+"A farmer uses satellite images to see which parts of a field are stressed. This is",
+"A researcher interviews residents about how safe they feel in parks. This is",
+"Which is an example of quantitative geographic data?",
+"GPS is most useful for"
 ],
 "topicName": "Geographic Data",
 "unitN": 1,
@@ -2675,10 +2675,10 @@
 "hug|1.3": {
 "course": "AP Human Geography",
 "stems": [
-"During a disease outbreak, officials map where cases occur to find the source. This shows geographic data being used to",
-"City planners use traffic data and GIS to decide where to build a new bus line. This is an application of geographic data at the",
-"A person's internal representation of places they know, such as the route to school, is a",
-"Businesses analyze consumer data by ZIP code to decide where to open new stores. This is an example of"
+"After a census, a state loses a congressional seat. The most direct cause is",
+"Health officials map cases of a disease to find its source. This is an example of",
+"Businesses use geographic data mainly to",
+"An undercount of immigrants in a census could lead to"
 ],
 "topicName": "The Power of Geographic Data",
 "unitN": 1,
@@ -2687,12 +2687,12 @@
 "hug|1.4": {
 "course": "AP Human Geography",
 "stems": [
-"The coordinates 40.7° N, 74.0° W describe New York City's",
-"\"Chicago is located on the southwestern shore of Lake Michigan and is a major rail hub linking the eastern and western United States.\" The second part of this sentence describes Chicago's",
-"The idea that interaction between places decreases as the distance between them increases is",
-"Video calls and fast airline travel make distant places feel closer. This is",
-"The arrangement of phenomena across Earth's surface, such as clustered or dispersed, is called",
-"A town's sense of place, based on its landmarks, culture, and physical setting, describes its"
+"The spread of a new store's customers declines farther from the store. This is",
+"Video calls let people interact across the world instantly. This illustrates",
+"'The store is two blocks north of the school' describes",
+"A city's situation refers to its",
+"Houses spread evenly across a suburb show a",
+"Coffee shops clustered downtown have high"
 ],
 "topicName": "Spatial Concepts",
 "unitN": 1,
@@ -2701,11 +2701,11 @@
 "hug|1.5": {
 "course": "AP Human Geography",
 "stems": [
-"The idea that the physical environment determines human culture and development is",
-"Terraced rice fields in the Philippine mountains are an example of",
-"Draining wetlands to build housing is an example of",
-"Using resources in a way that meets present needs without compromising future generations is",
-"Natural resources that cannot be replaced within a human lifetime, such as oil, are"
+"The idea that the environment sets limits but people choose how to adapt is",
+"Terraced rice fields on steep hillsides in the Philippines are an example of",
+"Environmental determinism has been criticized because it",
+"Overgrazing in the Sahel contributes to",
+"Building dams for hydroelectric power is an example of"
 ],
 "topicName": "Human-Environmental Interaction",
 "unitN": 1,
@@ -2714,10 +2714,10 @@
 "hug|1.6": {
 "course": "AP Human Geography",
 "stems": [
-"A map of U.S. unemployment by state shows the Midwest average. A county map shows sharp differences within one state. This shows that",
-"Studying the spread of COVID-19 among countries uses which scale of analysis?",
-"Comparing voting patterns among neighborhoods in one city uses which scale?",
-"Why should geographers be careful when drawing conclusions from national-scale data?"
+"National data show falling poverty, but some cities show rising poverty. This shows the importance of",
+"Which scale would best show differences in income within one city?",
+"A global map of COVID-19 cases by country could hide",
+"Analyzing migration between states uses which scale?"
 ],
 "topicName": "Scales of Analysis",
 "unitN": 1,
@@ -2726,11 +2726,11 @@
 "hug|1.7": {
 "course": "AP Human Geography",
 "stems": [
-"The area served by a pizza delivery restaurant is an example of a",
-"The Corn Belt, defined by a high share of land planted in corn, is a",
-"\"The South\" in the United States, defined by people's feelings and identity, is a",
-"Regional boundaries are often contested because",
-"A newspaper's circulation area is best described as a"
+"The area served by a city's airport is an example of a",
+"A region where most people speak Spanish is a",
+"'The South' in the U.S. is often described as a",
+"Perceptual region boundaries are hard to define because they",
+"A newspaper's delivery area is a functional region because it"
 ],
 "topicName": "Regional Analysis",
 "unitN": 1,
@@ -2739,11 +2739,11 @@
 "hug|2.1": {
 "course": "AP Human Geography",
 "stems": [
-"Arithmetic density is calculated as",
-"Egypt has a high physiological density because",
-"Agricultural density (farmers per unit of arable land) is typically higher in",
-"Which region is one of the world's largest population clusters?",
-"Most of the world's population lives"
+"Most of Egypt's population lives along the Nile because",
+"Egypt's physiological density is much higher than its arithmetic density because",
+"Arithmetic density is calculated by dividing",
+"Agricultural density measures",
+"Most of the world's people live"
 ],
 "topicName": "Population Distribution",
 "unitN": 2,
@@ -2752,11 +2752,11 @@
 "hug|2.10": {
 "course": "AP Human Geography",
 "stems": [
-"A family leaves Syria because of civil war. War is a",
-"Ravenstein's laws of migration state that",
-"An obstacle that prevents a migrant from reaching their intended destination, such as strict border laws, is an",
-"A migrant heading to a big city takes a good job in a town along the way and stays. This is an",
-"The gravity model predicts that migration between two places is"
+"Leaving a region because of war is a",
+"Job opportunities in a destination are a",
+"A migrant moves from a village to a town, then to a city. This is",
+"A migrant stops in a city along the way because of a job offer. This is an",
+"Ravenstein's laws of migration state that most migrants move"
 ],
 "topicName": "Causes of Migration",
 "unitN": 2,
@@ -2765,12 +2765,12 @@
 "hug|2.11": {
 "course": "AP Human Geography",
 "stems": [
-"The transatlantic slave trade is an example of",
-"A person who flees their country because of well-founded fear of persecution and crosses an international border is a",
-"People forced from their homes by conflict who remain within their own country are",
-"Migrants who join family members already settled in a new country are part of",
-"A Turkish worker moves to Germany temporarily to fill a labor shortage. This is an example of",
-"Herders who move their livestock seasonally between mountain and lowland pastures practice"
+"Syrians fleeing civil war to Turkey are",
+"People forced from their homes but staying in their own country are",
+"The Atlantic slave trade is an example of",
+"Guest workers in Germany from Turkey were an example of",
+"An asylum seeker is someone who",
+"Transhumance is the seasonal movement of"
 ],
 "topicName": "Forced and Voluntary Migration",
 "unitN": 2,
@@ -2779,11 +2779,11 @@
 "hug|2.12": {
 "course": "AP Human Geography",
 "stems": [
-"Money sent home by migrants to their families is called",
-"The emigration of highly educated professionals from a less developed country is known as",
-"A country that receives many immigrants may experience",
-"Emigration of many young adult men from a rural area is likely to cause",
-"Areas that receive many migrants may develop ethnic neighborhoods, such as Chinatowns. This is an example of migration affecting"
+"Money sent home by migrants is called",
+"Brain drain occurs when",
+"Migration can change a destination's culture by",
+"A sending country may experience an uneven sex ratio because",
+"Receiving countries often benefit from migration through"
 ],
 "topicName": "Effects of Migration",
 "unitN": 2,
@@ -2792,10 +2792,10 @@
 "hug|2.2": {
 "course": "AP Human Geography",
 "stems": [
-"A country with very high physiological density may face",
-"Rapid population growth in cities can strain",
-"Uneven population distribution in a country can lead to",
-"Carrying capacity refers to"
+"Rapid population growth in a city can lead to",
+"Areas losing population often experience",
+"Population shifts toward cities can affect politics by",
+"High population density can increase"
 ],
 "topicName": "Consequences of Population Distribution",
 "unitN": 2,
@@ -2804,11 +2804,11 @@
 "hug|2.3": {
 "course": "AP Human Geography",
 "stems": [
-"A population pyramid with a wide base and narrow top most likely represents a country with",
-"A population pyramid shaped like a column or slightly wider at the top indicates",
-"A population pyramid shows an unusually large number of males aged 20–40. The most likely explanation is",
-"The sex ratio is",
-"A dip in a population pyramid in a specific age group 20 years earlier might reflect"
+"A population pyramid with a wide base indicates",
+"A pyramid with a narrow base and wide top suggests",
+"A bulge of young men in a pyramid for Qatar is most likely due to",
+"The dependency ratio compares",
+"The sex ratio in China is skewed toward males mainly because of"
 ],
 "topicName": "Population Composition",
 "unitN": 2,
@@ -2817,11 +2817,11 @@
 "hug|2.4": {
 "course": "AP Human Geography",
 "stems": [
-"A country's CBR is 30 and its CDR is 10 per 1,000. Its rate of natural increase (RNI) is",
-"Using the rule of 70, a population growing at 2% per year will double in about",
-"Total fertility rate (TFR) is",
-"Infant mortality rate (IMR) is a useful indicator of",
-"The dependency ratio compares"
+"A country's CBR is 25 and CDR is 10. Its rate of natural increase is",
+"A country growing at 2% per year will double its population in about",
+"Total fertility rate (TFR) is the",
+"Infant mortality rate is a good indicator of",
+"Replacement-level fertility is about"
 ],
 "topicName": "Population Dynamics",
 "unitN": 2,
@@ -2830,11 +2830,11 @@
 "hug|2.5": {
 "course": "AP Human Geography",
 "stems": [
-"In Stage 2 of the Demographic Transition Model,",
-"The main reason birth rates fall in Stage 3 is",
-"A country with CBR 10, CDR 11, and an aging population is most likely in",
-"A criticism of the Demographic Transition Model is that",
-"Most countries in sub-Saharan Africa today are in"
+"In Stage 2 of the demographic transition model, death rates fall mainly because of",
+"A country with low birth rates, low death rates, and slow growth is in",
+"Birth rates fall in Stage 3 mainly because",
+"A criticism of the DTM is that it",
+"Japan's shrinking population places it in"
 ],
 "topicName": "The Demographic Transition Model",
 "unitN": 2,
@@ -2843,10 +2843,10 @@
 "hug|2.6": {
 "course": "AP Human Geography",
 "stems": [
-"Thomas Malthus argued that",
-"A major criticism of Malthus is that he",
-"Neo-Malthusians expand Malthus's ideas by arguing that",
-"Ester Boserup's view, which contrasts with Malthus, is that"
+"Malthus predicted that population would",
+"Malthus's prediction has not come true globally mainly because of",
+"Neo-Malthusians argue that population growth threatens",
+"Critics of Malthus argue that"
 ],
 "topicName": "Malthusian Theory",
 "unitN": 2,
@@ -2855,10 +2855,10 @@
 "hug|2.7": {
 "course": "AP Human Geography",
 "stems": [
-"China's one-child policy (1979–2015) is an example of",
-"France offers generous child allowances and paid parental leave to encourage larger families. This is",
-"An unintended consequence of China's one-child policy was",
-"Immigration policies that favor highly skilled workers, like Canada's points system, are designed to"
+"China's one-child policy is an example of an",
+"France paying families to have more children is a",
+"An unintended effect of China's one-child policy was",
+"Singapore's shift from antinatalist to pronatalist policies was a response to"
 ],
 "topicName": "Population Policies",
 "unitN": 2,
@@ -2867,10 +2867,10 @@
 "hug|2.8": {
 "course": "AP Human Geography",
 "stems": [
-"As women's access to education and paid work increases, fertility rates usually",
-"Improvements in women's rights and reproductive health care are associated with",
-"In many countries, women are marrying later and having children later. One demographic effect is",
-"Which change is most associated with countries moving from Stage 2 to Stage 3 of the DTM?"
+"As women's education increases, the total fertility rate usually",
+"Women entering the paid workforce often leads to",
+"Access to family planning most directly lowers",
+"Which is likely in a country where women have low status?"
 ],
 "topicName": "Women and Demographic Change",
 "unitN": 2,
@@ -2879,10 +2879,10 @@
 "hug|2.9": {
 "course": "AP Human Geography",
 "stems": [
-"A country with a large share of people over 65 is likely to face",
-"Countries with aging populations may respond by",
-"The elderly dependency ratio increases when",
-"Which country is best known for having one of the world's oldest populations?"
+"A high elderly dependency ratio creates pressure on",
+"Japan's response to an aging population includes",
+"An aging population often leads to",
+"One way to offset an aging workforce is"
 ],
 "topicName": "Aging Populations",
 "unitN": 2,
@@ -2891,10 +2891,10 @@
 "hug|3.1": {
 "course": "AP Human Geography",
 "stems": [
-"Culture traits include",
-"An attitude that one's own culture is superior to others is",
-"Evaluating another culture's practices based on that culture's own values is",
-"A Korean restaurant opens in a Mexican neighborhood of Los Angeles and serves kimchi tacos. This blend of traits reflects"
+"Traditional clothing worn by the Amish is an example of",
+"A global fashion trend spread through social media is an example of",
+"Judging another culture by your own culture's standards is",
+"Understanding another culture by its own values is"
 ],
 "topicName": "Introduction to Culture",
 "unitN": 3,
@@ -2903,11 +2903,11 @@
 "hug|3.2": {
 "course": "AP Human Geography",
 "stems": [
-"The visible imprint of human activity on the land, such as buildings, fields, and signs, is the",
-"Layers of different cultural influences on a place over time, such as Spanish missions and later American buildings in San Antonio, show",
-"Mosques with minarets in a city's skyline are an example of",
-"Streets named after saints and a central plaza with a cathedral in Latin American cities reflect",
-"Attachment to a place that gives people a sense of identity is known as"
+"Buildings from different eras layered in a city show",
+"A mosque, a church, and a synagogue near each other illustrate a",
+"Placelessness refers to",
+"Street signs in Chinese characters in a U.S. city show",
+"Sacred spaces like Mecca are important because they"
 ],
 "topicName": "Cultural Landscapes",
 "unitN": 3,
@@ -2916,10 +2916,10 @@
 "hug|3.3": {
 "course": "AP Human Geography",
 "stems": [
-"The belief that a particular place belongs to a group because of their ethnic identity is related to",
-"Ethnic enclaves such as Little Havana in Miami form because",
-"Gender roles that differ from place to place are an example of",
-"Architecture that uses local materials and traditional designs, like adobe homes in the Southwest, is"
+"Chinatown in San Francisco is an example of",
+"Immigrants often settle in ethnic enclaves because of",
+"Gender roles in agriculture differ across regions because of",
+"As women gain education, gender roles in the workforce tend to"
 ],
 "topicName": "Cultural Patterns",
 "unitN": 3,
@@ -2928,12 +2928,12 @@
 "hug|3.4": {
 "course": "AP Human Geography",
 "stems": [
-"A fashion trend that starts in New York, then spreads to Los Angeles and Chicago before reaching smaller towns, illustrates",
-"A viral video spreading rapidly from person to person, regardless of hierarchy, is",
-"McDonald's in India serves the vegetarian McAloo Tikki instead of beef burgers. This is",
-"Irish immigrants bringing St. Patrick's Day celebrations to Boston is",
-"The spread of Christianity through the Roman Empire, first to urban centers and then outward, involved",
-"The point where a culture trait originates is called its"
+"Hip-hop spreading from New York to other large cities first is",
+"A viral video spreading from person to person is",
+"McDonald's offering vegetarian burgers in India is",
+"Irish immigrants bringing St. Patrick's Day to Boston is",
+"A new style adopted first by celebrities and then the public shows",
+"The spread of Islam across North Africa through trade and conquest shows"
 ],
 "topicName": "Types of Diffusion",
 "unitN": 3,
@@ -2942,10 +2942,10 @@
 "hug|3.5": {
 "course": "AP Human Geography",
 "stems": [
-"English became widespread in India, Nigeria, and Australia mainly because of",
-"The Silk Road contributed to the diffusion of",
-"Spanish and Portuguese are the dominant languages in Latin America because of",
-"The spread of Islam across North Africa in the 7th–8th centuries occurred largely through"
+"English spread worldwide largely through",
+"Spanish is widely spoken in Latin America because of",
+"Christianity spread to the Americas largely through",
+"Historical trade routes helped spread"
 ],
 "topicName": "Historical Causes of Diffusion",
 "unitN": 3,
@@ -2954,11 +2954,11 @@
 "hug|3.6": {
 "course": "AP Human Geography",
 "stems": [
-"K-pop gaining fans around the world through streaming platforms is an example of",
-"Critics argue that global chains like Starbucks lead to",
-"The adoption of another culture's traits while still keeping one's own culture is",
-"Immigrants whose grandchildren speak only English and no longer practice their ancestors' traditions have experienced",
-"Popular culture differs from folk culture in that popular culture"
+"Time-space compression most speeds up",
+"Social media platforms contribute to",
+"Multinational corporations spread culture by",
+"Tourism contributes to cultural diffusion by",
+"France's quotas on French music are an example of"
 ],
 "topicName": "Contemporary Causes of Diffusion",
 "unitN": 3,
@@ -2967,12 +2967,12 @@
 "hug|3.7": {
 "course": "AP Human Geography",
 "stems": [
-"Which religions are universalizing religions that actively seek converts?",
-"Hinduism is considered an ethnic religion because it",
-"Buddhism originated in",
-"English, Hindi, Spanish, and Persian all belong to which language family?",
-"The Anatolian hypothesis proposes that Proto-Indo-European spread",
-"A language used between speakers of different native languages to communicate, such as Swahili in East Africa, is a"
+"Christianity and Islam are",
+"Hinduism is mostly concentrated in India because it is",
+"Buddhism spread from India to East Asia mainly through",
+"The Indo-European language family spread partly through",
+"A lingua franca is",
+"Judaism is considered an ethnic religion because it"
 ],
 "topicName": "Diffusion of Religion and Language",
 "unitN": 3,
@@ -2981,11 +2981,11 @@
 "hug|3.8": {
 "course": "AP Human Geography",
 "stems": [
-"Voodoo in Haiti combines West African religious traditions with Catholicism. This is",
-"Many indigenous languages are disappearing as younger generations adopt dominant languages. This is an example of",
-"Quebec's laws requiring French on signs are an attempt to",
-"Amish communities rejecting many modern technologies show",
-"The mixing of Spanish and English words, such as \"Spanglish,\" is an example of"
+"Cultures becoming more alike through contact is",
+"Blending Christian and Indigenous beliefs in Vodou is an example of",
+"An immigrant family fully adopting the host culture and losing its own is",
+"Adopting some traits of a new culture while keeping one's own is",
+"The Amish maintaining traditions separate from mainstream U.S. culture is an example of"
 ],
 "topicName": "Effects of Diffusion",
 "unitN": 3,
@@ -2994,12 +2994,12 @@
 "hug|4.1": {
 "course": "AP Human Geography",
 "stems": [
-"A state is best defined as",
-"A nation is",
-"Japan is often cited as an example of a",
-"The Kurds, who live across Turkey, Iraq, Iran, and Syria without their own country, are a",
-"The former Soviet Union, with dozens of ethnic groups, was a",
-"Koreans living in both North and South Korea are an example of a"
+"Japan, where most people share one ethnicity and language, is close to a",
+"The Kurds, spread across four countries without their own state, are a",
+"Russia, with dozens of ethnic groups, is a",
+"Koreans living in both North and South Korea form a",
+"Sovereignty means a state",
+"Vatican City and Monaco are examples of"
 ],
 "topicName": "Introduction to Political Geography",
 "unitN": 4,
@@ -3008,11 +3008,11 @@
 "hug|4.10": {
 "course": "AP Human Geography",
 "stems": [
-"A shared national language and common national holidays are examples of",
-"Ethnic separatist movements are examples of",
-"Belgium's division between Dutch-speaking Flanders and French-speaking Wallonia creates",
-"Uneven economic development between regions of a country is likely to act as a",
-"A strong national sports team that the whole country supports is an example of a"
+"A shared national language is an example of a",
+"Ethnic conflict that divides a country is a",
+"The breakup of Yugoslavia in the 1990s resulted from",
+"National holidays and symbols act as",
+"Balkanization refers to"
 ],
 "topicName": "Consequences of Centrifugal and Centripetal Forces",
 "unitN": 4,
@@ -3021,10 +3021,10 @@
 "hug|4.2": {
 "course": "AP Human Geography",
 "stems": [
-"The idea that states have the right to govern their own territory without outside interference is",
-"European powers dividing Africa among themselves at the Berlin Conference (1884–85) is an example of",
-"After World War II, many African and Asian colonies gained independence. This process is called",
-"The right of a group to govern itself is known as"
+"The division of Africa at the Berlin Conference is an example of",
+"After World War II, many African states gained independence through",
+"The breakup of the Soviet Union in 1991 created",
+"Russia's annexation of Crimea in 2014 is an example of"
 ],
 "topicName": "Political Processes",
 "unitN": 4,
@@ -3033,10 +3033,10 @@
 "hug|4.3": {
 "course": "AP Human Geography",
 "stems": [
-"A country trying to extend its control over a region where people of its ethnicity live in another country is practicing",
-"Neocolonialism refers to",
-"Territoriality is",
-"Shatterbelts are regions that"
+"China building military bases on disputed islands shows",
+"Under UNCLOS, a state's exclusive economic zone extends",
+"A state's territorial sea extends",
+"Neocolonialism refers to"
 ],
 "topicName": "Political Power and Territoriality",
 "unitN": 4,
@@ -3046,10 +3046,10 @@
 "course": "AP Human Geography",
 "stems": [
 "The 49th parallel boundary between the U.S. and Canada is a",
-"A boundary drawn after a cultural landscape developed, often following ethnic or religious lines, is a",
-"A boundary imposed by outside powers that ignores existing cultural patterns, like many borders in Africa, is a",
-"The Berlin Wall's remaining sections, a boundary that no longer functions, are an example of a",
-"A boundary that existed before the area was heavily populated, like much of the U.S.–Canada border, is an"
+"The India–Pakistan border, drawn to separate religious groups, is a",
+"The Berlin Wall's remains are a",
+"Borders drawn by Europeans in Africa, ignoring ethnic groups, are",
+"The dispute over Kashmir between India and Pakistan is a"
 ],
 "topicName": "Defining Political Boundaries",
 "unitN": 4,
@@ -3058,11 +3058,11 @@
 "hug|4.5": {
 "course": "AP Human Geography",
 "stems": [
-"The UN Convention on the Law of the Sea gives coastal states an exclusive economic zone (EEZ) extending",
-"Under UNCLOS, a state's territorial sea extends",
-"Two countries disagree about where exactly a boundary line should be drawn according to a treaty. This is a",
-"Countries disagree over how to manage migration across their shared border. This is an",
-"A dispute over oil deposits that lie under a border is an"
+"The Schengen Agreement changed the function of borders by",
+"A dispute over how to control migration at a border is",
+"An allocational boundary dispute concerns",
+"The Rio Grande as part of the U.S.–Mexico border is a",
+"An antecedent boundary is one drawn"
 ],
 "topicName": "The Function of Political Boundaries",
 "unitN": 4,
@@ -3071,10 +3071,10 @@
 "hug|4.6": {
 "course": "AP Human Geography",
 "stems": [
-"Drawing voting district boundaries to benefit one political party is",
-"Concentrating an opposing party's voters into a few districts so they win those by large margins but lose elsewhere is",
-"After each U.S. census, House seats are redistributed among states based on population. This is",
-"Spreading an opposing party's voters thinly across many districts so they are outvoted everywhere is"
+"Drawing districts to concentrate opposing voters in a few districts is",
+"Spreading opposing voters across many districts so they're a minority in each is",
+"Reapportionment after the census changes",
+"Gerrymandering can lead to"
 ],
 "topicName": "Internal Boundaries",
 "unitN": 4,
@@ -3083,10 +3083,10 @@
 "hug|4.7": {
 "course": "AP Human Geography",
 "stems": [
-"A unitary state is one in which",
-"A federal state, such as the U.S. or Germany, is one in which",
-"Federal systems are often found in large, culturally diverse countries because they",
-"Which country is best described as a unitary state?"
+"France, where most power is in Paris, is a",
+"The U.S., which divides power between national and state governments, is a",
+"A large, diverse country might choose federalism to",
+"A unitary system works best in a country that is"
 ],
 "topicName": "Forms of Governance",
 "unitN": 4,
@@ -3095,11 +3095,11 @@
 "hug|4.8": {
 "course": "AP Human Geography",
 "stems": [
-"The transfer of power from a central government to regional governments is",
-"The breakup of Yugoslavia into several smaller states along ethnic lines is often called",
-"Which factor is most likely to drive devolution in a country?",
-"Physical geography, such as a remote island region far from the capital, can encourage devolution because",
-"Economic differences, such as a wealthier region resenting transfers to poorer regions, can lead to"
+"Catalonia's push for independence from Spain is driven partly by",
+"Transferring power from a central government to regional governments is",
+"Scotland's parliament, created in 1999, is an example of",
+"Physical isolation can encourage devolution because",
+"Ethnic separatism can lead to"
 ],
 "topicName": "Defining Devolutionary Factors",
 "unitN": 4,
@@ -3108,10 +3108,10 @@
 "hug|4.9": {
 "course": "AP Human Geography",
 "stems": [
-"The European Union is an example of",
-"The United Kingdom's decision to leave the EU (Brexit) reflects",
-"Which is a challenge to state sovereignty?",
-"NATO is an example of a supranational organization focused on"
+"Membership in the European Union challenges sovereignty because states",
+"Which is a supranational organization?",
+"Terrorist groups challenge state sovereignty because they",
+"The internet challenges sovereignty by"
 ],
 "topicName": "Challenges to Sovereignty",
 "unitN": 4,
@@ -3120,11 +3120,11 @@
 "hug|5.1": {
 "course": "AP Human Geography",
 "stems": [
-"Farming that uses large amounts of labor or capital on a small plot of land to get high yields is",
-"Ranching on vast areas of land with few inputs per acre is an example of",
-"Mediterranean agriculture, which grows olives, grapes, and citrus, is associated with a climate of",
-"Slash-and-burn agriculture in tropical rainforests is a form of",
-"Nomadic pastoralism is most common in"
+"Growing rice on small plots with much labor is",
+"Cattle ranching on large tracts with few workers is",
+"Subsistence agriculture is farming",
+"Commercial agriculture is farming",
+"Climate influences agriculture because"
 ],
 "topicName": "Introduction to Agriculture",
 "unitN": 5,
@@ -3133,11 +3133,11 @@
 "hug|5.10": {
 "course": "AP Human Geography",
 "stems": [
-"Converting tropical rainforest to cattle pasture most directly leads to",
-"Desertification in the Sahel is caused in part by",
-"Soil salinization is most often caused by",
-"Terracing hillsides for farming helps to",
-"Pesticide and fertilizer runoff from farms can cause"
+"Clearing the Amazon for cattle ranching causes",
+"Fertilizer runoff causing a dead zone in the Gulf of Mexico is",
+"Irrigation in dry areas can cause",
+"Terracing and contour plowing help reduce",
+"Monocropping can reduce"
 ],
 "topicName": "Consequences of Agricultural Practices",
 "unitN": 5,
@@ -3146,11 +3146,11 @@
 "hug|5.11": {
 "course": "AP Human Geography",
 "stems": [
-"Genetically modified organisms (GMOs) are controversial because",
-"Urban areas where residents lack affordable access to fresh, healthy food are called",
-"The growing demand for meat in developing countries like China is increasing",
-"The local food movement encourages people to",
-"Using crops such as corn to produce ethanol fuel can"
+"An area with no nearby supermarket and limited fresh food is a",
+"Supporters of GMOs argue they",
+"Critics of GMOs worry about",
+"The organic farming movement",
+"Urban farming helps address food deserts by"
 ],
 "topicName": "Challenges of Contemporary Agriculture",
 "unitN": 5,
@@ -3159,10 +3159,10 @@
 "hug|5.12": {
 "course": "AP Human Geography",
 "stems": [
-"In many developing countries, women",
-"Microloans to women farmers are intended to",
-"In developed countries, the role of women in agriculture has shifted toward",
-"Improving women's access to land, credit, and education in agriculture tends to"
+"In many developing countries, women produce most of the",
+"A major barrier for women farmers is",
+"Microloans to women farmers can",
+"When women gain land rights, agricultural output often"
 ],
 "topicName": "Women in Agriculture",
 "unitN": 5,
@@ -3171,11 +3171,11 @@
 "hug|5.2": {
 "course": "AP Human Geography",
 "stems": [
-"The metes and bounds survey system uses",
-"The long-lot survey system, which divides land into narrow strips extending back from a river, is associated with",
-"The township and range system (Public Land Survey System) created",
-"A clustered rural settlement, where farmers live in a village and travel out to their fields, is a",
-"Houses spread out along a road or river are an example of a"
+"Farmhouses spread out across the land show a",
+"Long, narrow farms along rivers in Quebec reflect the",
+"The square grid pattern in the Midwest reflects the",
+"Metes and bounds surveys use",
+"Clustered rural settlements often form because"
 ],
 "topicName": "Settlement Patterns and Survey Methods",
 "unitN": 5,
@@ -3184,11 +3184,11 @@
 "hug|5.3": {
 "course": "AP Human Geography",
 "stems": [
-"The Fertile Crescent was a hearth for the domestication of",
-"Maize (corn) was first domesticated in",
-"The Columbian Exchange was",
-"The First Agricultural Revolution refers to",
-"Carl Sauer proposed that early agriculture began with"
+"The Fertile Crescent was a hearth for domesticating",
+"Maize was first domesticated in",
+"The Columbian Exchange brought which crop to Europe?",
+"The First Agricultural Revolution led to",
+"Animal domestication in Southwest Asia included"
 ],
 "topicName": "Agricultural Origins and Diffusions",
 "unitN": 5,
@@ -3197,10 +3197,10 @@
 "hug|5.4": {
 "course": "AP Human Geography",
 "stems": [
-"The Second Agricultural Revolution was closely linked to",
-"A major demographic effect of the Second Agricultural Revolution was",
-"Which innovation is associated with the Second Agricultural Revolution?",
-"Improvements in transportation, such as railroads, during the Second Agricultural Revolution allowed"
+"The Second Agricultural Revolution coincided with",
+"The seed drill and crop rotation increased",
+"Mechanization during the Second Agricultural Revolution led to",
+"The enclosure movement in Britain"
 ],
 "topicName": "The Second Agricultural Revolution",
 "unitN": 5,
@@ -3209,10 +3209,10 @@
 "hug|5.5": {
 "course": "AP Human Geography",
 "stems": [
-"The Green Revolution of the mid-20th century introduced",
-"A positive outcome of the Green Revolution was",
-"A criticism of the Green Revolution is that it",
-"The Green Revolution had less impact in sub-Saharan Africa than in Asia partly because"
+"The Green Revolution introduced",
+"A negative effect of the Green Revolution was",
+"The Green Revolution had the least impact in",
+"The Green Revolution benefited wealthier farmers more because they"
 ],
 "topicName": "The Green Revolution",
 "unitN": 5,
@@ -3221,11 +3221,11 @@
 "hug|5.6": {
 "course": "AP Human Geography",
 "stems": [
-"Plantation agriculture, growing crops like coffee, bananas, and sugarcane for export, is most common in",
-"Commercial grain farming, such as wheat on the Great Plains, is characterized by",
-"Dairy farms tend to be located near large cities because",
-"Wet rice farming in East and South Asia is an example of",
-"Truck farming, also called market gardening, specializes in"
+"Grapes, olives, and citrus are typical of",
+"Slash-and-burn farming is common in",
+"Pastoral nomadism is found mainly in",
+"Plantations are usually found in",
+"Dairy farming is common near cities because"
 ],
 "topicName": "Agricultural Production Regions",
 "unitN": 5,
@@ -3234,10 +3234,10 @@
 "hug|5.7": {
 "course": "AP Human Geography",
 "stems": [
-"Large corporations that control several stages of food production, from seeds to processing to distribution, are examples of",
-"A commodity chain describes",
-"Economies of scale in agriculture mean that",
-"The shift toward fewer, larger farms in the U.S. is known as"
+"A company that owns farms, processing plants, and stores uses",
+"Agribusiness refers to",
+"Economies of scale allow large farms to",
+"Monocropping is"
 ],
 "topicName": "Spatial Organization of Agriculture",
 "unitN": 5,
@@ -3246,11 +3246,11 @@
 "hug|5.8": {
 "course": "AP Human Geography",
 "stems": [
-"In the von Thünen model, which activity is located closest to the central market?",
-"In von Thünen's original model, forestry was in the second ring because",
-"The main factor determining land use in the von Thünen model is",
-"Ranching is found in the outermost ring of the von Thünen model because",
-"A limitation of the von Thünen model today is that"
+"In von Thünen's model, dairy and vegetables are grown",
+"Ranching is in the outer ring of von Thünen's model because",
+"A limitation of von Thünen's model today is",
+"Von Thünen's model assumes",
+"Forests were in the second ring because"
 ],
 "topicName": "Von Thünen Model",
 "unitN": 5,
@@ -3259,10 +3259,10 @@
 "hug|5.9": {
 "course": "AP Human Geography",
 "stems": [
-"Kenya exports cut flowers to Europe by air. This shows",
-"Many developing countries depend on exporting a few cash crops. This can make them vulnerable because",
-"Government payments to farmers to stabilize prices or support production are called",
-"Fair trade certification aims to"
+"Kenya exporting flowers to Europe is part of a",
+"Countries dependent on one export crop face risk from",
+"Fair trade aims to",
+"Subsidies to farmers in wealthy countries can"
 ],
 "topicName": "The Global System of Agriculture",
 "unitN": 5,
@@ -3271,11 +3271,11 @@
 "hug|6.1": {
 "course": "AP Human Geography",
 "stems": [
-"The first cities developed in places like Mesopotamia mainly because",
-"Site factors that influenced the location of early cities include",
-"The growth of suburbs in the U.S. after World War II was encouraged by",
-"Rapid urbanization in developing countries today is mostly caused by",
-"People moving from cities to rural areas or small towns is called"
+"Early cities in Mesopotamia grew near rivers mainly because rivers provided",
+"A city built on a hill for defense reflects the importance of",
+"Singapore's growth as a trade hub is explained mainly by its",
+"An agricultural surplus allowed early cities to form because",
+"Suburbanization in the U.S. after 1950 was driven largely by"
 ],
 "topicName": "The Origin and Influences of Urbanization",
 "unitN": 6,
@@ -3284,12 +3284,12 @@
 "hug|6.10": {
 "course": "AP Human Geography",
 "stems": [
-"When higher-income residents move into a lower-income neighborhood, raising property values and displacing longtime residents, this is",
-"The discriminatory practice of refusing loans in minority neighborhoods, historically marked on maps, is",
-"Real estate agents who scared white homeowners into selling cheaply by claiming minorities were moving in practiced",
-"The movement of white middle-class residents from central cities to suburbs in the mid-20th century is called",
-"Squatter settlements, also called favelas or informal settlements, form because",
-"Deindustrialization in cities like Detroit led to"
+"Rising rents forcing long-time residents out of a renovated neighborhood is",
+"Banks refusing loans in minority neighborhoods is",
+"Real estate agents scaring white homeowners into selling cheaply is",
+"Urban renewal programs in the 1950s–60s often",
+"Filtering occurs when",
+"Inclusionary zoning requires developers to"
 ],
 "topicName": "Challenges of Urban Changes",
 "unitN": 6,
@@ -3298,11 +3298,11 @@
 "hug|6.11": {
 "course": "AP Human Geography",
 "stems": [
-"Brownfields are",
-"Urban heat islands occur because",
-"Which is a challenge to urban sustainability caused by sprawl?",
-"Environmental injustice in cities refers to",
-"Converting old rail lines into urban parks, like New York's High Line, is an example of"
+"Cities are warmer than surrounding areas because of the",
+"Abandoned, contaminated industrial land is called a",
+"Redeveloping brownfields helps cities by",
+"Planting trees in cities helps",
+"Environmental injustice refers to"
 ],
 "topicName": "Challenges of Urban Sustainability",
 "unitN": 6,
@@ -3311,11 +3311,11 @@
 "hug|6.2": {
 "course": "AP Human Geography",
 "stems": [
-"A city with a population of more than 10 million is a",
-"A metacity is a city with more than",
-"Most of the fastest-growing cities today are in",
-"The continuous urban region stretching from Boston to Washington, D.C., is an example of a",
-"Suburban business centers with offices and shopping, such as Tysons, Virginia, are"
+"Lagos, Nigeria, is growing faster than Tokyo mainly because of",
+"A megacity has a population of more than",
+"A metacity has more than",
+"Rapid urban growth in developing countries often produces",
+"An edge city is"
 ],
 "topicName": "Cities Across the World",
 "unitN": 6,
@@ -3324,10 +3324,10 @@
 "hug|6.3": {
 "course": "AP Human Geography",
 "stems": [
-"World cities like New York, London, and Tokyo are important because they",
-"Cities that are highly connected in global networks of trade, finance, and information are ranked by their",
-"A city whose economy relies on business and financial services connected to global markets is most likely a",
-"Globalization has influenced cities by"
+"New York, London, and Tokyo are world cities mainly because they",
+"Which feature most distinguishes a world city?",
+"Globalization increases the importance of world cities because",
+"A city's hinterland is"
 ],
 "topicName": "Cities and Globalization",
 "unitN": 6,
@@ -3336,12 +3336,12 @@
 "hug|6.4": {
 "course": "AP Human Geography",
 "stems": [
-"According to the rank-size rule, if a country's largest city has 12 million people, its third-largest city should have about",
-"A primate city is",
-"Central place theory states that",
-"The minimum number of people needed to support a service is its",
-"The maximum distance people will travel to get a good or service is its",
-"The gravity model predicts that"
+"If a country's largest city has 1 million people, the rank-size rule predicts the fourth largest has",
+"A city more than twice the size of the next largest is a",
+"In central place theory, the minimum population needed to support a service is its",
+"The maximum distance people will travel for a good is its",
+"Central place theory predicts that",
+"Hexagonal market areas in central place theory avoid"
 ],
 "topicName": "The Size and Distribution of Cities",
 "unitN": 6,
@@ -3350,12 +3350,12 @@
 "hug|6.5": {
 "course": "AP Human Geography",
 "stems": [
-"The Burgess concentric zone model describes a city as",
-"The Hoyt sector model suggests that",
-"The Harris and Ullman multiple nuclei model is best suited to cities that",
-"In the Latin American city model (Griffin-Ford), the wealthy live",
-"In the Sub-Saharan African city model (de Blij), cities often have",
-"In the Southeast Asian city model (McGee), the old colonial port zone is the focus of the city rather than"
+"In the Burgess model, the zone next to the CBD is the",
+"The Hoyt sector model says cities grow in wedges along",
+"The multiple nuclei model says cities have",
+"In the Latin American city model, the wealthy live",
+"Disamenity zones in Latin American cities are areas that",
+"In the African city model, cities often have"
 ],
 "topicName": "The Internal Structure of Cities",
 "unitN": 6,
@@ -3364,10 +3364,10 @@
 "hug|6.6": {
 "course": "AP Human Geography",
 "stems": [
-"Low-density, car-dependent development spreading outward from a city is called",
-"Building on vacant or underused lots within existing urban areas is",
+"Low-density, car-dependent development spreading outward is",
+"Building apartments near transit stations encourages",
 "Mixed-use zoning allows",
-"Residential density is usually highest in"
+"New urbanism promotes"
 ],
 "topicName": "Density and Land Use",
 "unitN": 6,
@@ -3376,10 +3376,10 @@
 "hug|6.7": {
 "course": "AP Human Geography",
 "stems": [
-"Transit-oriented development (TOD) concentrates housing and businesses",
-"A city's infrastructure includes",
-"Informal settlements in developing cities often lack",
-"Well-developed infrastructure tends to"
+"A new subway line would most likely",
+"Poor infrastructure in a city can discourage",
+"Highway construction in the mid-1900s often",
+"Which is an example of infrastructure?"
 ],
 "topicName": "Infrastructure",
 "unitN": 6,
@@ -3388,10 +3388,10 @@
 "hug|6.8": {
 "course": "AP Human Geography",
 "stems": [
+"An urban growth boundary like Portland's is designed to",
 "Smart growth policies encourage",
-"New Urbanism is a design movement that promotes",
-"Urban growth boundaries, like Portland's, are designed to",
-"Green belts around cities such as London are intended to"
+"A downside of urban growth boundaries is",
+"Green roofs help cities by"
 ],
 "topicName": "Urban Sustainability",
 "unitN": 6,
@@ -3400,10 +3400,10 @@
 "hug|6.9": {
 "course": "AP Human Geography",
 "stems": [
-"Census tract data can help geographers analyze",
-"Qualitative urban data, such as interviews with residents, can reveal",
-"A map showing the percentage of residents with college degrees by neighborhood is best used to study",
-"Why might census data underestimate populations in informal settlements?"
+"Which data would best show income changes in a neighborhood over time?",
+"Interviews with long-time residents about neighborhood change provide",
+"Combining census data and interviews gives",
+"A limitation of census data is that it"
 ],
 "topicName": "Urban Data",
 "unitN": 6,
@@ -3412,10 +3412,10 @@
 "hug|7.1": {
 "course": "AP Human Geography",
 "stems": [
-"The Industrial Revolution began in Great Britain in the late 1700s partly because Britain had",
-"The Industrial Revolution spread to Western Europe and the U.S. through",
-"Industrialization increased the demand for raw materials, which encouraged",
-"A social effect of the Industrial Revolution was"
+"The Industrial Revolution began in Britain partly because of",
+"Industrialization spread from Britain to",
+"The Industrial Revolution caused cities to grow because",
+"Colonies during the Industrial Revolution mainly provided"
 ],
 "topicName": "The Industrial Revolution",
 "unitN": 7,
@@ -3424,14 +3424,14 @@
 "hug|7.2": {
 "course": "AP Human Geography",
 "stems": [
-"A coal miner works in the",
-"A factory worker assembling cars works in the",
-"A software engineer researching artificial intelligence works in the",
-"A CEO or top government official making high-level decisions works in the",
-"As countries develop, the share of workers typically shifts from",
-"Alfred Weber's least cost theory states that industries locate to minimize",
-"Copper smelting reduces the weight of raw ore substantially. According to Weber, a smelter should be located",
-"Soft drink bottling adds weight (water) to the product. Weber would predict bottlers locate"
+"A worker mining copper works in the",
+"A worker assembling cars works in the",
+"A teacher works in the",
+"A software researcher works in the",
+"Weber's least-cost theory says a bulk-reducing industry, like copper smelting, locates near",
+"A bulk-gaining industry, like soft-drink bottling, locates near",
+"A break-of-bulk point is where",
+"As countries develop, employment shifts from"
 ],
 "topicName": "Economic Sectors and Patterns",
 "unitN": 7,
@@ -3440,12 +3440,12 @@
 "hug|7.3": {
 "course": "AP Human Geography",
 "stems": [
-"Gross National Income (GNI) per capita measures",
-"The Human Development Index (HDI) combines",
-"The Gender Inequality Index (GII) measures",
-"The Gini coefficient measures",
-"Which indicator is most likely to be higher in a less developed country?",
-"The informal economy includes"
+"The Human Development Index measures",
+"GNI per capita doesn't show",
+"The Gender Inequality Index measures",
+"A country with high GDP per capita but low HDI may have",
+"The informal economy includes",
+"GDP differs from GNI because GDP"
 ],
 "topicName": "Measures of Development",
 "unitN": 7,
@@ -3454,10 +3454,10 @@
 "hug|7.4": {
 "course": "AP Human Geography",
 "stems": [
-"As women gain more access to education and jobs, a country's",
-"The gender wage gap refers to",
-"Microfinance programs mostly lend to women because",
-"Export processing zones in many developing countries often employ"
+"Microloans are often given to women because they",
+"As women's education rises, a country typically sees",
+"The wage gap refers to",
+"Women's participation in the formal economy is limited in some regions by"
 ],
 "topicName": "Women and Economic Development",
 "unitN": 7,
@@ -3466,11 +3466,11 @@
 "hug|7.5": {
 "course": "AP Human Geography",
 "stems": [
-"Rostow's stages of economic growth, in order, are",
-"A criticism of Rostow's model is that",
-"Wallerstein's world-systems theory divides countries into",
-"In world-systems theory, periphery countries typically",
-"Dependency theory argues that"
+"Rostow's final stage of development is",
+"World-systems theory classifies countries as",
+"Dependency theory argues that",
+"A criticism of Rostow's model is that it",
+"Semi-periphery countries such as Brazil and India"
 ],
 "topicName": "Theories of Development",
 "unitN": 7,
@@ -3479,11 +3479,11 @@
 "hug|7.6": {
 "course": "AP Human Geography",
 "stems": [
-"Comparative advantage means a country should specialize in producing goods that",
-"NAFTA, replaced by the USMCA, is an example of",
-"The World Trade Organization (WTO)",
-"The International Monetary Fund (IMF) has been criticized for",
-"A country that buys more from other countries than it sells to them has a"
+"Maquiladoras are factories in Mexico that",
+"Comparative advantage means a country should produce goods",
+"Special economic zones are designed to",
+"Free trade agreements like USMCA",
+"Neoliberal policies emphasize"
 ],
 "topicName": "Trade and the World Economy",
 "unitN": 7,
@@ -3492,12 +3492,12 @@
 "hug|7.7": {
 "course": "AP Human Geography",
 "stems": [
-"When U.S. manufacturing companies move factories to countries with cheaper labor, this is",
-"The Rust Belt in the northeastern U.S. has experienced",
-"Mexican factories near the U.S. border that assemble imported parts for export are called",
-"China's Special Economic Zones, like Shenzhen, were created to",
-"The clustering of related industries in one location, like tech firms in Silicon Valley, creates",
-"Flexible production methods that keep minimal inventory and deliver parts only when needed are called"
+"A U.S. company moving production to Vietnam to lower costs is",
+"The loss of manufacturing jobs in the Rust Belt is",
+"Agglomeration occurs when",
+"Call centers in India serving U.S. customers are an example of",
+"Post-Fordist production emphasizes",
+"Growth poles are"
 ],
 "topicName": "Changes as a Result of the World Economy",
 "unitN": 7,
@@ -3506,11 +3506,11 @@
 "hug|7.8": {
 "course": "AP Human Geography",
 "stems": [
-"The UN Sustainable Development Goals (SDGs) aim to",
-"Ecotourism can support sustainable development by",
-"A challenge to sustainable development is",
-"Renewable energy sources like wind and solar support sustainable development because they",
-"Which is an example of sustainable development in a developing country?"
+"Sustainable development aims to",
+"Costa Rica's ecotourism is an example of",
+"The UN Sustainable Development Goals include",
+"A challenge of sustainable development is",
+"Renewable energy supports sustainability because it"
 ],
 "topicName": "Sustainable Development",
 "unitN": 7,

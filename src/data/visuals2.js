@@ -20,58 +20,48 @@ V("bio", "1.3", ["In the reaction shown, what is X, and what type of reaction is
   "Joining two monomers with a covalent bond removes an –OH from one and an –H from the other, releasing H₂O. Hydrolysis is the reverse: it uses water to break the bond.",
   { t: "flow", title: "Formation of the disaccharide maltose", steps: ["Glucose + Glucose", "Maltose + X"] }]);
 
-V("bio", "1.4", ["The table shows the melting points of four 18-carbon fatty acids. Which explanation best accounts for the trend?", "Each additional C=C double bond adds a kink that keeps the tails from packing tightly, so less energy is needed to melt them",
-  ["Double bonds make fatty acids more polar, so they dissolve in water", "Unsaturated fatty acids have more hydrogen atoms, which weakens them", "Longer carbon chains melt at lower temperatures"],
+V("bio", "1.4", ["The table shows the melting points of four 18-carbon fatty acids. Which explanation best accounts for the trend?", "Double-bond kinks keep tails from packing tightly", ["Double bonds make the tails polar and soluble", "Unsaturated tails have more hydrogen atoms", "Longer carbon chains melt at lower temperatures"],
   "All four have 18 carbons, so chain length isn't the difference. More double bonds mean more bends and weaker interactions between tails, which is why oils rich in unsaturated fats are liquid at room temperature.",
   { t: "table", title: "Melting points of 18-carbon fatty acids (approximate)", head: ["Fatty acid", "C=C double bonds", "Melting point (°C)"], rows: [["Stearic acid", "0", "69"], ["Oleic acid", "1", "13"], ["Linoleic acid", "2", "−5"], ["α-Linolenic acid", "3", "−11"]] }]);
 
-V("bio", "1.5", ["The table shows how four single amino acid substitutions affect an enzyme. Which best explains the result for mutation B?", "Placing a charged R group in the hydrophobic core disrupts the interactions that hold the tertiary structure together",
-  ["Any change in primary structure destroys all enzyme activity", "Mutation B added a peptide bond to the enzyme", "Mutation B changed the enzyme's DNA into RNA"],
+V("bio", "1.5", ["The table shows how four single amino acid substitutions affect an enzyme. Which best explains the result for mutation B?", "A charged R group in the core disrupts folding", ["Any change in primary structure ends all activity", "Mutation B added an extra peptide bond", "Mutation B changed the enzyme's DNA into RNA"],
   "Nonpolar R groups cluster in the protein's interior. A charged residue there is energetically unfavorable, so the protein misfolds. Surface changes between similar residues (A, C) have little effect.",
   { t: "table", title: "Activity of enzyme variants", head: ["Mutation", "Change and location", "Activity (% of normal)"], rows: [["A", "Polar → polar, on the surface", "98"], ["B", "Nonpolar → charged, in the hydrophobic core", "5"], ["C", "Near the C-terminal end, far from the active site", "95"], ["D", "Glycine → proline inside an α-helix", "40"]] }]);
 
-V("bio", "2.2", ["The graph compares organelle abundance in three cell types. Cell B is most likely a", "heart muscle cell, which needs large amounts of ATP",
-  ["pancreatic cell that secretes digestive enzymes", "white blood cell that digests bacteria", "plant root cell that stores starch"],
+V("bio", "2.2", ["The graph compares organelle abundance in three cell types. Cell B is most likely a", "heart muscle cell that needs lots of ATP", ["pancreatic cell secreting digestive enzymes", "white blood cell that digests bacteria", "plant root cell that stores starch"],
   "Cell B has by far the most mitochondria, which supply ATP for constant contraction. Cell A (lots of rough ER) fits a protein-secreting cell, and Cell C (lots of lysosomes) fits a phagocyte.",
   { t: "bar", title: "Relative abundance of organelles (illustrative)", cats: ["Rough ER", "Mitochondria", "Lysosomes"], y: { min: 0, max: 10, ticks: [0, 2, 4, 6, 8, 10], label: "Relative abundance" },
     series: [{ name: "Cell A", vals: [9, 4, 2] }, { name: "Cell B", vals: [2, 9.5, 2] }, { name: "Cell C", vals: [3, 4, 9] }] }]);
 
-V("bio", "2.4", ["The graph shows membrane fluidity across a range of temperatures for membranes with and without cholesterol. Which conclusion is best supported?", "Cholesterol reduces changes in fluidity, keeping the membrane less fluid at high temperatures and more fluid at low temperatures",
-  ["Cholesterol makes the membrane more fluid at every temperature", "Cholesterol has no effect on membrane fluidity", "Membranes without cholesterol cannot change fluidity"],
+V("bio", "2.4", ["The graph shows membrane fluidity across a range of temperatures for membranes with and without cholesterol. Which conclusion is best supported?", "Cholesterol buffers fluidity at both extremes", ["Cholesterol makes membranes more fluid at all temperatures", "Cholesterol has no effect on membrane fluidity", "Only membranes with cholesterol can change fluidity"],
   "The curve with cholesterol is flatter: it's more fluid than the other membrane when cold and less fluid when hot. Cholesterol buffers the membrane against temperature swings.",
   { t: "line", title: "Membrane fluidity vs. temperature", x: { min: 0, max: 50, ticks: range(0, 50, 10), label: "Temperature (°C)" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Relative fluidity" },
     series: [{ name: "Without cholesterol", pts: curve(x => 5 + 90 * logistic(x, 25, 0.28), 0, 50) }, { name: "With cholesterol", pts: curve(x => 28 + 45 * logistic(x, 25, 0.12), 0, 50), k: 2, dash: true }] }]);
 
-V("bio", "2.5", ["The graph shows how readily substances cross an artificial phospholipid bilayer with no proteins. Which conclusion is best supported?", "Small nonpolar molecules cross most easily, while ions and large polar molecules barely cross",
-  ["Ions cross the bilayer faster than gases do", "Glucose crosses faster than water because it is larger", "All substances cross at the same rate"],
+V("bio", "2.5", ["The graph shows how readily substances cross an artificial phospholipid bilayer with no proteins. Which conclusion is best supported?", "Small nonpolar molecules cross most easily", ["Ions cross faster than gases like O₂ and CO₂", "Glucose crosses faster than water does", "All of the substances cross at the same rate"],
   "The hydrophobic core lets O₂ and CO₂ through easily. Water crosses slowly, and glucose and Na⁺ hardly cross at all, which is why cells need channels and carriers.",
   { t: "bar", title: "Relative permeability of a pure phospholipid bilayer (illustrative)", cats: ["O₂", "CO₂", "Ethanol", "H₂O", "Glucose", "Na⁺"], y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Relative permeability" },
     series: [{ name: "Permeability", vals: [100, 92, 60, 15, 1, 0.2] }] }]);
 
-V("bio", "2.6", ["Based on the ion concentrations shown, moving K⁺ from outside the cell to inside requires", "active transport, because K⁺ is moving against its concentration gradient",
-  ["simple diffusion, because K⁺ is small", "facilitated diffusion down the concentration gradient", "osmosis, because water carries K⁺ in"],
+V("bio", "2.6", ["Based on the ion concentrations shown, moving K⁺ from outside the cell to inside requires", "active transport against the K⁺ gradient", ["simple diffusion, because K⁺ is small", "facilitated diffusion down its gradient", "osmosis, because water carries K⁺ along"],
   "K⁺ is about 28 times more concentrated inside (140 vs. 5 mM), so moving it in goes uphill. The Na⁺/K⁺ pump uses ATP to do this.",
   { t: "table", title: "Typical ion concentrations in a mammalian cell (approximate)", head: ["Ion", "Inside cell (mM)", "Outside cell (mM)"], rows: [["Na⁺", "12", "145"], ["K⁺", "140", "5"]] }]);
 
-V("bio", "2.9", ["Intestinal cells were taking up glucose through sodium–glucose cotransporters. At minute 10, ouabain, which blocks the Na⁺/K⁺ pump, was added. What best explains the result?", "Without the pump, the Na⁺ gradient that powers the cotransporter runs down, so glucose uptake slows",
-  ["Ouabain directly blocks glucose from binding the cotransporter", "Glucose uptake needs ATP from the cotransporter itself", "Ouabain increases the Na⁺ gradient, which slows glucose uptake"],
+V("bio", "2.9", ["Intestinal cells were taking up glucose through sodium–glucose cotransporters. At minute 10, ouabain, which blocks the Na⁺/K⁺ pump, was added. What best explains the result?", "The Na⁺ gradient runs down, so glucose uptake slows", ["Ouabain directly blocks glucose from binding", "The cotransporter itself hydrolyzes ATP for glucose", "Ouabain increases the Na⁺ gradient and slows uptake"],
   "This is secondary active transport: the cotransporter uses the Na⁺ gradient that the pump builds with ATP. Stop the pump and the gradient, and then glucose uptake, fades.",
   { t: "line", title: "Glucose uptake by intestinal cells", x: { min: 0, max: 30, ticks: range(0, 30, 5), label: "Time (min)" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Glucose uptake rate (%)" },
     vlines: [{ x: 10, l: "Ouabain added" }], series: [{ name: "Uptake", pts: curve(x => x < 10 ? 95 : 10 + 85 * Math.exp(-(x - 10) / 4), 0, 30) }] }]);
 
-V("bio", "2.10", ["The graph shows the activity of a lysosomal enzyme at different pH values. How does compartmentalization protect the cell?", "If a lysosome leaks, its enzymes are much less active at the cytosol's pH of about 7.2",
-  ["The enzymes work best in the cytosol", "The enzymes digest the lysosome membrane at pH 5", "Compartments make enzymes work at every pH equally"],
+V("bio", "2.10", ["The graph shows the activity of a lysosomal enzyme at different pH values. How does compartmentalization protect the cell?", "Leaked enzymes are much less active at pH 7.2", ["The enzymes work best in the neutral cytosol", "The enzymes digest the lysosome at pH 5", "Compartments make enzymes work at any pH"],
   "The enzyme is most active near pH 5, the lysosome's internal pH, and nearly inactive at 7.2. Keeping the acidic environment inside a membrane limits accidental damage to the cell.",
   { t: "line", title: "Activity of a lysosomal enzyme vs. pH", x: { min: 3, max: 9, ticks: range(3, 9, 1), label: "pH" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Relative activity (%)" },
     vlines: [{ x: 7.2, l: "Cytosol" }], series: [{ name: "Activity", pts: curve(x => 100 * Math.exp(-((x - 4.8) ** 2) / (2 * 0.8 ** 2)), 3, 9, 80) }] }]);
 
-V("bio", "2.11", ["Which conclusion is best supported by the comparison in the table?", "Mitochondria resemble bacteria, supporting the idea that they came from an engulfed prokaryote",
-  ["Mitochondria evolved from the nucleus", "Bacteria evolved from mitochondria", "Mitochondria are made by the endoplasmic reticulum"],
+V("bio", "2.11", ["Which conclusion is best supported by the comparison in the table?", "Mitochondria descended from an engulfed prokaryote", ["Mitochondria evolved from pieces of the nucleus", "Bacteria evolved from free-living mitochondria", "Mitochondria are built by the endoplasmic reticulum"],
   "Circular DNA, bacteria-like 70S ribosomes, and division by fission are all shared with bacteria. This is key evidence for endosymbiotic theory.",
   { t: "table", title: "Comparing mitochondria, bacteria, and the eukaryotic nucleus", head: ["Feature", "Mitochondria", "Bacteria", "Eukaryotic nucleus / cytosol"], rows: [["DNA shape", "Circular", "Circular", "Linear"], ["Ribosome type", "70S-like", "70S", "80S"], ["How it divides", "Fission", "Binary fission", "Mitosis"], ["Membranes", "Double", "Single (plasma membrane)", "Double (nuclear envelope)"]] }]);
 
-V("bio", "3.1", ["An enzyme was tested with its normal substrate S and three similar molecules. Which explanation best accounts for the results?", "The active site's shape and charge fit S closely, so even small changes in the molecule reduce binding",
-  ["The enzyme binds all molecules equally, but S reacts faster", "S′ and S″ are larger, so they are too heavy to react", "The enzyme is used up by S, so it cannot react with the others"],
+V("bio", "3.1", ["An enzyme was tested with its normal substrate S and three similar molecules. Which explanation best accounts for the results?", "The active site fits S's shape and charge closely", ["The enzyme binds all molecules but S reacts faster", "S′ and S″ are too heavy to fit the active site", "The enzyme is used up by S and can't react again"],
   "Enzyme specificity comes from the active site's three-dimensional shape and chemical properties. A mirror-image molecule or one with a different charge doesn't fit.",
   { t: "bar", title: "Enzyme activity with four similar molecules (illustrative)", cats: ["S (normal)", "S′ (extra –CH₃)", "S″ (mirror image)", "S‴ (opposite charge)"], y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Relative activity (%)" }, values: true,
     series: [{ name: "Activity", vals: [100, 12, 0, 3] }] }]);
@@ -81,8 +71,7 @@ V("bio", "3.4", ["Using the ΔG values in the table, what is the free-energy cha
   "Coupled ΔG = +14.2 + (−30.5) = −16.3 kJ/mol. Pairing an endergonic reaction with ATP hydrolysis makes the overall process exergonic.",
   { t: "table", title: "Standard free-energy changes", head: ["Reaction", "ΔG (kJ/mol)"], rows: [["Glutamate + NH₃ → Glutamine", "+14.2"], ["ATP + H₂O → ADP + Pᵢ", "−30.5"]] }]);
 
-V("bio", "3.7", ["Two strains of a bacterium have different versions of a key enzyme. A population containing both strains is more likely to survive a shift in temperature because", "each enzyme version works best at a different temperature, so one strain can keep growing if conditions change",
-  ["the two enzymes combine into a single enzyme that works at all temperatures", "strain 1 grows faster at every temperature", "enzymes don't affect growth rate"],
+V("bio", "3.7", ["Two strains of a bacterium have different versions of a key enzyme. A population containing both strains is more likely to survive a shift in temperature because", "different enzyme versions suit different temperatures", ["the two enzymes merge to work at every temperature", "strain 1 grows faster at every temperature tested", "enzyme structure has no effect on growth rate"],
   "Molecular variation widens the range of conditions a population can tolerate. Strain 1 does best near 30 °C and strain 2 near 40 °C.",
   { t: "line", title: "Growth rate of two bacterial strains", x: { min: 15, max: 55, ticks: range(15, 55, 5), label: "Temperature (°C)" }, y: { min: 0, max: 1.2, ticks: [0, 0.4, 0.8, 1.2], label: "Growth rate (divisions/hour)" },
     series: [{ name: "Strain 1", pts: curve(x => Math.exp(-((x - 30) ** 2) / (2 * 5 ** 2)), 15, 55) }, { name: "Strain 2", pts: curve(x => 0.95 * Math.exp(-((x - 40) ** 2) / (2 * 5 ** 2)), 15, 55), k: 2, dash: true }] }]);
@@ -91,13 +80,11 @@ V("bio", "4.1", ["Which signal in the table is an example of quorum sensing?", "
   "Quorum sensing uses molecules that bacteria secrete. Once they build up past a threshold (a high population density), the bacteria change their gene expression together. X is endocrine, Y is synaptic, and Z is direct contact.",
   { t: "table", title: "Four cell-signaling examples", head: ["Signal", "How it works"], rows: [["W", "Secreted by bacteria; builds up as the population grows and triggers bioluminescence"], ["X", "Released by the pancreas; travels in the blood to liver and muscle cells"], ["Y", "Released into a synaptic cleft; binds receptors on the next neuron"], ["Z", "Small molecules pass directly between adjacent heart cells through gap junctions"]] }]);
 
-V("bio", "4.2", ["In the diagram of cell signaling, step X is best described as", "transduction, in which the signal is relayed and amplified inside the cell, often by second messengers and kinases",
-  ["reception, in which the ligand binds the receptor", "the response, in which gene expression changes", "transcription of the ligand's gene"],
+V("bio", "4.2", ["In the diagram of cell signaling, step X is best described as", "transduction, where the signal is relayed and amplified", ["reception, where the ligand binds the receptor", "the response, where gene expression changes", "transcription of the gene that codes for the ligand"],
   "Cell signaling has three stages: reception (the ligand binds), transduction (relay and amplification), and the response.",
   { t: "flow", title: "The three stages of cell signaling", steps: ["Ligand binds receptor", "X", "Cellular response"] }]);
 
-V("bio", "4.4", ["Intestinal cells were treated with cholera toxin, with and without a drug that blocks adenylyl cyclase. What do the results suggest?", "Cholera toxin raises cAMP by acting upstream of adenylyl cyclase, which is needed for the effect",
-  ["Cholera toxin makes cAMP directly without adenylyl cyclase", "Cholera toxin lowers cAMP levels", "The drug increases cAMP production"],
+V("bio", "4.4", ["Intestinal cells were treated with cholera toxin, with and without a drug that blocks adenylyl cyclase. What do the results suggest?", "The toxin acts upstream of adenylyl cyclase", ["The toxin makes cAMP without adenylyl cyclase", "The toxin lowers cAMP levels in the cells", "The drug itself increases cAMP production"],
   "Toxin alone raises cAMP about 12-fold, but blocking adenylyl cyclase prevents the rise. The toxin keeps a G protein active, which keeps adenylyl cyclase switched on.",
   { t: "bar", title: "cAMP in intestinal cells (relative)", cats: ["Control", "Cholera toxin", "Toxin + AC blocker"], y: { min: 0, max: 14, ticks: [0, 4, 8, 12], label: "cAMP (relative to control)" }, values: true,
     series: [{ name: "cAMP", vals: [1, 12, 1.4] }] }]);
@@ -108,12 +95,11 @@ V("bio", "5.1", ["The graph shows DNA content per cell as a cell goes through me
     x: { min: 0, max: 26, label: "Time" }, y: { min: 0, max: 5, ticks: [0, 1, 2, 3, 4], label: "DNA per cell (units)" },
     series: [{ name: "DNA", pts: [[0, 2], [6, 2], [12, 4], [18, 4], [18, 2], [24, 2], [24, 1], [26, 1]] }] }]);
 
-V("bio", "5.2", ["The table shows how many chromosome combinations independent assortment can produce in gametes. What is the missing value for humans (n = 23)?", "About 8.4 million (2²³)", ["46", "23 × 2 = 46 thousand", "529 (23²)"],
+V("bio", "5.2", ["The table shows how many chromosome combinations independent assortment can produce in gametes. What is the missing value for humans (n = 23)?", "About 8.4 million (2²³)", ["46 (23 × 2)", "529 (23²)", "About 4.2 million (2²²)"],
   "Each homologous pair lines up independently at metaphase I, giving 2ⁿ possible combinations. For n = 23, that's 8,388,608, before crossing over adds even more.",
   { t: "table", title: "Possible chromosome combinations from independent assortment", head: ["Haploid number (n)", "Combinations"], rows: [["2", "4"], ["3", "8"], ["4", "16"], ["23 (human)", "?"]] }]);
 
-V("bio", "5.5", ["Hydrangeas from the same clone, so genetically identical, were grown in soils of different pH. What do the results show?", "The environment can change how a genotype is expressed (phenotypic plasticity)",
-  ["Soil pH causes mutations in flower-color genes", "Flower color in hydrangeas is sex-linked", "The plants must have had different genotypes"],
+V("bio", "5.5", ["Hydrangeas from the same clone, so genetically identical, were grown in soils of different pH. What do the results show?", "The environment affects how genes are expressed", ["Soil pH causes mutations in flower-color genes", "Flower color in hydrangeas is a sex-linked trait", "The plants in each soil had different genotypes"],
   "Identical genotypes produced different phenotypes. Soil pH affects how available aluminum is, which changes flower pigments.",
   { t: "bar", title: "Flower color of cloned hydrangeas by soil pH", cats: ["pH 5.0", "pH 6.0", "pH 7.0"], y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Plants with each color (%)" },
     series: [{ name: "Blue", vals: [90, 45, 10] }, { name: "Pink", vals: [10, 55, 90], k: 2 }] }]);
@@ -136,8 +122,7 @@ V("bio", "6.4", ["Using the codon table, what polypeptide does the mRNA 5′-AUG
   "Ribosomes read codons 5′→3′ from the start codon: AUG (Met), GGC (Gly), UUU (Phe), then UAA, a stop codon that ends translation. The stop codon doesn't add an amino acid.",
   { t: "table", title: "Part of the genetic code", head: ["Codon", "Amino acid"], rows: [["AUG", "Methionine (Met), start"], ["GGC", "Glycine (Gly)"], ["GGA", "Glycine (Gly)"], ["UUU", "Phenylalanine (Phe)"], ["UUC", "Phenylalanine (Phe)"], ["UAA", "Stop"]] }]);
 
-V("bio", "6.6", ["The table shows whether four genes are expressed in three cell types from the same person. Which conclusion is best supported?", "The cells have the same genes but express different sets of them, which gives each cell type its function",
-  ["Each cell type has different genes in its nucleus", "Neurons have lost the albumin gene", "Only liver cells can make ATP synthase"],
+V("bio", "6.6", ["The table shows whether four genes are expressed in three cell types from the same person. Which conclusion is best supported?", "Same genes, but each cell type expresses different ones", ["Each cell type has different genes in its nucleus", "Neurons have lost the albumin gene during development", "Only liver cells contain the gene for ATP synthase"],
   "ATP synthase, a housekeeping gene, is on in all three, while specialized genes are on in only one. Differences in gene regulation, not in genes, create cell types.",
   { t: "table", title: "Gene expression in three cell types (✓ = expressed)", head: ["Gene", "Liver cell", "Muscle cell", "Neuron"], rows: [["Albumin", "✓", "", ""], ["Myosin (muscle form)", "", "✓", ""], ["Neurotransmitter synthase", "", "", "✓"], ["ATP synthase", "✓", "✓", "✓"]] }]);
 
@@ -145,48 +130,41 @@ V("bio", "6.7", ["Which mutant mRNA is a nonsense mutation, one that creates a p
   "In Mutant 2, GGA (Gly) became UGA, a stop codon, so translation ends early. Mutant 1 is silent (UUU and UUC both code for Phe), Mutant 4 is missense (Gly → Arg), and Mutant 3 is a frameshift from a deleted base, which changes every codon after it.",
   { t: "table", title: "The start of an mRNA and four mutants", head: ["Version", "Codons (5′ → 3′)"], rows: [["Original", "AUG · UUC · GGA · UAC · …"], ["Mutant 1", "AUG · UUU · GGA · UAC · …"], ["Mutant 2", "AUG · UUC · UGA · UAC · …"], ["Mutant 3", "AUG · UCG · GAU · AC…"], ["Mutant 4", "AUG · UUC · AGA · UAC · …"]] }]);
 
-V("bio", "7.1", ["The graph compares offspring produced by a population of frogs with the number that survive to adulthood. Which of Darwin's observations does it illustrate?", "Organisms produce more offspring than the environment can support, which leads to competition",
-  ["All offspring survive to reproduce", "Populations grow exponentially forever", "Traits acquired during life are passed on"],
+V("bio", "7.1", ["The graph compares offspring produced by a population of frogs with the number that survive to adulthood. Which of Darwin's observations does it illustrate?", "More offspring are born than can survive", ["All offspring survive long enough to reproduce", "Populations grow exponentially without limit", "Traits acquired during life are passed to offspring"],
   "Far more eggs hatch than can survive. Because resources are limited, individuals compete, and those with favorable heritable traits are more likely to survive and reproduce.",
   { t: "bar", title: "Offspring produced vs. surviving to adulthood (illustrative)", cats: ["Gen 1", "Gen 2", "Gen 3", "Gen 4"], y: { min: 0, max: 1000, ticks: range(0, 1000, 250), label: "Number of frogs" },
     series: [{ name: "Offspring produced", vals: [950, 1000, 980, 990] }, { name: "Survived to adulthood", vals: [48, 52, 50, 49], k: 2 }] }]);
 
-V("bio", "7.3", ["The graph shows average oil content of corn kernels in two lines selectively bred for high or low oil over many generations. Which conclusion is best supported?", "Selection on heritable variation changed the trait far beyond its original range",
-  ["Selection can only change a trait for a few generations", "The environment alone caused the change", "Both lines stayed near the starting value"],
+V("bio", "7.3", ["The graph shows average oil content of corn kernels in two lines selectively bred for high or low oil over many generations. Which conclusion is best supported?", "Selection on heritable variation shifted the trait", ["Selection can change a trait for only a few generations", "The environment alone caused the change in both lines", "Both lines stayed close to the starting average"],
   "This is based on a real long-term experiment in Illinois. Choosing parents with high or low oil each generation kept shifting the averages in opposite directions.",
   { t: "line", title: "Corn kernel oil content under artificial selection (approximate)", x: { min: 0, max: 100, ticks: range(0, 100, 20), label: "Generations of selection" }, y: { min: 0, max: 22, ticks: [0, 5, 10, 15, 20], label: "Oil content (%)" },
     series: [{ name: "Selected for high oil", pts: curve(x => 4.7 + 15.5 * (x / 100) ** 0.9, 0, 100) }, { name: "Selected for low oil", pts: curve(x => 1 + 3.7 * Math.exp(-x / 18), 0, 100), k: 2, dash: true }] }]);
 
 const drift = (seed, n2) => { const r = seeded(seed); let p = 0.5; const pts = [[0, 0.5]]; for (let g = 1; g <= 40; g++) { if (p > 0 && p < 1) { let c = 0; for (let i = 0; i < n2; i++) if (r() < p) c++; p = c / n2; } pts.push([g, R(p)]); } return pts; };
-V("bio", "7.4", ["Each line shows the frequency of one allele over 40 generations in a different small population (20 individuals) with no selection. What best explains the pattern?", "Genetic drift: random chance changes allele frequencies, and in small populations alleles can be lost or become fixed",
-  ["Natural selection favoring the allele in every population", "Gene flow making all populations identical", "Hardy-Weinberg equilibrium keeping frequencies constant"],
+V("bio", "7.4", ["Each line shows the frequency of one allele over 40 generations in a different small population (20 individuals) with no selection. What best explains the pattern?", "Genetic drift, which is strongest in small populations", ["Natural selection favoring the allele everywhere", "Gene flow making all the populations identical", "Hardy-Weinberg equilibrium holding frequencies steady"],
   "All populations started at 0.5, then wandered randomly in different directions. Some reached 0 (lost) or 1 (fixed). That's the signature of drift, which is strongest in small populations.",
   { t: "line", title: "Allele frequency in four small populations (simulated)", x: { min: 0, max: 40, ticks: range(0, 40, 10), label: "Generation" }, y: { min: 0, max: 1, ticks: [0, 0.25, 0.5, 0.75, 1], label: "Allele frequency" },
     series: [{ name: "Population 1", pts: drift(11, 40) }, { name: "Population 2", pts: drift(29, 40), k: 2 }, { name: "Population 3", pts: drift(53, 40), k: 3 }, { name: "Population 4", pts: drift(97, 40), k: 4, dash: true }] }]);
 
-V("bio", "7.7", ["Which feature in the table best supports the idea that all living organisms share a common ancestor?", "Ribosomes that translate a nearly universal genetic code",
-  ["A nucleus", "Mitochondria", "Membrane-bound organelles"],
+V("bio", "7.7", ["Which feature in the table best supports the idea that all living organisms share a common ancestor?", "Ribosomes and a nearly universal genetic code", ["A nucleus surrounded by a double membrane", "Mitochondria that carry out respiration", "Membrane-bound organelles like the Golgi"],
   "Only ribosomes and the genetic code appear in every group, including bacteria and archaea. The nucleus and organelles are shared only by eukaryotes.",
   { t: "table", title: "Features of four organisms (✓ = present)", head: ["Feature", "Bacterium", "Archaeon", "Yeast", "Human"], rows: [["Ribosomes + near-universal genetic code", "✓", "✓", "✓", "✓"], ["DNA as genetic material", "✓", "✓", "✓", "✓"], ["Nucleus", "", "", "✓", "✓"], ["Mitochondria", "", "", "✓", "✓"]] }]);
 
-V("bio", "7.10", ["The diagram shows how one population became two species. This process is", "allopatric speciation", ["sympatric speciation", "artificial selection", "gene flow"],
+V("bio", "7.10", ["The diagram shows how one population became two species. This process is", "allopatric speciation", ["sympatric speciation", "artificial selection", "gene flow between populations"],
   "A geographic barrier split the population and stopped gene flow. Drift and different selection pressures then built up reproductive isolation.",
   { t: "flow", title: "From one population to two species", steps: ["One squirrel population", "A canyon forms and splits it", "No gene flow for many generations", "Different mutations, drift, and selection", "Can no longer interbreed"] }]);
 
-V("bio", "7.11", ["A new disease reached two populations of the same plant. Which best explains the difference in outcomes?", "The genetically diverse population included some resistant individuals that survived and reproduced",
-  ["The clonal population reproduced faster", "The disease can only infect clones", "Genetic diversity has no effect on survival"],
+V("bio", "7.11", ["A new disease reached two populations of the same plant. Which best explains the difference in outcomes?", "Some diverse individuals were resistant and survived", ["The clonal population reproduced faster overall", "The disease can only infect genetically identical plants", "Genetic diversity has no effect on disease survival"],
   "In a clonal population, every individual shares the same susceptibility. Variation gives natural selection something to act on, which is why the Irish potato famine was so severe.",
   { t: "line", title: "Surviving plants after a disease arrives", x: { min: 0, max: 10, ticks: range(0, 10, 2), label: "Years after disease arrived" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Plants surviving (% of original)" },
     vlines: [{ x: 1, l: "Disease arrives" }],
     series: [{ name: "Genetically diverse population", pts: curve(x => x < 1 ? 100 : 55 + 45 * Math.exp(-(x - 1) * 1.4) + (x > 3 ? (x - 3) * 3.5 : 0), 0, 10) }, { name: "Clonal population", pts: curve(x => x < 1 ? 100 : 2 + 98 * Math.exp(-(x - 1) * 1.6), 0, 10), k: 2, dash: true }] }]);
 
-V("bio", "7.12", ["The table summarizes the Miller–Urey experiment. What did it demonstrate?", "Organic molecules such as amino acids can form from inorganic molecules under conditions thought to resemble early Earth",
-  ["Living cells can form in a few days", "Early Earth's atmosphere was rich in oxygen", "DNA was the first genetic material"],
+V("bio", "7.12", ["The table summarizes the Miller–Urey experiment. What did it demonstrate?", "Organic molecules can form from inorganic ones", ["Living cells can form within a few days", "Early Earth's atmosphere was rich in oxygen", "DNA must have been the first genetic material"],
   "Energy from sparks acting on simple gases produced amino acids. It supported the idea that life's building blocks could form without living things.",
   { t: "table", title: "The Miller–Urey experiment (1953)", head: ["Part", "Details"], rows: [["Starting gases", "CH₄, NH₃, H₂, H₂O"], ["Energy source", "Electric sparks (simulated lightning)"], ["After about 1 week", "Amino acids detected, including glycine and alanine"]] }]);
 
-V("bio", "8.1", ["Oat seedlings were lit from one side after the treatments shown. What conclusion do the results support?", "The tip of the shoot detects light and controls bending",
-  ["The base of the shoot detects light", "Seedlings bend away from light", "Covering any part of the shoot stops bending"],
+V("bio", "8.1", ["Oat seedlings were lit from one side after the treatments shown. What conclusion do the results support?", "The shoot tip detects light and controls bending", ["The base of the shoot detects the light", "Seedlings bend away from the light source", "Covering any part of the shoot stops bending"],
   "Bending stopped only when the tip was covered or removed. Covering the base had no effect. This matches Darwin's experiments, and we now know the tip sends auxin down the shaded side.",
   { t: "bar", title: "Bending toward light after each treatment", cats: ["Untreated", "Tip covered", "Tip removed", "Base covered"], y: { min: 0, max: 40, ticks: [0, 10, 20, 30, 40], label: "Bending toward light (degrees)" }, values: true,
     series: [{ name: "Bending", vals: [30, 0, 0, 30] }] }]);

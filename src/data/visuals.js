@@ -13,8 +13,7 @@ const energy = (s, p, e) => curve(x => s + (e - s) / (1 + Math.exp(-(x - 5) * 1.
 
 // 1.1 specific heat
 V("bio", "1.1", ["Equal masses of water and ethanol were heated at the same rate. Which property of water best explains the difference between the two curves?",
-  "Water has a higher specific heat, because added energy must first break hydrogen bonds between water molecules",
-  ["Water has a lower density than ethanol", "Water molecules are nonpolar, so they absorb heat slowly", "Ethanol forms more hydrogen bonds than water does"],
+  "Water's hydrogen bonds give it a higher specific heat", ["Water's lower density lets it absorb heat slowly", "Water is nonpolar, so it absorbs heat more slowly", "Ethanol forms more hydrogen bonds than water does"],
   "Water's temperature rises more slowly for the same energy input because much of the energy goes into disrupting hydrogen bonds. Ethanol levels off at about 78 °C because it begins to boil.",
   { t: "line", title: "Temperature of water and ethanol during heating", x: { min: 0, max: 10, ticks: range(0, 10, 2), label: "Time heating (min)" }, y: { min: 20, max: 90, ticks: range(20, 90, 10), label: "Temperature (°C)" },
     series: [{ name: "Water", pts: [[0, 20], [10, 60]] }, { name: "Ethanol", pts: [[0, 20], [8.47, 78], [10, 78]], k: 2 }] }]);
@@ -37,15 +36,13 @@ V("bio", "2.3", ["The table shows measurements for three cube-shaped cells. What
   { t: "table", title: "Dimensions of model cube cells", head: ["Side length (µm)", "Surface area (µm²)", "Volume (µm³)", "SA : V"], rows: [["1", "6", "1", "6 : 1"], ["2", "24", "8", "3 : 1"], ["4", "96", "64", "?"]] }]);
 
 // 2.7 saturation
-V("bio", "2.7", ["The graph shows the rate at which two solutes enter a cell. Which explanation best accounts for the shape of the curve for Solute B?", "Solute B moves through carrier proteins, and the rate levels off once all carriers are occupied",
-  ["Solute B diffuses directly through the phospholipid bilayer", "Solute B requires no membrane proteins at any concentration", "The cell stops producing ATP at high concentrations of Solute B"],
+V("bio", "2.7", ["The graph shows the rate at which two solutes enter a cell. Which explanation best accounts for the shape of the curve for Solute B?", "B uses carrier proteins that become saturated", ["B diffuses directly through the lipid bilayer", "B needs no membrane proteins at any concentration", "B uptake stops because the cell runs out of ATP"],
   "Carrier-mediated (facilitated) transport saturates because there are only so many carriers. Simple diffusion (Solute A) keeps increasing in proportion to the concentration gradient.",
   { t: "line", title: "Rate of solute uptake vs. external concentration", x: { min: 0, max: 10, ticks: range(0, 10, 2), label: "External solute concentration (mM)" }, y: { min: 0, max: 10, ticks: range(0, 10, 2), label: "Rate of uptake (relative)" },
     series: [{ name: "Solute A", pts: [[0, 0], [10, 9]] }, { name: "Solute B", pts: curve(x => 8 * x / (1.2 + x), 0, 10), k: 2 }] }]);
 
 // 2.8 compartments
-V("bio", "2.8", ["The two sides of the container are separated by a membrane permeable to water but not to sucrose. Which outcome is expected?", "Net movement of water from side 1 to side 2, raising the water level on side 2",
-  ["Net movement of sucrose from side 2 to side 1", "Net movement of water from side 2 to side 1", "No net movement of water, because the membrane blocks sucrose"],
+V("bio", "2.8", ["The two sides of the container are separated by a membrane permeable to water but not to sucrose. Which outcome is expected?", "Water moves from side 1 to side 2", ["Sucrose moves from side 2 to side 1", "Water moves from side 2 to side 1", "No net water movement occurs at all"],
   "Side 2 has the higher solute concentration and lower (more negative) water potential. Water moves by osmosis toward it.",
   { t: "compartments", title: "U-shaped container at the start of the experiment", left: { label: "Side 1: 0.2 M sucrose", dots: 9 }, right: { label: "Side 2: 0.5 M sucrose", dots: 22 }, membrane: "Membrane permeable to water, not sucrose", solute: "Sucrose molecule" }]);
 
@@ -58,8 +55,7 @@ V("bio", "2.8", ["Potato cores were soaked in sucrose solutions for 24 hours. Ba
 // 3.2 energy diagram
 const enz = { t: "line", title: "Free energy during a chemical reaction", x: { min: 0, max: 10, label: "Progress of reaction" }, y: { min: 0, max: 10, label: "Free energy (G)" },
   series: [{ name: "Without enzyme", pts: energy(5, 9, 2) }, { name: "With enzyme", pts: energy(5, 6.4, 2), k: 2, dash: true }] };
-V("bio", "3.2", ["Which statement is best supported by the energy diagram?", "The enzyme lowers the activation energy, but the overall free-energy change of the reaction is the same",
-  ["The enzyme makes the reaction release more free energy", "The enzyme raises the energy of the reactants", "The enzyme turns an endergonic reaction into an exergonic one"],
+V("bio", "3.2", ["Which statement is best supported by the energy diagram?", "It lowers Ea but doesn't change ΔG", ["It makes the reaction release more energy", "It raises the energy of the reactants", "It makes an endergonic reaction exergonic"],
   "Both curves start and end at the same free energy (same ΔG). Only the peak, the activation energy, is lower with the enzyme.", enz]);
 V("bio", "3.2", ["The reaction shown in the diagram is best described as", "exergonic, because the products have less free energy than the reactants",
   ["endergonic, because energy must be added to reach the peak", "endergonic, because the products have more free energy than the reactants", "at equilibrium, because an enzyme is present"],
@@ -88,21 +84,18 @@ V("bio", "3.5", ["Based on the absorption spectra, light of which wavelength wou
 // 3.6 respirometer
 const resp = { t: "line", title: "Cumulative O₂ consumed by peas in a respirometer", x: { min: 0, max: 20, ticks: range(0, 20, 5), label: "Time (min)" }, y: { min: 0, max: 1, ticks: [0, 0.2, 0.4, 0.6, 0.8, 1], label: "O₂ consumed (mL)" },
   series: [{ name: "Germinating, 25 °C", pts: [[0, 0], [5, 0.22], [10, 0.45], [15, 0.67], [20, 0.9]], dots: true }, { name: "Germinating, 10 °C", pts: [[0, 0], [5, 0.1], [10, 0.2], [15, 0.3], [20, 0.4]], dots: true, k: 2 }, { name: "Dry (non-germinating), 25 °C", pts: [[0, 0], [5, 0.02], [10, 0.05], [15, 0.07], [20, 0.1]], dots: true, k: 3 }] };
-V("bio", "3.6", ["Which conclusion is best supported by the data?", "Germinating peas respire faster than dry peas, and their respiration rate increases with temperature",
-  ["Dry peas respire faster than germinating peas", "Temperature has no effect on the respiration rate of germinating peas", "Germinating peas at 10 °C are not carrying out cellular respiration"],
+V("bio", "3.6", ["Which conclusion is best supported by the data?", "Germinating peas respire faster, more so when warm", ["Dry peas respire faster than germinating peas", "Temperature has no effect on germinating peas", "Germinating peas at 10 °C don't respire at all"],
   "The steeper slopes show higher O₂ consumption. Germinating seeds are metabolically active, and warmer temperatures speed up enzyme-driven reactions.", resp]);
 V("bio", "3.6", ["What is the rate of O₂ consumption for germinating peas at 25 °C?", "About 0.045 mL/min", ["About 0.9 mL/min", "About 0.02 mL/min", "About 0.005 mL/min"],
   "Rate = slope = 0.9 mL ÷ 20 min = 0.045 mL/min.", resp]);
 
 // 4.3 epinephrine pathway
-V("bio", "4.3", ["The diagram shows the epinephrine signaling pathway in liver cells. Molecule X is best described as a", "second messenger (cAMP) that activates protein kinase A",
-  ["ligand that binds the receptor on the cell surface", "transcription factor that binds DNA", "phosphatase that ends the response"],
+V("bio", "4.3", ["The diagram shows the epinephrine signaling pathway in liver cells. Molecule X is best described as a", "second messenger that activates a kinase", ["ligand that binds the cell-surface receptor", "transcription factor that binds to DNA", "phosphatase that ends the cell's response"],
   "Adenylyl cyclase converts ATP to cAMP. cAMP relays the signal inside the cell by activating protein kinase A, which starts a phosphorylation cascade.",
   { t: "flow", title: "Epinephrine signal transduction pathway", steps: ["Epinephrine", "G protein-coupled receptor", "G protein", "Adenylyl cyclase", "X", "Protein kinase A", "Glycogen phosphorylase", "Glucose released"] }]);
 
 // 4.5 glucose after meal
-V("bio", "4.5", ["The graph shows blood glucose in a healthy person after a meal. The decrease between 30 and 120 minutes is mainly caused by", "insulin release, which increases glucose uptake by cells: negative feedback",
-  ["glucagon release, which stimulates glycogen breakdown", "positive feedback that amplifies glucose levels", "epinephrine release from the adrenal glands"],
+V("bio", "4.5", ["The graph shows blood glucose in a healthy person after a meal. The decrease between 30 and 120 minutes is mainly caused by", "insulin release, a negative feedback response", ["glucagon release, which raises blood glucose", "positive feedback that amplifies glucose", "epinephrine release from the adrenal glands"],
   "Rising glucose triggers insulin release from beta cells. Insulin causes cells to take up glucose and store it as glycogen, bringing levels back toward the set point.",
   { t: "line", title: "Blood glucose after a meal", x: { min: 0, max: 180, ticks: range(0, 180, 30), label: "Time after meal (min)" }, y: { min: 60, max: 180, ticks: range(60, 180, 30), label: "Blood glucose (mg/dL)" },
     vlines: [{ x: 0, l: "Meal" }], series: [{ name: "Blood glucose", pts: [[0, 90], [15, 125], [30, 150], [45, 148], [60, 138], [90, 114], [120, 95], [150, 88], [180, 90]], dots: true }] }]);
@@ -115,20 +108,19 @@ V("bio", "4.6", ["The graph shows the amount of DNA per cell over one cell cycle
     series: [{ name: "DNA content", pts: [[0, 1], [10, 1], [18, 2], [24, 2], [24, 1], [26, 1]] }] }]);
 
 // 4.7 cyclin / MPF
-V("bio", "4.7", ["Based on the graph, MPF (cyclin–CDK) activity peaks", "when cyclin concentration is highest, triggering entry into mitosis", ["when cyclin concentration is lowest", "during G1, when the cell is growing", "at a constant level throughout the cycle"],
+V("bio", "4.7", ["Based on the graph, MPF (cyclin–CDK) activity peaks", "when cyclin concentration peaks, before mitosis", ["when cyclin concentration is at its lowest", "during G1, while the cell is still growing", "at a constant level throughout the cycle"],
   "CDK levels stay constant, but CDK is active only when bound to cyclin. As cyclin builds up, MPF activity rises and pushes the cell into M phase. Cyclin is then degraded, and MPF activity falls.",
   { t: "line", title: "Cyclin concentration and MPF activity over two cell cycles", bands: [{ from: 0, to: 7.5, l: "Interphase" }, { from: 7.5, to: 9.5, l: "M" }, { from: 9.5, to: 17.5, l: "Interphase" }, { from: 17.5, to: 19.5, l: "M" }],
     x: { min: 0, max: 20, label: "Time" }, y: { min: 0, max: 1.1, ticks: [0, 0.5, 1], label: "Relative level" },
     series: [{ name: "Cyclin concentration", pts: [[0, 0.1], [8, 1], [9, 0.1], [10, 0.1], [18, 1], [19, 0.1], [20, 0.1]] }, { name: "MPF activity", pts: [[0, 0.05], [7, 0.05], [8, 1], [9, 0.05], [17, 0.05], [18, 1], [19, 0.05], [20, 0.05]], k: 2, dash: true }] }]);
 
 // 5.3 chi-square
-V("bio", "5.3", ["A student predicts a 3:1 ratio for a cross of two heterozygous plants and collects the data shown. Which is the correct chi-square value and conclusion? (Critical value at p = 0.05, df = 1, is 3.84.)", "χ² ≈ 1.33, so the student fails to reject the null hypothesis of a 3:1 ratio",
-  ["χ² ≈ 1.33, so the student rejects the null hypothesis", "χ² ≈ 6.67, so the student rejects the null hypothesis", "χ² ≈ 0.33, so the data prove the 3:1 hypothesis is correct"],
+V("bio", "5.3", ["A student predicts a 3:1 ratio for a cross of two heterozygous plants and collects the data shown. Which is the correct chi-square value and conclusion? (Critical value at p = 0.05, df = 1, is 3.84.)", "χ² ≈ 1.33; fail to reject the 3:1 hypothesis", ["χ² ≈ 1.33; reject the 3:1 hypothesis", "χ² ≈ 6.67; reject the 3:1 hypothesis", "χ² ≈ 0.33; the data prove the 3:1 hypothesis"],
   "Expected counts are 300 : 100. χ² = (290 − 300)²/300 + (110 − 100)²/100 = 0.33 + 1.00 = 1.33. That is less than 3.84, so the difference could be due to chance.",
   { t: "table", title: "Offspring of a monohybrid cross (Pp × Pp)", head: ["Phenotype", "Observed", "Expected"], rows: [["Purple", "290", "?"], ["White", "110", "?"], ["Total", "400", "400"]] }]);
 
 // 5.3 autosomal recessive pedigree
-V("bio", "5.3", ["Which mode of inheritance is most consistent with this pedigree?", "Autosomal recessive", ["Autosomal dominant", "X-linked recessive", "Y-linked"],
+V("bio", "5.3", ["Which mode of inheritance is most consistent with this pedigree?", "Autosomal recessive", ["Autosomal dominant", "X-linked recessive", "X-linked dominant"],
   "Two unaffected parents have an affected daughter. A dominant trait would show in a parent. An X-linked recessive daughter would need an affected father. Y-linked traits never appear in females.",
   { t: "pedigree", title: "Pedigree of a family with a rare trait", people: [{ x: 1, y: 0, s: "m" }, { x: 3, y: 0, s: "f" }, { x: 0.5, y: 1, s: "m" }, { x: 2, y: 1, s: "f", a: 1 }, { x: 3.5, y: 1, s: "m" }],
     fams: [{ p: [0, 1], c: [2, 3, 4] }] }]);
@@ -148,15 +140,13 @@ V("bio", "5.4", ["Recombination frequencies between three linked genes are shown
   { t: "table", title: "Recombination frequencies from test crosses", head: ["Gene pair", "Recombination frequency"], rows: [["A and B", "8%"], ["B and C", "12%"], ["A and C", "20%"]] }]);
 
 // 6.2 Meselson–Stahl
-V("bio", "6.2", ["E. coli grown in ¹⁵N were moved to ¹⁴N medium, and their DNA was centrifuged after each generation. The Generation 1 result rules out which model?", "Conservative replication, which would give one heavy band and one light band instead of a single hybrid band",
-  ["Semiconservative replication, which predicts a single hybrid band", "Dispersive replication, which predicts a single hybrid band", "All models, because only one band appears"],
+V("bio", "6.2", ["E. coli grown in ¹⁵N were moved to ¹⁴N medium, and their DNA was centrifuged after each generation. The Generation 1 result rules out which model?", "Conservative replication", ["Semiconservative replication", "Dispersive replication", "None of the three models"],
   "After one generation, every DNA molecule has intermediate density. Conservative replication would keep the original heavy molecule intact, so that model is ruled out. Generation 2 (hybrid + light) then rules out dispersive.",
   { t: "gel", title: "DNA bands after density-gradient centrifugation", linear: true, h: 260, lanes: [{ name: "Gen 0", bands: [0.78] }, { name: "Gen 1", bands: [0.5] }, { name: "Gen 2", bands: [0.5, 0.22] }],
     refs: [{ v: 0.22, l: "Light (¹⁴N)" }, { v: 0.5, l: "Hybrid" }, { v: 0.78, l: "Heavy (¹⁵N)" }] }]);
 
 // 6.5 lac operon
-V("bio", "6.5", ["The diagram shows the lac operon. When lactose is absent, the repressor binds region X. Region X is the", "operator, where the bound repressor blocks RNA polymerase from transcribing the genes",
-  ["promoter, where the repressor recruits RNA polymerase", "lacZ gene, which codes for the repressor", "terminator, which ends translation"],
+V("bio", "6.5", ["The diagram shows the lac operon. When lactose is absent, the repressor binds region X. Region X is the", "operator, where the repressor blocks transcription", ["promoter, where the repressor recruits RNA polymerase", "lacZ gene, which codes for the repressor protein", "terminator, where the repressor ends translation"],
   "The operator lies between the promoter and the structural genes. When allolactose binds the repressor, it releases the operator and transcription proceeds.",
   { t: "flow", title: "The lac operon (E. coli)", strip: true, steps: [{ l: "lacI", s: "repressor gene", w: 1.1 }, { l: "Promoter", w: 1 }, { l: "X", x: 1, w: 0.7 }, { l: "lacZ", s: "β-galactosidase", w: 1.6 }, { l: "lacY", s: "permease", w: 1.2 }, { l: "lacA", s: "transacetylase", w: 1.2 }] }]);
 
@@ -183,19 +173,16 @@ V("bio", "7.2", ["The histogram shows a trait in a population before and after m
 const hw = { t: "table", title: "Genotypes in a population of 1,000 flowers", head: ["Genotype", "AA", "Aa", "aa"], rows: [["Number of individuals", "360", "480", "160"]] };
 V("bio", "7.5", ["Based on the data, what is the frequency of allele a?", "0.4", ["0.16", "0.6", "0.48"],
   "Total alleles = 2,000. a alleles = 480 (from Aa) + 2 × 160 (from aa) = 800. 800 ÷ 2,000 = 0.4.", hw]);
-V("bio", "7.5", ["Is this population in Hardy-Weinberg equilibrium for this gene?", "Yes. With p = 0.6 and q = 0.4, the expected counts are 360 AA, 480 Aa, and 160 aa, which match the observed counts",
-  ["No, because the population contains heterozygotes", "No, because p does not equal q", "It can't be determined without the phenotypes"],
+V("bio", "7.5", ["Is this population in Hardy-Weinberg equilibrium for this gene?", "Yes; expected counts match (360, 480, 160)", ["No; the population contains heterozygotes", "No; p and q are not equal to each other", "Yes; but only because there are no aa individuals"],
   "Expected: p² = 0.36, 2pq = 0.48, q² = 0.16, times 1,000. These match exactly, so there is no evidence of evolution at this locus.", hw]);
 
 // 7.6 cytochrome c
-V("bio", "7.6", ["The table shows the number of amino acid differences between human cytochrome c and that of other organisms. Which conclusion is best supported?", "Humans share a more recent common ancestor with cows than with pigeons",
-  ["Humans evolved from rhesus monkeys", "Yeast is more closely related to humans than wheat is", "Pigeons and bullfrogs are identical in cytochrome c"],
+V("bio", "7.6", ["The table shows the number of amino acid differences between human cytochrome c and that of other organisms. Which conclusion is best supported?", "Humans are more closely related to cows than to pigeons", ["Humans evolved directly from rhesus monkeys", "Yeast is more closely related to humans than wheat is", "Pigeons and bullfrogs have identical cytochrome c"],
   "Fewer differences suggest more recent divergence. Cows (10) differ less than pigeons (12), and far less than yeast (42). The data show relatedness, not that one living species evolved from another.",
   { t: "table", title: "Amino acid differences in cytochrome c compared with humans", head: ["Organism", "Differences"], rows: [["Chimpanzee", "0"], ["Rhesus monkey", "1"], ["Rabbit", "9"], ["Cow", "10"], ["Pigeon", "12"], ["Bullfrog", "20"], ["Fruit fly", "24"], ["Wheat", "37"], ["Yeast", "42"]], note: "" }]);
 
 // 7.8 antibiotic resistance
-V("bio", "7.8", ["An antibiotic was added to a bacterial culture at generation 10. What best explains the change in the percentage of resistant bacteria?", "The antibiotic killed susceptible bacteria, so the resistant ones that already existed survived and reproduced",
-  ["The antibiotic caused bacteria to mutate so they could survive", "Bacteria learned to break down the antibiotic", "Resistant bacteria migrated into the culture after generation 10"],
+V("bio", "7.8", ["An antibiotic was added to a bacterial culture at generation 10. What best explains the change in the percentage of resistant bacteria?", "Existing resistant bacteria survived and reproduced", ["The antibiotic caused new resistance mutations", "Bacteria learned to break down the antibiotic", "Resistant bacteria migrated in after generation 10"],
   "A few resistant cells were present before the antibiotic was added (about 1%). The antibiotic acted as a selective pressure, so their descendants took over the population.",
   { t: "line", title: "Antibiotic-resistant cells in a bacterial population", x: { min: 0, max: 40, ticks: range(0, 40, 10), label: "Generation" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Resistant cells (%)" },
     vlines: [{ x: 10, l: "Antibiotic added" }], series: [{ name: "Resistant", pts: curve(x => x < 10 ? 1 : 1 + 97 / (1 + Math.exp(-(x - 18) * 0.55)) - 97 / (1 + Math.exp(8 * 0.55)), 0, 40, 80) }] }]);
@@ -205,8 +192,7 @@ V("bio", "7.9", ["Based on the phylogenetic tree, which statement is correct?", 
   ["Chimpanzees are more closely related to gorillas than humans are", "Orangutans are more closely related to gorillas than chimpanzees are", "Gibbons are the ancestors of the other four groups"],
   "The gorilla lineage branches from the node that is the common ancestor of the human + chimpanzee clade. Both humans and chimps share that same most recent common ancestor with gorillas.",
   { t: "tree", title: "Phylogeny of the apes", root: [[[["Human", "Chimpanzee"], "Gorilla"], "Orangutan"], "Gibbon"] }]);
-V("bio", "7.9", ["The cladogram shows where traits first appeared. Which statement is supported?", "Frogs have jaws and four limbs but do not produce amniotic eggs",
-  ["Sharks have four limbs", "Lampreys and sharks share the trait of jaws", "Lizards lack jaws"],
+V("bio", "7.9", ["The cladogram shows where traits first appeared. Which statement is supported?", "Frogs have jaws and four limbs but no amniotic egg", ["Sharks have jaws and four limbs", "Lampreys and sharks share the trait of jaws", "Lizards lack jaws but have amniotic eggs"],
   "A trait is shared by every group that branches after the point where it appears. Frogs come after jaws and four limbs but before the amniotic egg.",
   { t: "tree", title: "Cladogram of selected vertebrates", root: ["Lamprey", { l: "Jaws", c: ["Shark", { l: "Four limbs", c: ["Frog", { l: "Amniotic egg", c: ["Lizard", "Human"] }] }] }] }]);
 
@@ -223,8 +209,7 @@ V("bio", "8.3", ["At which labeled point is the population growing fastest (grea
     marks: [{ x: 5, y: R(1000 / (1 + 99 * Math.exp(-1.75))), l: "A", dx: -8 }, { x: 13.13, y: 500, l: "B", dx: -8 }, { x: 20, y: R(1000 / (1 + 99 * Math.exp(-7))), l: "C", dx: -8, dy: 18 }, { x: 28, y: R(1000 / (1 + 99 * Math.exp(-9.8))), l: "D", dx: 0, dy: 20 }] }]);
 
 // 8.4 hare & lynx
-V("bio", "8.4", ["The graph shows population sizes of snowshoe hares and lynx over time. Which explanation best accounts for the pattern?", "Lynx numbers rise after hare numbers rise because more prey supports more predators, then fall after predation reduces the hare population",
-  ["The two populations change independently of each other", "Lynx populations peak before hare populations because lynx control hare reproduction directly", "Both populations are regulated only by density-independent factors like weather"],
+V("bio", "8.4", ["The graph shows population sizes of snowshoe hares and lynx over time. Which explanation best accounts for the pattern?", "Lynx rise after hares rise, then fall as hares decline", ["The two populations change independently", "Lynx peak first and directly control hare births", "Both are regulated only by weather conditions"],
   "The lynx peaks follow the hare peaks. Predator–prey interactions are density-dependent: food availability limits the predators, and predation limits the prey.",
   { t: "line", title: "Hare and lynx populations", x: { min: 0, max: 40, ticks: range(0, 40, 10), label: "Years" }, y: { min: 0, max: 160, ticks: range(0, 160, 40), label: "Population (thousands)" },
     series: [{ name: "Snowshoe hare", pts: curve(x => 75 + 65 * Math.sin(2 * Math.PI * x / 10), 0, 40, 160) }, { name: "Lynx", pts: curve(x => 30 + 22 * Math.sin(2 * Math.PI * (x - 2) / 10), 0, 40, 160), k: 2, dash: true }] }]);
@@ -247,8 +232,7 @@ V("bio", "8.6", ["Two plots each contain 100 plants of the same four species. Wh
   { t: "table", title: "Number of individuals of each species", head: ["", "Species 1", "Species 2", "Species 3", "Species 4"], rows: [["Plot A", "25", "25", "25", "25"], ["Plot B", "85", "5", "5", "5"]] }]);
 
 // 8.7 eutrophication
-V("bio", "8.7", ["Fertilizer runoff entered a lake on day 0. Why does dissolved oxygen fall sharply after about day 12?", "Algae die, and decomposers use up oxygen as they break down the dead algae",
-  ["Algae consume oxygen during photosynthesis", "Fertilizer chemically reacts with oxygen", "Fish populations increase and consume all the oxygen"],
+V("bio", "8.7", ["Fertilizer runoff entered a lake on day 0. Why does dissolved oxygen fall sharply after about day 12?", "Decomposers use up oxygen breaking down dead algae", ["Algae consume oxygen during photosynthesis", "Fertilizer reacts chemically with the oxygen", "Growing fish populations consume all the oxygen"],
   "Nutrients cause an algal bloom. When the algae die, aerobic decomposition consumes dissolved O₂, creating hypoxic conditions (eutrophication).",
   { t: "line", title: "Changes in a lake after fertilizer runoff", x: { min: 0, max: 30, ticks: range(0, 30, 5), label: "Days after runoff" }, y: { min: 0, max: 100, ticks: range(0, 100, 25), label: "Relative level (% of maximum)" },
     series: [{ name: "Algae biomass", pts: curve(x => 10 + 90 * bell(x, 11, 4.5), 0, 30) }, { name: "Dissolved oxygen", pts: curve(x => x < 12 ? 80 + 15 * bell(x, 9, 3) : 89.1 - 74 * (1 - Math.exp(-(x - 12) / 3)) + (x > 22 ? (x - 22) * 2 : 0), 0, 30), k: 2, dash: true }] }]);

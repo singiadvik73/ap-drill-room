@@ -2,12 +2,12 @@
 "bio|1.1": {
 "course": "AP Biology",
 "stems": [
-"Water can rise dozens of meters through the xylem of a tree. Which property of water most directly makes this possible?",
-"Why does ice float on liquid water?",
-"A water molecule is polar because",
-"Coastal areas tend to have milder climates than inland areas at the same latitude. Which property of water best explains this?",
-"Which substance would dissolve most readily in water?",
-"Sweating cools the body because"
+"Water moves up a narrow glass tube higher than it would in a wide tube. Which property best explains this?",
+"Coastal cities have milder temperatures than inland cities at the same latitude mainly because water",
+"Sweating cools the body because",
+"Which substance would dissolve best in water?",
+"If water molecules were nonpolar, which would most likely happen?",
+"A water strider stays on the surface of a pond because of"
 ],
 "topicName": "Structure of Water and Hydrogen Bonding",
 "unitN": 1,
@@ -16,11 +16,11 @@
 "bio|1.2": {
 "course": "AP Biology",
 "stems": [
-"A researcher grows cells in a medium containing radioactive nitrogen (¹⁵N). Which pair of macromolecules will become labeled?",
-"Radioactive sulfur (³⁵S) would be incorporated into which molecule?",
-"Phosphorus taken up by plant roots is used to build which of the following?",
-"Carbon is the backbone of biological molecules mainly because it",
-"Nitrogen-fixing bacteria in root nodules supply legumes with usable nitrogen. The plant most directly uses this nitrogen to synthesize"
+"A plant is grown in soil lacking phosphorus. Which molecule would it have the most trouble making?",
+"Radioactive sulfur (³⁵S) fed to cells would label",
+"Nitrogen from fertilizer is incorporated into which molecules in plants?",
+"Which element is found in both nucleic acids and phospholipids but not in carbohydrates?",
+"Carbon is central to biological molecules mainly because it"
 ],
 "topicName": "Elements of Life",
 "unitN": 1,
@@ -29,11 +29,11 @@
 "bio|1.3": {
 "course": "AP Biology",
 "stems": [
-"Which process joins monomers into polymers?",
-"During digestion, amylase breaks starch into glucose. This reaction is an example of",
-"A peptide bond forms between",
-"Adjacent nucleotides in a DNA strand are linked by",
-"A polymer of 20 glucose monomers is made by dehydration synthesis. How many water molecules are released?"
+"When two amino acids join, which is also produced?",
+"Digestive enzymes break down starch by",
+"A polymer of 50 glucose monomers is formed by dehydration synthesis. How many water molecules are released?",
+"Which reaction would a cell use to build a protein?",
+"Why do organisms need enzymes to digest polymers even though hydrolysis releases energy?"
 ],
 "topicName": "Introduction to Biological Macromolecules",
 "unitN": 1,
@@ -42,11 +42,11 @@
 "bio|1.4": {
 "course": "AP Biology",
 "stems": [
-"A nucleic acid strand has directionality. Its two ends are",
-"The chemical properties of an amino acid (polar, nonpolar, charged) are determined by its",
-"Compared with unsaturated fatty acids, saturated fatty acids",
-"Humans can digest starch but not cellulose, even though both are glucose polymers. The difference is due to",
-"Proteins have directionality defined by"
+"Which linkage joins the monomers of DNA?",
+"Saturated fats are solid at room temperature because their fatty acids",
+"In a phospholipid bilayer, the hydrophobic tails",
+"New nucleotides are added to which end of a growing DNA strand?",
+"Which macromolecule is made from glycerol and fatty acids?"
 ],
 "topicName": "Properties of Biological Macromolecules",
 "unitN": 1,
@@ -55,12 +55,12 @@
 "bio|1.5": {
 "course": "AP Biology",
 "stems": [
-"Alpha helices and beta pleated sheets are held together mainly by",
-"Hemoglobin is made of four polypeptide chains. This level of structure is",
-"In sickle cell disease, a charged glutamic acid is replaced by a nonpolar valine. Hemoglobin molecules then clump. Why?",
-"Phospholipids spontaneously form bilayers in water because",
-"Heating an enzyme to 90 °C makes it lose function because",
-"Which interaction contributes to tertiary structure but NOT to secondary structure?"
+"A mutation changes a hydrophobic amino acid in a protein's interior to a charged one. The most likely effect is",
+"Which level of protein structure is formed by hydrogen bonds between backbone atoms?",
+"Hemoglobin has four polypeptide chains. This describes its",
+"Disulfide bridges in a protein form between which amino acids?",
+"Heating an enzyme to 90°C destroys its function by disrupting",
+"Cellulose and starch are both glucose polymers, but humans can digest only starch because"
 ],
 "topicName": "Structure and Function of Biological Macromolecules",
 "unitN": 1,
@@ -69,11 +69,11 @@
 "bio|1.6": {
 "course": "AP Biology",
 "stems": [
+"A DNA sample is 30% adenine. What percentage is guanine?",
 "Which feature distinguishes RNA from DNA?",
-"A double-stranded DNA sample contains 30% adenine. What percentage is guanine?",
-"Which DNA molecule would require the highest temperature to separate its strands?",
-"The two strands of a DNA double helix are antiparallel, meaning",
-"Adenine and guanine are purines. In a DNA double helix, each purine pairs with"
+"The two strands of DNA are described as antiparallel because they",
+"Which DNA segment would need the highest temperature to separate its strands?",
+"Purines pair with pyrimidines in DNA, which keeps"
 ],
 "topicName": "Nucleic Acids",
 "unitN": 1,
@@ -82,12 +82,12 @@
 "bio|2.1": {
 "course": "AP Biology",
 "stems": [
-"Which structure is found in both prokaryotic and eukaryotic cells?",
-"Pancreatic cells secrete large amounts of digestive enzymes. Which organelles would be especially abundant in them?",
-"Liver cells break down many drugs and toxins. Which organelle is especially extensive in these cells?",
-"Radioactively labeled amino acids are given to a cell that secretes protein. In what order would the label most likely appear?",
-"Lysosomes are most directly involved in",
-"The nucleolus is the site of"
+"A cell has abundant rough ER and Golgi. It most likely specializes in",
+"Which organelle would be most abundant in liver cells that detoxify alcohol?",
+"Ribosomes are found in both prokaryotes and eukaryotes because",
+"A defect in lysosomes would most likely cause",
+"Which structure is found in plant cells but not animal cells?",
+"The nuclear envelope's pores allow"
 ],
 "topicName": "Cell Structure: Subcellular Components",
 "unitN": 2,
@@ -96,10 +96,10 @@
 "bio|2.10": {
 "course": "AP Biology",
 "stems": [
-"Lysosomal enzymes work best at pH ~5. The cytosol is ~pH 7.2. What is the advantage of this arrangement?",
-"Internal membranes in eukaryotic cells",
-"Prokaryotic cells lack membrane-bound organelles, but their DNA is concentrated in a",
-"Enclosing the Krebs cycle enzymes within the mitochondrial matrix"
+"Compartmentalization benefits eukaryotic cells mainly by",
+"Lysosomes keep their enzymes contained because the enzymes",
+"Prokaryotes carry out cellular respiration on their",
+"Which is an advantage of the nucleus?"
 ],
 "topicName": "Cell Compartmentalization",
 "unitN": 2,
@@ -108,10 +108,10 @@
 "bio|2.11": {
 "course": "AP Biology",
 "stems": [
-"Which observation supports the endosymbiont theory for mitochondria?",
-"According to endosymbiotic theory, chloroplasts most likely came from",
-"The endomembrane system (nuclear envelope, ER, Golgi) most likely evolved from",
-"Mitochondria have a double membrane. Endosymbiotic theory explains this as"
+"Which evidence supports the endosymbiotic origin of mitochondria?",
+"Mitochondrial ribosomes resemble",
+"Chloroplasts have two membranes, which suggests",
+"Mitochondria reproduce by"
 ],
 "topicName": "Origins of Cell Compartmentalization",
 "unitN": 2,
@@ -120,11 +120,11 @@
 "bio|2.2": {
 "course": "AP Biology",
 "stems": [
-"The folding of the inner mitochondrial membrane into cristae is an adaptation that",
-"In chloroplasts, the light-dependent reactions occur in the",
-"A large central vacuole in plant cells helps the plant by",
-"The Krebs (citric acid) cycle takes place in the",
-"A cell has a mutation that prevents lysosomes from fusing with vesicles. The most likely result is"
+"The folded inner membrane of mitochondria increases ATP production because it",
+"Thylakoid membranes in chloroplasts are the site of",
+"The central vacuole of a plant cell helps the plant stay upright by",
+"Microtubules are important in cell division because they",
+"A cell's Golgi complex is damaged. Which process is most affected?"
 ],
 "topicName": "Cell Structure and Function",
 "unitN": 2,
@@ -133,11 +133,11 @@
 "bio|2.3": {
 "course": "AP Biology",
 "stems": [
-"A cube-shaped cell with 2 µm sides has what surface area-to-volume ratio?",
-"As a cell grows larger without changing shape, its surface area-to-volume ratio",
-"Which of the following cells would exchange materials with its environment most efficiently?",
-"Cells lining the small intestine have microvilli. The main advantage is",
-"A cube-shaped cell with 3 µm sides has a surface area-to-volume ratio of"
+"A cube-shaped cell is 2 µm on each side. What is its surface-area-to-volume ratio?",
+"As a cell grows larger, its surface-area-to-volume ratio",
+"Microvilli on intestinal cells increase",
+"Why are most cells microscopic?",
+"Which cell would exchange materials most efficiently?"
 ],
 "topicName": "Cell Size",
 "unitN": 2,
@@ -146,11 +146,11 @@
 "bio|2.4": {
 "course": "AP Biology",
 "stems": [
-"The fluid mosaic model describes the plasma membrane as",
-"Cholesterol in animal cell membranes",
-"Glycoproteins on the outer surface of the plasma membrane mainly function in",
-"A transmembrane protein most likely has",
-"Which cell wall component is correctly matched with its organism?"
+"At colder temperatures, some organisms increase unsaturated fatty acids in membranes to",
+"Cholesterol in animal membranes",
+"Glycoproteins on the cell surface mainly function in",
+"An integral membrane protein has a region rich in hydrophobic amino acids. That region most likely",
+"The fluid mosaic model describes membranes as"
 ],
 "topicName": "Plasma Membranes",
 "unitN": 2,
@@ -159,10 +159,10 @@
 "bio|2.5": {
 "course": "AP Biology",
 "stems": [
-"Which molecule can diffuse directly through the phospholipid bilayer most easily?",
-"Ions such as K⁺ cannot easily cross the lipid bilayer because",
-"Selective permeability is important because it",
-"Although water is polar, small amounts cross the bilayer directly. Large amounts cross quickly through"
+"Which molecule crosses a phospholipid bilayer most easily without help?",
+"Ions can't cross the bilayer directly because",
+"A membrane is selectively permeable because it",
+"Steroid hormones can pass through membranes because they are"
 ],
 "topicName": "Membrane Permeability",
 "unitN": 2,
@@ -171,11 +171,11 @@
 "bio|2.6": {
 "course": "AP Biology",
 "stems": [
-"Which process requires the direct input of ATP?",
-"For each ATP hydrolyzed, the sodium-potassium pump moves",
-"A white blood cell engulfs a bacterium by wrapping its membrane around it. This process is",
-"Neurons release neurotransmitters from vesicles that fuse with the plasma membrane. This process is",
-"Cells take in cholesterol-carrying LDL particles only after they bind specific surface proteins. This is"
+"The sodium–potassium pump moves ions against their gradients using",
+"A drug blocks ATP production. Which process would stop first?",
+"Secondary active transport uses",
+"Which moves a substance from low to high concentration?",
+"A cell maintains high K⁺ inside and high Na⁺ outside. This gradient is maintained mainly by"
 ],
 "topicName": "Membrane Transport",
 "unitN": 2,
@@ -184,10 +184,10 @@
 "bio|2.7": {
 "course": "AP Biology",
 "stems": [
-"Facilitated diffusion differs from simple diffusion because it",
-"A graph shows that the rate of glucose uptake levels off at high external glucose concentrations. The best explanation is that",
-"Ion channels in nerve cell membranes allow",
-"Which molecule most likely moves by facilitated diffusion?"
+"Glucose enters red blood cells through GLUT1 carriers down its concentration gradient. This is",
+"The rate of facilitated diffusion levels off at high solute concentrations because",
+"Aquaporins increase the rate of",
+"Gated ion channels open in response to"
 ],
 "topicName": "Facilitated Diffusion",
 "unitN": 2,
@@ -196,12 +196,12 @@
 "bio|2.8": {
 "course": "AP Biology",
 "stems": [
-"A red blood cell is placed in distilled water. What will happen?",
-"Water moves by osmosis from a region of",
-"What is the solute potential of a 0.1 M sucrose solution at 22 °C? (Ψs = −iCRT, R = 0.0831 L·bar/mol·K)",
-"Compared with 0.1 M sucrose at the same temperature, 0.1 M NaCl has a solute potential that is",
-"Potato cores are placed in sucrose solutions. Mass change is zero at about 0.3 M. This suggests",
-"A freshwater Paramecium uses a contractile vacuole to"
+"A cell with 0.2 M solute is placed in 0.5 M solution. Water will move",
+"A plant cell in distilled water becomes",
+"Freshwater protists use contractile vacuoles to",
+"The water potential of a solution with solute potential −0.6 MPa and pressure potential 0 is",
+"Adding solute to a solution makes its water potential",
+"Red blood cells placed in a hypotonic solution will"
 ],
 "topicName": "Tonicity and Osmoregulation",
 "unitN": 2,
@@ -210,10 +210,10 @@
 "bio|2.9": {
 "course": "AP Biology",
 "stems": [
-"The sodium-glucose cotransporter moves glucose into intestinal cells against its gradient. The energy comes from",
-"Plant cells load sucrose into phloem using a H⁺/sucrose cotransporter. The H⁺ gradient is established by",
-"A drug inhibits the Na⁺/K⁺ ATPase. What would be the most immediate effect?",
-"Membrane potential in animal cells is primarily established by"
+"White blood cells engulf bacteria by",
+"Neurons release neurotransmitters by",
+"Receptor-mediated endocytosis is important because it",
+"Endocytosis and exocytosis both require"
 ],
 "topicName": "Mechanisms of Transport",
 "unitN": 2,
@@ -222,10 +222,10 @@
 "bio|3.1": {
 "course": "AP Biology",
 "stems": [
-"An enzyme's specificity for its substrate depends mainly on",
-"In the induced-fit model,",
-"Most enzymes are",
-"A mutation replaces a positively charged amino acid in an enzyme's active site with a nonpolar one. The substrate is negatively charged. The most likely result is"
+"A competitive inhibitor binds",
+"Adding more substrate can overcome",
+"An allosteric inhibitor changes the enzyme's",
+"Enzymes are specific because"
 ],
 "topicName": "Enzyme Structure",
 "unitN": 3,
@@ -235,9 +235,9 @@
 "course": "AP Biology",
 "stems": [
 "Enzymes speed up reactions by",
-"Which statement about an enzyme-catalyzed reaction is true?",
-"An energy diagram compares a reaction with and without an enzyme. The enzyme-catalyzed curve has",
-"In an experiment, product formation is fast at first and then levels off. The most likely reason is"
+"An enzyme changes which of these?",
+"On an energy diagram, adding an enzyme lowers",
+"Which statement about enzymes is true?"
 ],
 "topicName": "Enzyme Catalysis",
 "unitN": 3,
@@ -246,12 +246,12 @@
 "bio|3.3": {
 "course": "AP Biology",
 "stems": [
-"A competitive inhibitor",
-"A noncompetitive inhibitor lowers the maximum rate of reaction even at high substrate concentration because it",
-"Pepsin works in the stomach (pH 2). If moved to the small intestine (pH 8), it would",
-"Cooling an enzyme from 37 °C to 10 °C usually",
-"The end product of a metabolic pathway binds to the first enzyme and inhibits it. This is an example of",
-"A non-protein helper, such as Mg²⁺ or a vitamin-derived coenzyme, that an enzyme needs to function is called a"
+"An enzyme from a hot spring bacterium works best at 80°C. At 37°C, its activity would likely be",
+"Pepsin works best at pH 2. In the small intestine (pH 8), pepsin would",
+"Raising temperature from 20°C to 30°C usually increases enzyme activity because",
+"Adding salt can reduce enzyme activity by",
+"A cofactor like Mg²⁺ is needed because it",
+"Increasing enzyme concentration with excess substrate will"
 ],
 "topicName": "Environmental Impacts on Enzyme Function",
 "unitN": 3,
@@ -260,10 +260,10 @@
 "bio|3.4": {
 "course": "AP Biology",
 "stems": [
-"Cells drive endergonic reactions by",
-"Organisms need a constant input of energy because",
-"ATP releases energy when",
-"If a step in a metabolic pathway is blocked, what happens to the intermediates?"
+"ATP hydrolysis powers cellular work mainly by",
+"An endergonic reaction",
+"Cells couple reactions so that",
+"Organisms need a constant energy input because"
 ],
 "topicName": "Cellular Energy",
 "unitN": 3,
@@ -272,12 +272,12 @@
 "bio|3.5": {
 "course": "AP Biology",
 "stems": [
-"In an experiment, plants are given water labeled with ¹⁸O. Where will the ¹⁸O appear?",
-"The Calvin cycle directly uses which products of the light reactions?",
-"The enzyme that fixes CO₂ in the Calvin cycle is",
-"During the light reactions, ATP is made when",
-"Chlorophyll a absorbs mostly red and blue light. Leaves appear green because",
-"A drug blocks electron flow between photosystem II and photosystem I. The immediate effect is"
+"In photosynthesis, the oxygen released comes from",
+"A plant in green light produces little O₂ because chlorophyll",
+"The Calvin cycle uses ATP and NADPH to",
+"A herbicide blocks electron flow in photosystem II. The Calvin cycle would",
+"Proton gradients in chloroplasts are built across the",
+"If CO₂ levels drop, which would accumulate?"
 ],
 "topicName": "Photosynthesis",
 "unitN": 3,
@@ -286,12 +286,12 @@
 "bio|3.6": {
 "course": "AP Biology",
 "stems": [
-"Glycolysis occurs in the ___ and produces a net of ___ ATP per glucose.",
-"The final electron acceptor in aerobic respiration is",
-"The poison cyanide blocks the transfer of electrons to O₂. The immediate effect on a cell is",
-"The main function of fermentation is to",
-"The chemical 2,4-dinitrophenol (DNP) makes the inner mitochondrial membrane leaky to H⁺. The expected effect is",
-"CO₂ released during cellular respiration is produced during"
+"Cyanide blocks the last protein complex of the electron transport chain. Which stops?",
+"Oxygen's role in aerobic respiration is to",
+"Glycolysis occurs in the",
+"Fermentation allows glycolysis to continue by",
+"An uncoupler makes the inner mitochondrial membrane leaky to protons. The result is",
+"Most ATP in aerobic respiration is made by"
 ],
 "topicName": "Cellular Respiration",
 "unitN": 3,
@@ -300,10 +300,10 @@
 "bio|3.7": {
 "course": "AP Biology",
 "stems": [
-"Some bacteria live in hot springs above 80 °C. Their enzymes most likely",
-"Plants have several photosynthetic pigments (chlorophyll a, chlorophyll b, carotenoids). How does this variation benefit them?",
-"Having multiple forms of hemoglobin (fetal and adult) is advantageous because",
-"A population with greater variation in enzyme alleles is more likely to"
+"Fitness in biology refers to",
+"Variation in enzyme structure among individuals can affect fitness because it",
+"Organisms in hot deserts often have enzymes that",
+"A population's genetic variation in metabolism increases its chance to"
 ],
 "topicName": "Fitness",
 "unitN": 3,
@@ -312,11 +312,11 @@
 "bio|4.1": {
 "course": "AP Biology",
 "stems": [
-"Neurotransmitters diffuse across a synapse to a nearby cell. This is an example of",
-"Insulin released from the pancreas travels through the blood to cells throughout the body. This is",
-"Plant cells can exchange small molecules directly through",
-"Bacteria such as Vibrio fischeri glow only when their population density is high. This coordination depends on",
-"A T cell recognizes an antigen on the surface of an antigen-presenting cell by direct contact. This is"
+"A signal released by a cell that affects only nearby cells is an example of",
+"Insulin travels through the blood to reach target cells. This is",
+"Only certain cells respond to a hormone because only they have",
+"Plasmodesmata in plants allow",
+"Immune cells recognize each other through surface molecules. This is"
 ],
 "topicName": "Cell Communication",
 "unitN": 4,
@@ -325,11 +325,11 @@
 "bio|4.2": {
 "course": "AP Biology",
 "stems": [
-"The three stages of cell signaling, in order, are",
-"Steroid hormones like testosterone can bind receptors inside the cell because they",
-"When a ligand binds a receptor protein, the receptor typically",
-"G protein-coupled receptors are activated when",
-"Receptor tyrosine kinases, when activated, typically"
+"The three stages of cell signaling in order are",
+"Epinephrine binds a receptor on the cell surface rather than entering the cell because it is",
+"Testosterone binds receptors inside the cell because it is",
+"A mutation prevents a receptor from binding its ligand. The cell will",
+"A single ligand can cause different responses in different cells because"
 ],
 "topicName": "Introduction to Signal Transduction",
 "unitN": 4,
@@ -338,11 +338,11 @@
 "bio|4.3": {
 "course": "AP Biology",
 "stems": [
-"Cyclic AMP (cAMP) acts as a",
-"A phosphorylation cascade amplifies a signal because",
-"Protein phosphatases in signaling pathways",
-"Epinephrine binding to liver cells causes glycogen breakdown without epinephrine entering the cell. This shows that",
-"Which cellular response could result from a signal transduction pathway?"
+"cAMP acts in signaling pathways as a",
+"Protein kinases pass signals along by",
+"A phosphatase inhibitor would most likely",
+"Signal amplification occurs because",
+"G protein–coupled receptors activate G proteins by causing them to"
 ],
 "topicName": "Signal Transduction",
 "unitN": 4,
@@ -351,10 +351,10 @@
 "bio|4.4": {
 "course": "AP Biology",
 "stems": [
-"Cholera toxin keeps a G protein permanently active in intestinal cells. The result is",
-"A mutation makes the Ras protein unable to hydrolyze GTP. The most likely outcome is",
-"A drug that blocks a hormone receptor would most likely",
-"In type 2 diabetes, cells respond poorly to insulin. This is best described as a change in"
+"A mutation locks the Ras protein in its active form. The cell would likely",
+"Cholera toxin keeps G proteins active in intestinal cells, causing",
+"A drug blocks a receptor's binding site. This drug acts as",
+"Mutations in signaling pathways can cause cancer when they"
 ],
 "topicName": "Changes in Signal Transduction Pathways",
 "unitN": 4,
@@ -363,11 +363,11 @@
 "bio|4.5": {
 "course": "AP Biology",
 "stems": [
-"After a meal, blood glucose rises, insulin is released, and glucose levels fall. This is an example of",
-"During childbirth, uterine contractions stimulate oxytocin release, which causes stronger contractions. This is",
-"Ripening fruit releases ethylene, which causes nearby fruit to ripen and release more ethylene. This is",
-"When body temperature rises, sweating increases and blood vessels near the skin dilate. This is",
-"When blood glucose is low, the pancreas releases"
+"When body temperature rises, sweating increases to lower it. This is",
+"During childbirth, oxytocin causes contractions, which trigger more oxytocin. This is",
+"After a meal, insulin lowers blood glucose. This helps maintain",
+"Fruit ripening, where ethylene triggers more ethylene release, is an example of",
+"A person with type 1 diabetes can't regulate blood glucose because"
 ],
 "topicName": "Feedback",
 "unitN": 4,
@@ -376,12 +376,12 @@
 "bio|4.6": {
 "course": "AP Biology",
 "stems": [
-"DNA replication occurs during which phase?",
-"During which phase of mitosis do sister chromatids separate and move to opposite poles?",
-"A human somatic cell (2n = 46) completes mitosis. Each daughter cell has",
-"Cells that stop dividing, such as mature neurons, exit the cycle into",
-"Chromosomes line up along the middle of the cell during",
-"A cell has 20 units of DNA in G1. How much DNA does it have in G2?"
+"DNA is replicated during which phase?",
+"A cell has 20 chromosomes at the end of G₁. How many chromatids does it have at the end of S?",
+"Sister chromatids separate during",
+"A drug that prevents spindle formation would stop cells in",
+"In a root tip, 90 of 100 cells are in interphase. This suggests",
+"Cells that permanently stop dividing, such as neurons, enter"
 ],
 "topicName": "Cell Cycle",
 "unitN": 4,
@@ -390,12 +390,12 @@
 "bio|4.7": {
 "course": "AP Biology",
 "stems": [
-"Cyclins regulate the cell cycle by",
-"The protein p53 is called a tumor suppressor because it",
-"The M checkpoint (spindle checkpoint) ensures that",
-"Proto-oncogenes normally",
-"Cancer cells often",
-"Programmed cell death that removes damaged or unneeded cells is called"
+"Cyclin-dependent kinases (CDKs) are active only when",
+"The protein p53 helps prevent cancer by",
+"A mutation that inactivates p53 would most likely lead to",
+"Proto-oncogenes become oncogenes when mutations",
+"Growth factors stimulate cell division by",
+"Apoptosis is important because it"
 ],
 "topicName": "Regulation of Cell Cycle",
 "unitN": 4,
@@ -404,11 +404,11 @@
 "bio|5.1": {
 "course": "AP Biology",
 "stems": [
-"In humans (2n = 46), how many chromosomes are in each cell produced by meiosis?",
+"A cell with 2n = 12 undergoes meiosis. Each daughter cell has",
 "Homologous chromosomes separate during",
-"Which event occurs in meiosis but not in mitosis?",
-"A cell at the end of meiosis I is",
-"Meiosis produces"
+"Which is a key difference between mitosis and meiosis?",
+"After meiosis I, each cell is",
+"Synapsis, the pairing of homologous chromosomes, occurs in"
 ],
 "topicName": "Meiosis",
 "unitN": 5,
@@ -417,11 +417,11 @@
 "bio|5.2": {
 "course": "AP Biology",
 "stems": [
-"Crossing over occurs during",
-"Ignoring crossing over, how many different combinations of chromosomes can a human (n = 23) gamete receive through independent assortment?",
-"Random fertilization increases genetic variation because",
-"Failure of homologous chromosomes to separate in meiosis I is called",
-"Why is sexual reproduction advantageous in a changing environment?"
+"Crossing over increases genetic variation by",
+"A species has 2n = 8. How many chromosome combinations are possible from independent assortment alone?",
+"Random fertilization adds variation because",
+"Genes far apart on a chromosome are more likely to",
+"Which process in meiosis most increases diversity among siblings?"
 ],
 "topicName": "Meiosis and Genetic Diversity",
 "unitN": 5,
@@ -430,12 +430,12 @@
 "bio|5.3": {
 "course": "AP Biology",
 "stems": [
-"Two heterozygous pea plants (Pp × Pp) are crossed. P (purple) is dominant to p (white). The expected phenotypic ratio is",
-"AaBb × AaBb (independent assortment). What fraction of offspring will be aabb?",
-"AaBbCc × AaBbCc. What is the probability of an AABBCC offspring?",
-"A test cross is used to determine an individual's genotype by crossing it with",
-"In a chi-square test with 2 phenotypic classes, the degrees of freedom and critical value at p = 0.05 are",
-"Two unaffected parents have an affected child. The trait is most likely"
+"Two heterozygous pea plants (Pp) are crossed. What fraction of offspring are purple (P dominant)?",
+"A dihybrid cross (AaBb × AaBb) gives what fraction aabb?",
+"A testcross of a dominant-phenotype plant gives half dominant and half recessive offspring. The plant's genotype is",
+"The probability that a child of two carriers (Aa × Aa) has the recessive disease is",
+"Mendel's law of segregation states that",
+"In a chi-square test, a result below the critical value means"
 ],
 "topicName": "Mendelian Genetics",
 "unitN": 5,
@@ -444,12 +444,12 @@
 "bio|5.4": {
 "course": "AP Biology",
 "stems": [
-"Crossing red and white snapdragons produces pink offspring. Crossing two pinks gives 1 red : 2 pink : 1 white. This is",
-"A person with type AB blood expresses both A and B antigens. This is",
-"A carrier woman (XᴮXᵇ) has children with a man with normal color vision (XᴮY). What fraction of their sons are expected to be color-blind?",
-"Genes A and B show 12% recombinant offspring. This suggests they are",
-"A disease caused by a mitochondrial DNA mutation is passed",
-"Human height shows continuous variation in a bell-shaped distribution. This is most consistent with"
+"Red and white snapdragons produce pink offspring. This is",
+"Type AB blood shows both A and B antigens. This is",
+"A color-blind man (XᶜY) and a carrier woman (XᶜX) have a son. The chance he is color-blind is",
+"Traits controlled by many genes, like height, show",
+"Mitochondrial disorders are passed from",
+"Genes that are linked are inherited together more often because they"
 ],
 "topicName": "Non-Mendelian Genetics",
 "unitN": 5,
@@ -458,10 +458,10 @@
 "bio|5.5": {
 "course": "AP Biology",
 "stems": [
-"Hydrangeas with the same genotype produce blue flowers in acidic soil and pink flowers in basic soil. This shows",
-"Himalayan rabbits have dark fur on their ears, nose, and feet. The best explanation is",
-"People with phenylketonuria (PKU) can develop normally if they follow a low-phenylalanine diet. This shows",
-"In many turtle species, the incubation temperature of eggs determines the sex of the hatchlings. This is an example of"
+"Hydrangeas are blue in acidic soil and pink in alkaline soil. This shows",
+"Himalayan rabbits have dark fur on cold extremities because",
+"People with PKU can avoid symptoms by",
+"Sex determination in some turtles depends on"
 ],
 "topicName": "Environmental Effects on Phenotype",
 "unitN": 5,
@@ -470,11 +470,11 @@
 "bio|5.6": {
 "course": "AP Biology",
 "stems": [
-"Down syndrome most commonly results from",
-"A person with Klinefelter syndrome has which karyotype?",
-"Thomas Morgan's fruit fly experiments with white eyes provided evidence that",
-"A karyotype can be used to detect",
-"Why are X-linked recessive disorders more common in males?"
+"Down syndrome is usually caused by",
+"Nondisjunction in meiosis I produces gametes that are",
+"A karyotype shows XXY. The person has",
+"Turner syndrome (XO) results from",
+"Pedigrees are useful for determining"
 ],
 "topicName": "Chromosomal Inheritance",
 "unitN": 5,
@@ -483,11 +483,11 @@
 "bio|6.1": {
 "course": "AP Biology",
 "stems": [
-"Hershey and Chase used ³²P and ³⁵S to label phage. They found ³²P inside infected bacteria, which showed that",
-"Compared with eukaryotic chromosomes, a typical prokaryotic chromosome is",
-"Plasmids are",
-"In eukaryotes, DNA is packaged by wrapping around",
-"Griffith found that heat-killed virulent bacteria could make harmless bacteria virulent. This process is called"
+"Hershey and Chase showed DNA is genetic material by finding that",
+"Griffith's experiment showed that",
+"Prokaryotic DNA differs from eukaryotic DNA because it is usually",
+"Plasmids are important in bacteria because they",
+"Histones help package DNA by"
 ],
 "topicName": "DNA and RNA Structure",
 "unitN": 6,
@@ -496,12 +496,12 @@
 "bio|6.2": {
 "course": "AP Biology",
 "stems": [
-"Meselson and Stahl grew E. coli in ¹⁵N, then switched them to ¹⁴N. After two rounds of replication, the DNA would be",
-"DNA polymerase can add nucleotides only to",
+"DNA replication is semiconservative, meaning each new molecule has",
 "Okazaki fragments are formed on the",
-"Which enzyme unwinds the double helix at the replication fork?",
-"DNA ligase",
-"DNA polymerase needs a primer because it cannot start a new strand. The primer is made by"
+"DNA ligase is needed to",
+"Helicase functions to",
+"DNA polymerase can only add nucleotides to",
+"Proofreading by DNA polymerase reduces"
 ],
 "topicName": "Replication",
 "unitN": 6,
@@ -510,11 +510,11 @@
 "bio|6.3": {
 "course": "AP Biology",
 "stems": [
-"A DNA template strand reads 3′-TAC GGA TTC-5′. What is the mRNA sequence?",
-"Which modifications happen to eukaryotic pre-mRNA before it leaves the nucleus?",
+"RNA polymerase binds to the",
+"Introns are removed from pre-mRNA by",
 "Alternative splicing allows",
-"RNA polymerase binds to a region of DNA called the",
-"During transcription, RNA is synthesized in which direction?"
+"The 5′ cap and poly-A tail help",
+"Transcription produces an RNA strand that is"
 ],
 "topicName": "Transcription and RNA Processing",
 "unitN": 6,
@@ -523,12 +523,12 @@
 "bio|6.4": {
 "course": "AP Biology",
 "stems": [
-"The mRNA codon 5′-AUG-3′ pairs with which tRNA anticodon?",
-"The fact that almost all organisms use the same genetic code is evidence of",
-"Several codons can code for the same amino acid. This is called",
+"An mRNA codon 5′-AUG-3′ pairs with the tRNA anticodon",
+"Translation occurs at the",
+"The genetic code is redundant, meaning",
+"A stop codon causes",
 "In prokaryotes, translation can begin before transcription ends because",
-"Translation ends when",
-"Retroviruses such as HIV use reverse transcriptase to"
+"The human insulin gene can be expressed in bacteria because"
 ],
 "topicName": "Translation",
 "unitN": 6,
@@ -537,12 +537,12 @@
 "bio|6.5": {
 "course": "AP Biology",
 "stems": [
-"In the lac operon, when lactose is present,",
-"The trp operon is a repressible operon, meaning",
+"In the lac operon, lactose turns on transcription by",
+"The trp operon is shut off when",
+"DNA methylation usually",
 "Histone acetylation generally",
-"DNA methylation of a gene's promoter usually",
-"MicroRNAs (miRNAs) regulate gene expression by",
-"Enhancers are DNA regions that"
+"Transcription factors control gene expression by",
+"MicroRNAs regulate gene expression by"
 ],
 "topicName": "Regulation of Gene Expression",
 "unitN": 6,
@@ -551,10 +551,10 @@
 "bio|6.6": {
 "course": "AP Biology",
 "stems": [
-"A liver cell and a nerve cell from the same person differ in structure and function mainly because they",
-"A specific combination of transcription factors in a cell determines",
-"Homeotic (Hox) genes are important in development because they",
-"Stem cells differ from differentiated cells in that stem cells"
+"A muscle cell and a nerve cell in the same person have the same DNA but different proteins because",
+"Cell differentiation during development is driven mainly by",
+"Homeotic (Hox) genes control",
+"Stem cells are useful in medicine because they"
 ],
 "topicName": "Gene Expression and Cell Specialization",
 "unitN": 6,
@@ -563,12 +563,12 @@
 "bio|6.7": {
 "course": "AP Biology",
 "stems": [
-"A single-base substitution changes a codon from UAC (Tyr) to UAG (stop). This is a",
-"Which mutation is most likely to severely disrupt a protein?",
-"Bacteria can take up DNA from their environment. This form of horizontal gene transfer is",
-"Antibiotic resistance genes often spread between bacterial species through",
-"A mutation that changes one amino acid to another with similar chemical properties is most likely to have",
-"Why are mutations important for evolution?"
+"A single base substitution that doesn't change the amino acid is a",
+"A mutation that creates a stop codon early is a",
+"Deleting one nucleotide from a coding sequence usually causes",
+"Sickle cell disease results from",
+"Mutations are important for evolution because they",
+"UV light causes mutations by"
 ],
 "topicName": "Mutations",
 "unitN": 6,
@@ -577,12 +577,12 @@
 "bio|6.8": {
 "course": "AP Biology",
 "stems": [
-"In gel electrophoresis, DNA fragments move toward the positive electrode because",
-"A gel shows three bands: 500 bp, 1,200 bp, and 3,000 bp. Which band traveled farthest from the wells?",
-"The three steps of each PCR cycle, in order, are",
-"Starting with one DNA molecule, how many copies does PCR produce after 10 cycles, ideally?",
-"Restriction enzymes are useful in making recombinant DNA because they",
-"After inserting a plasmid with an ampicillin-resistance gene into bacteria, scientists grow them on ampicillin plates. The purpose is to"
+"PCR is used to",
+"In gel electrophoresis, the smallest DNA fragments",
+"Restriction enzymes cut DNA at",
+"To make bacteria produce human insulin, scientists insert",
+"DNA fingerprinting works because",
+"CRISPR-Cas9 is used to"
 ],
 "topicName": "Biotechnology",
 "unitN": 6,
@@ -591,10 +591,10 @@
 "bio|7.1": {
 "course": "AP Biology",
 "stems": [
-"Which statement best describes natural selection?",
-"The smallest unit that can evolve is",
-"Darwin's reasoning about natural selection was influenced by the observation that",
-"Evolutionary fitness is measured by"
+"Which is required for natural selection to occur?",
+"Darwin's finches on different islands have different beak shapes mainly because",
+"Natural selection acts directly on",
+"Populations, not individuals, evolve because"
 ],
 "topicName": "Introduction to Natural Selection",
 "unitN": 7,
@@ -603,12 +603,12 @@
 "bio|7.10": {
 "course": "AP Biology",
 "stems": [
-"Two frog species live in the same pond but breed in different months. This is",
-"A horse and a donkey produce a sterile mule. This is",
-"A canyon forms and splits a squirrel population in two. Over time, the two groups become separate species. This is",
-"Sympatric speciation in plants often happens through",
-"The fossil record shows long periods of little change broken by short periods of rapid change. This pattern is called",
-"A single ancestral species rapidly diversifies into many species that fill different niches, like Hawaiian honeycreepers. This is"
+"Two squirrel populations separated by the Grand Canyon became different species. This is",
+"Polyploidy in plants can cause",
+"Two frog species breed in different seasons. This is",
+"A mule is sterile. This is an example of",
+"Punctuated equilibrium describes evolution as",
+"Adaptive radiation occurs when"
 ],
 "topicName": "Speciation",
 "unitN": 7,
@@ -617,10 +617,10 @@
 "bio|7.11": {
 "course": "AP Biology",
 "stems": [
-"Why was the Irish potato famine so devastating?",
-"Individuals heterozygous for the sickle-cell allele are more resistant to malaria. In malaria regions, this keeps the allele in the population through",
-"A population with high genetic diversity is more likely to",
-"Cavendish bananas are propagated as clones. Scientists worry about them because"
+"Cheetahs have very low genetic diversity, which makes them",
+"A population bottleneck reduces genetic diversity because",
+"Conservationists move animals between isolated populations to",
+"Genetically diverse crops are less likely to be wiped out by disease because"
 ],
 "topicName": "Variations in Populations",
 "unitN": 7,
@@ -630,9 +630,9 @@
 "course": "AP Biology",
 "stems": [
 "The Miller-Urey experiment showed that",
-"The RNA world hypothesis proposes that RNA was the first genetic material because RNA",
-"Earth formed about 4.6 billion years ago. The earliest evidence of life dates to about",
-"Protocells formed from lipid vesicles would have been an important step toward life because they"
+"The RNA world hypothesis is supported by the fact that RNA can",
+"Early Earth's atmosphere likely lacked",
+"Protocells may have formed when"
 ],
 "topicName": "Origins of Life on Earth",
 "unitN": 7,
@@ -641,12 +641,12 @@
 "bio|7.2": {
 "course": "AP Biology",
 "stems": [
-"Human birth weights cluster around an intermediate value because very small and very large babies have lower survival. This is",
-"After a drought, Galápagos finches with deeper beaks survived better because they could crack larger, harder seeds. This is",
-"In a population, both small and large seed-eating birds survive better than medium-sized ones, because only small and large seeds are available. This is",
-"During the Industrial Revolution, dark peppered moths increased in soot-covered areas. This occurred because",
-"Male peacocks have elaborate tails that attract females but make them easier for predators to catch. This trait is maintained by",
-"Which is required for natural selection to change a population?"
+"Antibiotic use leads to resistant bacteria because",
+"A population of mice has mostly dark fur after volcanic rock covers the area. This is",
+"Human birth weight shows stabilizing selection because",
+"Disruptive selection favors",
+"Sexual selection explains traits like a peacock's tail because",
+"After pollution declined in England, light-colored peppered moths increased because"
 ],
 "topicName": "Natural Selection",
 "unitN": 7,
@@ -655,10 +655,10 @@
 "bio|7.3": {
 "course": "AP Biology",
 "stems": [
-"Broccoli, cabbage, kale, and cauliflower all came from wild mustard. This is an example of",
-"Artificial selection is similar to natural selection because both",
-"Many dog breeds have health problems, such as hip dysplasia. This is best explained by",
-"Dairy cattle bred for high milk production over many generations illustrate that"
+"Dog breeds such as Chihuahuas and Great Danes resulted from",
+"Broccoli, cabbage, and kale were all bred from",
+"Artificial selection differs from natural selection because",
+"A risk of intense artificial selection is"
 ],
 "topicName": "Artificial Selection",
 "unitN": 7,
@@ -667,11 +667,11 @@
 "bio|7.4": {
 "course": "AP Biology",
 "stems": [
-"A storm randomly kills most of a small beetle population, and the survivors' allele frequencies differ from the original population's. This is",
-"A few individuals colonize an island, and the new population has allele frequencies unlike the source population. This is",
-"Genetic drift has the greatest effect on allele frequencies in",
-"Pollen carried by wind between two plant populations tends to",
-"Cheetahs have very low genetic diversity. This is most likely due to"
+"A storm kills most of a small beetle population at random. The change in allele frequencies is",
+"A small group colonizes an island and has different allele frequencies than the mainland. This is",
+"Gene flow between two populations tends to",
+"Genetic drift has the greatest effect in",
+"Which is a source of new alleles?"
 ],
 "topicName": "Population Genetics",
 "unitN": 7,
@@ -680,11 +680,11 @@
 "bio|7.5": {
 "course": "AP Biology",
 "stems": [
-"In a population in Hardy-Weinberg equilibrium, 16% of individuals show the recessive phenotype. What is the frequency of the dominant allele (p)?",
-"Using the same population (q² = 0.16), what percentage of individuals are heterozygous?",
-"A recessive disorder affects 1 in 10,000 people. About what fraction of the population are carriers?",
+"In a population, 16% of individuals are homozygous recessive (aa). What is the frequency of allele a?",
+"If q = 0.3, what percentage of the population is heterozygous?",
 "Which condition is required for Hardy-Weinberg equilibrium?",
-"If a population's allele frequencies change significantly over generations, you can conclude that"
+"If allele frequencies change across generations, the population is",
+"In a population of 500, 45 have the recessive phenotype. What is p?"
 ],
 "topicName": "Hardy-Weinberg Equilibrium",
 "unitN": 7,
@@ -693,11 +693,11 @@
 "bio|7.6": {
 "course": "AP Biology",
 "stems": [
-"The forelimbs of humans, cats, whales, and bats have the same bone arrangement but different functions. These are",
-"The wings of bats and the wings of insects are",
-"Radiometric dating of fossils is useful because it",
-"Comparing the amino acid sequence of cytochrome c among species shows that humans and chimps differ by 0 amino acids and humans and yeast by 44. This supports",
-"Whales have small pelvic bones that don't support hind limbs. These are"
+"Bat wings and human arms have the same bone structure. They are",
+"Bird wings and insect wings are",
+"The human appendix is considered a",
+"Humans and chimpanzees share about 98% of their DNA. This supports",
+"Transitional fossils like Tiktaalik provide evidence of"
 ],
 "topicName": "Evidence of Evolution",
 "unitN": 7,
@@ -706,10 +706,10 @@
 "bio|7.7": {
 "course": "AP Biology",
 "stems": [
-"Which features are shared by all eukaryotes and support their common ancestry?",
-"Which of the following is found in all living organisms, supporting a common ancestor?",
-"Similar metabolic pathways, such as glycolysis, found across all domains of life suggest",
-"Ribosomal RNA sequences are used to compare distantly related organisms because rRNA"
+"All living organisms use DNA and nearly the same genetic code. This suggests",
+"Eukaryotes share membrane-bound organelles and linear chromosomes, which suggests",
+"Glycolysis occurs in nearly all organisms, suggesting it",
+"Similar embryonic structures in vertebrates, like pharyngeal pouches, suggest"
 ],
 "topicName": "Common Ancestry",
 "unitN": 7,
@@ -718,10 +718,10 @@
 "bio|7.8": {
 "course": "AP Biology",
 "stems": [
-"A new flu vaccine is needed every year mostly because",
-"HIV patients are given combinations of several drugs because",
-"Overuse of antibiotics has led to more antibiotic-resistant bacteria because",
-"Insects exposed to the same pesticide for many generations often become resistant. This shows that"
+"HIV evolves rapidly within a patient mainly because it",
+"Doctors use combination drug therapy against HIV because",
+"Pesticide-resistant insects increased in a field because",
+"The observation that evolution is ongoing today is supported by"
 ],
 "topicName": "Continuing Evolution",
 "unitN": 7,
@@ -730,12 +730,12 @@
 "bio|7.9": {
 "course": "AP Biology",
 "stems": [
-"On a phylogenetic tree, a node (branch point) represents",
-"A cladogram shows ((A, B), C). Which statement is correct?",
-"An outgroup in a phylogenetic analysis is",
-"Shared derived characters are used to build cladograms because they",
-"The principle of parsimony states that the best phylogenetic tree is the one that",
-"Trees based on DNA sequences are often considered more reliable than trees based only on morphology because"
+"On a cladogram, the organism that branches off first is the",
+"Two species share a more recent common ancestor if they",
+"A shared derived character is a trait that",
+"Molecular data sometimes change a phylogenetic tree because",
+"A clade includes",
+"Species A and B differ at 2 DNA positions; A and C differ at 10. Which is true?"
 ],
 "topicName": "Phylogeny",
 "unitN": 7,
@@ -744,11 +744,11 @@
 "bio|8.1": {
 "course": "AP Biology",
 "stems": [
-"A plant grows toward light because auxin builds up on its shaded side and causes cell elongation there. This is",
-"Honeybees perform a waggle dance to communicate the location of food. This is an example of",
-"A woodlouse moves faster in dry areas and slower in humid ones, so it ends up spending more time in humid areas. This is",
-"A ground squirrel gives an alarm call that warns relatives but puts itself at risk. This behavior can be explained by",
-"Many plants flower based on the length of night. This response is called"
+"A plant bends toward a window. This response is",
+"Birds migrating when day length shortens is triggered by",
+"A predator's approach causes a gazelle to stot (jump high). This behavior may increase fitness by",
+"Honeybees use the waggle dance to",
+"A plant closing its stomata during drought helps it"
 ],
 "topicName": "Responses to the Environment",
 "unitN": 8,
@@ -757,12 +757,12 @@
 "bio|8.2": {
 "course": "AP Biology",
 "stems": [
-"Producers in an ecosystem capture 10,000 kcal. About how much energy reaches tertiary consumers?",
-"Why is only about 10% of energy transferred between trophic levels?",
-"Compared with ectotherms, endotherms",
-"Net primary productivity (NPP) is",
-"Which biogeochemical cycle has no significant atmospheric component?",
-"Nitrogen-fixing bacteria convert"
+"If producers have 20,000 kcal, about how much energy reaches tertiary consumers?",
+"Most energy is lost between trophic levels as",
+"Decomposers are important because they",
+"Nitrogen-fixing bacteria convert",
+"Gross primary productivity minus respiration by producers equals",
+"Endotherms need more food than ectotherms of the same size because they"
 ],
 "topicName": "Energy Flow Through Ecosystems",
 "unitN": 8,
@@ -771,11 +771,11 @@
 "bio|8.3": {
 "course": "AP Biology",
 "stems": [
-"A population of 400 grows exponentially with r = 0.05 per year. What is dN/dt?",
-"A population has N = 1,000, rmax = 0.2, and K = 1,500. Using the logistic model, the growth rate is about",
-"In logistic growth, the population grows fastest when N is",
-"A J-shaped growth curve indicates",
-"An S-shaped (sigmoid) growth curve levels off because"
+"A population grows rapidly and then levels off. This is",
+"Carrying capacity (K) is the",
+"When N = K, population growth is",
+"Exponential growth occurs when",
+"A population of 1,000 has 100 births and 50 deaths per year. Its growth rate is"
 ],
 "topicName": "Population Ecology",
 "unitN": 8,
@@ -785,9 +785,9 @@
 "course": "AP Biology",
 "stems": [
 "Which is a density-dependent limiting factor?",
-"A severe frost kills 80% of an insect population no matter how dense it is. The frost is a",
-"As a deer population increases, the amount of food per individual decreases and birth rates drop. This shows",
-"Snowshoe hare and lynx populations rise and fall in linked cycles. This pattern is best explained by"
+"A hurricane that kills half a population regardless of its size is",
+"Competition for food becomes stronger as",
+"Predator and prey populations often cycle because"
 ],
 "topicName": "Effect of Density of Populations",
 "unitN": 8,
@@ -796,12 +796,12 @@
 "bio|8.5": {
 "course": "AP Biology",
 "stems": [
-"A community has three species with 5, 5, and 10 individuals. What is Simpson's diversity index (D = 1 − Σ(n/N)²)?",
-"Oxpeckers eat ticks off rhinos, and both species benefit. This relationship is",
-"Barnacles attach to whales, benefiting from transport while the whale is unaffected. This is",
-"Two species of warblers feed in different parts of the same tree. This is an example of",
+"Clownfish and sea anemones benefit each other. This is",
+"Barnacles on a whale benefit while the whale is unaffected. This is",
+"Two species of warblers feed in different parts of the same tree. This is",
 "The competitive exclusion principle states that",
-"When sea otters were removed from kelp forests, sea urchin populations exploded and kelp forests collapsed. Sea otters are"
+"Mimicry of a harmful species by a harmless species is",
+"Tapeworms living in a host's intestine are an example of"
 ],
 "topicName": "Community Ecology",
 "unitN": 8,
@@ -810,10 +810,10 @@
 "bio|8.6": {
 "course": "AP Biology",
 "stems": [
-"Ecosystems with greater biodiversity tend to",
-"Removing which organisms would most likely have the greatest effect on an ecosystem?",
-"Why does genetic diversity within a species matter for conservation?",
-"Loss of a keystone species usually causes"
+"Removing sea otters led to overgrazing of kelp by urchins. Sea otters are a",
+"Ecosystems with high biodiversity are generally",
+"Species richness refers to",
+"A community with many species in similar numbers has high"
 ],
 "topicName": "Biodiversity",
 "unitN": 8,
@@ -822,12 +822,12 @@
 "bio|8.7": {
 "course": "AP Biology",
 "stems": [
-"Fertilizer runoff into a lake causes algal blooms, then fish die-offs. The fish die mainly because",
-"Invasive species often spread rapidly because they",
-"DDT concentrations were much higher in eagles than in fish or plankton. This is",
-"Ecological succession on bare rock after a glacier retreats, starting with lichens, is",
-"Rising global temperatures are causing some species' ranges to shift toward the poles. This is an example of",
-"Which human activity most directly reduces biodiversity worldwide?"
+"An invasive species often thrives because it",
+"Eutrophication in lakes is caused mainly by",
+"Habitat fragmentation threatens species by",
+"Rising atmospheric CO₂ affects ocean ecosystems by",
+"Ecological succession after a forest fire is",
+"Mercury concentrations are highest in top predators because of"
 ],
 "topicName": "Disruptions to Ecosystems",
 "unitN": 8,

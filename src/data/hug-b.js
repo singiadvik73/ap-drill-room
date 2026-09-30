@@ -2,221 +2,221 @@
 AP_DATA.hug.units.push(
 { n: 5, name: "Agriculture and Rural Land-Use Patterns and Processes", weight: "12–17%", topics: [
   ["5.1", "Introduction to Agriculture", [
-    ["Growing rice on small plots with much labor is", "intensive agriculture", ["extensive agriculture", "ranching", "shifting cultivation"], "High inputs per unit of land."],
-    ["Cattle ranching on large tracts with few workers is", "extensive agriculture", ["intensive agriculture", "market gardening", "plantation farming"], "Low inputs per unit of land."],
-    ["Subsistence agriculture is farming", "to feed the farmer's family", ["for global export", "on large plantations for export", "using only machines and no labor"], "Little is sold."],
-    ["Commercial agriculture is farming", "to sell products", ["for personal use only", "without machinery", "only in developing countries"], "Market-oriented production."],
-    ["Climate influences agriculture because", "it determines which crops can grow", ["it sets crop prices", "it decides who owns farmland", "it has no effect"], "Rainfall and temperature matter."]
+    ["A farmer in Bangladesh grows rice on a small plot using many workers and little machinery. This is", "intensive subsistence agriculture", ["extensive commercial agriculture", "shifting cultivation", "plantation agriculture"], "High labor inputs on small land for local use."],
+    ["Why is extensive agriculture, such as ranching, common in dry regions?", "Low rainfall supports only sparse grazing", ["Dry regions have the most fertile soil", "Ranching requires the most labor", "Dry regions have fertile soils that suit intensive crops"], "Environmental limits favor extensive use."],
+    ["Which best distinguishes commercial from subsistence agriculture?", "Commercial farming produces mainly for sale in markets", ["Subsistence farming uses more machinery", "Commercial farming uses more human labor per acre", "Subsistence farming produces for export"], "The purpose of production differs."],
+    ["Which factor most explains why rice is grown in South and East Asia?", "Warmth and heavy monsoon rains", ["Cold, dry winters", "Poor soils", "Cool temperatures and steady rain"], "Rice needs warmth and water."],
+    ["In which region would you most likely find large-scale commercial grain farming?", "The U.S. Great Plains", ["The Sahel of West Africa", "The Amazon Basin", "Rural Bangladesh"], "Wheat belts in developed countries."]
   ]],
   ["5.2", "Settlement Patterns and Survey Methods", [
-    ["Farmhouses spread out across the land show a", "dispersed settlement pattern", ["clustered settlement pattern", "linear settlement pattern", "nucleated village"], "Farms are isolated."],
-    ["Long, narrow farms along rivers in Quebec reflect the", "long-lot survey system", ["township and range system", "metes and bounds survey system", "grid system"], "Each lot had river access."],
-    ["The square grid pattern in the Midwest reflects the", "township and range system", ["long-lot system", "metes and bounds system", "open-field system"], "Land was surveyed into squares."],
-    ["Metes and bounds surveys use", "natural landmarks to define boundaries", ["a grid", "lines of latitude and longitude", "latitude lines"], "Used in the original colonies."],
-    ["Clustered rural settlements often form because", "people share resources and defense", ["land is flat", "farmland is spread over large areas", "farms are huge"], "Villages provide community services."]
+    ["Long, narrow farm lots along rivers in Quebec reflect", "the French long-lot system", ["the Spanish system of large land grants", "metes and bounds using natural landmarks", "the U.S. township and range grid"], "French colonial survey system."],
+    ["Why do farms in the Midwest form a square grid pattern?", "The township and range system surveyed land into squares", ["The long-lot system was adapted to flat land", "Rivers flow in a grid pattern", "The long-lot system required squares"], "The Land Ordinance of 1785."],
+    ["Irregular property lines in the original 13 colonies reflect the", "metes and bounds system", ["township and range system", "long-lot system", "grid system"], "Boundaries used natural features."],
+    ["Clustered rural settlements are more common where", "farmers share land, water, or defense needs", ["farms are very large and highly mechanized", "land is surveyed in a grid", "farmers live on their own land"], "Villages allow cooperation."],
+    ["Which best explains why dispersed settlement is common in the U.S. Midwest?", "The Homestead Act gave families their own plots", ["Villages were built around shared irrigation systems", "Rivers forced people to cluster", "Farmers needed defense from Native nations"], "Individual farms led to dispersed patterns."]
   ]],
   ["5.3", "Agricultural Origins and Diffusions", [
-    ["The Fertile Crescent was a hearth for domesticating", "wheat and barley", ["maize and potatoes", "rice and soybeans", "coffee and cacao"], "Southwest Asia's crops."],
-    ["Maize was first domesticated in", "Mesoamerica", ["the Fertile Crescent", "Southeast Asia", "West Africa"], "Mexico and Central America."],
-    ["The Columbian Exchange brought which crop to Europe?", "Potatoes", ["Wheat", "Barley and oats", "Rice and soybeans"], "From the Andes."],
-    ["The First Agricultural Revolution led to", "permanent settlements", ["more nomadic lifestyles", "industrial cities", "fewer people"], "Farming allowed people to settle."],
-    ["Animal domestication in Southwest Asia included", "sheep and goats", ["llamas and alpacas", "turkeys and llamas", "horses only"], "Early livestock."]
+    ["Maize was domesticated in Mesoamerica, while wheat and barley were domesticated in the Fertile Crescent. This shows that", "farming arose separately in several hearths", ["agriculture spread from one hearth in Southwest Asia", "agriculture began in Europe", "farming spread outward from Asia"], "Multiple agricultural hearths."],
+    ["The spread of potatoes from the Andes to Europe after 1492 is part of", "the Columbian Exchange", ["the Green Revolution", "the Second Agricultural Revolution", "the Neolithic Revolution"], "Crops moved between hemispheres."],
+    ["The First Agricultural Revolution most directly led to", "permanent settlements", ["industrial factories", "global trade networks", "mechanized farming tools"], "Farming allowed settled life."],
+    ["Which crop did the Columbian Exchange bring from Afro-Eurasia to the Americas?", "Sugarcane", ["Maize", "Potatoes", "Tomatoes"], "Sugarcane led to Caribbean plantations."],
+    ["The domestication of animals like cattle and horses in Afro-Eurasia gave those societies an advantage mainly because", "animals provided labor, transport, and food", ["animals reduced the need for planting crops", "animals prevented disease", "animals replaced crops"], "Domesticated animals were valuable."]
   ]],
   ["5.4", "The Second Agricultural Revolution", [
-    ["The Second Agricultural Revolution coincided with", "the Industrial Revolution", ["the Neolithic period", "the Green Revolution", "the Columbian Exchange"], "Machines and better methods."],
-    ["The seed drill and crop rotation increased", "farm productivity", ["farm labor needs", "subsistence farming", "shifting cultivation"], "More food with fewer workers."],
-    ["Mechanization during the Second Agricultural Revolution led to", "rural-to-urban migration", ["more farm jobs", "smaller cities", "more farm jobs in villages"], "Workers moved to factories."],
-    ["The enclosure movement in Britain", "consolidated small farms into larger ones", ["divided large estates into small family plots", "ended farming", "banned sheep grazing on common land"], "Commons were fenced off."]
+    ["The Second Agricultural Revolution, including the seed drill and crop rotation, most directly supported", "the growth of industrial cities by freeing farm labor", ["the spread of shifting cultivation in Europe", "the Green Revolution in Asia", "the decline of population"], "Fewer farmers were needed."],
+    ["The enclosure movement in Britain pushed many rural people to", "move to cities for factory work", ["start large farms of their own nearby", "migrate to Asia", "become nomadic herders"], "They lost access to common land."],
+    ["Which innovation was part of the Second Agricultural Revolution?", "Mechanized reapers and threshers", ["High-yield seed varieties from the 1960s", "Genetically modified seed crops", "The first domestication of wheat"], "19th-century machinery."],
+    ["Improved transportation such as railroads in the 1800s changed agriculture by", "allowing farmers to sell to distant markets", ["forcing farmers to grow for themselves", "ending the need for farms", "stopping crop rotation"], "Farms connected to national markets."]
   ]],
   ["5.5", "The Green Revolution", [
-    ["The Green Revolution introduced", "high-yield seeds and fertilizers", ["organic farming", "shifting cultivation methods in forests", "subsistence methods"], "It increased yields in developing countries."],
-    ["A negative effect of the Green Revolution was", "overuse of water and chemicals", ["lower crop yields", "less food", "fewer farmers taking out loans"], "Irrigation and chemicals caused problems."],
-    ["The Green Revolution had the least impact in", "sub-Saharan Africa", ["India", "Mexico", "the Philippines"], "Crops and conditions didn't fit as well."],
-    ["The Green Revolution benefited wealthier farmers more because they", "could afford seeds, fertilizer, and irrigation", ["didn't need water or fertilizer to grow the new seeds", "grew more rice without irrigation or fertilizer", "had more children"], "Inputs were costly."]
+    ["India's wheat and rice output rose sharply after 1965. Which set of changes most explains this?", "High-yield seeds, chemical fertilizers, and expanded irrigation", ["Organic farming methods and greater crop diversity", "Shifting cultivation", "Nomadic herding and transhumance"], "Green Revolution technologies."],
+    ["Why did the Green Revolution have less impact in sub-Saharan Africa than in Asia?", "Its crops suited Asia, and irrigation was scarce", ["Africa had more irrigation, so new seeds weren't needed", "Africa had little farmland", "The Green Revolution began in Africa"], "Staple crops and infrastructure differed."],
+    ["A critic of the Green Revolution would most likely point to", "falling water tables from heavy irrigation in Punjab", ["rising yields of wheat and rice in northern India", "reduced famine in India", "cheaper grain prices"], "Environmental costs."],
+    ["The Green Revolution benefited larger farmers more than small farmers mainly because", "large farmers could afford seeds, fertilizer, and irrigation", ["small farmers grew more rice", "large farmers had more laborers per acre of land", "small farmers had better soil"], "Costly inputs favored wealthier farmers."]
   ]],
   ["5.6", "Agricultural Production Regions", [
-    ["Grapes, olives, and citrus are typical of", "Mediterranean agriculture", ["plantation agriculture on estates", "pastoral nomadism", "shifting cultivation"], "Hot, dry summers."],
-    ["Slash-and-burn farming is common in", "tropical rainforests", ["deserts and dry grasslands", "tundra", "the Great Plains"], "Shifting cultivation clears land."],
-    ["Pastoral nomadism is found mainly in", "dry regions", ["tropical rainforests", "river valleys", "cities"], "Herders move with livestock."],
-    ["Plantations are usually found in", "tropical regions and export crops", ["cold regions", "cold regions and subsistence grain crops", "deserts"], "Examples: coffee, bananas."],
-    ["Dairy farming is common near cities because", "milk is perishable", ["cows need cities", "land is cheap there", "it's extensive farming"], "Close to markets."]
+    ["California's Central Valley grows grapes, olives, and citrus mainly because of its", "Mediterranean climate", ["humid subtropical climate", "cold continental climate", "arctic tundra climate"], "Mediterranean agriculture."],
+    ["Farmers in the Amazon clear and burn forest, farm for a few years, then move on. Why do they move?", "The soil loses fertility quickly after clearing", ["The land becomes too valuable to keep farming", "The government requires them to relocate", "The rainfall stops"], "Tropical soils are nutrient-poor."],
+    ["Plantation agriculture in Central America most often produces", "export crops like bananas and coffee", ["subsistence grains for local families", "dairy and vegetables for nearby cities", "wheat for domestic bread"], "Cash crops for export."],
+    ["Pastoral nomadism is most common in", "dry grasslands and deserts", ["humid river valleys and deltas", "tropical rainforests near the equator", "densely settled coastal plains"], "Herders move with animals."],
+    ["Dairy farms are often located near large cities because", "milk is perishable", ["cows need urban land", "land is cheapest near cities", "dairy needs large, cheap land"], "Perishability drives location."]
   ]],
   ["5.7", "Spatial Organization of Agriculture", [
-    ["A company that owns farms, processing plants, and stores uses", "vertical integration", ["horizontal integration", "small-scale subsistence farming", "shifting cultivation"], "Controls multiple stages."],
-    ["Agribusiness refers to", "large-scale commercial agriculture", ["small-scale subsistence farming for families", "family gardens", "nomadic herding"], "Corporate farming."],
-    ["Economies of scale allow large farms to", "lower costs per unit", ["raise costs per unit", "use more labor", "grow less"], "Bulk production is cheaper."],
-    ["Monocropping is", "growing one crop on large areas", ["growing many crops together in small fields", "herding animals", "rotating crops"], "Common in commercial farming."]
+    ["A company owns the seed supply, farms, processing plants, and grocery distribution for its products. This is", "vertical integration", ["horizontal integration", "subsistence farming", "shifting cultivation"], "Controlling multiple stages of production."],
+    ["Why can large agribusinesses often sell food more cheaply than small farms?", "Economies of scale lower costs per unit", ["They use more human labor per acre", "They grow many different crops together", "They sell to local markets"], "Large-scale production reduces costs."],
+    ["Growing only corn across thousands of acres is", "monocropping", ["crop rotation", "intercropping", "shifting cultivation"], "One crop over large areas."],
+    ["Which is a likely drawback of agribusiness for rural communities?", "Fewer family farms and jobs", ["More small family farms", "Higher crop diversity on farms", "Increased rural population growth"], "Consolidation reduces farms."]
   ]],
   ["5.8", "Von Thünen Model", [
-    ["In von Thünen's model, dairy and vegetables are grown", "closest to the market", ["farthest from the market", "in the middle ring", "in forests in the second ring"], "Perishable goods need quick transport."],
-    ["Ranching is in the outer ring of von Thünen's model because", "land is cheap and animals can walk to market", ["land is expensive", "it is perishable", "it needs many workers and is highly perishable"], "Extensive land use."],
-    ["A limitation of von Thünen's model today is", "modern transportation and refrigeration", ["it assumes too many competing markets", "it's based on cities", "it ignores farming"], "Distance matters less."],
-    ["Von Thünen's model assumes", "a flat, uniform landscape", ["mountains and navigable rivers", "multiple cities", "global trade and several cities"], "An isolated state."],
-    ["Forests were in the second ring because", "wood was heavy and needed nearby", ["forests grew best on the most expensive land", "they were cheap to ship", "forests grew anywhere"], "Firewood and lumber were costly to transport."]
+    ["In von Thünen's model, why is dairy located in the ring closest to the market?", "Milk is perishable and costly to transport far", ["Dairy cattle need the largest amount of land", "Dairy land is the cheapest land in the model", "Cows can walk to market from any ring"], "Perishability and transport cost."],
+    ["Why is ranching in the outer ring of von Thünen's model?", "Land is cheap and animals can walk to market", ["Beef is the most perishable product sold", "Beef is highly perishable", "Ranching needs many workers"], "Extensive use of cheap land."],
+    ["Refrigerated trucks let farms far from cities sell fresh vegetables. This shows a limitation of von Thünen's model:", "modern transport reduces distance's importance", ["cities need less food today", "land rent matters less today", "land near cities is now cheaper than farmland"], "Technology changes the rings."],
+    ["Von Thünen placed forests in the second ring because in the 1800s", "wood was heavy and needed close by", ["wood was light and cheap to ship long distances", "wood was perishable", "forests needed little land"], "Transport costs for bulky wood."],
+    ["Which assumption of von Thünen's model is least realistic today?", "One isolated city with a flat, uniform landscape", ["Farmers want to maximize the profit from their land", "Transport costs affect land use", "Land closer to markets is more valuable to farmers"], "Real landscapes vary and have many markets."]
   ]],
   ["5.9", "The Global System of Agriculture", [
-    ["Kenya exporting flowers to Europe is part of a", "global commodity chain", ["subsistence system", "local market", "von Thünen ring"], "Production linked to distant consumers."],
-    ["Countries dependent on one export crop face risk from", "price changes in global markets", ["too much crop diversity on farms", "strong local demand", "urbanization"], "Prices fluctuate."],
-    ["Fair trade aims to", "give farmers fairer prices", ["lower prices for consumers", "end global trade", "ban exports"], "Better wages for producers."],
-    ["Subsidies to farmers in wealthy countries can", "hurt farmers in poorer countries", ["help farmers in every country equally", "raise global prices", "end trade"], "Subsidized crops are cheaper on world markets."]
+    ["Kenya exports cut flowers to Europe by air. Which risk does this pose for Kenya's economy?", "Dependence on distant markets and global prices", ["Too much reliance on its domestic market", "Excessive local demand", "Too few export options"], "Export dependence creates vulnerability."],
+    ["U.S. corn subsidies can harm farmers in Mexico mainly because", "subsidized corn sells below local production costs", ["subsidies raise world corn prices above Mexican costs", "Mexico bans imports of U.S. corn", "Mexico doesn't grow corn"], "Cheap imports undercut local farmers."],
+    ["Fair trade coffee aims to", "pay farmers a guaranteed minimum price", ["lower coffee prices for consumers abroad", "end coffee exports to wealthy countries", "promote plantation monocropping"], "Better returns for producers."],
+    ["A global commodity chain for chocolate links", "West African cacao farmers to European buyers", ["coffee growers in Brazil to buyers in Asia", "cacao farmers to local village markets", "chocolate factories to farms in West Africa"], "Production and consumption across regions."]
   ]],
   ["5.10", "Consequences of Agricultural Practices", [
-    ["Clearing the Amazon for cattle ranching causes", "deforestation", ["desertification", "salinization of soils", "eutrophication"], "Forests are removed."],
-    ["Fertilizer runoff causing a dead zone in the Gulf of Mexico is", "eutrophication", ["desertification", "salinization", "soil erosion"], "Nutrients cause algae blooms."],
-    ["Irrigation in dry areas can cause", "salinization", ["deforestation", "eutrophication", "urbanization"], "Salt builds up in soil."],
-    ["Terracing and contour plowing help reduce", "soil erosion", ["crop yields", "rainfall", "biodiversity"], "They slow water runoff."],
-    ["Monocropping can reduce", "biodiversity", ["erosion", "crop yields", "pesticide use"], "Only one crop is grown."]
+    ["Fertilizer runoff from Midwest farms contributes to a 'dead zone' in the Gulf of Mexico through", "eutrophication, as algae blooms deplete oxygen", ["salinization, as salt builds up", "salinization, as salts build up in the soil", "deforestation, as trees are cut"], "Excess nutrients cause hypoxia."],
+    ["Irrigating dry farmland for many years can make soil too salty to farm. This is", "salinization", ["eutrophication", "desertification", "deforestation"], "Salts accumulate as water evaporates."],
+    ["Which practice would most reduce soil erosion on sloped farmland?", "Terracing and contour plowing", ["Removing ground cover", "Plowing straight up and down slopes", "Monocropping year after year"], "They slow runoff."],
+    ["Converting Amazon rainforest to cattle pasture most directly reduces", "biodiversity", ["cattle production", "soil erosion and runoff", "global beef demand"], "Forests hold species and carbon."],
+    ["Heavy pesticide use can lead to", "pest resistance and harm to pollinators", ["higher biodiversity in and around fields", "healthier soil life and more earthworms", "cleaner rivers and streams downstream"], "Unintended ecological effects."]
   ]],
   ["5.11", "Challenges of Contemporary Agriculture", [
-    ["An area with no nearby supermarket and limited fresh food is a", "food desert", ["food swamp", "farmers' market", "agribusiness zone"], "Limited access to healthy food."],
-    ["Supporters of GMOs argue they", "increase yields and resist pests", ["lower yields", "require more pesticide use", "reduce food supply"], "Engineered traits help crops."],
-    ["Critics of GMOs worry about", "corporate control of seeds", ["higher crop yields and prices", "less pesticide use", "better nutrition for consumers"], "Farmers depend on companies."],
-    ["The organic farming movement", "avoids synthetic chemicals", ["uses more pesticides", "relies on GMOs", "increases monocropping of grains"], "Natural methods."],
-    ["Urban farming helps address food deserts by", "growing food locally in cities", ["increasing imports", "building supermarkets only", "reducing food supply"], "Local production."]
+    ["A low-income urban neighborhood has many convenience stores but no supermarket within a mile. This is best described as a", "food desert", ["food surplus", "commodity chain", "von Thünen ring"], "Limited access to healthy food."],
+    ["Supporters of GMO crops most often argue that they", "raise yields and resist pests or drought", ["reduce yields to protect soil", "cost less to grow than conventional crops", "reduce the need for irrigation and fertilizer"], "Engineered traits improve output."],
+    ["Critics of GMOs often worry that farmers become dependent on", "a few corporations that control patented seeds", ["local seed banks run by farming villages", "organic certification agencies and inspectors", "government price supports for grain crops"], "Corporate control of seeds."],
+    ["Which trend is most associated with rising incomes in developing countries?", "Increased demand for meat and dairy", ["Decreased demand for food", "A shift back to subsistence farming", "Lower water use in agriculture"], "Diets change with income."],
+    ["Community gardens and farmers' markets in cities mainly help", "increase access to fresh local food", ["increase food miles and imports", "expand agribusiness", "raise food miles"], "Local food access."]
   ]],
   ["5.12", "Women in Agriculture", [
-    ["In many developing countries, women produce most of the", "food for family consumption", ["export crops like cotton", "export cash crops like coffee", "factory goods"], "Subsistence farming."],
-    ["A major barrier for women farmers is", "limited access to land and credit", ["too much land for each farmer", "no work", "high wages"], "Legal and cultural limits."],
-    ["Microloans to women farmers can", "increase productivity and income", ["decrease household food production", "reduce education", "end farming"], "Women invest in farms."],
-    ["When women gain land rights, agricultural output often", "increases", ["decreases", "stays the same", "stays about the same"], "Secure land encourages investment."]
+    ["In many sub-Saharan African countries, women grow most household food but own little land. Which result is most likely?", "Women struggle to get loans for their farms", ["Women grow mainly export crops for sale abroad", "Women own most of the region's farm machinery", "Women hire most of the region's farm labor"], "Without land, credit is hard to obtain."],
+    ["Microloans to women farmers are often effective because women", "tend to reinvest in family and farm", ["rarely repay loans", "don't work in farming", "borrow smaller amounts than men do"], "High repayment and family benefits."],
+    ["When women gain secure rights to farmland, which outcome is most likely?", "More investment and more food", ["Lower crop yields", "More land abandonment", "More land sold to large farms"], "Security encourages investment."],
+    ["Which best explains why women's farm work is often undercounted in official statistics?", "Much of it is unpaid subsistence work", ["Women don't do much agricultural work", "Surveys count women twice", "It's done mostly in factories"], "Unpaid work isn't counted."]
   ]]
 ]},
 { n: 6, name: "Cities and Urban Land-Use Patterns and Processes", weight: "12–17%", topics: [
   ["6.1", "The Origin and Influences of Urbanization", [
-    ["Early cities in Mesopotamia grew near rivers mainly because rivers provided", "water and fertile soil for surplus food", ["protection from invaders and seasonal floods", "cheap building stone", "access to the Atlantic"], "Agricultural surplus supported cities."],
-    ["A city built on a hill for defense reflects the importance of", "site", ["situation", "hinterland", "range"], "Site is the physical character of a place."],
-    ["Singapore's growth as a trade hub is explained mainly by its", "situation on major shipping routes", ["site on flat land with fertile soil", "cold climate", "large farmland"], "Situation is location relative to other places."],
-    ["An agricultural surplus allowed early cities to form because", "not everyone had to farm", ["cities needed more farmers", "trade was banned", "food was scarce in villages"], "Specialized jobs developed."],
-    ["Suburbanization in the U.S. after 1950 was driven largely by", "cars, highways, and home loans", ["rising farm jobs", "declining incomes", "public transit expansion in cities"], "Federal policies supported suburbs."]
+    ["Early cities in Mesopotamia developed only after farmers produced surpluses. Which best explains this link?", "Surpluses let some people take non-farming jobs", ["Surpluses caused people to become nomadic", "Surpluses reduced the need for trade", "Surpluses led to lower population density"], "Specialization requires surplus food."],
+    ["Istanbul grew into a major city largely because it controls the Bosporus between Europe and Asia. This reflects the importance of", "situation", ["site factors", "absolute location", "range"], "Its location relative to trade routes."],
+    ["A medieval town built on a hill surrounded by a river reflects which consideration?", "Site selection for defense", ["Situation for global trade", "Suburban sprawl", "Central place hierarchy"], "Physical characteristics for protection."],
+    ["U.S. suburbs expanded rapidly after 1950 mainly because of", "highways, cheap mortgages, and cars", ["rising farm employment near cities", "new public transit systems", "falling incomes in central cities"], "Federal policy and cars drove suburbanization."],
+    ["Which factor most explains rapid urbanization in developing countries today?", "Rural migration plus high natural increase", ["Declining birth rates in cities", "Suburbanization of the middle class", "Government bans on rural living"], "Both migration and births drive growth."]
   ]],
   ["6.2", "Cities Across the World", [
-    ["Lagos, Nigeria, is growing faster than Tokyo mainly because of", "rural-to-urban migration and high natural increase", ["an aging population", "low birth rates", "an aging population with low birth rates"], "Developing-country cities grow quickly."],
-    ["A megacity has a population of more than", "10 million", ["1 million", "5 million", "50 million"], "Examples: Tokyo, Delhi, Lagos."],
-    ["A metacity has more than", "20 million people", ["5 million people", "1 million people", "100 million people"], "Very large urban agglomerations."],
-    ["Rapid urban growth in developing countries often produces", "informal settlements", ["declining populations", "empty suburbs", "rural growth"], "Housing can't keep up."],
-    ["An edge city is", "a suburban node of offices and shopping", ["a small city at a national border crossing", "an old industrial town", "a rural village far from any highway"], "It forms near highways outside the core."]
+    ["Lagos is growing much faster than Tokyo. Which pair of factors best explains this?", "High natural increase and rural migration in Nigeria", ["An aging population and low fertility in Nigeria", "High emigration and low birth rates in Nigeria", "Suburbanization and deindustrialization in Lagos"], "Growth factors differ by development level."],
+    ["An edge city like Tysons, Virginia, is best described as", "a suburban node of offices and retail", ["a city on an international border crossing", "an old industrial town in decline", "a historic downtown district in decline"], "Edge cities form outside central cities."],
+    ["Which region is expected to see the most urban growth by 2050?", "Africa and South Asia", ["Latin America and Europe", "North America", "Australia"], "These regions are least urbanized now."],
+    ["A megacity differs from a metacity mainly in", "size, with metacities over 20 million", ["its role as a center of global finance", "its level of industrialization", "its role in global finance and trade"], "Megacities exceed 10 million; metacities exceed 20 million."],
+    ["Informal settlements on the edges of cities in developing countries grow mainly because", "cities can't build formal housing fast enough", ["the wealthy prefer to live on the edge", "governments require new migrants to live there", "land in the center is too cheap"], "Housing lags behind migration."]
   ]],
   ["6.3", "Cities and Globalization", [
-    ["New York, London, and Tokyo are world cities mainly because they", "control global finance and corporate decisions", ["have the largest populations in the world", "are national capitals", "produce the most food"], "They are nodes of the global economy."],
-    ["Which feature most distinguishes a world city?", "Global financial and corporate headquarters", ["A large port only", "Rapid population growth and suburban sprawl", "Historic monuments"], "Decision-making power."],
-    ["Globalization increases the importance of world cities because", "decision-making concentrates in connected hubs", ["manufacturing moves into their central cores", "they become isolated", "they lose population"], "They coordinate global networks."],
-    ["A city's hinterland is", "the surrounding area it serves", ["its downtown", "its suburbs and outer exurbs", "its airport"], "The market area of a city."]
+    ["London is considered a world city mainly because it", "hosts global banks and corporate headquarters", ["is the capital of the United Kingdom", "has the largest population of any city in Western Europe", "has the busiest container port in Europe"], "Global economic control functions."],
+    ["Which city would most likely rank higher as a world city?", "One with major stock exchanges and air connections", ["One with a large population but few global firms", "One with many factories but little finance", "One with a historic center but little trade"], "Connectivity and control define world cities."],
+    ["Globalization tends to concentrate decision-making in world cities because", "headquarters cluster where finance does", ["manufacturing moves into city centers", "manufacturing plants cluster in city centers", "world cities lose population"], "Agglomeration of advanced services."],
+    ["A city's hinterland is best described as", "the surrounding area it serves", ["its central business district and nearby core", "its outer suburbs and exurbs", "its international airport"], "The market area of a city."]
   ]],
   ["6.4", "The Size and Distribution of Cities", [
-    ["If a country's largest city has 1 million people, the rank-size rule predicts the fourth largest has", "250,000", ["500,000", "400,000", "100,000"], "The nth city is 1/n the size of the largest."],
-    ["A city more than twice the size of the next largest is a", "primate city", ["world city", "edge city", "boomburb"], "Example: Paris, Bangkok."],
-    ["In central place theory, the minimum population needed to support a service is its", "threshold", ["range", "hinterland", "market area"], "Customers needed to stay in business."],
-    ["The maximum distance people will travel for a good is its", "range", ["threshold", "site", "situation"], "High-order goods have larger ranges."],
-    ["Central place theory predicts that", "large cities offer more high-order goods", ["all cities are the same size", "small towns offer the most specialty hospitals", "services are randomly placed"], "A hierarchy of places."],
-    ["Hexagonal market areas in central place theory avoid", "gaps and overlaps between service areas", ["unequal population densities between towns", "rivers", "suburbs"], "Hexagons fit together."]
+    ["A country's largest city has 6 million people. Under the rank-size rule, the third-largest city should have about", "2 million", ["3 million", "1.5 million", "600,000"], "6 million ÷ 3."],
+    ["Bangkok is more than 20 times larger than Thailand's second city. Bangkok is best described as", "a primate city", ["an edge city", "a world city", "a boomburb suburb"], "It dominates the urban hierarchy."],
+    ["A specialty cancer hospital is found only in large cities. In central place theory, this is because it has a", "high threshold and large range", ["low threshold and small range", "high threshold and small range", "low threshold and large range"], "High-order services need many customers."],
+    ["A gas station can survive in a small town because it has a", "low threshold", ["high threshold", "large range", "high-order function"], "Few customers are needed."],
+    ["Which pattern would central place theory predict on a flat landscape?", "Many small towns and few large cities, evenly spaced", ["A few large cities and no small towns", "Cities clustered along one major river", "Cities located randomly across the plain"], "A hierarchy of hexagonal market areas."],
+    ["A country with many similar-sized cities and no dominant city best fits", "neither primacy nor the rank-size rule", ["a primate city pattern", "the rank-size rule exactly", "a central place hierarchy of hexagonal areas"], "A flat urban hierarchy."]
   ]],
   ["6.5", "The Internal Structure of Cities", [
-    ["In the Burgess model, the zone next to the CBD is the", "zone of transition", ["commuter zone suburbs", "high-income zone", "industrial fringe zone"], "Older housing and industry."],
-    ["The Hoyt sector model says cities grow in wedges along", "transportation lines", ["concentric rings only", "rivers only", "random paths"], "Sectors follow routes."],
-    ["The multiple nuclei model says cities have", "several centers of activity", ["one CBD only", "rings of land use around one CBD", "no CBD or central market"], "Suburbs and nodes form."],
-    ["In the Latin American city model, the wealthy live", "near the CBD along the spine", ["on the periphery", "in squatter settlements", "in the disamenity zone"], "Opposite of the Burgess model."],
-    ["Disamenity zones in Latin American cities are areas that", "lack services and are often on steep or unsafe land", ["hold the wealthiest homes", "hold the elite residential sector along the city's spine", "are industrial parks"], "Informal settlements."],
-    ["In the African city model, cities often have", "multiple CBDs, including colonial and traditional ones", ["a single CBD surrounded by wealthy suburbs", "no markets", "no suburbs"], "Colonial history shaped them."]
+    ["In the Burgess concentric zone model, the zone of transition is characterized by", "industry, older housing, and newcomers", ["high-income commuter homes", "the central business district itself", "middle-class commuters' homes"], "Deteriorating housing near the CBD."],
+    ["Hoyt's sector model says high-income housing tends to", "extend in a wedge along a transit route", ["form rings around the CBD", "cluster at the city's outer edge", "be randomly placed"], "Sectors follow routes."],
+    ["The multiple nuclei model best fits which city?", "Los Angeles, with many business centers", ["Chicago in the 1920s, with a single dominant CBD", "A medieval walled city with one market square", "A city with one CBD"], "Several nodes of activity."],
+    ["In the Latin American city model, the wealthy live", "near the CBD along the commercial spine", ["in squatter settlements on the periphery", "in the zone of disamenity", "in the zone of in situ accretion"], "Opposite of the Burgess model."],
+    ["Periférico squatter settlements in Latin American cities are found mainly", "on the city's outer edge", ["in the central business district", "along the elite commercial spine", "in the zone of maturity"], "Poorest residents live on the periphery."],
+    ["The Southeast Asian city model centers on", "the old colonial port zone", ["a single shopping mall", "a medieval cathedral", "a suburban office park"], "McGee's model."]
   ]],
   ["6.6", "Density and Land Use", [
-    ["Low-density, car-dependent development spreading outward is", "urban sprawl", ["gentrification", "infilling of vacant lots", "smart growth"], "Sprawl increases driving."],
-    ["Building apartments near transit stations encourages", "less car dependence", ["more sprawl", "longer daily commutes", "lower density"], "Transit-oriented development."],
-    ["Mixed-use zoning allows", "homes, shops, and offices in the same area", ["only homes", "only businesses and offices, no homes", "only factories"], "It makes neighborhoods walkable."],
-    ["New urbanism promotes", "walkable, mixed-use neighborhoods", ["large-lot suburbs with cul-de-sacs", "highway expansion", "car-only access and large lots"], "It counters sprawl."]
+    ["Which would most likely reduce urban sprawl?", "Zoning for denser, mixed-use housing near transit", ["Zoning that separates homes from shops and offices", "Building new highways to the suburbs", "Banning apartments near city centers"], "Density and mixed use limit sprawl."],
+    ["Bid-rent theory predicts that land closest to the CBD is used by", "businesses paying most for access", ["farmers seeking cheap land", "low-density housing", "low-density residential users"], "Accessibility is most valuable to businesses."],
+    ["New urbanism promotes", "walkable neighborhoods with mixed uses", ["car-dependent suburbs with large lots", "separate zones for each land use", "highway-oriented shopping malls"], "It counters sprawl."],
+    ["Infill development refers to", "building on vacant lots in developed areas", ["building new suburbs on the edge of the city", "demolishing old neighborhoods", "expanding highways outward to new suburbs"], "It uses existing infrastructure."]
   ]],
   ["6.7", "Infrastructure", [
-    ["A new subway line would most likely", "increase development near stations", ["reduce new development near the stations", "increase sprawl", "lower land values"], "Access raises demand."],
-    ["Poor infrastructure in a city can discourage", "business investment", ["population loss", "traffic", "pollution"], "Firms need reliable services."],
-    ["Highway construction in the mid-1900s often", "divided and displaced urban neighborhoods", ["united neighborhoods", "reduced traffic in downtown areas", "increased public transit use in central cities"], "Many were minority neighborhoods."],
-    ["Which is an example of infrastructure?", "Water and sewer systems", ["A city's population", "A neighborhood's culture", "Local elections"], "Physical systems that support a city."]
+    ["A city builds a light rail line. Which change is most likely near new stations?", "Higher-density housing and businesses develop", ["Suburban sprawl increases near the new stations", "Suburban sprawl increases nearby", "Traffic congestion rises sharply"], "Transit-oriented development."],
+    ["Why did urban freeway construction in the 1950s–60s often harm minority neighborhoods?", "Highways were routed through them", ["Highways raised property values in minority areas", "Highways increased property values there", "Highways connected them to jobs"], "Many neighborhoods were divided."],
+    ["Poor water and sewer infrastructure in a city is most likely to", "deter investment and harm health", ["attract new businesses quickly", "lower disease rates", "attract new residents"], "Infrastructure supports growth."],
+    ["Which best explains why some cities lack infrastructure in informal settlements?", "Settlements grew faster than services", ["Residents refuse services", "Informal settlements are too small to need services", "Informal settlements have few residents"], "Rapid, unplanned growth."]
   ]],
   ["6.8", "Urban Sustainability", [
-    ["An urban growth boundary like Portland's is designed to", "limit sprawl and protect farmland", ["encourage low-density growth outward", "raise car use and commuting times", "lower density"], "Growth is directed inward."],
-    ["Smart growth policies encourage", "compact, walkable development", ["low-density suburban growth", "highway building", "longer commutes"], "They aim for sustainability."],
-    ["A downside of urban growth boundaries is", "higher housing prices inside the boundary", ["more sprawl", "less density", "more farmland lost just beyond the boundary"], "Limited land raises prices."],
-    ["Green roofs help cities by", "reducing heat and stormwater runoff", ["raising summer temperatures", "adding traffic", "reducing plants"], "Vegetation absorbs heat and water."]
+    ["Portland's urban growth boundary most likely led to", "higher prices and denser building inside it", ["lower housing prices and more sprawl inside the boundary", "lower density in the city", "less farmland protection"], "Limited land raises prices and density."],
+    ["Smart growth policies aim mainly to", "concentrate growth in compact, walkable areas", ["spread development evenly across the region", "reduce public transit", "encourage low-density suburbs"], "Sustainable urban growth."],
+    ["Green roofs and urban trees help cities mainly by", "reducing heat and stormwater runoff", ["raising summer temperatures downtown", "increasing pollution", "adding traffic to downtown streets"], "Vegetation cools and absorbs water."],
+    ["Which is a common criticism of greenbelts around cities?", "They can push growth beyond the belt", ["They raise housing density in the suburbs beyond the belt", "They lower housing prices", "They eliminate farmland"], "Leapfrog development."]
   ]],
   ["6.9", "Urban Data", [
-    ["Which data would best show income changes in a neighborhood over time?", "Census data from several decades", ["One interview with a long-time resident", "A single photograph", "A tourism brochure for the neighborhood"], "Quantitative data shows trends."],
-    ["Interviews with long-time residents about neighborhood change provide", "qualitative data about experiences", ["quantitative data about income", "census counts", "satellite images"], "They capture perceptions."],
-    ["Combining census data and interviews gives", "a fuller picture of change", ["less accurate results overall", "only numbers", "only opinions"], "Both types complement each other."],
-    ["A limitation of census data is that it", "may undercount some groups", ["is collected only every 50 years", "can't show any change over time", "is collected daily"], "Some groups are harder to count."]
+    ["A researcher wants to measure how a neighborhood's racial makeup changed from 1990 to 2020. Which source is best?", "Census data by tract for each decade", ["Interviews with a few residents", "Photographs of houses", "Newspaper opinion columns"], "Quantitative, comparable data over time."],
+    ["Why would a researcher add interviews to census data when studying gentrification?", "To understand residents' experiences behind the numbers", ["To measure household incomes more precisely than the census", "To replace the census entirely", "To count the population more precisely than the census does"], "Qualitative data explains why and how."],
+    ["Which is a limitation of relying only on census data for urban studies?", "It may undercount some groups", ["It isn't numerical", "It isn't available at small scales", "It's collected each year"], "Some populations are hard to count."],
+    ["Mapping 911 calls by neighborhood is an example of", "using quantitative spatial data to find patterns", ["collecting qualitative data from 911 callers", "remote sensing", "using a mental map"], "Counts mapped over space."]
   ]],
   ["6.10", "Challenges of Urban Changes", [
-    ["Rising rents forcing long-time residents out of a renovated neighborhood is", "gentrification", ["suburbanization", "redlining practices", "blockbusting"], "Higher-income newcomers raise costs."],
-    ["Banks refusing loans in minority neighborhoods is", "redlining", ["blockbusting", "gentrification", "zoning"], "It caused disinvestment."],
-    ["Real estate agents scaring white homeowners into selling cheaply is", "blockbusting", ["redlining", "gentrification", "filtering"], "It exploited racial fears."],
-    ["Urban renewal programs in the 1950s–60s often", "displaced low-income residents", ["built suburbs", "increased affordable housing everywhere", "ended segregation"], "Neighborhoods were cleared."],
-    ["Filtering occurs when", "housing passes to lower-income groups as it ages", ["housing prices rise as homes age over time", "suburbs grow", "cities gentrify"], "Older homes lose value."],
-    ["Inclusionary zoning requires developers to", "include affordable housing units", ["build only luxury housing units", "avoid mixed use", "reduce density"], "It supports affordability."]
+    ["In a gentrifying neighborhood, rents rise and long-time residents leave. Which effect is the most common criticism?", "Displacement of lower-income residents", ["Rising crime rates in the neighborhood", "Loss of new businesses", "Declining property values"], "Residents are priced out."],
+    ["Banks refusing mortgages in minority neighborhoods in the mid-1900s most directly led to", "disinvestment and declining housing quality", ["rapid gentrification and rising rents", "faster integration of the suburbs", "new public housing in those areas"], "Redlining starved areas of investment."],
+    ["Real estate agents frightening white homeowners into selling cheaply was", "blockbusting", ["redlining practices", "gentrification", "filtering"], "It exploited racial fears."],
+    ["Inclusionary zoning is designed to", "require affordable units in new buildings", ["ban affordable housing", "limit new housing to single-family homes", "reduce density"], "It promotes mixed-income housing."],
+    ["Filtering occurs when", "housing passes to lower-income groups as it ages", ["housing prices rise as homes age", "new luxury housing is built for wealthy residents", "neighborhoods gentrify quickly as wealthier people arrive"], "Older homes lose value."],
+    ["Urban renewal programs in the 1950s–60s often", "cleared poor neighborhoods and displaced people", ["built new suburbs for displaced residents", "ended segregation", "encouraged suburban growth"], "Clearance displaced many."]
   ]],
   ["6.11", "Challenges of Urban Sustainability", [
-    ["Cities are warmer than surrounding areas because of the", "urban heat island effect", ["greenhouse effect only", "rain shadow effect", "Coriolis effect"], "Pavement and buildings absorb heat."],
-    ["Abandoned, contaminated industrial land is called a", "brownfield", ["greenfield", "greenbelt area", "food desert"], "Cleanup is often needed."],
-    ["Redeveloping brownfields helps cities by", "reusing land and reducing sprawl", ["increasing suburban development instead", "expanding suburbs", "reducing housing"], "Infill development."],
-    ["Planting trees in cities helps", "reduce the heat island effect", ["increase runoff", "raise summer temperatures", "increase pollution"], "Shade and evaporation cool cities."],
-    ["Environmental injustice refers to", "pollution affecting low-income and minority areas more", ["pollution spread evenly across all of a city's neighborhoods", "cleaner air in poor neighborhoods than in wealthy suburbs", "rural pollution only"], "Unequal exposure to hazards."]
+    ["A heat map shows downtown is 4°C warmer than nearby farmland. This is the", "urban heat island effect", ["greenhouse effect on cities", "rain shadow effect", "Coriolis effect"], "Pavement and buildings absorb heat."],
+    ["Redeveloping an old factory site with contaminated soil is", "brownfield redevelopment", ["greenfield development", "infill on farmland", "suburban sprawl"], "Reusing contaminated land."],
+    ["Low-income neighborhoods near highways and factories face more pollution. This is", "environmental injustice", ["environmental determinism", "urban renewal planning", "gentrification"], "Unequal exposure to hazards."],
+    ["Which would most reduce a city's heat island effect?", "Planting trees and adding reflective roofs", ["Expanding parking lots", "Removing parks", "Replacing parks with large parking lots"], "Shade and reflectivity cool cities."],
+    ["Why can brownfield cleanup be difficult?", "It's costly, and liability is often unclear", ["Brownfields are usually protected as parkland", "Brownfields are protected parks", "Brownfields are mostly in suburbs"], "Contamination is expensive to fix."]
   ]]
 ]},
 { n: 7, name: "Industrial and Economic Development Patterns and Processes", weight: "12–17%", topics: [
   ["7.1", "The Industrial Revolution", [
-    ["The Industrial Revolution began in Britain partly because of", "coal and iron deposits", ["a large tropical farmland", "cheap labor from China", "oil reserves"], "Resources fueled industry."],
-    ["Industrialization spread from Britain to", "Western Europe and North America", ["sub-Saharan Africa and South America first", "South America and Africa at the same time", "Southeast Asia first"], "Diffusion to nearby core regions."],
-    ["The Industrial Revolution caused cities to grow because", "people moved for factory jobs", ["farming expanded", "birth rates dropped", "farm jobs grew in cities"], "Rural-to-urban migration."],
-    ["Colonies during the Industrial Revolution mainly provided", "raw materials and markets", ["finished goods and factories", "factories", "new technology"], "Economic dependence grew."]
+    ["Why did the Industrial Revolution begin in Britain rather than elsewhere?", "It had coal, iron, and capital", ["It had the largest population in Europe", "It had the most farmland in the world", "It banned foreign trade"], "Resources and capital combined."],
+    ["During the Industrial Revolution, colonies mainly served European industry by", "supplying raw materials and buying goods", ["producing most manufactured goods", "supplying factory workers for European cities", "developing most new industrial technology"], "Economic dependence."],
+    ["Industrialization spread first to which regions?", "Western Europe, North America, and Japan", ["Sub-Saharan Africa and South America", "Central Asia and the Middle East", "Southeast Asia and Oceania"], "Diffusion to places with capital and resources."],
+    ["The Industrial Revolution most changed where people lived by", "drawing rural workers into factory cities", ["drawing urban workers back to rural farms", "reducing city populations", "ending migration"], "Urbanization accelerated."]
   ]],
   ["7.2", "Economic Sectors and Patterns", [
-    ["A worker mining copper works in the", "primary sector", ["secondary sector", "tertiary (service) sector", "quaternary sector"], "Extracting resources."],
-    ["A worker assembling cars works in the", "secondary sector", ["primary (extractive) sector", "tertiary sector", "quinary sector"], "Manufacturing."],
-    ["A teacher works in the", "tertiary sector", ["secondary sector", "primary sector", "quinary sector"], "Services."],
-    ["A software researcher works in the", "quaternary sector", ["primary sector", "secondary sector", "tertiary sector"], "Information and knowledge."],
-    ["Weber's least-cost theory says a bulk-reducing industry, like copper smelting, locates near", "raw materials", ["the market", "the coast", "the national capital"], "The product weighs less than inputs."],
-    ["A bulk-gaining industry, like soft-drink bottling, locates near", "the market", ["raw materials", "the mines", "forests"], "The product weighs more than inputs."],
-    ["A break-of-bulk point is where", "goods transfer between transport modes", ["goods are produced", "goods are sold", "goods are manufactured and assembled"], "Ports are common examples."],
-    ["As countries develop, employment shifts from", "primary to tertiary sectors", ["tertiary to primary sectors", "secondary to primary sectors", "quaternary to primary sectors"], "Services grow."]
+    ["A copper smelter locates near a mine rather than near customers. Weber's model explains this as", "a bulk-reducing industry minimizing transport costs", ["a bulk-gaining industry near markets", "an industry locating near its cheapest labor supply", "an agglomeration of similar firms"], "The product weighs less than inputs."],
+    ["A soft-drink bottler locates near large cities. Weber's model explains this because", "water added locally makes it heavier", ["the raw materials are heavier than the product", "labor is cheaper in cities", "cities have more mines"], "Bulk-gaining industries locate near markets."],
+    ["A port where cargo moves from ships to trains is a", "break-of-bulk point", ["bulk-reducing location", "growth pole city", "primate city"], "Goods transfer between transport modes."],
+    ["Silicon Valley's tech firms cluster together mainly because of", "agglomeration economies", ["the cheapest land in California", "access to cheap land for large factories", "access to raw materials"], "Clustering benefits firms."],
+    ["As a country develops, employment typically shifts", "from primary to secondary to tertiary sectors", ["from tertiary to secondary to primary sectors", "from secondary to primary to tertiary sectors", "mainly within the primary sector over time"], "Economic structure changes."],
+    ["A software engineer designing apps works in the", "quaternary sector", ["primary sector", "secondary sector", "tertiary retail sector"], "Knowledge and information."],
+    ["A CEO making decisions for a multinational corporation works in the", "quinary sector", ["primary sector", "secondary sector", "tertiary sector"], "Top-level decision-making."],
+    ["Which factor most explains why many factories moved from the U.S. to Asia after 1980?", "Lower labor costs and shipping", ["Higher wages in Asia", "U.S. bans on factories", "New U.S. trade restrictions"], "Cost advantages drove relocation."]
   ]],
   ["7.3", "Measures of Development", [
-    ["The Human Development Index measures", "health, education, and income", ["income only", "GDP only", "population size and population density"], "A broader measure of development."],
-    ["GNI per capita doesn't show", "how income is distributed", ["average income per person", "total output", "economic size"], "It's an average."],
-    ["The Gender Inequality Index measures", "gender gaps in health, empowerment, and labor", ["only income", "population", "life expectancy and income levels for both sexes"], "Higher values mean more inequality."],
-    ["A country with high GDP per capita but low HDI may have", "high inequality or poor services", ["equal income distribution", "strong education", "high literacy and life expectancy"], "Wealth may not reach everyone."],
-    ["The informal economy includes", "unregistered work like street vending", ["government jobs", "corporate jobs", "government jobs and factory work on the books"], "It's not counted in official statistics."],
-    ["GDP differs from GNI because GDP", "counts output within a country's borders", ["counts income earned abroad by citizens", "counts only exports", "measures happiness"], "GNI includes income earned abroad."]
+    ["Country A has high GNI per capita but a lower HDI than Country B. Which is the best explanation?", "A's wealth is unequal, or health lags", ["A has higher life expectancy and literacy than B does", "HDI measures income and trade", "A has more schools than B"], "HDI includes health and education."],
+    ["Which indicator would best show whether women and men have equal opportunities?", "The Gender Inequality Index", ["GDP per capita", "The rank-size rule", "The Human Development Index"], "It measures gender gaps."],
+    ["Why can GNI per capita be misleading as a measure of development?", "It's an average that hides inequality", ["It measures rural incomes", "It counts the formal economy of rural areas", "It measures happiness directly"], "Averages hide distribution."],
+    ["A country with high infant mortality, low literacy, and most workers in agriculture is most likely", "less developed", ["highly developed", "in Stage 4 of the DTM", "a core country"], "These indicators signal lower development."],
+    ["The informal economy is especially large in developing countries because", "many workers lack formal, regulated jobs", ["governments require informal work", "wages are highest in informal jobs", "it is fully counted in official GDP statistics"], "Unregistered work like street vending."],
+    ["Which change would raise a country's HDI the most directly?", "More schooling and longer lives", ["More military spending", "More highway construction", "Lower literacy but more exports"], "HDI components improve."]
   ]],
   ["7.4", "Women and Economic Development", [
-    ["Microloans are often given to women because they", "tend to invest in families and businesses", ["have higher default rates than men do", "are wealthy", "don't work"], "High repayment rates and family benefits."],
-    ["As women's education rises, a country typically sees", "lower fertility and higher incomes", ["higher fertility and lower incomes", "lower incomes", "no change"], "Education changes outcomes."],
-    ["The wage gap refers to", "differences in pay between men and women", ["differences in income between countries", "tax rates", "prices"], "Women often earn less."],
-    ["Women's participation in the formal economy is limited in some regions by", "cultural norms and laws", ["climate and geography", "climate and soil quality", "latitude"], "Social factors shape work."]
+    ["Microloans to women in Bangladesh most directly help development by", "letting women start small businesses", ["shifting women from farming into factory work", "increasing birth rates", "moving women out of agriculture"], "Women reinvest in families."],
+    ["As women's education and paid work increase, which is most likely?", "Lower fertility and higher household incomes", ["Higher fertility and lower household incomes", "Little change in fertility", "Lower life expectancy"], "Education changes family outcomes."],
+    ["Which best explains why a gender wage gap persists even in developed countries?", "Job segregation and unequal caregiving", ["Women work fewer hours by law", "Laws require women to earn less than men", "Men do more unpaid work"], "Structural factors."],
+    ["Women's participation in formal employment is lowest in regions where", "norms and laws limit women's roles", ["climates are coldest", "service jobs are most common", "cities are largest"], "Social factors matter most."]
   ]],
   ["7.5", "Theories of Development", [
-    ["Rostow's final stage of development is", "high mass consumption", ["take-off", "traditional society stage", "drive to maturity"], "Widespread consumer goods."],
-    ["World-systems theory classifies countries as", "core, semi-periphery, and periphery", ["developed and developing only", "first, second, and third world", "urban and rural"], "Wallerstein's model."],
-    ["Dependency theory argues that", "poor countries are kept poor by rich countries", ["all countries develop through the same stages over time", "colonialism helped poor countries", "trade always benefits both rich and poor countries equally"], "Exploitative relationships."],
-    ["A criticism of Rostow's model is that it", "assumes all countries follow one path", ["ignores the role of industry and trade", "focuses on Africa", "has no stages"], "Based on Western experience."],
-    ["Semi-periphery countries such as Brazil and India", "have both core and periphery traits", ["are fully developed core states", "have no industry", "are colonies"], "Mixed characteristics."]
+    ["Rostow's model is criticized mainly because it", "assumes all countries follow the same Western path", ["ignores the central role of industrialization", "focuses mainly on Africa", "has too few stages"], "One-size-fits-all development."],
+    ["In Wallerstein's world-systems theory, periphery countries typically", "export raw materials", ["control global finance", "import raw materials", "set world commodity prices"], "Core countries dominate."],
+    ["Dependency theory argues that poor countries remain poor because", "rich countries exploit them through trade", ["they don't try to develop", "they have too many resources", "they lack natural resources to trade"], "Structural exploitation."],
+    ["A country with both advanced industries and large poor rural areas, like Brazil, is best classified as", "semi-periphery", ["core", "periphery", "Stage 1 of the DTM"], "Mixed characteristics."],
+    ["In Rostow's model, a country experiencing rapid growth in a few manufacturing industries is in", "takeoff", ["high mass consumption", "the traditional society stage", "drive to maturity"], "Growth concentrated in key sectors."]
   ]],
   ["7.6", "Trade and the World Economy", [
-    ["Maquiladoras are factories in Mexico that", "assemble goods for export using imported parts", ["grow crops for export", "mine silver and copper for export to North America", "grow cotton and vegetables for export to the U.S."], "Near the U.S. border."],
-    ["Comparative advantage means a country should produce goods", "at the lowest opportunity cost", ["it can make most cheaply only", "that other countries also make", "only for its own market"], "Specialization and trade."],
-    ["Special economic zones are designed to", "attract foreign investment with incentives", ["ban foreign trade and outside investment", "limit exports", "end industry"], "Example: Shenzhen."],
-    ["Free trade agreements like USMCA", "reduce trade barriers", ["increase tariffs on members", "ban imports", "end trade"], "They lower tariffs."],
-    ["Neoliberal policies emphasize", "free markets and less regulation", ["state-owned industries and tariffs", "high tariffs and state ownership", "import substitution"], "Deregulation and privatization."]
+    ["Maquiladoras along Mexico's northern border mainly exist because", "they offer cheaper labor near the U.S. market", ["Mexico bans imports from the U.S.", "they grow crops for export to U.S. grocery chains", "Mexican law requires factories to locate near the border"], "Assembly plants for export."],
+    ["Comparative advantage suggests a country should", "specialize in goods with the lowest opportunity cost", ["produce every good it needs to avoid imports", "specialize in goods others make more cheaply", "export raw materials and import manufactured goods"], "Specialization and trade."],
+    ["China's Shenzhen special economic zone grew rapidly because it", "offered tax breaks to investors", ["banned foreign companies", "had the lowest wages in China", "closed to trade"], "Incentives attracted investment."],
+    ["Neoliberal policies promoted by the IMF often require", "privatization and deregulation", ["higher tariffs and more state-owned companies", "import substitution", "more government jobs"], "Free-market reforms."],
+    ["Free trade agreements like USMCA are criticized by some U.S. workers because", "factory jobs may move abroad", ["they raise tariffs on Mexican imports", "they ban U.S. exports to Mexico", "they end trade with Canada"], "Job losses in manufacturing."]
   ]],
   ["7.7", "Changes as a Result of the World Economy", [
-    ["A U.S. company moving production to Vietnam to lower costs is", "offshoring", ["reshoring", "deindustrialization only", "import substitution"], "Moving jobs abroad."],
-    ["The loss of manufacturing jobs in the Rust Belt is", "deindustrialization", ["rapid industrialization", "gentrification", "agglomeration"], "Factories closed."],
-    ["Agglomeration occurs when", "similar firms cluster together", ["firms spread out", "factories close and relocate", "firms spread out to cheaper areas"], "Example: Silicon Valley."],
-    ["Call centers in India serving U.S. customers are an example of", "outsourcing services", ["deindustrialization", "subsistence work", "primary sector jobs"], "Services moved abroad."],
-    ["Post-Fordist production emphasizes", "flexible, just-in-time manufacturing", ["mass production of large runs of identical goods", "fixed assembly lines only", "large warehouses"], "Responds quickly to demand."],
-    ["Growth poles are", "areas that attract investment and spur growth", ["places that lose investment to core cities", "rural villages", "national parks"], "Development spreads outward."]
+    ["A U.S. company moves its call center to the Philippines to cut costs. This is", "offshoring of services", ["deindustrialization of manufacturing", "reshoring of jobs", "import substitution"], "Moving services abroad."],
+    ["The decline of steel mills in Pittsburgh and auto plants in Detroit is", "deindustrialization", ["reindustrialization", "gentrification", "agglomeration"], "Loss of manufacturing jobs."],
+    ["Just-in-time delivery, where parts arrive only when needed, is a feature of", "post-Fordist flexible production", ["Fordist assembly-line production", "subsistence agriculture", "cottage industry"], "Flexible, lean production."],
+    ["Why do growth poles such as tech hubs spur regional development?", "They attract investment that spreads to nearby areas", ["They draw workers away from nearby areas", "They reduce employment", "They lack connections"], "Spread effects."],
+    ["Which best explains why many companies now bring some manufacturing back to the U.S. (reshoring)?", "Rising wages abroad and supply risks", ["Lower U.S. wages than in China", "U.S. bans on imported goods", "Falling automation in U.S. plants"], "Costs and risks changed."],
+    ["An area with many small auto-parts suppliers near a car factory shows", "agglomeration", ["deglomeration", "offshoring", "dispersal"], "Firms cluster to share benefits."]
   ]],
   ["7.8", "Sustainable Development", [
-    ["Sustainable development aims to", "meet present needs without harming future generations", ["maximize economic growth for the current generation above all", "end all industry and return to farming worldwide", "increase pollution"], "Balance economy, society, environment."],
-    ["Costa Rica's ecotourism is an example of", "sustainable development", ["deindustrialization", "neocolonialism", "outsourcing"], "Tourism funds conservation."],
-    ["The UN Sustainable Development Goals include", "ending poverty and hunger", ["increasing military spending", "reducing education", "expanding coal"], "17 global goals."],
-    ["A challenge of sustainable development is", "balancing growth with environmental protection", ["having too little public demand for clean energy", "too little industry in wealthy countries", "no demand for resources"], "Trade-offs exist."],
-    ["Renewable energy supports sustainability because it", "reduces greenhouse gas emissions", ["increases energy efficiency", "uses more coal", "raises emissions"], "Solar and wind produce little CO₂."]
+    ["Costa Rica funds forest protection with ecotourism revenue. This is an example of", "sustainable development", ["deindustrialization that harms the rural economy", "neocolonialism by wealthy countries", "import substitution"], "Conservation supports income."],
+    ["Which is the biggest challenge for developing countries pursuing sustainable development?", "Balancing growth with protection", ["Too much renewable energy", "Too few natural resources to use", "Having too little industry to pollute"], "Trade-offs between growth and sustainability."],
+    ["Which UN Sustainable Development Goal most directly addresses urban issues?", "Sustainable cities", ["Life below water", "Life on land", "Zero hunger"], "SDG 11."],
+    ["Solar microgrids in rural Africa support sustainable development mainly because they", "expand power without fossil fuels", ["reduce the need for rural electricity", "use nonrenewable resources", "work mainly in cities"], "Clean energy access."],
+    ["Which practice best reflects sustainable agriculture?", "Crop rotation and reduced chemical use", ["Monocropping with heavy fertilizer use", "Clearing forests for new fields", "Overpumping groundwater"], "Protects soil and water."]
   ]]
 ]}
 );
